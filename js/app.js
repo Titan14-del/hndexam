@@ -30,7 +30,18 @@ function render() {
   const { view, year, paperIdx } = currentState;
   if (view === 'home') app.innerHTML = renderHome();
   else if (view === 'year') app.innerHTML = renderYear(year);
-  else if (view === 'paper') app.innerHTML = renderPaper(year, paperIdx);
+  else if (view === 'paper') { app.innerHTML = renderPaper(year, paperIdx); renderMermaidInQuestions(); }
+}
+
+function renderMermaidInQuestions() {
+  if (typeof mermaid === 'undefined') return;
+  setTimeout(() => {
+    const diagrams = document.querySelectorAll('.question .mermaid');
+    diagrams.forEach((el, i) => {
+      if (!el.id) el.id = 'qmermaid-' + i;
+      try { mermaid.run({ nodes: [el] }); } catch(e) {}
+    });
+  }, 150);
 }
 
 function renderHome() {
@@ -105,7 +116,7 @@ function renderQuestion(q, si, qi) {
       <div class="question-header">
         <div>
           <span class="question-number">${q.id || qi+1}.</span>
-          <span class="question-text">${q.text}</span>
+          <div class="question-text">${formatQuestionText(q.text)}</div>
         </div>
         <span class="question-marks">${q.marks} mk${q.marks > 1 ? 's' : ''}</span>
       </div>
@@ -119,6 +130,21 @@ function renderQuestion(q, si, qi) {
       </div>
     </div>
   `;
+}
+
+function formatQuestionText(text) {
+  if (!text) return '';
+  if (!text.includes('```mermaid')) return text.replace(/\n/g, '<br>');
+  
+  const parts = text.split(/(```mermaid[\s\S]*?```)/);
+  return parts.map(part => {
+    const mermaidMatch = part.match(/```mermaid\n?([\s\S]*?)```/);
+    if (mermaidMatch) {
+      const diagram = mermaidMatch[1].trim();
+      return '<div class="mermaid">' + diagram + '</div>';
+    }
+    return '<p>' + part.replace(/\n/g, '<br>') + '</p>';
+  }).join('');
 }
 
 function toggleAnswer(id, btn) {
