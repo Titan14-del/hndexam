@@ -10459,15 +10459,15 @@ const examData = {
               },
                {
                 "id": 5,
-                "text": "Which UML diagram is shown below?\n\n```mermaid\nsequenceDiagram\n    actor User\n    participant UI as User Interface\n    participant C as Controller\n    participant M as Model\n    User->>UI: Click Button\n    UI->>C: Handle Event\n    C->>M: Get Data\n    M-->>C: Return Data\n    C-->>UI: Update View\n    UI-->>User: Display Result\n```\n\na) Use Case\nb) Collaboration\nc) Sequence\nd) Object",
+                "text": "Which UML diagram is shown below?\n\n```mermaid\nsequenceDiagram\n    actor Applicant\n    participant System\n    participant Database\n    Applicant->>System: Submit Application\n    System->>Database: Store Data\n    Database-->>System: Confirm\n    System-->>Applicant: Acknowledgment\n```\n\na) Use Case\nb) Collaboration\nc) Sequence\nd) Object",
                 "marks": 1,
                 "answer": "c) Sequence"
               },
               {
                 "id": 6,
-                "text": "Which UML diagram is shown below?\n\n```mermaid\nflowchart TD\n    subgraph \"Deployment View\"\n        S[Web Server<br/>:8080] --- A[App Server<br/>GlassFish]\n        A --- DB[Database Server<br/>Oracle]\n        C[Client Browser] --- S\n    end\n    subgraph \"Devices\"\n        PC[Desktop PC] --- C\n        MOB[Mobile Device] --- C\n    end\n```\n\na) Component\nb) Deployment\nc) Use Case\nd) Class",
+                "text": "Which UML diagram is shown below?\n\n```mermaid\nflowchart TD\n    subgraph \"Component Diagram\"\n        ADMIN[Admin Component]\n        CLIENT[Client Component]\n        SERVER[Server Component]\n        DB[(Database Component)]\n        ADMIN --- SERVER\n        CLIENT --- SERVER\n        SERVER --- DB\n    end\n```\n\na) Component\nb) Deployment\nc) Use Case\nd) Class",
                 "marks": 1,
-                "answer": "b) Deployment"
+                "answer": "a) Component"
               },
               {
                 "id": 7,
