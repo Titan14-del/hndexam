@@ -10459,131 +10459,131 @@ const examData = {
                 "marks": 1,
                 "answer": "c) Activity, State Chart"
               },
-              {
+               {
                 "id": 5,
-                "text": "What is a physical element existing at runtime in UML?\na) A node\nb) An interface\nc) An activity\nd) None",
+                "text": "Which UML diagram is shown below?\n\n```mermaid\nsequenceDiagram\n    actor User\n    participant UI as User Interface\n    participant C as Controller\n    participant M as Model\n    User->>UI: Click Button\n    UI->>C: Handle Event\n    C->>M: Get Data\n    M-->>C: Return Data\n    C-->>UI: Update View\n    UI-->>User: Display Result\n```\n\na) Use Case\nb) Collaboration\nc) Sequence\nd) Object",
                 "marks": 1,
-                "answer": "a) A node"
+                "answer": "c) Sequence"
               },
               {
                 "id": 6,
-                "text": "Which are the dynamic parts of UML models?\na) Structural things\nb) Behavioral things\nc) Grouping things\nd) Annotational things",
+                "text": "Which UML diagram is shown below?\n\n```mermaid\nflowchart TD\n    subgraph \"Deployment View\"\n        S[Web Server<br/>:8080] --- A[App Server<br/>GlassFish]\n        A --- DB[Database Server<br/>Oracle]\n        C[Client Browser] --- S\n    end\n    subgraph \"Devices\"\n        PC[Desktop PC] --- C\n        MOB[Mobile Device] --- C\n    end\n```\n\na) Component\nb) Deployment\nc) Use Case\nd) Class",
                 "marks": 1,
-                "answer": "b) Behavioral things"
+                "answer": "b) Deployment"
               },
               {
                 "id": 7,
-                "text": "For real-time process control or concurrent processing, use:\na) Activity diagram\nb) Sequence diagram\nc) Statechart diagram\nd) Object diagram",
-                "marks": 1,
-                "answer": "c) Statechart diagram"
-              },
-              {
-                "id": 8,
-                "text": "Which UML things are explanatory parts?\na) Structural things\nb) Behavioral things\nc) Grouping things\nd) Annotational things",
-                "marks": 1,
-                "answer": "d) Annotational things"
-              },
-              {
-                "id": 9,
-                "text": "What refers to the value associated with a specific attribute and any actions?\na) Object\nb) State\nc) Interface\nd) None",
-                "marks": 1,
-                "answer": "b) State"
-              },
-              {
-                "id": 10,
-                "text": "Select the true statement for activity diagrams:\na) Discover parallel activities\nb) Depict workflow for business activity\nc) Activity diagrams do not tell who does what\nd) All of the above",
-                "marks": 1,
-                "answer": "d) All of the above"
-              },
-              {
-                "id": 11,
-                "text": "Valid relationships in Use Case Diagrams:\na) Generalization\nb) Include\nc) Extend\nd) All of the above",
-                "marks": 1,
-                "answer": "d) All of the above"
-              },
-              {
-                "id": 12,
-                "text": "UML interfaces are used to:\na) specify required services for types of objects\nb) program in Java only\nc) define executable logic across classes\nd) define an API for all Classes",
-                "marks": 1,
-                "answer": "a) specify required services for types of objects"
-              },
-              {
-                "id": 13,
-                "text": "How many diagrams are in UML?\na) six\nb) seven\nc) eight\nd) nine",
-                "marks": 1,
-                "answer": "d) nine"
-              },
-              {
-                "id": 14,
-                "text": "Which diagram shows behavior as a consequence of external events?\na) Data flow\nb) State transition\nc) Control specification\nd) Work flow",
-                "marks": 1,
-                "answer": "b) State transition"
-              },
-              {
-                "id": 15,
-                "text": "____ defines properties of a data object:\na) Data object\nb) Attributes\nc) Relationships\nd) All",
-                "marks": 1,
-                "answer": "b) Attributes"
-              },
-              {
-                "id": 16,
-                "text": "Enables modeling information and functional domains simultaneously:\na) Data flow diagram\nb) State transition diagram\nc) Control specification\nd) Activity diagram",
-                "marks": 1,
-                "answer": "a) Data flow diagram"
-              },
-              {
-                "id": 17,
-                "text": "Which is not a construct?\na) Sequence\nb) Condition\nc) Repetition\nd) System",
-                "marks": 1,
-                "answer": "d) System"
-              },
-              {
-                "id": 18,
-                "text": "____ is represented as a rectangular box in flow chart:\na) Repetition\nb) Sequence\nc) Condition\nd) None",
-                "marks": 1,
-                "answer": "b) Sequence"
-              },
-              {
-                "id": 19,
-                "text": "Which granularity tests module cooperation?\na) Unit Testing\nb) Integration Testing\nc) Acceptance Testing\nd) Regression Testing",
-                "marks": 1,
-                "answer": "b) Integration Testing"
-              },
-              {
-                "id": 20,
-                "text": "Which is a design pattern?\na) Behavioral\nb) Structural\nc) Abstract Factory\nd) All",
-                "marks": 1,
-                "answer": "d) All"
-              },
-              {
-                "id": 21,
-                "text": "Classes and interfaces are part of:\na) Structural things\nb) Behavioral things\nc) Grouping things\nd) Annotational things",
-                "marks": 1,
-                "answer": "a) Structural things"
-              },
-              {
-                "id": 22,
-                "text": "A structural model showing other systems in environment:\na) System context model\nb) Interaction model\nc) Environmental model\nd) Both a and b",
+                "text": "Which of the following is a structural model that demonstrates the other systems in the environment of the system being developed?\na) System context model\nb) Interaction model\nc) Environmental model\nd) Both a and b",
                 "marks": 1,
                 "answer": "d) Both a and b"
               },
               {
-                "id": 23,
-                "text": "Model showing flow of object interactions:\na) Sequence model\nb) Subsystem model\nc) Dynamic model\nd) Structural model",
+                "id": 8,
+                "text": "Which model shows the flow of object interactions?\na) Sequence model\nb) Subsystem model\nc) Dynamic model\nd) Structural model",
                 "marks": 1,
                 "answer": "c) Dynamic model"
               },
               {
-                "id": 24,
-                "text": "Which UML diagram is time-oriented?\na) Sequence\nb) Collaboration\nc) Class\nd) Use Case",
+                "id": 9,
+                "text": "Which diagram indicates the behavior of the system as a consequence of external events?\na) Data flow\nb) State transition\nc) Control specification\nd) Work flow",
                 "marks": 1,
-                "answer": "a) Sequence"
+                "answer": "b) State transition"
+              },
+              {
+                "id": 10,
+                "text": "____ defines the properties of a data object:\na) Data object\nb) Attributes\nc) Relationships\nd) All of the above",
+                "marks": 1,
+                "answer": "b) Attributes"
+              },
+              {
+                "id": 11,
+                "text": "The _____ enables the software engineer to develop models of the information domain and functional domain at the same time:\na) Data flow diagram\nb) State transition diagram\nc) Control specification diagram\nd) Activity diagram",
+                "marks": 1,
+                "answer": "a) Data flow diagram"
+              },
+              {
+                "id": 12,
+                "text": "Which of the following is not a construct?\na) Sequence\nb) Condition\nc) Repetition\nd) System",
+                "marks": 1,
+                "answer": "d) System"
+              },
+              {
+                "id": 13,
+                "text": "The _____ is represented as a rectangular box in flow chart:\na) Repetition\nb) Sequence\nc) Condition\nd) None of the above",
+                "marks": 1,
+                "answer": "b) Sequence"
+              },
+              {
+                "id": 14,
+                "text": "Which granularity level of testing checks the behavior of module cooperation?\na) Unit Testing\nb) Integration Testing\nc) Acceptance Testing\nd) Regression Testing",
+                "marks": 1,
+                "answer": "b) Integration Testing"
+              },
+              {
+                "id": 15,
+                "text": "Which of the following is a design pattern?\na) Behavioral\nb) Structural\nc) Abstract Factory\nd) All of the above",
+                "marks": 1,
+                "answer": "d) All of the above"
+              },
+              {
+                "id": 16,
+                "text": "Classes and interfaces are a part of:\na) Structural things\nb) Behavioral things\nc) Grouping things\nd) Annotational things",
+                "marks": 1,
+                "answer": "a) Structural things"
+              },
+              {
+                "id": 17,
+                "text": "What is a physical element that exists at runtime in UML?\na) A node\nb) An interface\nc) An activity\nd) None of the above",
+                "marks": 1,
+                "answer": "a) A node"
+              },
+              {
+                "id": 18,
+                "text": "Which things are dynamic parts of UML models?\na) Structural things\nb) Behavioral things\nc) Grouping things\nd) Annotational things",
+                "marks": 1,
+                "answer": "b) Behavioral things"
+              },
+              {
+                "id": 19,
+                "text": "If you are working on real-time process control applications or systems that involve concurrent processing, you would use a:\na) Activity diagram\nb) Sequence diagram\nc) Statechart diagram\nd) Object diagram",
+                "marks": 1,
+                "answer": "c) Statechart diagram"
+              },
+              {
+                "id": 20,
+                "text": "Which things in UML are the explanatory parts of UML models?\na) Structural things\nb) Behavioral things\nc) Grouping things\nd) Annotational things",
+                "marks": 1,
+                "answer": "d) Annotational things"
+              },
+              {
+                "id": 21,
+                "text": "What refers to the value associated with a specific attribute of an object and to any actions or side effects?\na) Object\nb) State\nc) Interface\nd) None of the above",
+                "marks": 1,
+                "answer": "b) State"
+              },
+              {
+                "id": 22,
+                "text": "Select the true statement for activity diagrams:\na) They can be used to discover parallel activities\nb) They are used to depict workflow for a particular business activity\nc) Activity diagrams do not tell who does what\nd) All of the above",
+                "marks": 1,
+                "answer": "d) All of the above"
+              },
+              {
+                "id": 23,
+                "text": "Which of the following are the valid relationships in Use Case Diagrams?\na) Generalization\nb) Include\nc) Extend\nd) All of the above",
+                "marks": 1,
+                "answer": "d) All of the above"
+              },
+              {
+                "id": 24,
+                "text": "UML interfaces are used to:\na) specify required services for types of objects\nb) program in Java only\nc) define executable logic to reuse across classes\nd) define an API for all Classes",
+                "marks": 1,
+                "answer": "a) specify required services for types of objects"
               },
               {
                 "id": 25,
-                "text": "Shape class and Square class relationship:\na) Realization\nb) Generalization\nc) Aggregation\nd) Dependency",
+                "text": "How many diagrams are there in Unified Modelling Language?\na) six\nb) seven\nc) eight\nd) nine",
                 "marks": 1,
-                "answer": "b) Generalization"
+                "answer": "d) nine"
               }
             ]
           },
