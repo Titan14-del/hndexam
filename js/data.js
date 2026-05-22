@@ -12,9 +12,9 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "Write structured pseudocode for given flowcharts.",
+                "text": "Write structured pseudocode for the given flowcharts.\n\n**Flowchart A:**\n```mermaid\nflowchart TD\n    START([Start]) --> I1[Input x]\n    I1 --> D1{x > 0?}\n    D1 -->|Yes| O1[Display POSITIVE]\n    D1 -->|No| D2{x = 0?}\n    D2 -->|Yes| O2[Display ZERO]\n    D2 -->|No| O3[Display NEGATIVE]\n    O1 --> END([End])\n    O2 --> END\n    O3 --> END\n```\n\n**Flowchart B:**\n```mermaid\nflowchart TD\n    START2([Start]) --> I2[a = 1]\n    I2 --> D3{a <= 5?}\n    D3 -->|Yes| O4[Display a]\n    O4 --> I3[a = a + 1]\n    I3 --> D3\n    D3 -->|No| END2([End])\n```",
                 "marks": 5,
-                "answer": "BEGIN\nINPUT x\nIF x>0 THEN\n  DISPLAY \"Positive\"\nELSE\n  DISPLAY \"Non-positive\"\nENDIF\nEND"
+                "answer": "Flowchart A:\nBEGIN\n  INPUT x\n  IF x>0 THEN\n    DISPLAY \"POSITIVE\"\n  ELSE IF x=0 THEN\n    DISPLAY \"ZERO\"\n  ELSE\n    DISPLAY \"NEGATIVE\"\n  ENDIF\nEND\n\nFlowchart B:\nBEGIN\n  a = 1\n  WHILE a <= 5\n    DISPLAY a\n    a = a + 1\n  ENDWHILE\nEND"
               },
               {
                 "id": 2,
@@ -126,7 +126,7 @@ const examData = {
               },
               {
                 "id": 2,
-                "text": "Login form + PHP processing.",
+                "text": "Login form + PHP processing (see figure below).\n\n**Figure 1: Login Form**\n```\n+------------------------------------------+\n|                  LOGIN                    |\n+------------------------------------------+\n|                                          |\n|  Username: [__________________________]  |\n|                                          |\n|  Password: [__________________________]  |\n|                                          |\n|           [ Submit ]                     |\n|                                          |\n+------------------------------------------+\n```\n\nCreate the HTML form (as shown above) and write the PHP code to process the login.",
                 "marks": 11,
                 "answer": "<form method=post><input name=login><input type=password name=pass><input type=submit>\n<?php echo $_POST['login'];?>"
               }
@@ -1901,7 +1901,7 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "Implement Circle class with radius,color,getRadius(),getColor(),getArea(). Create 3 instances and display.",
+                "text": "Implement the Circle class as illustrated in the class diagram and instance diagrams below.\n\n**Class Diagram:**\n```mermaid\nclassDiagram\n    class Circle {\n        - radius: double\n        - color: String\n        + Circle()\n        + Circle(radius: double)\n        + Circle(radius: double, color: String)\n        + getRadius(): double\n        + setRadius(radius: double): void\n        + getColor(): String\n        + setColor(color: String): void\n        + getArea(): double\n    }\n```\n\n**Instance Diagrams:**\n```\ncl: Circle\n- radius = 1.0\n- color = \"red\"\n\nc2: Circle\n- radius = 2.0\n- color = \"blue\"\n\nc3: Circle\n- radius = 3.0\n- color = \"green\"\n```\n\nCreate three instances of Circle (cl, c2, c3) with different radius values and display their properties.",
                 "marks": 10,
                 "answer": "class Circle{private double r=1.0;String c=\"red\";Circle(){}Circle(double r){this.r=r;}Circle(double r,String c){this.r=r;this.c=c;}double getR(){return r;}String getC(){return c;}double getA(){return Math.PI*r*r;}}",
                 "tutorial": "Encapsulation: private fields with public getters."
@@ -2345,7 +2345,7 @@ const examData = {
               },
               {
                 "id": 2,
-                "text": "Consider an ER model for a pharmacy chain. Can a pharmaceutical company have multiple phone numbers? If not, what do you need to do?",
+                "text": "Consider the ER model (Figure 1) for a pharmacy chain below:\n\n```mermaid\nerDiagram\n    PharmaceuticalCompany ||--o{ Drug : manufactures\n    Pharmacy ||--o{ Drug : sells\n    Pharmacy ||--o{ Contract : signs\n    PharmaceuticalCompany ||--o{ Contract : signs\n    Patient ||--o{ Prescription : receives\n    Drug ||--o{ Prescription : contained_in\n    PharmaceuticalCompany {\n        int companyId PK\n        string name\n        string phone\n    }\n    Drug {\n        int drugId PK\n        string name\n    }\n    Pharmacy {\n        int pharmacyId PK\n        string name\n        string address\n    }\n    Contract {\n        int contractId PK\n        date startDate\n    }\n    Patient {\n        int patientId PK\n        string name\n    }\n    Prescription {\n        int prescriptionId PK\n        date date\n    }\n```\n\nCan a pharmaceutical company have multiple phone numbers? If not, what do you need to do?",
                 "marks": 5,
                 "answer": "As a single-valued attribute, it cannot. Add a multi-valued attribute (phoneNumbers) or split into a separate Phone table with 1-to-many relationship."
               },
@@ -3394,9 +3394,7 @@ const examData = {
               },
               {
                 "id": 44,
-                "text": "How do we call the main application window shown in the diagram with ribbons, quick access toolbar, title bar, and document area?",
-                "marks": 3,
-                "answer": "The Microsoft Word application window. Parts: A) Title Bar - displays document name. B) Ribbon/Tabs - contains command groups. C) Ruler - for margin and tab settings. D) Document Area - where text is typed. E) Status Bar - shows page number, word count."
+                "text": "How do we call the main application window shown in the diagram below?\n\n```mermaid\nflowchart TD\n    subgraph \"Microsoft Word Application Window\"\n        TB[\"Title Bar: Document1 - Word\"]\n        QAT[\"Quick Access Toolbar: Save, Undo, Redo\"]\n        RIBBON[\"Ribbon: Home  Insert  Design  Layout  References  Mailings  Review  View\"]\n        RULER[\"Ruler\"]\n        DA[\"Document Area (editing surface)\"]\n        SB[\"Status Bar: Page 1 of 1 | Words: 0 | English (US)\"]\n    end\n    TB --> QAT\n    QAT --> RIBBON\n    RIBBON --> RULER\n    RULER --> DA\n    DA --> SB\n```\n\nParts:\nA) Title Bar\nB) Ribbon/Tabs\nC) Ruler\nD) Document Area\nE) Status Bar\n\nName each part (A through E) and give the use of the symbols shown in the circle.",
               }
             ]
           }
@@ -6009,7 +6007,7 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "Identify the port shown in diagram. Give TWO reasons for its widespread use.",
+                "text": "Identify the port shown in the diagram below.\n\n```mermaid\nflowchart LR\n    subgraph \"Computer Port\"\n        P[\"USB Port (Type-A)\"]\n    end\n    subgraph \"Connector\"\n        C[\"USB Type-A Plug<br/>4 pins: Vbus, D-, D+, GND\"]\n    end\n    P <--> C\n```\n\n**Diagram:** A rectangular 4-pin female port on the computer side with a matching rectangular male connector.\n\nGive TWO reasons for its widespread use.",
                 "marks": 4,
                 "answer": "USB (Universal Serial Bus) port.\nReasons: 1) Hot-swappable (connect/disconnect without restart). 2) Supports many device types (keyboard, mouse, storage, printer)."
               },
@@ -7805,7 +7803,7 @@ const examData = {
               },
               {
                 "id": 5,
-                "text": "Diamond symbol in UML represents: A) Aggregation B) Dependency C) Generalization D) Association",
+                "text": "What type of core-relationship is represented by the UML symbol in the figure below?\n\n```mermaid\nflowchart LR\n    subgraph \"UML Relationship Symbols\"\n        C1[Class A] ---|<>--- C2[Class B]\n    end\n```\n\nThe diamond symbol (♢) attached to Class B indicates:\n\nA) Aggregation\nB) Dependency\nC) Generalization\nD) Association",
                 "marks": 2,
                 "answer": "A) Aggregation"
               },
@@ -10979,7 +10977,7 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "From a student marks sheet with columns: Name, Test1, Test2, Average, Rank, Decision.\na) Give formulas for cells F7 (Average), G7 (Rank), H7 (Decision) where Failed if Avg<50, Pass if Avg>=50. (6 marks)\nb) Two differences between relative and absolute references. (4 marks)",
+                "text": "From the student marks sheet below:\n\n```\n+--------+-------+-------+---------+------+----------+\n|  Name  | Test1 | Test2 | Average | Rank | Decision |\n+--------+-------+-------+---------+------+----------+\n| Alice  |  75   |  82   |  78.5   |  2   |   Pass   |\n| Bob    |  45   |  52   |  48.5   |  5   |  Failed  |\n| Carol  |  88   |  90   |  89.0   |  1   |   Pass   |\n| Dave   |  60   |  65   |  62.5   |  4   |   Pass   |\n| Eve    |  70   |  68   |  69.0   |  3   |   Pass   |\n+--------+-------+-------+---------+------+----------+\n   A         B       C        D       E         F\n```\n\na) Give the formulas for cells D7 (Average), E7 (Rank), F7 (Decision) where Failed if Avg<50, Pass if Avg>=50. (6 marks)\nb) Two differences between relative and absolute references. (4 marks)",
                 "marks": 10,
                 "answer": "a) F7 = AVERAGE(D7:E7) or (D7+E7)/2\nG7 = RANK(F7,$F$7:$F$n,0) (0 for descending)\nH7 = IF(F7>=50,\"Pass\",\"Failed\")\n\nb) Relative reference (A1): changes when formula is copied. Absolute reference ($A$1): stays constant when copied. Mixed ($A1, A$1): one part fixed."
               },
