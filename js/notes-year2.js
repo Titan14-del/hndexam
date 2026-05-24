@@ -18,7 +18,10 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Compilation:</b> C is a compiled language — you write .c source code, a compiler translates it into machine code. Unlike interpreted languages (Python), compilation happens in one step producing an executable file." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "C Programming", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Every C program MUST have a main() function — execution starts here", "printf() is standard output; scanf() is standard input", "Always match opening braces { with closing braces }"]
         },
@@ -35,7 +38,10 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Important:</b> Integer division truncates: 5/2 = 2 (not 2.5). Use 5.0/2 for decimal result. Modulo % gives remainder: 5%2 = 1." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "C Programming", "section": "Section A", "qid": "Q2" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know size and range: int=4B, float=4B, double=8B, char=1B", "Integer division truncates: 5/2 = 2, not 2.5", "Format specifiers: %d=int, %f=float, %lf=double, %c=char"]
         },
@@ -54,7 +60,10 @@ const _notesYear2 = {
             { "type": "code", "lang": "c", "value": "for (int i = 0; i < 5; i++) { }    // known count\nwhile (condition) { }                 // condition checked first\ndo { } while (condition);             // runs at least once" },
             { "type": "related", "value": [
               { "year": "2021", "paper": "C Programming", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["switch works only with integer/char expressions (not floats/strings)", "for = known count; while = condition matters; do-while = must run at least once", "Don't forget break in switch cases"]
         },
@@ -70,7 +79,10 @@ const _notesYear2 = {
             { "type": "code", "lang": "c", "value": "void change(int *x) { *x = 100; }  // modifies original\nint num = 10;\nchange(&num);  // pass address\n// num is now 100" },
             { "type": "related", "value": [
               { "year": "2020", "paper": "C Programming", "section": "Section B", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["C uses pass by value by default — the function gets a copy", "To modify the original variable, use pointers (pass by reference)", "A function prototype tells the compiler about the function before it's defined"]
         },
@@ -85,7 +97,10 @@ const _notesYear2 = {
             { "type": "code", "lang": "c", "value": "#include <string.h>\nchar name[20];\nstrcpy(name, \"Bob\");     // copy string\nint len = strlen(name);   // length without null\nstrcat(name, \" Smith\");   // concatenate" },
             { "type": "related", "value": [
               { "year": "2020", "paper": "C Programming", "section": "Section A", "qid": "Q4" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Array indices start at 0 — always remember!", "C does NOT check array bounds — accessing outside is dangerous", "Strings are null-terminated ('\\0') char arrays"]
         },
@@ -100,7 +115,10 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Functions:</b> malloc() allocates uninitialized memory. calloc() allocates and zero-initializes. realloc() resizes. free() releases. Forgetting free() = memory leaks." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "C Programming", "section": "Section B", "qid": "Q2" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["& gives address; * gives value at address (dereference)", "Always check if malloc() returned NULL (allocation failed)", "Every malloc() must have a corresponding free()"]
         },
@@ -117,7 +135,10 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>File modes:</b> \"r\" = read (must exist), \"w\" = write (creates/overwrites), \"a\" = append (creates if not exists), \"r+\" = read/write." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "C Programming", "section": "Section B", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Always close files after use (fclose)", "fgets() is safer than gets() — prevents buffer overflow", "Check if fopen() returned NULL (file couldn't be opened)"]
         }
@@ -140,8 +161,13 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Abstraction:</b> Hiding complex implementation details and showing only essential features. When you drive a car, you use the steering wheel and pedals — you don't need to understand the engine. Similarly, an abstract class defines what methods a class must have without specifying how they work." },
             { "type": "mermaid", "value": "classDiagram\n  class Animal {\n    +String name\n    +makeSound()\n  }\n  class Dog {\n    +makeSound()\n  }\n  class Cat {\n    +makeSound()\n  }\n  Animal <|-- Dog\n  Animal <|-- Cat" },
             { "type": "related", "value": [
-              { "year": "2020", "paper": "OOP", "section": "Section A", "qid": "Q1" }
-            ]}
+              { "year": "2020", "paper": "OOP", "section": "Section A", "qid": "Q1" },
+              { "year": "2024", "paper": "Case Study", "section": "Algorithm and Programming", "qid": "Q3" }
+            ,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Case Study", "section": "Section A", "qid": "Q1" },
+              { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know the 4 pillars with definitions and examples — this is a guaranteed question", "Be able to read and draw UML class diagrams representing OOP design"]
         },
@@ -155,8 +181,11 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Constructor:</b> Special method with the same name as the class, no return type. Called automatically when an object is created. Used to initialize data members." },
             { "type": "text", "value": "<b>Destructor (~ClassName):</b> Called automatically when an object is destroyed. Used to release resources (close files, free memory)." },
             { "type": "related", "value": [
-              { "year": "2020", "paper": "OOP", "section": "Section B", "qid": "Q1" }
-            ]}
+              { "year": "2020", "paper": "OOP", "section": "Section B", "qid": "Q1" },
+              { "year": "2024", "paper": "Case Study", "section": "Algorithm and Programming", "qid": "Q3" }
+            ,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Case Study", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Constructor has same name as class and no return type — called when object is created", "Destructor (~ClassName) is called when object is destroyed"]
         },
@@ -170,7 +199,12 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Pure virtual function (=0):</b> Makes the class abstract — cannot create objects directly. Derived classes MUST override it." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "OOP", "section": "Section A", "qid": "Q3" }
-            ]}
+            ,
+              { "year": "2020", "paper": "OOP", "section": "Section A", "qid": "Q1" },
+              { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Case Study", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["virtual keyword enables runtime polymorphism in C++", "Pure virtual function (=0) makes a class abstract — cannot instantiate"]
         },
@@ -183,7 +217,12 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Java Features:</b> No pointers (all objects are references), Garbage collection (automatic memory management), final keyword (prevents inheritance for classes, overriding for methods, reassignment for variables), static keyword (belongs to class, not instance), this keyword (refers to current object)." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "OOP", "section": "Section B", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2020", "paper": "OOP", "section": "Section A", "qid": "Q1" },
+              { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Case Study", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Java does NOT support multiple class inheritance — only multiple interface implementation", "this keyword refers to the current instance", "Garbage collection = automatic memory management (no delete keyword)"]
         }
@@ -207,8 +246,12 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>O(n\u00b2) — Quadratic:</b> Time grows with the square of input size. Example: nested loops (bubble sort, checking all pairs)." },
             { "type": "text", "value": "<b>O(2\u207f) — Exponential:</b> Time doubles with each added input. Example: recursive Fibonacci, brute-force subset generation." },
             { "type": "related", "value": [
-              { "year": "2020", "paper": "Algorithms & DS", "section": "Section A", "qid": "Q1" }
-            ]}
+              { "year": "2020", "paper": "Algorithms & DS", "section": "Section A", "qid": "Q1" },
+              { "year": "2024", "paper": "Case Study", "section": "Algorithms", "qid": "Q1" }
+            ,
+              { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
+              { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Big-O describes growth rate as n\u2192\u221e, ignoring constants and lower terms", "Know best, average, and worst case for common algorithms", "O(log n) is the fastest for searching; O(1) is the fastest overall"]
         },
@@ -231,7 +274,11 @@ const _notesYear2 = {
             ]},
             { "type": "related", "value": [
               { "year": "2020", "paper": "Algorithms & DS", "section": "Section B", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Algorithms & DS", "section": "Section A", "qid": "Q1" },
+              { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Quick sort uses divide-and-conquer with a pivot; worst case occurs when pivot is smallest/largest", "Merge sort is stable, O(n log n) guaranteed, but needs O(n) extra space"]
         },
@@ -245,7 +292,8 @@ const _notesYear2 = {
             { "type": "code", "lang": "c", "value": "int binarySearch(int arr[], int l, int r, int key) {\n    while (l <= r) {\n        int mid = l + (r - l) / 2;  // avoid overflow\n        if (arr[mid] == key) return mid;\n        if (arr[mid] < key) l = mid + 1;\n        else r = mid - 1;\n    }\n    return -1;\n}" },
             { "type": "related", "value": [
               { "year": "2021", "paper": "Algorithms & DS", "section": "Section A", "qid": "Q2" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Binary search only works on SORTED arrays", "Calculate mid as l + (r-l)/2 to avoid integer overflow"]
         },
@@ -260,7 +308,8 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Circular Linked List:</b> Last node points back to first. No NULL pointers. Useful for round-robin scheduling." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Algorithms & DS", "section": "Section A", "qid": "Q3" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Linked lists use dynamic memory allocation (no fixed size like arrays)", "Insertion/deletion at beginning is O(1); at end is O(n) for singly linked"]
         },
@@ -274,7 +323,8 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Circular Queue:</b> Uses an array efficiently by wrapping around. When the rear reaches the end, it goes back to index 0 if the front has moved forward." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Algorithms & DS", "section": "Section B", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Stack overflow = push when full; Stack underflow = pop when empty", "Know how to implement stack/queue using both arrays and linked lists"]
         },
@@ -290,7 +340,10 @@ const _notesYear2 = {
             { "type": "mermaid", "value": "graph TD\n  A[Root] --> B[Left]\n  A --> C[Right]\n  B --> D[Left-Left]\n  B --> E[Left-Right]" },
             { "type": "related", "value": [
               { "year": "2021", "paper": "Algorithms & DS", "section": "Section A", "qid": "Q2" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Algorithms & DS", "section": "Section A", "qid": "Q1" },
+              { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Inorder traversal of BST gives sorted order", "BST worst case O(n) when tree is skewed — AVL trees fix this (self-balancing)", "BFS uses queue, DFS uses stack"]
         }
@@ -318,7 +371,10 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Models:</b> Waterfall (sequential, rigid), Agile (iterative, flexible), Spiral (risk-driven with prototyping), V-Model (verification at each phase)." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "System Analysis & Design", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2021", "paper": "System Analysis & Design", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "System Analysis and Design", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "System Analysis and Design", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Waterfall vs Agile differences are frequently tested", "Know which fact-finding method (interview, questionnaire, observation) is best for each scenario"]
         },
@@ -329,7 +385,7 @@ const _notesYear2 = {
             { "type": "text", "value": "UML (Unified Modeling Language) is a standard visual language for modeling software systems. There are 14 diagram types divided into two categories: <b>structural</b> (showing the static structure) and <b>behavioral</b> (showing dynamic behavior). Below are the most commonly tested diagrams." },
             { "type": "text", "value": "<hr><h3>Structural (Static) Diagrams</h3>" },
             { "type": "text", "value": "<b>1. Class Diagram</b> — The most important UML diagram for exams. It shows classes (rectangles), their attributes (middle section), their methods (bottom section), and relationships between classes. Key relationships: <b>Inheritance</b> (hollow triangle arrow pointing to parent), <b>Association</b> (simple line with multiplicity like \"1\" or \"*\"), <b>Aggregation</b> (hollow diamond at the whole end — the parts can exist without the whole, e.g., a Department has Teachers, but Teachers can exist without the Department), <b>Composition</b> (filled diamond — the parts cannot exist without the whole, e.g., a House has Rooms, and Rooms are destroyed when the House is destroyed)." },
-            { "type": "mermaid", "value": "classDiagram\n  class User {\n    -String userId\n    -String name\n    +login()\n    +logout()\n  }\n  class Account {\n    -String accountNo\n    -double balance\n    +deposit(amount)\n    +withdraw(amount)\n    +getBalance()\n  }\n  class Transaction {\n    -String transactionId\n    -double amount\n    -Date date\n    +getDetails()\n  }\n  User \"1\" --> \"*\" Account : owns\n  Account \"1\" --> \"*\" Transaction : has\n  Account --|> Transaction : \u00abcontains\u00bb" },
+            { "type": "mermaid", "value": "classDiagram\n  class User {\n    -String userId\n    -String name\n    +login()\n    +logout()\n  }\n  class Account {\n    -String accountNo\n    -double balance\n    +deposit(amount)\n    +withdraw(amount)\n    +getBalance()\n  }\n  class Transaction {\n    -String transactionId\n    -double amount\n    -Date date\n    +getDetails()\n  }\n  User \"1\" --> \"*\" Account : owns\n  Account \"1\" --> \"*\" Transaction : has" },
             { "type": "text", "value": "<b>How to read:</b> One User can own many Accounts (the \"1\" and \"*\" show this). Each Account has many Transactions. Private attributes start with -, public methods start with +." },
             { "type": "text", "value": "<hr>" },
             { "type": "text", "value": "<b>2. Component Diagram</b> — Shows how the software is physically packaged into components (files, libraries, executables, modules) and the dependencies between them. Each component is drawn as a rectangle with two small rectangles sticking out from the left side (like a UML component stereotype). Components are connected by dashed arrows showing dependencies." },
@@ -342,10 +398,10 @@ const _notesYear2 = {
             { "type": "text", "value": "<hr><h3>Behavioral (Dynamic) Diagrams</h3>" },
             { "type": "text", "value": "<b>4. Use Case Diagram</b> — Shows the interactions between <b>actors</b> (external users or systems, drawn as stick figures) and <b>use cases</b> (functions the system performs, drawn as ovals). A system boundary box surrounds the use cases. Actors are connected to use cases by lines. This is one of the most frequently tested UML diagrams in HND exams." },
             { "type": "mermaid", "value": "flowchart LR\n  %% Actors\n  Student([\"Student\"])\n  Admin([\"Administrator\"])\n  \n  subgraph System[\"Library Management System\"]\n    UC1[\"( Search Books )\"]\n    UC2[\"( Borrow Book )\"]\n    UC3[\"( Return Book )\"]\n    UC4[\"( Add New Book )\"]\n    UC5[\"( Manage Members )\"]\n  end\n  \n  Student --> UC1\n  Student --> UC2\n  Student --> UC3\n  Admin --> UC3\n  Admin --> UC4\n  Admin --> UC5\n  Admin --> UC1" },
-            { "type": "text", "value": "<b>How to read:</b> Two actors interact with the Library System. Student can Search, Borrow, and Return books. Administrator can do all of those plus Add New Book and Manage Members. Notice both Student and Administrator can Return books." },
+            { "type": "text", "value": "<b>How to read:</b> Two actors interact with the Library System. Student can Search, Borrow, and Return books. Administrator can Search, Return, Add New Book, and Manage Members. Notice both Student and Administrator can Return books." },
             { "type": "text", "value": "<hr>" },
             { "type": "text", "value": "<b>5. Sequence Diagram</b> — Shows HOW objects interact over TIME. Each object has a vertical <b>lifeline</b> (dashed line). Messages are horizontal arrows between lifelines, read from top to bottom (time flows downward). Sequence diagrams are excellent for showing the order of operations in a single scenario." },
-            { "type": "mermaid", "value": "sequenceDiagram\n  participant Student\n  participant System as Library System\n  participant DB as Database\n  \n  Student->>System: searchBook(\"title\")\n  System->>DB: SELECT * FROM books\n  DB-->>System: result set\n  System-->>Student: display book list\n  \n  Student->>System: borrowBook(bookId)\n  System->>DB: check availability\n  DB-->>System: available=true\n  System->>DB: UPDATE books SET status='borrowed'\n  DB-->>System: success\n  System-->>Student: confirmBorrowal(receipt)" },
+            { "type": "mermaid", "value": "sequenceDiagram\n  participant Student\n  participant System as Library System\n  participant DB as Database\n  \n  Student->>System: searchBook(\"title\")\n  System->>DB: SELECT * FROM books\n  DB-->>System: result set\n  System-->>Student: display book list\n  \n  Student->>System: borrowBook(bookId)\n  System->>DB: check availability\n  DB-->>System: available=true\n  System->>DB: UPDATE books SET status='borrowed'\n  DB-->>System: success\n  System-->>Student: confirmBorrow(receipt)" },
             { "type": "text", "value": "<b>How to read:</b> Time flows downward. The Student sends a searchBook message to the System. The System queries the Database and returns results. Then the Student borrows a book — the System checks availability, updates the database, and confirms. Solid arrows are synchronous calls; dashed arrows are return messages." },
             { "type": "text", "value": "<hr>" },
             { "type": "text", "value": "<b>6. Activity Diagram</b> — Like a flowchart for business processes. It shows the flow from one activity to another, including <b>decision points</b> (diamonds), <b>parallel forks</b> (thick bars splitting into multiple flows), and <b>joins</b> (thick bars merging flows back). The solid circle is the start, the bullseye circle is the end." },
@@ -363,7 +419,10 @@ const _notesYear2 = {
             { "type": "mermaid", "value": "erDiagram\n  STUDENT ||--o{ ENROLLMENT : has\n  COURSE ||--o{ ENROLLMENT : includes\n  STUDENT {\n    int studentId PK\n    string name\n  }\n  COURSE {\n    string courseCode PK\n    string title\n  }\n  ENROLLMENT {\n    int studentId FK\n    string courseCode FK\n  }" },
             { "type": "related", "value": [
               { "year": "2020", "paper": "System Analysis & Design", "section": "Section B", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2021", "paper": "System Analysis & Design", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "System Analysis and Design", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "System Analysis and Design", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["DFD shows data flow — NOT control flow (that's a flowchart)", "ERD cardinalities: || = exactly one, o{ = zero or many, |{ = one or many"]
         },
@@ -376,7 +435,10 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Fact-Finding Techniques:</b> Interview (in-depth, can probe), Questionnaire (large groups, standardized), Observation (watch current processes), Document Analysis (review existing forms and reports). Choose based on: time, budget, access to people, type of information needed." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "System Analysis & Design", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2020", "paper": "System Analysis & Design", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "System Analysis and Design", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "System Analysis and Design", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Functional describes features; non-functional describes quality attributes", "Select the BEST fact-finding technique based on scenario (interviews for depth, questionnaires for breadth)"]
         }
@@ -400,7 +462,10 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Data Independence:</b> Logical independence = change conceptual level without affecting external views (add a column without breaking user queries). Physical independence = change storage structure without affecting conceptual level (move data to SSD without changing queries)." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Database & SQL", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Data independence: logical (change conceptual without affecting external) and physical (change storage without affecting conceptual)", "PK uniquely identifies rows; FK links tables together"]
         },
@@ -425,8 +490,11 @@ const _notesYear2 = {
             ]},
             { "type": "text", "value": "<b>Important:</b> WHERE filters rows BEFORE grouping. HAVING filters groups AFTER GROUP BY. JOINs combine data from multiple tables based on related columns." },
             { "type": "related", "value": [
-              { "year": "2020", "paper": "Database & SQL", "section": "Section B", "qid": "Q1" }
-            ]}
+              { "year": "2020", "paper": "Database & SQL", "section": "Section B", "qid": "Q1" },
+              { "year": "2024", "paper": "Case Study", "section": "Database", "qid": "Q4" }
+            ,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Case Study", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["SQL keywords are case-insensitive but conventionally UPPERCASE", "HAVING filters groups (after GROUP BY); WHERE filters rows (before GROUP BY)", "Learn JOIN syntax: INNER JOIN, LEFT JOIN, RIGHT JOIN"]
         },
@@ -441,7 +509,8 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Why normalize?</b> Reduces data duplication, prevents update anomalies (change in one place only), prevents insertion anomalies (cannot add data without other data), prevents deletion anomalies (deleting one fact deletes unrelated facts)." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "Database & SQL", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Functional dependency: X\u2192Y means X determines Y (if you know X, you can find Y)", "Normalization reduces redundancy and prevents anomalies (insert, update, delete)"]
         },
@@ -453,7 +522,10 @@ const _notesYear2 = {
             { "type": "text", "value": "(1) Each strong entity becomes a table (attributes become columns, PK maps to PK). (2) Each weak entity becomes a table with FK to owner's PK as part of composite key. (3) For relationships: 1:M = add FK to the many-side table. 1:1 = add FK to either side (preferably the one with total participation). M:N = create a new table with composite PK from both related entities' PKs. (4) Multivalued attributes become a new table with FK back to owning entity." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Database & SQL", "section": "Section B", "qid": "Q2" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["M:N relationships always produce a new intersection/cross-reference table", "For 1:M, put the FK in the table on the M (many) side"]
         },
@@ -470,7 +542,8 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Transaction control:</b> COMMIT = save changes permanently. ROLLBACK = undo all changes. SAVEPOINT = set a point to roll back to (partial rollback)." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "Database & SQL", "section": "Section A", "qid": "Q3" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["COMMIT makes changes permanent; ROLLBACK undoes changes", "Isolation levels: Read Uncommitted (lowest) to Serializable (highest)"]
         }
@@ -491,8 +564,13 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Semantic HTML:</b> Using tags that describe their meaning: header, nav, main, section, article, footer, aside. This improves accessibility and SEO." },
             { "type": "code", "lang": "css", "value": "/* Selectors: element, class, id */\np { color: blue; }           // element selector\n.container { max-width: 960px; }  // class selector\n#main-title { font-size: 2em; }  // id selector\n\n/* Flexbox — one-dimensional layout */\n.flex { display: flex; justify-content: space-between; }\n\n/* Grid — two-dimensional layout */\n.grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }" },
             { "type": "related", "value": [
-              { "year": "2020", "paper": "Web Programming", "section": "Section A", "qid": "Q1" }
-            ]}
+              { "year": "2020", "paper": "Web Programming", "section": "Section A", "qid": "Q1" },
+              { "year": "2024", "paper": "Case Study", "section": "Web Design", "qid": "Q5" }
+            ,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Case Study", "section": "Section A", "qid": "Q1" },
+              { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Semantic HTML improves accessibility and SEO", "CSS specificity: inline > id > class > element. !important overrides everything"]
         },
@@ -507,7 +585,9 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Important:</b> == compares with type coercion (5 == \"5\" is true). === compares strictly (5 === \"5\" is false). Always prefer ===." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Web Programming", "section": "Section A", "qid": "Q3" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["== vs ===: always prefer === (strict comparison, no type coercion)", "let and const are block-scoped; var is function-scoped", "DOM = browser's tree representation of HTML"]
         },
@@ -520,7 +600,9 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Key Concepts:</b> $_GET and $_POST collect form data. Sessions (session_start(), $_SESSION) persist data across pages. Cookies (setcookie(), $_COOKIE) store data client-side. Prepared statements prevent SQL injection — never use string concatenation for SQL queries with user input." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Web Programming", "section": "Section B", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Always use prepared statements to prevent SQL injection — NEVER use string concatenation for queries with user input", "$_GET shows data in URL; $_POST hides data in request body"]
         }
@@ -544,7 +626,9 @@ const _notesYear2 = {
             { "type": "mermaid", "value": "flowchart TD\n  subgraph Star\n    S1[Switch] --- C1[Computer 1]\n    S1 --- C2[Computer 2]\n    S1 --- C3[Computer 3]\n  end\n  subgraph Bus\n    B1[Cable] --- B2[Computer A]\n    B1 --- B3[Computer B]\n    B1 --- B4[Computer C]\n  end" },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Networking", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Star topology is most common in modern LANs (Ethernet switches)", "Mesh is used in WANs and critical systems where reliability is paramount"]
         },
@@ -561,10 +645,12 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Layer 2 — Data Link:</b> Framing, MAC addresses, error detection. Ethernet, Wi-Fi. Frame is the PDU." },
             { "type": "text", "value": "<b>Layer 1 — Physical:</b> Raw bit transmission over physical medium (cables, radio waves, fiber optics). Bit is the PDU." },
             { "type": "text", "value": "<b>TCP vs UDP:</b> TCP (connection-oriented, reliable, ordered — for web, email, file transfer). UDP (connectionless, fast, no guarantees — for streaming, VoIP, DNS)." },
-            { "type": "mermaid", "value": "flowchart TB\n  L7[7. Application\\nHTTP, FTP, SMTP, DNS]\n  L4[4. Transport\\nTCP, UDP]\n  L3[3. Network\\nIP, ICMP]\n  L2[2. Data Link\\nEthernet, MAC]\n  L1[1. Physical\\nBits on wire]\n  L7 --> L4 --> L3 --> L2 --> L1" },
+            { "type": "mermaid", "value": "flowchart TB\n  L7[7. Application\\nHTTP, FTP, SMTP, DNS]\n  L6[6. Presentation\\nSSL, TLS, JPEG, MPEG]\n  L5[5. Session\\nNetBIOS, RPC]\n  L4[4. Transport\\nTCP, UDP]\n  L3[3. Network\\nIP, ICMP]\n  L2[2. Data Link\\nEthernet, MAC]\n  L1[1. Physical\\nBits on wire]\n  L7 --> L6 --> L5 --> L4 --> L3 --> L2 --> L1" },
             { "type": "related", "value": [
-              { "year": "2020", "paper": "Networking", "section": "Section A", "qid": "Q2" }
-            ]}
+              { "year": "2020", "paper": "Networking", "section": "Section A", "qid": "Q2" },
+              { "year": "2024", "paper": "Case Study", "section": "Networking", "qid": "Q6" }
+            ,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Mnemonic: Please Do Not Throw Sausage Pizza Away (Physical to Application)", "TCP/IP model has 4 layers vs OSI's 7 layers — TCP/IP merges upper 3 into Application"]
         },
@@ -579,7 +665,10 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Example:</b> 192.168.1.0/24 (default mask 255.255.255.0). To create 4 subnets, borrow 2 bits: /26 (255.255.255.192). Each subnet has 62 usable hosts." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "Networking", "section": "Section A", "qid": "Q2" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Networking", "section": "Section A", "qid": "Q1" },
+              { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Private IP ranges: 10.x.x.x, 172.16-31.x.x, 192.168.x.x", "CIDR notation: /n means first n bits are network portion"]
         },
@@ -601,7 +690,10 @@ const _notesYear2 = {
             { "type": "text", "value": "DNS converts human-readable domain names (google.com) to IP addresses (142.250.190.46). DHCP automatically assigns IP addresses, subnet masks, and default gateways to devices when they connect to the network." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Networking", "section": "Section B", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Networking", "section": "Section A", "qid": "Q1" },
+              { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know common port numbers: HTTP(80), HTTPS(443), FTP(21), SMTP(25), DNS(53), SSH(22)", "DNS converts domain names to IP addresses — the \"phonebook of the Internet\""]
         }
@@ -621,7 +713,8 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Types:</b> Batch (jobs collected and processed without user interaction), Time-sharing/multitasking (CPU switches rapidly between programs — feels like they run simultaneously), Real-time (guaranteed response within deadlines — used in aircraft, medical devices), Distributed (multiple computers appear as one system), Embedded (dedicated to a specific device — smartphone, router, IoT)." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Operating Systems", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Multitasking = one CPU, rapid switching; Multiprocessing = multiple CPUs", "Real-time OS must guarantee deadlines (hard RT vs soft RT)"]
         },
@@ -637,7 +730,9 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Priority Scheduling:</b> Higher priority processes run first. Starvation risk for low-priority processes (solved by aging — gradually increasing priority of waiting processes)." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Operating Systems", "section": "Section A", "qid": "Q2" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Operating Systems", "section": "Section A", "qid": "Q1" },
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Preemptive = CPU can be taken away; Non-preemptive = process keeps CPU until it yields", "Round Robin: quantum size is critical — too large = FCFS, too small = too many context switches"]
         },
@@ -652,7 +747,9 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Virtual Memory:</b> Uses disk space as an extension of RAM. Allows running programs larger than physical memory. Pages are swapped between RAM and disk. <b>Thrashing</b> = excessive page swapping, causing severe slowdown." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "Operating Systems", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Operating Systems", "section": "Section A", "qid": "Q1" },
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Thrashing = excessive paging due to too many active processes", "Paging eliminates external fragmentation; segmentation allows logical divisions"]
         },
@@ -665,7 +762,9 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Disk Scheduling:</b> FCFS (fair but slow), SSTF (shortest seek first — good throughput, may starve far requests), SCAN/Elevator (move in one direction servicing requests, reverse at end — fair), C-SCAN (service only in one direction, then jump back — more uniform wait times)." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "Operating Systems", "section": "Section A", "qid": "Q2" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Operating Systems", "section": "Section A", "qid": "Q1" },
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["SCAN algorithm behaves like an elevator — fair and avoids starvation", "Know the difference between FAT, NTFS, ext4"]
         }
@@ -685,7 +784,11 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Data vs Information:</b> Data is raw, unprocessed facts (\"25\", \"Male\", \"Buea\"). Information is processed data with meaning and context (\"The average age of patients in Buea is 25\")." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Information Systems", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Information System", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "Information System", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Information Systems", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Information Systems", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Information \u2260 Data. Data is raw; information is processed data with meaning", "Know the 5 components of an IS: Hardware, Software, Data, Procedures, People"]
         },
@@ -700,7 +803,11 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>EIS (Executive Information System):</b> Provides strategic data to top executives. Answers: \"Where are we heading?\" Example: dashboard showing market share trends, competitor analysis." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Information Systems", "section": "Section A", "qid": "Q2" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Information System", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "Information System", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Information Systems", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Information Systems", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["TPS processes structured data about daily operations; EIS provides strategic data for top-level decisions", "Know which system supports which management level: TPS=operational, MIS/DSS=tactical, EIS=strategic"]
         },
@@ -716,7 +823,11 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Benefits:</b> 24/7 availability, global reach, lower costs, personalization, faster transactions. <b>Challenges:</b> Security (hacking, fraud), trust, logistics (delivery), legal issues (regulations across countries)." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "Information Systems", "section": "Section A", "qid": "Q2" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Information System", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "Information System", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Information Systems", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Information Systems", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know the difference between B2B, B2C, C2C, G2C", "E-commerce challenges: security, trust, logistics, legal issues"]
         }
@@ -739,7 +850,10 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Activity Lifecycle:</b> onCreate() \u2192 onStart() \u2192 onResume() \u2192 onPause() \u2192 onStop() \u2192 onDestroy(). Understanding which methods are called when the user rotates the phone or receives a call is important." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "Mobile Programming", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Mobile Programming", "section": "Section A", "qid": "Q1" },
+              { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Activity lifecycle is frequently tested — memorize the callback order", "Intents are used for navigation between activities and passing data"]
         },
@@ -753,7 +867,10 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Units:</b> dp (density-independent pixels) for sizes, sp (scale-independent pixels) for fonts. match_parent fills the container; wrap_content fits the content." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "Mobile Programming", "section": "Section A", "qid": "Q2" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Mobile Programming", "section": "Section A", "qid": "Q1" },
+              { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
+              { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["dp for sizes, sp for fonts (both scale with screen density)", "match_parent = fill container; wrap_content = fit content size"]
         }
@@ -774,7 +891,11 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Logical Connectives:</b> \u00acp (negation = not p), p \u2227 q (conjunction = p AND q), p \u2228 q (disjunction = p OR q), p \u2192 q (implication = if p then q), p \u2194 q (biconditional = p if and only if q). Truth tables evaluate expressions for all possible combinations." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Discrete Mathematics", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2021", "paper": "Discrete Mathematics", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "Discrete Mathematics", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Discrete Mathematics", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Discrete Mathematics", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["De Morgan's laws: complement of union = intersection of complements, complement of intersection = union of complements", "Truth tables are the standard way to evaluate logical expressions"]
         },
@@ -789,7 +910,11 @@ const _notesYear2 = {
             { "type": "text", "value": "<b>Eulerian Circuit:</b> A path that visits every edge exactly once and returns to the start. Exists iff all vertices have even degree. This is the original \"Seven Bridges of K\u00f6nigsberg\" problem solved by Euler." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "Discrete Mathematics", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Discrete Mathematics", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "Discrete Mathematics", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Discrete Mathematics", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Discrete Mathematics", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["A graph has an Eulerian circuit iff all vertices have even degree", "In a tree, number of edges = vertices - 1", "Equivalence relation = reflexive + symmetric + transitive"]
         }

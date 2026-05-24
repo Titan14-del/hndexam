@@ -3395,6 +3395,8 @@ const examData = {
               {
                 "id": 44,
                 "text": "How do we call the main application window shown in the diagram below?\n\n```mermaid\nflowchart TD\n    subgraph \"Microsoft Word Application Window\"\n        TB[\"Title Bar: Document1 - Word\"]\n        QAT[\"Quick Access Toolbar: Save, Undo, Redo\"]\n        RIBBON[\"Ribbon: Home  Insert  Design  Layout  References  Mailings  Review  View\"]\n        RULER[\"Ruler\"]\n        DA[\"Document Area (editing surface)\"]\n        SB[\"Status Bar: Page 1 of 1 | Words: 0 | English (US)\"]\n    end\n    TB --> QAT\n    QAT --> RIBBON\n    RIBBON --> RULER\n    RULER --> DA\n    DA --> SB\n```\n\nParts:\nA) Title Bar\nB) Ribbon/Tabs\nC) Ruler\nD) Document Area\nE) Status Bar\n\nName each part (A through E) and give the use of the symbols shown in the circle.",
+                "answer": "The window is the Microsoft Word Application Window.\n\nA) Title Bar — Displays the document name (Document1) and application name (Word).\nB) Ribbon/Tabs — Contains command buttons and features organized under tabs (Home, Insert, Design, Layout, References, Mailings, Review, View).\nC) Ruler — Used to set margins, tab stops, and paragraph indents.\nD) Document Area — The editing workspace where users type and format content.\nE) Status Bar — Shows document information: current page (Page 1 of 1), word count (Words: 0), and language (English US).\n\nSymbols in the circle (Quick Access Toolbar):\n- Save (floppy disk icon) — saves the current document to disk.\n- Undo (curved arrow left) — reverses the most recent action.\n- Redo (curved arrow right) — reapplies a previously undone action.",
+                "tutorial": "<h3>Microsoft Word Application Window</h3><p>The Word application window is the primary user interface of Microsoft Word. Understanding its parts is essential for efficient document creation and editing.</p><h4>Key Components</h4><ul><li><b>Title Bar:</b> The topmost bar showing the document name and application. It also contains the minimize, maximize/restore, and close buttons.</li><li><b>Ribbon:</b> A panel that houses command buttons organized into tabs. Each tab (Home, Insert, Design, etc.) groups related commands. The Ribbon replaced traditional menus and toolbars in Word 2007+.</li><li><b>Ruler:</b> Horizontal (and vertical) guides for precise alignment. Used to set left/right margins, first-line indents, hanging indents, and tab stops by clicking and dragging.</li><li><b>Document Area:</b> The white editing surface where text, images, tables, and other content are placed. Text appears at the blinking cursor (insertion point).</li><li><b>Status Bar:</b> The bottom bar showing context-sensitive information. Right-click to customize which details appear (page number, word count, line number, zoom level, etc.).</li></ul><h4>Quick Access Toolbar (QAT)</h4><p>The QAT is a small customizable toolbar above or below the Ribbon. By default it contains three buttons:</p><ul><li><b>Save (Ctrl+S):</b> Saves the current document. The first time you save, Word prompts for a filename and location.</li><li><b>Undo (Ctrl+Z):</b> Reverses the last action. Can be clicked multiple times to undo several actions.</li><li><b>Redo (Ctrl+Y):</b> Reapplies an action that was undone. Only available after using Undo.</li></ul><p>The QAT can be customized by clicking the small drop-down arrow at its end to add frequently used commands.</p><h4>Exam Tip</h4><p>Questions about the Word interface test basic computer literacy. Identify each component by its position and function. The circle in the diagram typically highlights the Quick Access Toolbar icons — note that these differ from Ribbon commands because they are always visible regardless of which tab is selected.</p>"
               }
             ]
           }
@@ -9000,8 +9002,446 @@ const examData = {
             ]
           }
         ]
-      }
-    ]
+      },
+      {
+        "title": "Case Study - SWE",
+        "duration": "6 hours",
+        "credits": 14,
+        "description": "Specialty: Software Engineering (SWE) | 2024 Session",
+        "sections": [
+          {
+          "title": "Section A: Algorithm and Programming",
+          "marks": 50,
+          "questions": [
+            {
+              "id": 1,
+              "text": "Find the bug in the pseudocode and implement in the language you master.\n\n```pseudocode\n// This program uses an array to display five names.\nConstant Integer SIZE = 5\nDeclare String names[SIZE] = \"Meg\", \"Janai\", \"Sonat\", \"Belle\", \"Molak\"\nDeclare Integer index\nFor index = 0 To SIZE\n    Display names[index]\nEnd For\n```",
+              "marks": 10,
+              "answer": "Bug (5 marks): The loop condition \"0 To SIZE\" allows index to reach 5 (when SIZE = 5). Arrays use 0-based indexing, so valid indices are 0 through 4 (SIZE-1). When index = 5, names[5] is out of bounds. Fix: Change the loop to \"For index = 0 To SIZE - 1\".\n\nC implementation (5 marks):\n#include <stdio.h>\n\nint main() {\n    const int SIZE = 5;\n    char *names[SIZE] = {\"Meg\", \"Janai\", \"Sonat\", \"Belle\", \"Molak\"};\n    for (int index = 0; index < SIZE; index++) {\n        printf(\"%s\\n\", names[index]);\n    }\n    return 0;\n}",
+              "tutorial": "Array indices start at 0 and go up to SIZE-1. The condition 'index <= SIZE' causes an off-by-one error."
+            },
+            {
+              "id": 2,
+              "text": "Find the bug and fix it, then implement in your language.\n\n```pseudocode\n// This program displays the highest value in the array.\nDeclare Integer SIZE = 3\nDeclare Integer values[SIZE] = 1, 3, 4\nDeclare Integer index\nDeclare Integer highest\nFor index = 0 To SIZE - 1\n    If values[index] > highest Then\n        Set highest = values[index]\n    End If\nEnd For\nDisplay \"The highest number is \", highest\n```",
+              "marks": 25,
+              "answer": "Bug explanation (10 marks): The variable 'highest' is declared but never initialized. The first comparison 'values[0] > highest' uses whatever garbage value is in 'highest' memory. If that garbage is > 1, highest never updates and the output is wrong.\n\nFix: Add 'Set highest = values[0]' before the loop.\n\nC implementation (15 marks):\n#include <stdio.h>\n\nint main() {\n    int SIZE = 3;\n    int values[SIZE] = {1, 3, 4};\n    int highest = values[0];\n    for (int index = 0; index < SIZE; index++) {\n        if (values[index] > highest) {\n            highest = values[index];\n        }\n    }\n    printf(\"The highest number is %d\\n\", highest);\n    return 0;\n}",
+              "tutorial": "Always initialize variables before using them in comparisons. For finding max, initialize to the first element."
+            },
+            {
+              "id": 3,
+              "text": "Design a CellPhone class for Wireless Solutions. Data: manufacturer (String), modelNumber (String), retailPrice (double).\n\na) Declare the data fields. (3 marks)\nb) Declare mutators (setters) and accessors (getters). (3 marks)\nc) Declare a default constructor and a parameterized constructor. (3 marks)\nd) Define the complete class in your preferred language. (3 marks)\ne) Implement a test program for the class. (3 marks)",
+              "marks": 15,
+              "answer": "a) Data fields (3 marks):\nprivate String manufacturer;\nprivate String modelNumber;\nprivate double retailPrice;\n\nb) Getters and Setters (3 marks):\npublic String getManufacturer() { return manufacturer; }\npublic void setManufacturer(String m) { manufacturer = m; }\npublic String getModelNumber() { return modelNumber; }\npublic void setModelNumber(String m) { modelNumber = m; }\npublic double getRetailPrice() { return retailPrice; }\npublic void setRetailPrice(double p) { retailPrice = p; }\n\nc) Constructors (3 marks):\n// Default\npublic CellPhone() { manufacturer = \"\"; modelNumber = \"\"; retailPrice = 0.0; }\n// Parameterized\npublic CellPhone(String m, String model, double price) {\n    manufacturer = m; modelNumber = model; retailPrice = price;\n}\n\nd) Complete class (3 marks):\npublic class CellPhone {\n    private String manufacturer;\n    private String modelNumber;\n    private double retailPrice;\n    public CellPhone() { manufacturer = \"\"; modelNumber = \"\"; retailPrice = 0.0; }\n    public CellPhone(String m, String model, double price) {\n        manufacturer = m; modelNumber = model; retailPrice = price;\n    }\n    public String getManufacturer() { return manufacturer; }\n    public void setManufacturer(String m) { manufacturer = m; }\n    public String getModelNumber() { return modelNumber; }\n    public void setModelNumber(String m) { modelNumber = m; }\n    public double getRetailPrice() { return retailPrice; }\n    public void setRetailPrice(double p) { retailPrice = p; }\n}\n\ne) Test program (3 marks):\npublic class CellPhoneTest {\n    public static void main(String[] args) {\n        CellPhone phone = new CellPhone(\"Apple\", \"iPhone 15\", 999.99);\n        System.out.println(\"Manufacturer: \" + phone.getManufacturer());\n        System.out.println(\"Model: \" + phone.getModelNumber());\n        System.out.println(\"Price: $\" + phone.getRetailPrice());\n        phone.setRetailPrice(899.99);\n        System.out.println(\"Discounted: $\" + phone.getRetailPrice());\n    }\n}",
+              "tutorial": "Encapsulation: private fields with public getters/setters. Constructors initialize object state."
+            }
+          ]
+        },
+        {
+          "title": "Section B: Database Development and Administration",
+          "marks": 20,
+          "questions": [
+            {
+              "id": 1,
+              "text": "Given: User(Id, Name, Age, Gender, OccupationId*, CityId*), Occupation(OccupationId, OccupationName), City(CityId, CityName).\nData: User={1,John,25,Male,1,3; 2,Sara,20,Female,3,4}, Occupation={1,Software; 2,Accountant; 3,Pharmacist}, City={1,Bertoua; 2,Buea; 3,Bamenda; 4,?}.\n\na) Relational algebra + SQL: users older than 25. (5 marks)\nb) Relational algebra + SQL: Id < 3 OR Age <> 32. (5 marks)\nc) Relational algebra + SQL: users with their occupation info. (5 marks)\nd) Relational algebra + SQL: names/gender of users in Bamenda. (5 marks)",
+              "marks": 20,
+              "answer": "a) Users older than 25 (5 marks):\nRelational Algebra: \u03c3_Age > 25 (User)\nSQL: SELECT Name FROM User WHERE Age > 25;\n(No rows \u2014 John is 25, Sara is 20 \u2014 but query is correct)\n\nb) Id < 3 OR Age \u2260 32 (5 marks):\nRelational Algebra: \u03c3_Id < 3 \u2228 Age \u2260 32 (User)\nSQL: SELECT * FROM User WHERE Id < 3 OR Age <> 32;\n(Returns both John and Sara since both have Id < 3)\n\nc) Users with occupation (5 marks):\nRelational Algebra: User \u2a1d Occupation\nSQL: SELECT * FROM User u JOIN Occupation o ON u.OccupationId = o.OccupationId;\n(John-Software, Sara-Pharmacist)\n\nd) Users in Bamenda (5 marks):\nRelational Algebra: \u03c0_Name, Gender (\u03c3_CityName = 'Bamenda' (User \u2a1d City))\nSQL: SELECT u.Name, u.Gender FROM User u JOIN City c ON u.CityId = c.CityId WHERE c.CityName = 'Bamenda';\n(John, Male \u2014 CityId=3 maps to Bamenda)",
+              "tutorial": "Relational algebra: \u03c3 selects rows, \u03c0 projects columns, \u2a1d natural join. SQL: WHERE filters, JOIN combines tables."
+            }
+          ]
+        },
+        {
+          "title": "Section C: Web Design",
+          "marks": 15,
+          "questions": [
+            {
+              "id": 1,
+              "text": "Given CSS/HTML:\n\n```html\n<!DOCTYPE html> <html>\n<head>\n<style>\n.relative { position: relative; left: 20px;\ntop: 10px;\n}\n.absolute {\nposition: absolute;\ntop: 50px;\nright: 30px;\n}\n.fixed {\nposition: fixed;\nbottom: 0;\nright: 0;\n}\n</style>\n</head>\n<body>\n<div class=\"relative\">Relative Positioning</div>\n<div class=\"absolute\">Absolute Positioning</div>\n<div class=\"fixed\">Fixed Positioning</div>\n</body>\n</html>\n```\n\na) Name the three positioning elements. (3 marks)\nb) Explain the function of each. (3 marks)\nc) Provide a title for the code. (3 marks)\nd) What is the purpose of this code? (3 marks)\ne) Define the function of CSS in HTML. (3 marks)",
+              "marks": 15,
+              "answer": "a) Three positioning elements (3 marks):\n1. Relative\n2. Absolute\n3. Fixed\n\nb) Functions (3 marks):\n1. Relative: Positioned relative to its normal position. left:20px; top:10px shifts it right and down from where it would normally appear. Original space is preserved.\n2. Absolute: Removed from normal flow. Positioned relative to nearest positioned ancestor. top:50px; right:30px. Other elements ignore its space.\n3. Fixed: Removed from normal flow. Positioned relative to viewport. Stays in place when scrolling.\n\nc) Title (3 marks): \"Understanding CSS Positioning Properties\"\n\nd) Purpose (3 marks): Demonstrates three CSS positioning schemes \u2014 relative, absolute, fixed \u2014 showing how each places elements differently.\n\ne) Function of CSS (3 marks): Controls visual presentation (colors, fonts, layout, positioning). Separates content from styling, improving maintainability.",
+              "tutorial": "Static = default flow. Relative = offset from normal. Absolute = positioned to ancestor. Fixed = positioned to viewport, stays on scroll."
+            }
+          ]
+        },
+        {
+          "title": "Section D: Networking",
+          "marks": 15,
+          "questions": [
+            {
+              "id": 1,
+              "text": "a) Explain the importance of layering in a network. (2 marks)\nb) Differentiate:\n   i) OSI model vs TCP/IP model (2 marks)\n   ii) UDP vs TCP (3 marks)\nc) Describe the data encapsulation process in the OSI model. (2 marks)\nd) For Mesh and Star topologies: sketch, 2 advantages, 2 disadvantages, and a protocol/topology that employs each. (6 marks)",
+              "marks": 15,
+              "answer": "a) Importance of layering (2 marks):\n- Breaks complex networking into manageable, independent layers\n- Allows interoperability between different vendors\n- Changes in one layer don't affect others\n- Simplifies troubleshooting\n\nb) i) OSI vs TCP/IP (2 marks):\n- OSI: 7 layers; TCP/IP: 4 layers\n- OSI conceptual; TCP/IP practical\n- TCP/IP merges top 3 OSI layers into Application\n\nii) UDP vs TCP (3 marks):\nTCP: connection-oriented, reliable, ordered, slower. Used for web, email, FTP.\nUDP: connectionless, unreliable, unordered, fast. Used for streaming, VoIP, DNS.\n\nc) Data encapsulation (2 marks):\nData flows top-to-bottom. Each layer adds a header:\n1. Transport: Segment (TCP/UDP header)\n2. Network: Packet (IP header)\n3. Data Link: Frame (MAC header+trailer)\n4. Physical: Bits\nReceiver strips headers in reverse.\n\nd) Topologies (6 marks):\nMesh: each device links to every other. Advantage: no single point of failure. Disadvantage: expensive (n(n-1)/2 cables). Used in Internet routing.\nStar: all devices connect to central hub. Advantage: easy to manage. Disadvantage: hub is single point of failure. Used in Ethernet LANs.",
+              "tutorial": "OSI layers bottom-up: Physical, Data Link, Network, Transport, Session, Presentation, Application. TCP/IP merges top 3."
+            }
+          ]
+        }
+      ]
+    },
+      {
+        "title": "Enterprise Creation and Entrepreneurship",
+        "duration": "2 hours",
+        "credits": 1,
+        "description": "Specialty: All Specialties | 2024 Session",
+        "sections": [
+          {
+            "title": "Section A: Entrepreneurship",
+            "marks": 34,
+            "questions": [
+              {
+                "id": 1,
+                "text": "State and explain the stages in the entrepreneurial process.",
+                "marks": 10,
+                "answer": "The entrepreneurial process consists of 5 stages (2 marks each):\n\n1. Discovery/Innovation (2 marks): The entrepreneur identifies an opportunity or develops a new idea through creativity, market research, or recognizing a gap in the market.\n\n2. Concept Development (2 marks): The idea is refined into a viable business concept. A feasibility study is conducted to assess technical, financial, and market viability.\n\n3. Resourcing (2 marks): The entrepreneur acquires the necessary resources — capital, human resources, equipment, and raw materials. This includes preparing a business plan to attract investors.\n\n4. Actualization (2 marks): The business is launched and operations begin. The entrepreneur implements the business plan, markets products/services, and manages daily operations.\n\n5. Harvesting/Exit (2 marks): The entrepreneur evaluates growth and considers exit strategies — selling the business, going public (IPO), or passing it to successors. Profits are realized.",
+                "tutorial": "The entrepreneurial process is a step-by-step approach from idea generation to business launch and beyond. The 5 stages form a logical progression: think of it as Dream \u2192 Plan \u2192 Gather \u2192 Launch \u2192 Exit."
+              },
+              {
+                "id": 2,
+                "text": "Why the executive summary is often called the most important part of a business plan?",
+                "marks": 8,
+                "answer": "Reasons (2 marks each, any 4):\n\n1. First Impression (2 marks): It is the first section investors read. If the executive summary fails to capture interest, the rest of the plan may not be read at all.\n\n2. Condensed Overview (2 marks): It summarizes the entire business plan in 1-2 pages — covering the problem, solution, market, competition, financials, and management team — giving readers a complete picture quickly.\n\n3. Decision-Making Tool (2 marks): Investors and banks often decide whether to proceed based solely on the executive summary. A strong summary leads to funding requests; a weak one leads to rejection.\n\n4. Roadmap for the Business (2 marks): Writing the executive summary forces the entrepreneur to clarify the core value proposition, target market, and competitive advantage, serving as a strategic guide.\n\n5. Accessibility (2 marks): Busy stakeholders (investors, partners, managers) can understand the business without reading the entire document, making it essential for communication.",
+                "tutorial": "The executive summary is your business plan's 'elevator pitch' in written form. It must be concise, compelling, and cover all key points. Write it LAST even though it appears FIRST."
+              },
+              {
+                "id": 3,
+                "text": "State six (6) importance of a business plan.",
+                "marks": 6,
+                "answer": "Six importance of a business plan (1 mark each):\n\n1. Guidance (1 mark): Provides a roadmap for the business, outlining goals, strategies, and actions needed to achieve success.\n\n2. Securing Funding (1 mark): Essential for attracting investors, banks, and lenders who require a detailed plan before providing capital.\n\n3. Resource Allocation (1 mark): Helps the entrepreneur allocate limited resources (time, money, personnel) efficiently toward priority activities.\n\n4. Performance Evaluation (1 mark): Serves as a benchmark to measure actual performance against planned targets and make adjustments.\n\n5. Risk Identification (1 mark): Forces the entrepreneur to analyze market conditions, competition, and potential obstacles, enabling proactive risk management.\n\n6. Communication Tool (1 mark): Communicates the business vision to stakeholders — employees, partners, suppliers, and customers — ensuring everyone is aligned.",
+                "tutorial": "A business plan is both an internal roadmap and an external fundraising document. It transforms an abstract idea into a concrete action plan with measurable milestones."
+              },
+              {
+                "id": 4,
+                "text": "State and explain five (5) external sources of finance for a business in Cameroon.",
+                "marks": 10,
+                "answer": "Five external sources of finance (2 marks each: 1 for stating, 1 for explaining):\n\n1. Commercial Bank Loans (2 marks): Banks like Afriland First Bank, Societe Generale, and BICEC provide term loans, overdrafts, and lines of credit to businesses. The business must provide collateral and a solid business plan.\n\n2. Microfinance Institutions (MFIs) (2 marks): Institutions like Caisse Populaire and Express Union provide smaller loans to entrepreneurs and SMEs who may not qualify for traditional bank loans. They are more accessible in rural areas.\n\n3. Government Grants and Support Programs (2 marks): The Government of Cameroon, through agencies like APME (Agence de Promotion des PME) and FONDAFRIQUE, provides grants, subsidies, and subsidized loans to support entrepreneurship and youth employment.\n\n4. Angel Investors and Venture Capital (2 marks): Private investors provide capital in exchange for equity. In Cameroon, organizations like Cameroon Angel Network invest in high-potential startups.\n\n5. Cooperative Societies and Tontines (2 marks): Traditional rotating savings and credit associations (tontines) and cooperatives pool members' savings and provide loans at lower interest rates, especially common in the informal sector.",
+                "tutorial": "External financing comes from outside the business. Each source has different requirements: banks want collateral, MFIs are more flexible, grants are competitive, investors want equity, and tontines rely on community trust."
+              }
+            ]
+          },
+          {
+            "title": "Section B: Economics",
+            "marks": 33,
+            "questions": [
+              {
+                "id": 5,
+                "text": "With the aid of diagrams differentiate between change in quantity supply and change in supply.",
+                "marks": 13,
+                "answer": "Change in Quantity Supplied (6 marks):\nRefers to a movement ALONG the same supply curve caused ONLY by a change in the product's own price.\n\nDiagram (3 marks):\n- Draw an upward-sloping supply curve S.\n- Label point A at price P1, quantity Q1.\n- Label point B at price P2 (higher), quantity Q2 (higher).\n- Arrow along the curve from A to B.\n- Title: \"Movement Along Supply Curve (Change in Quantity Supplied)\"\n\nExplanation (3 marks):\n- When price rises from P1 to P2, quantity supplied increases from Q1 to Q2.\n- All other factors (technology, input costs, taxes) remain constant (ceteris paribus).\n- This is a change in quantity supplied, NOT a change in supply.\n\nChange in Supply (7 marks):\nRefers to a SHIFT of the entire supply curve caused by factors OTHER than the product's own price.\n\nDiagram (3 marks):\n- Draw two supply curves: S1 (original) and S2 (new, shifted right).\n- At the same price P, quantity shifts from Q1 to Q2.\n- Arrows showing curve shifting right.\n- Title: \"Shift of Supply Curve (Change in Supply)\"\n\nExplanation (4 marks):\n- Supply increases when: technology improves, input costs fall, taxes decrease, subsidies increase, number of sellers rises, or favorable weather (for agriculture).\n- Supply decreases from leftward shifts (opposite factors).\n- At every price level, a different quantity is supplied, showing a fundamental change in supply conditions.",
+                "tutorial": "Key distinction: Change in Quantity Supplied = movement ALONG the curve (price change only). Change in Supply = SHIFT of the curve (caused by technology, costs, taxes, etc.). Mnemonic: 'Price moves along, other factors shift.'"
+              },
+              {
+                "id": 6,
+                "text": "State and explain five (5) functions of commercial banks in Cameroon.",
+                "marks": 10,
+                "answer": "Five functions of commercial banks (2 marks each: 1 for stating, 1 for explaining):\n\n1. Accepting Deposits (2 marks): Banks accept savings, current, and fixed deposit accounts from individuals and businesses. This provides a safe place for money and pays interest to depositors. Examples: Afriland First Bank, BICEC.\n\n2. Granting Loans and Advances (2 marks): Banks provide loans (personal, business, mortgage) and overdrafts to customers, charging interest. This fuels economic activity by providing capital for investment and consumption.\n\n3. Money Transfer and Payment Services (2 marks): Banks facilitate domestic and international money transfers, electronic funds transfers, mobile banking, and cheque payments. Services like Express Union and Western Union partnerships enable remittances.\n\n4. Foreign Exchange Services (2 marks): Commercial banks buy and sell foreign currencies (euro, dollar, CFA) for customers engaged in international trade, travel, or remittances. They set exchange rates and facilitate forex transactions.\n\n5. Trade Finance (2 marks): Banks issue letters of credit (L/C), bank guarantees, and documentary collections to facilitate import/export transactions, reducing risk for both buyers and sellers in international trade.",
+                "tutorial": "Commercial banks are financial intermediaries that connect savers (depositors) with borrowers. In Cameroon, they also play a key role in the CEMAC zone's financial system and facilitate cross-border trade."
+              },
+              {
+                "id": 7,
+                "text": "State five (5) difficulties encounter in measuring national income.",
+                "marks": 10,
+                "answer": "Five difficulties in measuring national income (2 marks each):\n\n1. Double Counting (2 marks): Intermediate goods may be counted multiple times if not carefully distinguished from final goods. Fix: Use value-added method to count only the value added at each production stage.\n\n2. Informal Sector (2 marks): A large portion of economic activity in Cameroon occurs in the informal sector (street vendors, artisans, small farms) with no records, making it nearly impossible to capture accurately.\n\n3. Non-Monetary Transactions (2 marks): Subsistence agriculture, barter trade, and household services (cooking, childcare) are not recorded in monetary transactions but contribute to economic welfare.\n\n4. Price Changes / Inflation (2 marks): Changes in price levels distort nominal GDP comparisons over time. Real GDP (adjusted for inflation) must be used, but choosing the correct price index and base year is challenging.\n\n5. Inadequate Data Collection (2 marks): Limited statistical infrastructure, outdated census data, tax evasion, and underreporting of income lead to incomplete and unreliable data, especially in rural areas.",
+                "tutorial": "National income measurement always underestimates true economic activity due to the informal sector and non-monetary transactions. Economists use multiple methods (output, income, expenditure) to cross-check estimates."
+              }
+            ]
+          },
+          {
+            "title": "Section C: Company Law",
+            "marks": 33,
+            "questions": [
+              {
+                "id": 8,
+                "text": "Differentiate between public limited company and private limited company.",
+                "marks": 20,
+                "answer": "Differentiation between Public Limited Company (PLC) and Private Limited Company (Ltd) (2 marks each point):\n\n| Aspect | Public Limited Company (PLC) | Private Limited Company (Ltd) |\n|---|---|---|\n| 1. Membership | Minimum 7 members, no maximum. (2 marks) | Minimum 2, maximum 50 members. (2 marks) |\n| 2. Share Transfer | Shares are freely transferable on the stock exchange. (2 marks) | Shares cannot be freely transferred; restrictions in articles. (2 marks) |\n| 3. Public Invitation | Can invite the general public to subscribe for shares via prospectus. (2 marks) | Cannot invite the public to subscribe for shares. (2 marks) |\n| 4. Listing | Must be listed on a recognized stock exchange (e.g., Douala Stock Exchange). (2 marks) | Not listed; shares are held privately. (2 marks) |\n| 5. Disclosure | Must publish annual accounts, directors' reports, and hold AGMs publicly. (2 marks) | Less stringent disclosure; accounts filed privately with registrar. (2 marks) |\n| 6. Name | Must end with \"Public Limited Company\" or \"PLC\". (2 marks) | Must end with \"Limited\" or \"Ltd\". (2 marks) |\n| 7. Directors | Minimum 3 directors, may have different qualifications. (2 marks) | Minimum 1 director, often family-owned. (2 marks) |\n| 8. Capital | Minimum share capital requirements (higher, e.g., 10 million CFA). (2 marks) | Lower minimum capital (e.g., 1 million CFA). (2 marks) |\n| 9. Management | Separation of ownership and management; board of directors oversees. (2 marks) | Often owner-managed; more flexible management structure. (2 marks) |\n| 10. Commencement | Cannot commence business until certificate of trading is obtained. (2 marks) | Can commence business immediately upon incorporation. (2 marks) |\n\nAnswer any 10 points (20 marks total).",
+                "tutorial": "The key difference: a PLC can raise capital from the public through the stock exchange, while a Ltd is privately held. PLCs face stricter regulation and disclosure requirements to protect public investors."
+              },
+              {
+                "id": 9,
+                "text": "Identify and explain reasons why the courts may uplift the corporate veil in company law.",
+                "marks": 13,
+                "answer": "The corporate veil separates the company from its shareholders. Courts may \"lift\" or \"pierce\" this veil in the following circumstances (2 marks each for any 6-7 points, totaling 13 marks):\n\n1. Fraud or Improper Conduct (2 marks): When the company is used as a facade to conceal fraud, illegality, or evade legal obligations. Example: transfering assets to a company to avoid creditors (Gilford Motor Co v Horne).\n\n2. Evasion of Legal Obligations (2 marks): When incorporation is used to avoid existing legal duties — e.g., an employee incorporating to avoid a non-compete clause, or a landlord incorporating to circumvent rent control laws.\n\n3. Group Companies / Agency (2 marks): When a subsidiary is merely an agent or alter ego of the parent company, courts may treat them as one entity. Example: if the parent controls all decisions and the subsidiary has no independent will.\n\n4. Reduction of Members Below Minimum (2 marks): If the number of members falls below the legal minimum (2 for Ltd, 7 for PLC) for more than 6 months, members may become personally liable for debts.\n\n5. Trading Without Certificate (2 marks): If a public company commences business before obtaining a certificate of trading (or if a company trades before incorporation), those responsible may be personally liable.\n\n6. National Security or Public Interest (2 marks): Courts may lift the veil in times of war, national emergency, or when the company's activities threaten national security or public policy.\n\n7. Wrongful Trading (2 marks): Under insolvency law, if directors continue trading when the company is insolvent and cannot pay debts, courts may hold them personally liable for debts incurred during that period.\n\n8. Single Economic Entity (1 mark): In some cases, courts treat a group of companies as one economic unit, especially when the separation is purely technical and the companies are tightly integrated.",
+                "tutorial": "The corporate veil protects shareholders from personal liability. Courts only lift it in exceptional circumstances where justice requires looking behind the corporate form — primarily fraud, evasion, and abuse of the corporate structure."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "English",
+        "duration": "2 hours",
+        "credits": 1,
+        "description": "Specialty: All Specialties | 2024 Session",
+        "sections": [
+          {
+            "title": "Section A: Reading Comprehension",
+            "marks": 20,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Based on the passage, how does the author likely feel about leaving his post?\nA) Melancholic and reflective\nB) Angry and resentful\nC) Relieved and content\nD) Gleeful and giddy",
+                "marks": 2,
+                "answer": "A) Melancholic and reflective",
+                "tutorial": "The passage has a somber, reflective tone as the author takes leave of his congregation. Phrases like 'committing your souls to him' and 'taking my leave of you' convey melancholy, not anger, relief, or giddiness."
+              },
+              {
+                "id": 2,
+                "text": "In Paragraph 2, Sentence 2, the word 'strictest' most closely means:\nA) sternest\nB) harshest\nC) closest\nD) narrowest",
+                "marks": 2,
+                "answer": "C) closest",
+                "tutorial": "'Strictest union' refers to the closest/most intimate bond between minister and congregation, not a harsh or stern relationship."
+              },
+              {
+                "id": 3,
+                "text": "Over the course of the passage, the author expresses a particular concern for:\nA) ministers who no longer have congregations.\nB) young people in the church.\nC) orphans and widows.\nD) souls that are facing judgment.",
+                "marks": 2,
+                "answer": "B) young people in the church.",
+                "tutorial": "The author devotes most of the passage to addressing young people specifically, expressing his 'peculiar concern for the souls of the young people' and warning them against vice."
+              },
+              {
+                "id": 4,
+                "text": "Which lines in the passage best support the answer to the previous question?\nA) Paragraph 1, Sentence 1 ('Ministers . . . united')\nB) Paragraph 2, Sentence 3 ('The minister . . . world')\nC) Paragraph 3, Sentence 1 ('Since I . . . them')\nD) Paragraph 5, Sentence 1 ('But whether . . . you')",
+                "marks": 2,
+                "answer": "C) Paragraph 3, Sentence 1 ('Since I . . . them')",
+                "tutorial": "Paragraph 3 opens with 'Since I have been settled... I have always had a peculiar concern for the souls of the young people' -- directly supporting Q3's answer."
+              },
+              {
+                "id": 5,
+                "text": "According to the passage, what is the author's observation about young people's compliance with divine law?\nA) They sometimes but not always adhere to its standards\nB) They are less likely than both children and adults to comply\nC) They mock all who try to adhere to its standards of behaviour\nD) They are eager to please and afraid to disappoint",
+                "marks": 2,
+                "answer": "A) They sometimes but not always adhere to its standards",
+                "tutorial": "The author notes some young people walk in virtue while others engage in 'vice, vanity, and disorder,' indicating mixed compliance rather than total rejection or full devotion."
+              },
+              {
+                "id": 6,
+                "text": "The author implies in the fourth paragraph that he:\nA) used to fall prey to both vice and vanity in his youth before turning to religion.\nB) failed to institute the strict standards of behavior necessary to properly instruct the church's youth.\nC) wishes he could go back to his own youth in order to seek prosperity and happiness.\nD) may have been removed from his post because of overzealous care and policing of young people in his community.",
+                "marks": 2,
+                "answer": "D) may have been removed from his post because of overzealous care and policing of young people in his community.",
+                "tutorial": "In paragraph 4, the author says his efforts to suppress vice among youth gave 'so great offense, and by which I became so obnoxious' -- implying he was removed due to his strict measures."
+              },
+              {
+                "id": 7,
+                "text": "The author indicates that he believes that one day the 'great Judge' will:\nA) condemn him and all other sinners.\nB) confirm the wisdom of the author's counsel.\nC) pardon all souls who defied his laws.\nD) testify against the author's wayward congregation.",
+                "marks": 2,
+                "answer": "B) confirm the wisdom of the author's counsel.",
+                "tutorial": "The author says 'not doubting but God will approve and confirm it in that day' referring to his warnings, showing confidence that divine judgment will validate his teachings."
+              },
+              {
+                "id": 8,
+                "text": "The passage can primarily be classified as which of the following?\nA) A direct threat\nB) An offering of advice\nC) A circular argument\nD) A personal anecdote",
+                "marks": 2,
+                "answer": "B) An offering of advice",
+                "tutorial": "The entire passage is a farewell sermon offering counsel and warnings to the congregation, especially the youth -- a pastoral exhortation rather than a threat, argument, or mere story."
+              },
+              {
+                "id": 9,
+                "text": "Give a suitable title to the passage.",
+                "marks": 4,
+                "answer": "Acceptable titles (4 marks for any reasonable title):\n- 'A Minister's Farewell to His Flock'\n- 'Parting Counsel to the Youth'\n- 'The Last Sermon: Words of Wisdom and Warning'\n- 'A Pastor's Farewell Address'\n\nGrading: 1 mark for capturing farewell theme, 1 mark for referencing the audience (youth/congregation), 1 mark for appropriate tone, 1 mark for clarity.",
+                "tutorial": "A good title captures both the farewell context and the author's concern for the youth. Avoid overly generic titles like 'The Sermon' or 'A Speech'."
+              }
+            ]
+          },
+          {
+            "title": "Section B: Grammar & Vocabulary",
+            "marks": 30,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Even in the age of electronic mails, letters still got posted, _____? (Add question tag)",
+                "marks": 1,
+                "answer": "...didn't they?",
+                "tutorial": "The statement is positive ('got posted'), so the tag must be negative. The auxiliary 'did' is used because 'got' is the past tense of 'get'."
+              },
+              {
+                "id": 2,
+                "text": "They would still have to be posted for a long while yet, _____? (Add question tag)",
+                "marks": 1,
+                "answer": "...wouldn't they?",
+                "tutorial": "Positive statement with 'would' requires the negative tag 'wouldn't'. The pronoun 'they' replaces the subject."
+              },
+              {
+                "id": 3,
+                "text": "The boss sacked all his employees, _____? (Add question tag)",
+                "marks": 1,
+                "answer": "...didn't he?",
+                "tutorial": "'Sacked' is past tense, so the tag uses 'did' + not + pronoun. Positive statement requires negative tag."
+              },
+              {
+                "id": 4,
+                "text": "I am tired. We _____ (walk) for over an hour. Let's stop and rest for a while.",
+                "marks": 1,
+                "answer": "have been walking",
+                "tutorial": "Present perfect continuous tense is used for an action that started in the past and is still continuing (or just stopped). Structure: have/has + been + verb-ing."
+              },
+              {
+                "id": 5,
+                "text": "I _____ just _____ (turn off) the lights when the telephone _____ (ring).",
+                "marks": 1,
+                "answer": "had just turned off... rang",
+                "tutorial": "Past perfect ('had just turned off') is used for the first completed action, and simple past ('rang') for the second action that interrupted it."
+              },
+              {
+                "id": 6,
+                "text": "The careless businessman squanders all his money on unnecessary things. (Change to passive voice)",
+                "marks": 1,
+                "answer": "All his money is squandered on unnecessary things by the careless businessman.",
+                "tutorial": "Passive voice: object becomes subject + 'to be' (is) + past participle (squandered) + 'by' + agent."
+              },
+              {
+                "id": 7,
+                "text": "\"Did you send him your letter of apology yesterday?\", the man asked. (Change to indirect speech)",
+                "marks": 1,
+                "answer": "The man asked if/whether I had sent him my letter of apology the previous day/the day before.",
+                "tutorial": "Indirect speech for yes/no questions uses 'if/whether'. Tense shifts back: 'did send' to 'had sent'. 'Yesterday' becomes 'the previous day'."
+              },
+              {
+                "id": 8,
+                "text": "The money could not yield any interest because it was deposited in the current account.\nComplete with 'If': If this money wasn't deposited in the current account...",
+                "marks": 1,
+                "answer": "...it could yield some interest. OR ...it would be able to yield interest.",
+                "tutorial": "Third conditional (past unreal): If + past perfect (or past), would/could + base verb. Expresses a hypothetical situation contrary to past fact."
+              },
+              {
+                "id": 9,
+                "text": "She advised me to follow him. (Change to passive voice)",
+                "marks": 1,
+                "answer": "I was advised to follow him (by her).",
+                "tutorial": "The object 'me' becomes the subject 'I'. Passive: subject + was/were + past participle + (by agent)."
+              },
+              {
+                "id": 10,
+                "text": "John is (bad) _____ than Peter at Maths. (Write comparative form)",
+                "marks": 1,
+                "answer": "worse",
+                "tutorial": "'Bad' has an irregular comparative form: bad -> worse -> worst (not 'badder' or 'more bad')."
+              },
+              {
+                "marks": 2,
+                "answer": "D) make",
+                "tutorial": "The subject is 'trees and paint' (plural). The phrase 'along with...' does NOT make the subject singular. Plural subject requires 'make'."
+              },
+              {
+                "id": 12,
+                "text": "Where _____ the earrings that I left by the bathroom sink?\nA) was  B) were  C) is  D) are",
+                "marks": 1,
+                "answer": "D) are",
+                "tutorial": "'Earrings' is plural, so the plural form 'are' is required. 'Where are the earrings?'"
+              },
+              {
+                "id": 13,
+                "text": "Neither of those sharks circling your boogie board _____ hungry enough to bite.\nA) looks  B) look  C) looked  D) had looked",
+                "marks": 1,
+                "answer": "A) looks",
+                "tutorial": "With 'neither of', the verb is singular (formal usage). 'Neither' means 'not one' and takes a singular verb: 'neither... looks'."
+              },
+              {
+                "id": 14,
+                "text": "One hundred and fifty gallons _____ the amount of liquid the average living room rug can absorb.\nA) is  B) are  C) was  D) were",
+                "marks": 1,
+                "answer": "A) is",
+                "tutorial": "When referring to a quantity as a single measurement/amount, use a singular verb. 'One hundred and fifty gallons is the amount...'"
+              },
+              {
+                "id": 15,
+                "text": "Each pen, pencil, and paperclip _____ a tiny flag attached with Agnes' full name on it.\nA) will have  B) has  C) have  D) had",
+                "marks": 1,
+                "answer": "B) has",
+                "tutorial": "With 'each', the verb is singular even when listing multiple items. 'Each pen, pencil, and paperclip has...'"
+              },
+              {
+                "id": 16,
+                "text": "Asteroids and comets slamming into Earth _____ Marge.\nA) worries  B) worry  C) worried  D) used to worry",
+                "marks": 1,
+                "answer": "B) worry",
+                "tutorial": "The subject 'Asteroids and comets' is plural. 'Slamming into Earth' is a participial phrase, not the main verb. Plural subject requires 'worry'."
+              },
+              {
+                "id": 17,
+                "text": "Someone -- perhaps Emmanuel or Paul -- _____ the right wine to serve with earthworm lasagna.\nA) knew  B) will know  C) knows  D) know",
+                "marks": 1,
+                "answer": "C) knows",
+                "tutorial": "The subject is 'someone', which is singular. The parenthetical phrase 'perhaps Emmanuel or Paul' does not change subject-verb agreement."
+              },
+              {
+                "id": 18,
+                "text": "These scissors _____ so dull that I'm not sure you could slice butter with them!\nA) is  B) are  C) has been  D) had been",
+                "marks": 1,
+                "answer": "B) are",
+                "tutorial": "'Scissors' is a plural noun (it always takes a plural verb). 'These scissors are...'"
+              },
+              {
+                "id": 19,
+                "text": "Physics _____ proven to be Jerry's easiest subject this semester.\nA) has  B) have  C) had  D) will have",
+                "marks": 1,
+                "answer": "A) has",
+                "tutorial": "'Physics' ends in 's' but is a singular subject (name of a field of study). It takes a singular verb: 'Physics has proven...'"
+              },
+              {
+                "id": 20,
+                "text": "Briefly explain what each of the following proverbs and idioms mean:\n\na) Add insult to injury.\nb) Cost an arm and a leg.\nc) A picture paints a thousand words.\nd) Once in a blue moon.\ne) Let the cat out of the bag.",
+                "marks": 5,
+                "answer": "a) Add insult to injury (1 mark): To make a bad situation even worse by saying or doing something that further offends someone who has already been harmed.\nb) Cost an arm and a leg (1 mark): Extremely expensive; costing a very large amount of money.\nc) A picture paints a thousand words (1 mark): A visual image can convey an idea or story more effectively than a lengthy description.\nd) Once in a blue moon (1 mark): Very rarely; almost never; happening infrequently.\ne) Let the cat out of the bag (1 mark): To reveal a secret unintentionally or prematurely.",
+                "tutorial": "Idioms are fixed expressions with meanings that cannot be deduced from the individual words. Study them as whole phrases."
+              },
+              {
+                "id": 21,
+                "text": "For each word find another which is pronounced similarly but which is spelt differently and has a different meaning (homophone):\n\na) Pear\nb) Still\nc) Male\nd) Feel\ne) Rice",
+                "marks": 5,
+                "answer": "a) Pear (1 mark) -> Pair (a set of two). Also: Pare (to trim).\nb) Still (1 mark) -> Distill (to purify). Or just 'till' (from 'until') -- though less standard. Most likely: style/stile are not exact homophones. Alternative answer: 'still' itself is fine; a common homophone pair is less common. Accept: 'steel' is close but not exact. The best match may be contextual.\nc) Male (1 mark) -> Mail (postal correspondence).\nd) Feel (1 mark) -> Fell (past tense of fall, or to cut down a tree).\ne) Rice (1 mark) -> Rise (to go up).",
+                "tutorial": "Homophones are words that sound the same but have different spellings and meanings. Common pairs: pear/pair, male/mail, rice/rise."
+              }
+            ]
+          },
+          {
+            "title": "Section C: Spoken English",
+            "marks": 20,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Identify the word with an odd sound in each group:\n1. Bark, bake, back, dam\n2. Sea, see, seak, set\n3. Meat, meat, lead, met\n4. Tall, tail, tale, take\n5. Lack, lake, sad, black",
+                "marks": 5,
+                "answer": "1. dam (different vowel sound /ae/ vs /a:/ or /ei/)\n2. seak (not a real word; but among real words: 'set' has a different vowel sound /e/ vs /i:/)\n3. met (different vowel sound /e/ vs /i:/)\n4. take (different vowel sound /ei/ vs /o:/ or /ai/)\n5. sad (different vowel sound /ae/ vs /ei/ or /ae/)",
+                "tutorial": "Listen for the vowel sound. 'Bark' has /a:/, 'bake' has /ei/, 'back' has /ae/, 'dam' has /ae/ -- so 'bark' or 'bake' could be odd. However, the intended answer is typically based on minimal pairs."
+              },
+              {
+                "id": 2,
+                "text": "Transcribe the following words phonetically:\n1. Sail\n2. Waist\n3. Car\n4. Boy\n5. We",
+                "marks": 5,
+                "answer": "1. Sail: /seɪl/\n2. Waist: /weɪst/\n3. Car: /kɑː(r)/\n4. Boy: /bɔɪ/\n5. We: /wiː/",
+                "tutorial": "Phonetic transcription uses IPA symbols to represent the sounds of words. Learn the IPA symbols for English vowels and consonants."
+              },
+              {
+                "id": 3,
+                "text": "Put the stress mark on each word (indicate which syllable is stressed):\n1. Export\n2. Danger\n3. Popular\n4. Water\n5. Manage",
+                "marks": 5,
+                "answer": "1. Export: /'ɛkspɔːt/ (stress on first syllable as noun; second as verb)\n2. Danger: /'deɪndʒə(r)/ (stress on first syllable)\n3. Popular: /'pɒpjʊlə(r)/ (stress on first syllable)\n4. Water: /'wɔːtə(r)/ (stress on first syllable)\n5. Manage: /'mænɪdʒ/ (stress on first syllable)",
+                "tutorial": "Stress mark (') is placed BEFORE the stressed syllable. Most 2-syllable English nouns stress the first syllable; verbs often stress the second."
+              },
+              {
+                "id": 4,
+                "text": "Write down the number of syllables in each word:\n1. Generously\n2. Appreciation\n3. Informal\n4. Challenges\n5. Intelligently",
+                "marks": 5,
+                "answer": "1. Generously: 4 syllables (gen-e-rous-ly)\n2. Appreciation: 5 syllables (ap-pre-ci-a-tion)\n3. Informal: 3 syllables (in-for-mal)\n4. Challenges: 3 syllables (chal-leng-es)\n5. Intelligently: 5 syllables (in-tel-li-gent-ly)",
+                "tutorial": "Count vowel sounds, not syllables. Each syllable has exactly one vowel sound. Double-check by saying the word slowly and counting chin drops."
+              }
+            ]
+          },
+          {
+            "title": "Section D: Composition",
+            "marks": 30,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Write a composition of not more than 450 to 500 words on ONE of the following topics:\n\n1. I must make a change\n2. Write a letter to a carpeting company about defective carpeting. Pay attention to correct spelling, paragraphing, punctuation and the essentials of business writing. Orderly presentation of your work and standard English will be an advantage. Your address: Boulevard Hotel, Britain, Bonia Street 214.\n3. My first day in the University",
+                "marks": 30,
+                "answer": "This is a composition question. Marks are awarded for:\n- Content and relevance to the chosen topic (10 marks)\n- Organization and structure (introduction, body, conclusion) (5 marks)\n- Grammar, spelling, and punctuation (5 marks)\n- Vocabulary and expression (5 marks)\n- Length (450-500 words) and presentation (5 marks)\n\nNo single correct answer -- students must write an original composition on one of the three topics.",
+                "tutorial": "For composition questions: plan before writing, use paragraphing, vary sentence structure, check spelling and grammar, and stay within the word limit. For the letter option, use proper business letter format (sender address, date, recipient address, salutation, body, closing)."
+              }
+            ]
+          }
+        ]
+      },
+  ]
   },
   "2025": {
     "papers": [

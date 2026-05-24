@@ -30,7 +30,13 @@ const _notesYear1 = {
             { "type": "related", "value": [
               { "year": "2020", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
               { "year": "2021", "paper": "Computer Technology", "section": "Section A", "qid": "Q2" }
-            ]}
+            ,
+               { "year": "2022", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },,
+               { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },,
+               { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },,
+               { "year": "2025", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2021", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Computer Fundamentals", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Be ready to draw and label a block diagram of the IPO cycle", "Distinguish carefully between RAM (volatile, used during work) and ROM (non-volatile, stores startup instructions)", "Know what each component does AND give a real-world analogy for each"]
         },
@@ -52,8 +58,16 @@ const _notesYear1 = {
               "Two's complement: invert all bits, then add 1 (this is how computers store negative numbers)"
             ]},
             { "type": "related", "value": [
-              { "year": "2021", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }
-            ]}
+              { "year": "2021", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2022", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2025", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }
+            ,
+              { "year": "2020", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },,
+              { "year": "2021", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Practice binary-decimal-hex conversions repeatedly — they are guaranteed to appear", "For two's complement, remember: flip all bits then add 1", "When adding binary numbers, remember 1+1=0 with a carry of 1 (just like 9+1=0 with carry in decimal)"]
         },
@@ -77,7 +91,12 @@ const _notesYear1 = {
             ]},
             { "type": "related", "value": [
               { "year": "2022", "paper": "Computer Technology", "section": "Section A", "qid": "Q3" }
-            ]}
+            ,
+               { "year": "2022", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },,
+               { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },,
+               { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },,
+               { "year": "2025", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2021", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["The simplest distinction: system software makes the computer usable; application software makes it useful", "Be able to classify any given software as system or application — this is a very common question", "The operating system is the most important example of system software — know its functions"]
         },
@@ -103,7 +122,11 @@ const _notesYear1 = {
             { "type": "related", "value": [
               { "year": "2020", "paper": "Computer Technology", "section": "Section A", "qid": "Q2" },
               { "year": "2021", "paper": "Computer Technology", "section": "Section A", "qid": "Q3" }
-            ]}
+            ,
+               { "year": "2022", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },,
+               { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },,
+               { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },,
+               { "year": "2025", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["For each device, memorize: (1) what category it belongs to (input/output/both), (2) what it does, (3) one real-world use", "Touch screen is a special case — it is BOTH input (touch sensor) and output (display)"]
         },
@@ -126,7 +149,12 @@ const _notesYear1 = {
             ]},
             { "type": "related", "value": [
               { "year": "2020", "paper": "Computer Technology", "section": "Section A", "qid": "Q4" }
-            ]}
+            ,
+               { "year": "2022", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },,
+               { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },,
+               { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },,
+               { "year": "2025", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2021", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["For each generation, memorize: (1) the key technology, (2) one example computer, (3) one defining characteristic", "The pattern is: smaller, faster, cheaper, more reliable with each generation", "Fifth generation is about making computers intelligent (AI), not just faster"]
         }
@@ -148,12 +176,15 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>NOT Gate (Inverter):</b> The NOT gate has only one input and simply flips it. If input is 1, output is 0; if input is 0, output is 1. Written as Q = A'. Think of a light switch that is always in the opposite position." },
             { "type": "text", "value": "<b>NAND and NOR Gates (Universal Gates):</b> NAND is NOT + AND: it outputs the opposite of AND. So NAND outputs 0 only when all inputs are 1; it outputs 1 for every other combination. NOR is NOT + OR: it outputs 1 only when all inputs are 0. These are called \"universal gates\" because you can build ANY other gate — AND, OR, NOT, XOR — using only NAND gates." },
             { "type": "text", "value": "<b>XOR Gate (Exclusive OR):</b> XOR outputs 1 when the inputs are DIFFERENT (one is 0 and the other is 1). If both inputs are the same (both 0 or both 1), XOR outputs 0. XOR is extremely important in arithmetic circuits — it is the core of binary addition." },
-            { "type": "mermaid", "value": "flowchart LR\n  subgraph AND\n    A1[A] & B1[B] --> G1[AND] --> O1[Q = 1 only\nif both are 1]\n  end\n  subgraph OR\n    A2[A] & B2[B] --> G2[OR] --> O2[Q = 1 if\nat least one is 1]\n  end\n  subgraph NOT\n    A3[A] --> G3[NOT] --> O3[Q = opposite\nof A]\n  end" },
+            { "type": "mermaid", "value": "flowchart LR\n  subgraph AND\n    A1[A] --> G1[AND]\n    B1[B] --> G1[AND]\n    G1[AND] --> O1[Q = 1 only\nif both are 1]\n  end\n  subgraph OR\n    A2[A] --> G2[OR]\n    B2[B] --> G2[OR]\n    G2[OR] --> O2[Q = 1 if\nat least one is 1]\n  end\n  subgraph NOT\n    A3[A] --> G3[NOT] --> O3[Q = opposite\nof A]\n  end" },
             { "type": "text", "value": "<b>How to build a truth table:</b> A truth table lists all possible input combinations and the corresponding output. For 2 inputs, there are 2\u00b2 = 4 rows (00, 01, 10, 11). For 3 inputs, 2\u00b3 = 8 rows. To construct one: (1) list all input combinations in binary counting order, (2) for each row, evaluate the gate's output based on its rule." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },
               { "year": "2021", "paper": "Digital Electronics", "section": "Section A", "qid": "Q2" }
-            ]}
+            ,
+               { "year": "2022", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },,
+               { "year": "2025", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },
+              { "year": "2021", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Memorize the truth tables for all 7 gates — AND, OR, NOT, NAND, NOR, XOR, XNOR", "Universal gates (NAND, NOR) can be used to build any other gate — this is a classic exam question", "XOR is the basis for binary addition circuits"]
         },
@@ -174,7 +205,10 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Worked Example:</b> Simplify F = A \u00b7 (A + B).<br>Step 1: Apply distributive: A \u00b7 A + A \u00b7 B<br>Step 2: Idempotent: A \u00b7 A = A, so we get A + A \u00b7 B<br>Step 3: Absorption: A + A \u00b7 B = A \u00b7 (1 + B) = A \u00b7 1 = A<br>So the expression simplifies from A \u00b7 (A + B) down to just A!" },
             { "type": "related", "value": [
               { "year": "2021", "paper": "Digital Electronics", "section": "Section A", "qid": "Q3" }
-            ]}
+            ,
+               { "year": "2020", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },,
+               { "year": "2022", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },,
+               { "year": "2025", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["De Morgan's theorem is the MOST frequently tested topic — memorize both forms cold", "When simplifying, show each step and cite which law you used (exams give marks for the method)", "Practice simplifying increasingly complex expressions"]
         },
@@ -190,7 +224,10 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>T Flip-Flop (Toggle):</b> When T=1, the output toggles at each clock pulse. When T=0, the output stays the same. T flip-flops are ideal for building counters." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "Digital Electronics", "section": "Section A", "qid": "Q4" }
-            ]}
+            ,
+               { "year": "2020", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },,
+               { "year": "2022", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },,
+               { "year": "2025", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know the characteristic table and excitation table for each flip-flop type", "The SR flip-flop has an invalid state (S=1,R=1) — the JK flip-flop fixes this by toggling instead", "D flip-flops are the most commonly used for building registers"]
         }
@@ -216,8 +253,11 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Variance (\u03c3\u00b2):</b> Average of squared deviations from the mean. Formula: \u03c3\u00b2 = \u03a3(x - x\u0304)\u00b2 / n." },
             { "type": "text", "value": "<b>Standard Deviation (\u03c3):</b> Square root of variance. The most important measure of spread — in the same units as the original data. In a normal distribution: about 68% of values lie within 1\u03c3 of the mean, 95% within 2\u03c3, and 99.7% within 3\u03c3." },
             { "type": "related", "value": [
-              { "year": "2020", "paper": "Mathematics", "section": "Section A", "qid": "Q1" }
-            ]}
+              { "year": "2020", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },
+              { "year": "2022", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Mathematics", "section": "Section A", "qid": "Q1" }
+            ,
+               { "year": "2021", "paper": "Mathematics", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know which measure of central tendency to use for different types of data", "Variance = (standard deviation)\u00b2; Standard deviation = \u221a(variance)", "The 68-95-99.7 rule for normal distribution appears regularly"]
         },
@@ -233,7 +273,10 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Bayes' Theorem:</b> P(A|B) = P(B|A) \u00d7 P(A) / P(B). This lets you reverse conditional probabilities." },
             { "type": "text", "value": "<b>Tree Diagrams:</b> A visual tool for multi-stage problems. Each branch represents a possible outcome with its probability. To find the probability of a particular path, multiply along the branches. To find the probability of an event with multiple paths, add the probabilities of each path." },
             { "type": "related", "value": [
-              { "year": "2021", "paper": "Mathematics", "section": "Section A", "qid": "Q1" }
+              { "year": "2020", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },
+              { "year": "2021", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },
+              { "year": "2022", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Mathematics", "section": "Section A", "qid": "Q1" }
             ]}
           ],
           "examTips": ["Tree diagrams are your best friend for multi-stage probability — draw them for every problem", "Distinguish carefully between mutually exclusive (cannot both happen) and independent (one does not affect the other)", "P(not happening) = 1 - P(happening)"]
@@ -251,7 +294,11 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Z-Scores:</b> Z = (x - \u03bc) / \u03c3. A Z-score tells you how many standard deviations a value is from the mean. Z=2 means 2\u03c3 above average. Z-scores let you compare values from different normal distributions." },
             { "type": "related", "value": [
               { "year": "2022", "paper": "Mathematics", "section": "Section A", "qid": "Q2" }
-            ]}
+            ,
+               { "year": "2020", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },,
+               { "year": "2021", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },,
+               { "year": "2022", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },,
+               { "year": "2023", "paper": "Mathematics", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know when to use Binomial vs Poisson", "The 68-95-99.7 rule is your shortcut for normal distribution problems", "Z-score formula: Z = (x - \u03bc) / \u03c3"]
         },
@@ -268,7 +315,11 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Calculating slope b:</b> b = \u03a3(x - x\u0304)(y - y\u0304) / \u03a3(x - x\u0304)\u00b2. This minimizes the sum of squared vertical distances from each point to the line (\"least squares\")." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Mathematics", "section": "Section B", "qid": "Q1" }
-            ]}
+            ,
+               { "year": "2020", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },,
+               { "year": "2021", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },,
+               { "year": "2022", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },,
+               { "year": "2023", "paper": "Mathematics", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know the formula for Pearson's r and what values mean (strong/weak, positive/negative)", "CORRELATION DOES NOT IMPLY CAUSATION — this is a guaranteed exam question", "Regression equation Y = a + bX — learn how to calculate b (slope)"]
         }
@@ -290,8 +341,14 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Entrepreneur vs Manager:</b> An entrepreneur starts the business and takes the risk. A manager runs day-to-day operations for a salary. An entrepreneur can also be a manager, but a manager is not necessarily an entrepreneur." },
             { "type": "text", "value": "<b>Intrapreneurship:</b> Employees acting like entrepreneurs within an existing company. They develop new products or processes using company resources. Google's policy of allowing 20% time for personal projects led to Gmail." },
             { "type": "related", "value": [
-              { "year": "2020", "paper": "Entrepreneurship", "section": "Section A", "qid": "Q1" }
-            ]}
+              { "year": "2020", "paper": "Entrepreneurship", "section": "Section A", "qid": "Q1" },
+              { "year": "2024", "paper": "Enterprise Creation", "section": "Entrepreneurship", "qid": "Q1" }
+            ,
+              { "year": "2021", "paper": "Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Enterprise Creation", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },
+              { "year": "2024", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know the difference between entrepreneur (risk-taker, business starter) and manager (employee, runs operations)", "Intrapreneurship = entrepreneurship within an existing organization"]
         },
@@ -303,8 +360,14 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Why important?</b> (1) Forces you to think through every aspect before investing. (2) Helps identify problems before they happen. (3) Banks and investors require one. (4) Serves as a benchmark to compare actual results against." },
             { "type": "text", "value": "<b>Components:</b> (1) Executive Summary — one-page overview (write last). (2) Company Description — legal structure, mission, goals. (3) Market Analysis — target market, competitors, competitive advantage. (4) Organization and Management — leadership team, org chart. (5) Product or Service — features, benefits, IP. (6) Marketing and Sales Strategy — pricing, advertising, distribution. (7) Funding Request — how much, how used, repayment terms. (8) Financial Projections — P&L, cash flow, balance sheet for 3-5 years." },
             { "type": "related", "value": [
-              { "year": "2021", "paper": "Entrepreneurship", "section": "Section B", "qid": "Q1" }
-            ]}
+              { "year": "2021", "paper": "Entrepreneurship", "section": "Section B", "qid": "Q1" },
+              { "year": "2024", "paper": "Enterprise Creation", "section": "Entrepreneurship", "qid": "Q2" },
+              { "year": "2024", "paper": "Enterprise Creation", "section": "Entrepreneurship", "qid": "Q3" }
+            ,
+              { "year": "2020", "paper": "Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Enterprise Creation", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Be able to list and explain all 8 components of a business plan — this is a common question", "The executive summary is the MOST important part — it is often the only part investors read"]
         },
@@ -325,7 +388,12 @@ const _notesYear1 = {
             ]},
             { "type": "related", "value": [
               { "year": "2020", "paper": "Entrepreneurship", "section": "Section A", "qid": "Q3" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2020", "paper": "Company Law", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Limited liability is the most important concept — it protects personal assets from business debts", "Double taxation (corporation pays tax, then shareholders pay tax on dividends) is a key disadvantage of C corporations"]
         },
@@ -343,7 +411,13 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Market Research:</b> Primary = surveys, interviews, focus groups, observation (new data). Secondary = existing reports, government statistics, industry publications (existing data)." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "Entrepreneurship", "section": "Section A", "qid": "Q2" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2021", "paper": "Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Enterprise Creation", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Memorize the 4Ps (Product, Price, Place, Promotion) and be able to explain each with an example", "Primary research = new data you collect yourself; Secondary = existing data collected by others"]
         }
@@ -365,7 +439,12 @@ const _notesYear1 = {
             { "type": "mermaid", "value": "flowchart TD\n  A[Scarcity] --> B[Choice is necessary]\n  B --> C[Opportunity Cost]\n  B --> D[Resource Allocation]\n  A --> E[PPF Model]" },
             { "type": "related", "value": [
               { "year": "2020", "paper": "General Economics", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+               { "year": "2022", "paper": "General Economics", "section": "Section A", "qid": "Q1" },
+              { "year": "2022", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Enterprise Creation", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Opportunity cost is the foundation of economics — be ready to calculate it in any scenario", "Marginal analysis: compare additional (not average) benefits vs additional costs", "A PPF shifts outward when resources increase or technology improves"]
         },
@@ -380,8 +459,13 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>What shifts the supply curve?</b> Technology, input prices, number of sellers, taxes/subsidies, expectations." },
             { "type": "text", "value": "<b>Market Equilibrium:</b> Where supply = demand. At this price, quantity consumers want = quantity producers want to sell. Price above equilibrium = surplus (prices fall). Price below equilibrium = shortage (prices rise)." },
             { "type": "related", "value": [
-              { "year": "2021", "paper": "General Economics", "section": "Section A", "qid": "Q1" }
-            ]}
+              { "year": "2021", "paper": "General Economics", "section": "Section A", "qid": "Q1" },
+              { "year": "2024", "paper": "Enterprise Creation", "section": "Economics", "qid": "Q5" }
+            ,
+               { "year": "2020", "paper": "General Economics", "section": "Section A", "qid": "Q1" },,
+               { "year": "2022", "paper": "General Economics", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Enterprise Creation", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Be able to draw supply and demand curves and show equilibrium, surplus, and shortage", "Distinguish between movement ALONG a curve (price change) and SHIFT of the curve (other factors)", "Ceteris paribus = 'all other things being equal'"]
         },
@@ -402,7 +486,12 @@ const _notesYear1 = {
             ]},
             { "type": "related", "value": [
               { "year": "2020", "paper": "General Economics", "section": "Section B", "qid": "Q2" }
-            ]}
+            ,
+               { "year": "2022", "paper": "General Economics", "section": "Section A", "qid": "Q1" },
+              { "year": "2022", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Enterprise Creation", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["The key distinguishing factors: number of firms, product differentiation, and entry barriers", "Monopoly has maximum market power (price maker); perfect competition has zero (price taker)"]
         },
@@ -419,7 +508,13 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>The Business Cycle:</b> Expansion (growth) \u2192 Peak (top) \u2192 Contraction/Recession (decline) \u2192 Trough (bottom) \u2192 Expansion again." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "General Economics", "section": "Section A", "qid": "Q3" }
-            ]}
+            ,
+               { "year": "2022", "paper": "General Economics", "section": "Section A", "qid": "Q1" },
+              { "year": "2020", "paper": "General Economics", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Enterprise Creation", "section": "Section A", "qid": "Q1" },,
+              { "year": "2024", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Fiscal policy = government taxes + spending; Monetary policy = central bank interest rates + money supply", "The business cycle has four phases: expansion, peak, contraction/recession, trough"]
         }
@@ -441,8 +536,14 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Memorandum of Association:</b> The \"birth certificate\" — contains: name, registered office, objectives, liability clause, share capital." },
             { "type": "text", "value": "<b>Articles of Association:</b> The \"rule book\" — internal management rules: director appointments, meetings, voting, dividends." },
             { "type": "related", "value": [
-              { "year": "2020", "paper": "Company Law", "section": "Section A", "qid": "Q1" }
-            ]}
+              { "year": "2020", "paper": "Company Law", "section": "Section A", "qid": "Q1" },
+              { "year": "2024", "paper": "Enterprise Creation", "section": "Company Law", "qid": "Q8" }
+            ,
+              { "year": "2020", "paper": "Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2021", "paper": "Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "Enterprise Creation", "section": "Section A", "qid": "Q1" },,
+              { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Private vs Public: private cannot sell shares to the public, public can", "Memorandum deals with external matters (name, objectives); Articles deal with internal management (rules)"]
         },
@@ -458,7 +559,8 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Duty Not to Make Secret Profits:</b> Cannot use position to make personal profits at company expense. Business opportunities learned through position must first be offered to the company." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Company Law", "section": "Section B", "qid": "Q1" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Company Law", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Directors owe duties to the COMPANY, not to shareholders individually", "Fiduciary duty is the most important — act in good faith and in the company's best interest"]
         },
@@ -475,7 +577,8 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Board Meetings:</b> Directors meet regularly (monthly/quarterly) to manage affairs. Shareholders do not attend board meetings." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Company Law", "section": "Section B", "qid": "Q2" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Company Law", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Shareholders OWN the company; directors MANAGE the company", "AGM is held once per year; EGM is for urgent matters between AGMs"]
         },
@@ -490,7 +593,8 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Order of Payment:</b> (1) Secured creditors (banks with charges), (2) Preferential creditors (employees' wages, taxes), (3) Floating charge holders, (4) Unsecured creditors (suppliers), (5) Shareholders (preference, then ordinary)." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "Company Law", "section": "Section B", "qid": "Q2" }
-            ]}
+            ,
+              { "year": "2020", "paper": "Company Law", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know the order of payment in liquidation — this is frequently tested", "The priority: secured creditors \u2192 preferential \u2192 floating charge \u2192 unsecured \u2192 shareholders"]
         }
@@ -513,7 +617,12 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>International Law:</b> Treaties ratified by Cameroon become part of domestic law (e.g., UDHR, African Charter)." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Law and Citizenship", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+               { "year": "2022", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },,
+               { "year": "2023", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },,
+               { "year": "2024", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },,
+               { "year": "2025", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },
+              { "year": "2021", "paper": "Law and Citizenship", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Cameroon's bijural system (English Common Law + French Civil Law) is a unique feature", "The hierarchy: Written law \u2192 Customary law \u2192 Case law \u2192 Doctrine"]
         },
@@ -530,7 +639,11 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Rights of Citizens vs Non-Citizens:</b> Citizens have full political rights (vote, hold office). Non-citizens have basic human rights but cannot vote or hold public office." },
             { "type": "related", "value": [
               { "year": "2021", "paper": "Law and Citizenship", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+               { "year": "2022", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },,
+               { "year": "2023", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },,
+               { "year": "2024", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },,
+               { "year": "2025", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Jus sanguinis (blood/parentage) vs Jus soli (birthplace) — the most tested distinction", "Know how citizenship can be acquired AND lost"]
         },
@@ -546,7 +659,12 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Limitations:</b> No right is absolute. Rights can be limited for national security, public order, public health, or protecting others' rights. Any limitation must be prescribed by law and necessary in a democratic society." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "Law and Citizenship", "section": "Section B", "qid": "Q1" }
-            ]}
+            ,
+               { "year": "2022", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },,
+               { "year": "2023", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },,
+               { "year": "2024", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },,
+               { "year": "2025", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },
+              { "year": "2021", "paper": "Law and Citizenship", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know the three generations: Civil/Political (freedom from interference), Economic/Social (right to services), Environmental (collective rights)", "Rights are not absolute — they can be limited for public good"]
         }
@@ -573,7 +691,11 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Sentence Structure:</b> Subject + Verb + Object: Je mange une pomme (I eat an apple)." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "French Language", "section": "Section A", "qid": "Q1" }
-            ]}
+            ,
+               { "year": "2021", "paper": "French Language", "section": "Section A", "qid": "Q1" },,
+               { "year": "2022", "paper": "French Language", "section": "Section A", "qid": "Q1" },,
+               { "year": "2023", "paper": "French Language", "section": "Section A", "qid": "Q1" },,
+               { "year": "2025", "paper": "French Language", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Learn present tense of four essential verbs: \u00eatre, avoir, aller, faire", "Negation: ne ... pas around the verb"]
         },
@@ -588,7 +710,11 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Classroom:</b> Je ne comprends pas (I don't understand), R\u00e9p\u00e9tez s'il vous pla\u00eet (Repeat please), Parlez-vous anglais? (Do you speak English?)." },
             { "type": "related", "value": [
               { "year": "2020", "paper": "French Language", "section": "Section A", "qid": "Q2" }
-            ]}
+            ,
+               { "year": "2021", "paper": "French Language", "section": "Section A", "qid": "Q1" },,
+               { "year": "2022", "paper": "French Language", "section": "Section A", "qid": "Q1" },,
+               { "year": "2023", "paper": "French Language", "section": "Section A", "qid": "Q1" },,
+               { "year": "2025", "paper": "French Language", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Practice writing short paragraphs about yourself (name, age, nationality, occupation, family)", "Know numbers 1-100 thoroughly"]
         }
@@ -609,8 +735,13 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Tense Consistency:</b> Do not shift tenses without reason. If you start in past tense, stay in past tense throughout." },
             { "type": "text", "value": "<b>Articles:</b> 'a' before consonant SOUNDS (a university — starts with 'y' sound), 'an' before vowel SOUNDS (an hour — 'h' is silent, starts with 'ow' sound)." },
             { "type": "related", "value": [
-              { "year": "2020", "paper": "English Language", "section": "Section A", "qid": "Q1" }
-            ]}
+              { "year": "2020", "paper": "English Language", "section": "Section A", "qid": "Q1" },
+              { "year": "2024", "paper": "English", "section": "Grammar & Vocabulary", "qid": "Q1" }
+            ,
+              { "year": "2021", "paper": "English Language", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "English Language", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "English Language", "section": "Section A", "qid": "Q1" },
+              { "year": "2024", "paper": "English", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Subject-verb agreement is the most frequently tested grammar rule", "Know the difference between: your/you're, its/it's, their/there/they're, affect/effect"]
         },
@@ -622,8 +753,12 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Comprehension Strategy:</b> (1) Skim the passage (first/last paragraphs, first sentence of each paragraph) for main idea. (2) Read the questions to know what to look for. (3) Scan for keywords from questions in the passage. (4) Answer in your own words, supporting answers with evidence from the passage." },
             { "type": "text", "value": "<b>Summary Tips:</b> Identify main points, omit examples and repetition, paraphrase in your own words, stay within word limit, maintain logical flow with connecting words (however, therefore, consequently), write in complete sentences." },
             { "type": "related", "value": [
-              { "year": "2020", "paper": "English Language", "section": "Section A", "qid": "Q2" }
-            ]}
+              { "year": "2020", "paper": "English Language", "section": "Section A", "qid": "Q2" },
+              { "year": "2024", "paper": "English", "section": "Reading Comprehension", "qid": "Q1" }
+            ,
+              { "year": "2021", "paper": "English Language", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "English Language", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "English Language", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["For summaries: identify main points, omit examples, use your own words, stay within word limit", "Read the questions BEFORE re-reading the passage in detail"]
         },
@@ -635,8 +770,12 @@ const _notesYear1 = {
             { "type": "text", "value": "<b>Formal Letter:</b> Sender's address (top right), Date, Recipient's address (left), Salutation (Dear Sir/Madam or Dear Mr. Name), Subject line, Body (intro, details, action requested), Closing (Yours faithfully for Dear Sir; Yours sincerely for Dear Mr. Name), Signature." },
             { "type": "text", "value": "<b>Informal Letter:</b> Address only top right. Salutation: Dear John. Conversational tone with contractions. Closing: Best wishes, Love, Yours." },
             { "type": "related", "value": [
-              { "year": "2020", "paper": "English Language", "section": "Section B", "qid": "Q1" }
-            ]}
+              { "year": "2020", "paper": "English Language", "section": "Section B", "qid": "Q1" },
+              { "year": "2024", "paper": "English", "section": "Composition", "qid": "Q1" }
+            ,
+              { "year": "2021", "paper": "English Language", "section": "Section A", "qid": "Q1" },,
+              { "year": "2022", "paper": "English Language", "section": "Section A", "qid": "Q1" },,
+              { "year": "2023", "paper": "English Language", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Every essay needs: introduction (with thesis), body paragraphs (one idea each), conclusion", "Formal letter: Yours faithfully for Dear Sir; Yours sincerely for Dear Mr. Name"]
         }
