@@ -9441,6 +9441,278 @@ const examData = {
           }
         ]
       },
+      {
+        "title": "Computer Technology",
+        "duration": "4 hours",
+        "credits": 6,
+        "description": "Specialty: SOFTWARE ENGINEERING (SWE) | 2024 Session",
+        "sections": [
+          {
+            "title": "Section A: I. MCQs",
+            "marks": 20,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Which of the following concepts make extensive use of arrays?\na. Binary trees\nb. Scheduling of processes\nc. Caching\nd. Spatial locality",
+                "marks": 1,
+                "answer": "d. Spatial locality"
+              },
+              {
+                "id": 2,
+                "text": "Assuming int is of 4bytes, what is the size of int arr[15];?\na. 15\nb. 19\nc. 11\nd. 60",
+                "marks": 1,
+                "answer": "d. 60"
+              },
+              {
+                "id": 3,
+                "text": "The data structure required for Breadth First Traversal on a graph is?\na. Stack\nb. Array\nc. Queue\nd. Tree",
+                "marks": 1,
+                "answer": "c. Queue"
+              },
+              {
+                "id": 4,
+                "text": "Cartesian product in relational algebra is\na. Binary operator\nb. Unary operator\nc. Ternary operator\nd. Not defined",
+                "marks": 1,
+                "answer": "a. Binary operator"
+              },
+              {
+                "id": 5,
+                "text": "The view of total database content is:\na. Conceptual view\nb. Internal view\nc. Physical view\nd. External view",
+                "marks": 1,
+                "answer": "a. Conceptual view"
+              },
+              {
+                "id": 6,
+                "text": "Architecture of a database can be viewed as:\na. One level\nb. Two levels\nc. Three levels\nd. Four levels",
+                "marks": 1,
+                "answer": "c. Three levels"
+              },
+              {
+                "id": 7,
+                "text": "Database schema is written in:\na. DML\nb. HCL\nc. DDL\nd. DCL",
+                "marks": 1,
+                "answer": "c. DDL"
+              },
+              {
+                "id": 8,
+                "text": "Which technique is used for data protection?\na. Data piracy\nb. Authentication\nc. Encryption\nd. None of these",
+                "marks": 1,
+                "answer": "c. Encryption"
+              },
+              {
+                "id": 9,
+                "text": "Coaxial cables used in _________ networks\na. Telephone\nb. Cable TV\nc. Both A and B\nd. NONE OF these",
+                "marks": 1,
+                "answer": "c. Both A and B"
+              },
+              {
+                "id": 10,
+                "text": "Optical Fiber transmit _________.\na. light signal\nb. radio signal\nc. electrical signal\nd. Both A and B",
+                "marks": 1,
+                "answer": "a. light signal"
+              },
+              {
+                "id": 11,
+                "text": "HTTP port number used is _________.\na. 80\nb. 441\nc. 443\nd. 449",
+                "marks": 1,
+                "answer": "a. 80"
+              },
+              {
+                "id": 12,
+                "text": "In the handshake protocol which is the message type first sent between client and server?\na. server_hello\nb. client_hello\nc. hello_request\nd. certificate_request",
+                "marks": 1,
+                "answer": "b. client_hello"
+              },
+              {
+                "id": 13,
+                "text": "Inside which HTML element do we put the JavaScript?\na. <js>\nb. <javascript>\nc. <scripting>\nd. <script>",
+                "marks": 1,
+                "answer": "d. <script>"
+              },
+              {
+                "id": 14,
+                "text": "Which one is not a programming language?\na. HTML\nb. CSS\nc. JavaScript\nd. PHP",
+                "marks": 1,
+                "answer": "a. HTML"
+              },
+              {
+                "id": 15,
+                "text": "Which one is a method of inserting a style sheet?\na. Inline style sheet\nb. External style sheet\nc. Internal style sheet\nd. All above",
+                "marks": 1,
+                "answer": "d. All above"
+              },
+              {
+                "id": 16,
+                "text": "An example of a variable declaration in JavaScript:\na. $a;\nb. Var a;\nc. Variable a;\nd. None above",
+                "marks": 1,
+                "answer": "d. None above"
+              },
+              {
+                "id": 17,
+                "text": "An example of a variable declaration in PHP:\na. $a;\nb. Var a;\nc. Variable a;\nd. None above",
+                "marks": 1,
+                "answer": "a. $a;"
+              },
+              {
+                "id": 18,
+                "text": "The RSA signature uses which hash algorithm?\na. MD5\nb. SHA-1\nc. MD5 and SHA-1\nd. None of the mentioned",
+                "marks": 1,
+                "answer": "d. None of the mentioned"
+              },
+              {
+                "id": 19,
+                "text": "Choose the function of a router\na. changing the data from one format to another\nb. error detection in data\nc. send the packet to the uplinks\nd. None of the above",
+                "marks": 1,
+                "answer": "c. send the packet to the uplinks"
+              },
+              {
+                "id": 20,
+                "text": "Which utility is used to find the number of routers between a source and destination?\na. route\nb. Traceroute\nc. Ifconfig\nd. Ipconfig",
+                "marks": 1,
+                "answer": "b. Traceroute"
+              }
+            ]
+          },
+          {
+            "title": "Section A: II. Structural Questions",
+            "marks": 20,
+            "questions": [
+              {
+                "id": 1,
+                "marks": 4,
+                "text": "Name three (03) examples of application software and give a feature of each.",
+                "answer": "1. Microsoft Word (Word Processor) — creates, edits, and formats text documents with features like spell check and tables.\n2. Microsoft Excel (Spreadsheet) — organizes data in rows/columns with formulas, charts, and pivot tables for analysis.\n3. Google Chrome (Web Browser) — accesses and displays web pages with tabbed browsing, bookmarks, and extensions."
+              },
+              {
+                "id": 2,
+                "marks": 4,
+                "text": "Explain the functions of the following:\na) Motherboard (2 marks)\nb) PCIe card (2 marks)",
+                "answer": "a) Motherboard: The main printed circuit board that connects all hardware components (CPU, RAM, storage, peripherals) and provides communication pathways (buses) between them.\nb) PCIe card: An expansion card that plugs into a PCI Express slot to add high-speed capabilities (graphics card, network card, SSD) with dedicated point-to-point connections."
+              },
+              {
+                "id": 3,
+                "marks": 3,
+                "text": "What are the features of a standard chipset?",
+                "answer": "1. Manages data flow between CPU, memory, and peripherals.\n2. Controls communication buses (PCIe, USB, SATA).\n3. Provides integrated features like audio, networking, and graphics support.\n4. Determines compatibility with CPU generations and RAM types.\n5. Manages power distribution and system clock signals."
+              },
+              {
+                "id": 4,
+                "marks": 2,
+                "text": "Differentiate between compiler and linker.",
+                "answer": "Compiler: Translates source code (high-level language) into object code (machine code) for a single source file, checking syntax and semantics.\nLinker: Combines multiple object files and libraries into a single executable, resolving external references (function calls, variable addresses) between them."
+              },
+              {
+                "id": 5,
+                "marks": 3,
+                "text": "Compare dynamic RAM and static RAM.",
+                "answer": "DRAM: Uses capacitors that need periodic refreshing (every few ms), slower access, higher density (more memory per chip), cheaper, consumes more power due to refresh cycles. Used for main memory (RAM).\nSRAM: Uses flip-flops, no refresh needed, faster access, lower density, more expensive, consumes less static power. Used for CPU cache memory."
+              },
+              {
+                "id": 6,
+                "marks": 4,
+                "text": "Name the three (03) main buses in a computer system.\na) (1 mark) List them\nb) (3 marks) Give their characteristics.",
+                "answer": "a) Three main buses: 1. Data Bus  2. Address Bus  3. Control Bus\n\nb) Characteristics:\n- Data Bus: Carries actual data between CPU, memory, and I/O. Bidirectional. Width (8, 16, 32, 64 bits) determines how much data transfers at once.\n- Address Bus: Carries memory addresses from CPU to memory/I/O. Unidirectional. Width determines maximum addressable memory (e.g., 32-bit = 4GB).\n- Control Bus: Carries control signals (read/write, interrupt, clock, reset). Bidirectional. Coordinates bus access and timing."
+              }
+            ]
+          },
+          {
+            "title": "Section B: I. Programming",
+            "marks": 20,
+            "questions": [
+              {
+                "id": 1,
+                "marks": 4,
+                "text": "Distinguish between the following as seen in computer programming with examples if necessary:\na) (1 mark) High level and low level programming language\nb) (2 marks) C programming language and C++\nc) (1 mark) Program interpretation and program compilation",
+                "answer": "a) High-level language: closer to human language (Python, Java), uses English-like syntax, requires compiler/interpreter. Low-level language: closer to machine code (Assembly), uses mnemonics and registers, hardware-specific.\n\nb) C: Procedural language, functions as basic unit, manual memory management (malloc/free), no OOP features. C++: Multi-paradigm (procedural + OOP), classes and objects, constructors/destructors, inheritance, polymorphism, templates, STL library, operator overloading.\n\nc) Interpretation: Source code executed line-by-line by interpreter (Python, JavaScript). No separate compilation step. Slower execution. Compilation: Source code translated entirely to machine code before execution (C, C++). Faster execution. Requires compilation step."
+              },
+              {
+                "id": 2,
+                "marks": 6,
+                "text": "Write a C code that computes the factorial of an integer n. When does the code fail (upper limit on n for the result to be correct) and why?",
+                "answer": "#include <stdio.h>\nint main() {\n    int n, i;\n    unsigned long long fact = 1;\n    printf(\"Enter n: \");\n    scanf(\"%d\", &n);\n    if (n < 0) { printf(\"Factorial not defined\\n\"); return 1; }\n    for (i = 1; i <= n; i++) {\n        fact *= i;\n    }\n    printf(\"Factorial of %d = %llu\\n\", n, fact);\n    return 0;\n}\n\nThe code fails when n > 20 because unsigned long long (64 bits) overflows beyond 20! = 2,432,902,008,176,640,000. The maximum value is 18,446,744,073,709,551,615 (2^64 - 1). n = 21 already exceeds this."
+              },
+              {
+                "id": 3,
+                "marks": 6,
+                "text": "Consider 2 three-dimensional vectors X and Y whose components are specified by the user and stored in 1D arrays. Write the C code that verifies if the two vectors are orthogonal.\n(two vectors a and b are orthogonal if their dot product a.b is zero. If a = x1i + y1j + z1k and b = x2i + y2j + z2k then a.b = x1x2 + y1y2 + z1z2)",
+                "answer": "#include <stdio.h>\nint main() {\n    double X[3], Y[3];\n    double dot = 0;\n    int i;\n    printf(\"Enter 3 components of vector X: \");\n    for (i = 0; i < 3; i++) scanf(\"%lf\", &X[i]);\n    printf(\"Enter 3 components of vector Y: \");\n    for (i = 0; i < 3; i++) scanf(\"%lf\", &Y[i]);\n    for (i = 0; i < 3; i++) dot += X[i] * Y[i];\n    if (dot == 0) printf(\"Vectors are orthogonal\\n\");\n    else printf(\"Vectors are NOT orthogonal (dot = %.2lf)\\n\", dot);\n    return 0;\n}"
+              },
+              {
+                "id": 4,
+                "marks": 4,
+                "text": "Write a C++ program that computes the factorial of a number using recursion.",
+                "answer": "#include <iostream>\nusing namespace std;\nunsigned long long factorial(int n) {\n    if (n <= 1) return 1;\n    return n * factorial(n - 1);\n}\nint main() {\n    int n;\n    cout << \"Enter n: \";\n    cin >> n;\n    if (n < 0) { cout << \"Factorial not defined\" << endl; return 1; }\n    cout << \"Factorial of \" << n << \" = \" << factorial(n) << endl;\n    return 0;\n}"
+              }
+            ]
+          },
+          {
+            "title": "Section B: II. Database",
+            "marks": 15,
+            "questions": [
+              {
+                "id": 1,
+                "marks": 5,
+                "text": "What is Normalization?\na) (2 marks) Define normalization\nb) (3 marks) Explain its significance in database design and development.",
+                "answer": "a) Normalization is the process of organizing data in a database to reduce redundancy and eliminate anomalies (insertion, update, deletion). It involves decomposing tables into smaller, related tables through normal forms (1NF, 2NF, 3NF, BCNF).\n\nb) Significance:\n- Eliminates data redundancy (reduces storage)\n- Prevents update anomalies (change in one place only)\n- Prevents insertion anomalies (no dummy values needed)\n- Prevents deletion anomalies (deleting one fact does not lose others)\n- Ensures data integrity and consistency\n- Makes database more flexible for queries and maintenance"
+              },
+              {
+                "id": 2,
+                "marks": 10,
+                "text": "Mrs ISABELLA has a Restaurant that is operating with a manual information system. She decided to implement a database management system to keep information about their customers, record of orders, payment and sales.\na) (4 marks) Explain the stages you will follow to develop this database.\nb) (6 marks) Model the database for this restaurant using ERD.",
+                "answer": "a) Database development stages:\n1. Requirements Analysis - Identify what data to store (customers, orders, payments, sales)\n2. Conceptual Design - Create ERD with entities, attributes, and relationships\n3. Logical Design - Map ERD to relational schema (tables, primary keys, foreign keys)\n4. Physical Design - Implement using DBMS (MySQL, PostgreSQL), define indexes, constraints\n5. Implementation and Testing - Create tables, insert sample data, test queries\n6. Maintenance - Monitor performance, backup, optimize\n\nb) ERD:\n\nEntities:\n- Customer (CustomerID PK, Name, Phone, Email, Address)\n- Order (OrderID PK, OrderDate, TotalAmount, CustomerID FK)\n- Payment (PaymentID PK, Amount, PaymentDate, Method, OrderID FK)\n- Sale (SaleID PK, SaleDate, ItemName, Quantity, Price, OrderID FK)\n\nRelationships:\n- Customer 1---M Order (one customer can place many orders)\n- Order 1---M Payment (one order can have multiple payments)\n- Order 1---M Sale (one order can have multiple sale items)\n\n```mermaid\nerDiagram\n    CUSTOMER ||--o{ ORDER : places\n    ORDER ||--o{ PAYMENT : has\n    ORDER ||--o{ SALE : contains\n    CUSTOMER { int CustomerID PK }\n    ORDER { int OrderID PK }\n    PAYMENT { int PaymentID PK }\n    SALE { int SaleID PK }\n```"
+              }
+            ]
+          },
+          {
+            "title": "Section B: III. Networking",
+            "marks": 15,
+            "questions": [
+              {
+                "id": 1,
+                "marks": 5,
+                "text": "Give the functions of the following network components:\na) Hub\nb) Modem\nc) NIC Card\nd) Switch\ne) Router",
+                "answer": "a) Hub: Connects multiple devices in a LAN, broadcasts all data to all ports (no filtering). Operates at Layer 1 (Physical). Half-duplex.\n\nb) Modem: Modulates/demodulates digital signals to analog for transmission over telephone/cable lines. Converts digital data from computer to analog for transmission, and back.\n\nc) NIC Card: Network Interface Card provides physical connection to the network. Has unique MAC address. Handles data encapsulation and media access control.\n\nd) Switch: Connects devices in a LAN, forwards data only to the specific destination port using MAC addresses. Operates at Layer 2 (Data Link). Full-duplex. Reduces collisions.\n\ne) Router: Connects different networks. Forwards packets based on IP addresses. Operates at Layer 3 (Network). Determines best path using routing protocols. Connects LAN to WAN/Internet."
+              },
+              {
+                "id": 2,
+                "marks": 2,
+                "text": "Explain the difference between a MAC Address and an IP Address.",
+                "answer": "MAC Address: Physical/hardware address burned into NIC (48-bit). Operates at Layer 2 (Data Link). Used for local network communication. Permanent and unique per device. Format: 00:1A:2B:3C:4D:5E.\nIP Address: Logical/software address assigned by network (32-bit IPv4 or 128-bit IPv6). Operates at Layer 3 (Network). Used for routing across networks. Can change based on network. Format: 192.168.1.1."
+              },
+              {
+                "id": 3,
+                "marks": 3,
+                "text": "Explain CSMA/CD and CSMA/CA.",
+                "answer": "CSMA/CD (Carrier Sense Multiple Access with Collision Detection): Used in wired Ethernet (IEEE 802.3). Devices listen before transmitting; if collision detected, they stop, wait random time, and retry. Listen while talking.\n\nCSMA/CA (Carrier Sense Multiple Access with Collision Avoidance): Used in wireless networks (IEEE 802.11). Devices listen before transmitting; if channel busy, wait random time. Uses RTS/CTS frames to reserve channel and avoid collisions. Listen before talking."
+              },
+              {
+                "id": 4,
+                "marks": 5,
+                "text": "Explain the TCP/IP Model.",
+                "answer": "TCP/IP Model has 4 layers:\n\n1. Application Layer (L4): Provides protocols for user applications. Includes HTTP, FTP, SMTP, DNS, DHCP. Data unit: Message.\n\n2. Transport Layer (L3): Ensures end-to-end communication. TCP (connection-oriented, reliable, flow control, error checking) and UDP (connectionless, faster, no guarantee). Data unit: Segment (TCP) / Datagram (UDP).\n\n3. Internet Layer (L2): Routes packets across networks. IP addressing and routing. Protocol: IP (IPv4/IPv6), ICMP, ARP. Data unit: Packet.\n\n4. Network Access Layer (L1): Physical transmission over hardware. Defines how bits are sent over cables/wireless. Includes Ethernet, Wi-Fi. Data unit: Frame.\n\nEncapsulation: Data -> Segment -> Packet -> Frame -> Bits at each layer."
+              }
+            ]
+          },
+          {
+            "title": "Section B: IV. Data Structures and Algorithm",
+            "marks": 10,
+            "questions": [
+              {
+                "id": 1,
+                "marks": 3,
+                "text": "List and describe three types of Data Structures.",
+                "answer": "1. Arrays: Contiguous memory allocation, indexed access O(1), fixed size, same data type. Used for storing collections with random access.\n\n2. Linked Lists: Nodes with data and pointer to next node. Dynamic size, sequential access O(n). Types: singly, doubly, circular. Efficient insertions/deletions.\n\n3. Stacks: LIFO (Last In, First Out) structure. Operations: push, pop, peek. Used in function calls, undo operations, expression evaluation."
+              },
+              {
+                "id": 2,
+                "marks": 7,
+                "text": "Given the array A = [ 1 7 3 9 5 10 8 2 ]\na) (4 marks) Convert it to a binary tree.\nb) (3 marks) Using binary search, locate 5 in the array.",
+                "answer": "a) Binary Tree by inserting elements sequentially (not BST):\n\nLevel-order tree:\n       1\n     /   \\\n    7     3\n   / \\   / \\\n  9   5 10  8\n /\n2\n\nb) Binary search (requires sorted array):\nSorted A = [1, 2, 3, 5, 7, 8, 9, 10]\nSearching for 5:\n- Step 1: low=0, high=7, mid=3 (value 5) — found!\nFound at index 3 in the sorted array (1 step)."
+              }
+            ]
+          }
+        ]
+      },
   ]
   },
   "2025": {
