@@ -13,9 +13,10 @@
 <header>
   <div class="container">
     <a href="#" class="logo" onclick="navigateTo('home')">HND <span>Exam Hub</span></a>
+    <nav id="mainNav" class="main-nav"></nav>
     <div class="header-controls">
       <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search questions..." oninput="debouncedSearch(this.value)">
+        <input type="text" id="searchInput" placeholder="Search exams &amp; notes..." oninput="debouncedSearch(this.value)">
         <span class="icon">&#128269;</span>
       </div>
       <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">&#9790;</button>
@@ -28,6 +29,7 @@
 </main>
 
 <script src="js/data.js"></script>
+<script src="js/notes.js"></script>
 <script src="js/prism.js"></script>
 <script src="js/app.js"></script>
 </body>
