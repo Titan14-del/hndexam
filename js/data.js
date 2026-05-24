@@ -128,7 +128,7 @@ const examData = {
                 "id": 2,
                 "text": "Login form + PHP processing (see figure below).\n\n**Figure 1: Login Form**\n```\n+------------------------------------------+\n|                  LOGIN                    |\n+------------------------------------------+\n|                                          |\n|  Username: [__________________________]  |\n|                                          |\n|  Password: [__________________________]  |\n|                                          |\n|           [ Submit ]                     |\n|                                          |\n+------------------------------------------+\n```\n\nCreate the HTML form (as shown above) and write the PHP code to process the login.",
                 "marks": 11,
-                "answer": "<form method=post><input name=login><input type=password name=pass><input type=submit>\n<?php echo $_POST['login'];?>"
+                "answer": "&lt;form method=post&gt;&lt;input name=login&gt;&lt;input type=password name=pass&gt;&lt;input type=submit&gt;\n<?php echo $_POST['login'];?>"
               }
             ]
           },
@@ -1947,13 +1947,13 @@ const examData = {
                 "id": 1,
                 "text": "HTML button calling displaymessage() that prompts for name, shows alert.",
                 "marks": 4,
-                "answer": "<button onclick='displaymessage()'>Click</button><script>function displaymessage(){var n=prompt('Name:');alert('Your name is '+n);}</script>"
+                "answer": "&lt;button onclick='displaymessage()'>Click&lt;/button&gt;&lt;script&gt;function displaymessage(){var n=prompt('Name:');alert('Your name is '+n);}&lt;/script&gt;"
               },
               {
                 "id": 2,
                 "text": "HTML5 form with placeholders and required.",
                 "marks": 6,
-                "answer": "<form><input type='text' placeholder='TUBUO' required><br><input type='email' placeholder='...' required><br><input type='submit'></form>"
+                "answer": "&lt;form&gt;&lt;input type='text' placeholder='TUBUO' required>&lt;br&gt;&lt;input type='email' placeholder='...' required>&lt;br&gt;&lt;input type='submit'>&lt;/form&gt;"
               },
               {
                 "id": 3,
@@ -2002,7 +2002,7 @@ const examData = {
                 "id": 2,
                 "text": "Weight avg algorithm: a)Control structures? b)Flowchart. c)Algorithm vs program.",
                 "marks": 10,
-                "answer": "a)Sequence + Selection. b)Start->Input->If negative?→Error/Compute→Display->End. c)Algorithm=conceptual; Program=executable.\n\n```mermaid\nflowchart TD\n    START([Start]) --> I1[Input scores a1, a2, a3]\n    I1 --> I2[Input weights w1, w2, w3]\n    I2 --> CALC[Calculate weighted average<br/>avg = a1×w1 + a2×w2 + a3×w3]\n    CALC --> DEC{avg >= 50?}\n    DEC -->|Yes| P[Display PASS]\n    DEC -->|No| F[Display FAIL]\n    P --> END([End])\n    F --> END\n```"
+                "answer": "a)Sequence + Selection. b)Start->Input->If negative?→Error/Compute→Display->End. c)Algorithm=conceptual; Program=executable.\n\n```mermaid\nflowchart TD\n    START([Start]) --> I1[Input scores a1, a2, a3]\n    I1 --> I2[Input weights w1, w2, w3]\n    I2 --> CALC[Calculate weighted average&lt;br/>avg = a1×w1 + a2×w2 + a3×w3]\n    CALC --> DEC{avg >= 50?}\n    DEC -->|Yes| P[Display PASS]\n    DEC -->|No| F[Display FAIL]\n    P --> END([End])\n    F --> END\n```"
               },
               {
                 "id": 3,
@@ -2074,7 +2074,7 @@ const examData = {
                 "id": 2,
                 "text": "Meta charset tag.",
                 "marks": 2,
-                "answer": "<meta charset='UTF-8'>"
+                "answer": "&lt;meta charset='UTF-8'>"
               },
               {
                 "id": 3,
@@ -2086,7 +2086,7 @@ const examData = {
                 "id": 4,
                 "text": "Types of CSS?",
                 "marks": 5,
-                "answer": "There are three types of CSS:\n\n(1) Inline CSS (1 mark): Applied directly to an HTML element using the style attribute. Example: <p style=\"color:red\">Text</p>. Affects only that single element.\n\n(2) Internal CSS (2 marks): Defined within the <style> tag inside the <head> section of an HTML page. Affects all elements of that type on the same page. Example: <style> p { color: red; } </style>.\n\n(3) External CSS (2 marks): Written in a separate .css file linked via <link> in HTML. Affects all pages that link to it. Best for large sites — separates content from presentation entirely. Example: <link rel=\"stylesheet\" href=\"styles.css\">."
+                "answer": "There are three types of CSS:\n\n(1) Inline CSS (1 mark): Applied directly to an HTML element using the style attribute. Example: &lt;p style=\"color:red\">Text&lt;/p&gt;. Affects only that single element.\n\n(2) Internal CSS (2 marks): Defined within the &lt;style&gt; tag inside the &lt;head&gt; section of an HTML page. Affects all elements of that type on the same page. Example: &lt;style&gt; p { color: red; } &lt;/style&gt;.\n\n(3) External CSS (2 marks): Written in a separate .css file linked via &lt;link&gt; in HTML. Affects all pages that link to it. Best for large sites — separates content from presentation entirely. Example: &lt;link rel=\"stylesheet\" href=\"styles.css\">."
               },
               {
                 "id": 5,
@@ -2153,7 +2153,7 @@ const examData = {
                 "id": 5,
                 "text": "What is Cloud Computing? Give an illustration of it.",
                 "marks": 4,
-                "answer": "Cloud computing is the on-demand delivery of computing services (servers, storage, databases, networking, software) over the internet on a pay-as-you-go basis (2 marks).\n\n```mermaid\nflowchart LR\n    subgraph \"Cloud Computing Model\"\n        USERS[Users/Devices] --> NET[Internet]\n        NET --> CLOUD[Cloud Provider Infrastructure]\n        subgraph \"Service Models\"\n            I[IaaS<br/>Servers, Storage]\n            P[PaaS<br/>Platform, Runtime]\n            S[SaaS<br/>Google Drive, Office 365]\n        end\n        CLOUD --- I\n        CLOUD --- P\n        CLOUD --- S\n    end\n    USERS -.-> S\n```\n\nIllustration (2 marks): Google Drive — users store files on Google's servers and access them from any device anywhere; Google manages the infrastructure and the user only pays for storage needed."
+                "answer": "Cloud computing is the on-demand delivery of computing services (servers, storage, databases, networking, software) over the internet on a pay-as-you-go basis (2 marks).\n\n```mermaid\nflowchart LR\n    subgraph \"Cloud Computing Model\"\n        USERS[Users/Devices] --> NET[Internet]\n        NET --> CLOUD[Cloud Provider Infrastructure]\n        subgraph \"Service Models\"\n            I[IaaS&lt;br/>Servers, Storage]\n            P[PaaS&lt;br/>Platform, Runtime]\n            S[SaaS&lt;br/>Google Drive, Office 365]\n        end\n        CLOUD --- I\n        CLOUD --- P\n        CLOUD --- S\n    end\n    USERS -.-> S\n```\n\nIllustration (2 marks): Google Drive — users store files on Google's servers and access them from any device anywhere; Google manages the infrastructure and the user only pays for storage needed."
               },
               {
                 "id": 6,
@@ -2389,13 +2389,13 @@ const examData = {
                 "id": 1,
                 "text": "What are tags? Give two HTML tags that don't come in a pair (self-closing).",
                 "marks": 4,
-                "answer": "Tags are markup elements in HTML. Self-closing: <br>, <hr>, <img>, <input>."
+                "answer": "Tags are markup elements in HTML. Self-closing: &lt;br&gt;, &lt;hr&gt;, &lt;img&gt;, &lt;input&gt;."
               },
               {
                 "id": 2,
                 "text": "What are style sheets? Explain three ways of applying style sheets in a web document.",
                 "marks": 5,
-                "answer": "CSS defines presentation. Three ways: (1) Inline — style attribute on element; (2) Internal — <style> tag in <head>; (3) External — linked .css file via <link>."
+                "answer": "CSS defines presentation. Three ways: (1) Inline — style attribute on element; (2) Internal — &lt;style&gt; tag in &lt;head&gt;; (3) External — linked .css file via &lt;link&gt;."
               },
               {
                 "id": 3,
@@ -2413,13 +2413,13 @@ const examData = {
                 "id": 5,
                 "text": "What are some of the common lists that can be used when designing a page?",
                 "marks": 5,
-                "answer": "Ordered list (<ol>), Unordered list (<ul>), Definition list (<dl>), Nested lists, Menu list (<menu>)."
+                "answer": "Ordered list (&lt;ol&gt;), Unordered list (&lt;ul&gt;), Definition list (&lt;dl&gt;), Nested lists, Menu list (&lt;menu&gt;)."
               },
               {
                 "id": 6,
                 "text": "Write an HTML table tag sequence that outputs: 50 pes 100 500 / 1 pes 5 50",
                 "marks": 3,
-                "answer": "<table border='1'><tr><td>50<td>pes<td>100<td>500<tr><td>1<td>pes<td>5<td>50</table>"
+                "answer": "&lt;table border='1'>&lt;tr&gt;&lt;td&gt;50&lt;td&gt;pes&lt;td&gt;100&lt;td&gt;500&lt;tr&gt;&lt;td&gt;1&lt;td&gt;pes&lt;td&gt;5&lt;td&gt;50&lt;/table&gt;"
               }
             ]
           },
@@ -2664,7 +2664,7 @@ const examData = {
               },
               {
                 "id": 30,
-                "text": "To refer to an external CSS file within an HTML document, we use: A) <CSS>...</CSS> B) <LINK>...</LINK> C) <Script>...</Script> D) <LINK />",
+                "text": "To refer to an external CSS file within an HTML document, we use: A) &lt;CSS&gt;...&lt;/CSS&gt; B) &lt;LINK&gt;...&lt;/LINK&gt; C) &lt;Script&gt;...&lt;/Script&gt; D) &lt;LINK />",
                 "marks": 1,
                 "answer": "D"
               },
@@ -4745,7 +4745,7 @@ const examData = {
                 "id": 2,
                 "text": "Create HTML5 form titled 'HND Student Information' with Name, Matricule, DOB, Gender (radio), Subject (dropdown), Submit.",
                 "marks": 8,
-                "answer": "<!DOCTYPE html>\n<html><head><title>HND Student Information</title></head><body>\n<h2>HND Student Information</h2>\n<form action=\"submit.php\" method=\"POST\">\n    Name: <input type=\"text\" name=\"name\" required><br>\n    Matricule: <input type=\"text\" name=\"matricule\" required><br>\n    DOB: <input type=\"date\" name=\"dob\" required><br>\n    Gender: <input type=\"radio\" name=\"gender\" value=\"male\"> Male\n    <input type=\"radio\" name=\"gender\" value=\"female\"> Female<br>\n    Subject: <select name=\"subject\">\n        <option value=\"SWE\">Software Engineering</option>\n        <option value=\"CSN\">Computer Science</option>\n    </select><br>\n    <input type=\"submit\">\n</form>\n</body></html>"
+                "answer": "<!DOCTYPE html>\n&lt;html&gt;&lt;head&gt;&lt;title&gt;HND Student Information&lt;/title&gt;&lt;/head&gt;&lt;body&gt;\n&lt;h2>HND Student Information&lt;/h2>\n&lt;form action=\"submit.php\" method=\"POST\">\n    Name: &lt;input type=\"text\" name=\"name\" required>&lt;br&gt;\n    Matricule: &lt;input type=\"text\" name=\"matricule\" required>&lt;br&gt;\n    DOB: &lt;input type=\"date\" name=\"dob\" required>&lt;br&gt;\n    Gender: &lt;input type=\"radio\" name=\"gender\" value=\"male\"> Male\n    &lt;input type=\"radio\" name=\"gender\" value=\"female\"> Female&lt;br&gt;\n    Subject: &lt;select name=\"subject\">\n        &lt;option value=\"SWE\">Software Engineering&lt;/option&gt;\n        &lt;option value=\"CSN\">Computer Science&lt;/option&gt;\n    &lt;/select&gt;&lt;br&gt;\n    &lt;input type=\"submit\">\n&lt;/form&gt;\n&lt;/body&gt;&lt;/html&gt;"
               }
             ]
           },
@@ -4873,13 +4873,13 @@ const examData = {
                 "id": 3,
                 "text": "How to create frames? What is a frameset?",
                 "marks": 5,
-                "answer": "Frames divide window into sections. Frameset defines layout (<frameset cols=\"30%,70%\">). Deprecated in HTML5 (use iframe/CSS)."
+                "answer": "Frames divide window into sections. Frameset defines layout (&lt;frameset cols=\"30%,70%\">). Deprecated in HTML5 (use iframe/CSS)."
               },
               {
                 "id": 4,
                 "text": "Form elements supporting media in HTML5?",
                 "marks": 5,
-                "answer": "<input type=\"file\">, <audio>, <video>, <canvas>, <input type=\"image\">."
+                "answer": "&lt;input type=\"file\">, &lt;audio&gt;, &lt;video&gt;, &lt;canvas&gt;, &lt;input type=\"image\">."
               },
               {
                 "id": 5,
@@ -6009,7 +6009,7 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "Identify the port shown in the diagram below.\n\n```mermaid\nflowchart LR\n    subgraph \"Computer Port\"\n        P[\"USB Port (Type-A)\"]\n    end\n    subgraph \"Connector\"\n        C[\"USB Type-A Plug<br/>4 pins: Vbus, D-, D+, GND\"]\n    end\n    P <--> C\n```\n\n**Diagram:** A rectangular 4-pin female port on the computer side with a matching rectangular male connector.\n\nGive TWO reasons for its widespread use.",
+                "text": "Identify the port shown in the diagram below.\n\n```mermaid\nflowchart LR\n    subgraph \"Computer Port\"\n        P[\"USB Port (Type-A)\"]\n    end\n    subgraph \"Connector\"\n        C[\"USB Type-A Plug&lt;br/>4 pins: Vbus, D-, D+, GND\"]\n    end\n    P <--> C\n```\n\n**Diagram:** A rectangular 4-pin female port on the computer side with a matching rectangular male connector.\n\nGive TWO reasons for its widespread use.",
                 "marks": 4,
                 "answer": "USB (Universal Serial Bus) port.\nReasons: 1) Hot-swappable (connect/disconnect without restart). 2) Supports many device types (keyboard, mouse, storage, printer)."
               },
@@ -6982,14 +6982,14 @@ const examData = {
                 "id": "a",
                 "text": "Create an HTML form with Email, Zip Code, Country (dropdown: USA/UK/INDIA). Write HTML and JavaScript to validate all fields and email format.",
                 "marks": 8,
-                "answer": "<form id=\"myForm\" action=\"process.php\" method=\"POST\" onsubmit=\"return validateForm()\">\n    Email: <input type=\"email\" name=\"email\" id=\"email\" required><br>\n    Zip Code: <input type=\"text\" name=\"zip\" id=\"zip\" required><br>\n    Country: <select name=\"country\" id=\"country\" required>\n        <option value=\"\">choose yours</option>\n        <option value=\"USA\">USA</option>\n        <option value=\"UK\">UK</option>\n        <option value=\"INDIA\">INDIA</option>\n    </select><br>\n    <input type=\"submit\" value=\"Submit\">\n</form>\n<script>\nfunction validateForm() {\n    var email = document.getElementById(\"email\").value;\n    var zip = document.getElementById(\"zip\").value;\n    var country = document.getElementById(\"country\").value;\n    if (email == \"\" || zip == \"\" || country == \"\") {\n        alert(\"All fields must be filled!\"); return false;\n    }\n    var emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\n    if (!emailPattern.test(email)) {\n        alert(\"Enter a valid email!\"); return false;\n    }\n    return true;\n}\n</script>",
+                "answer": "&lt;form id=\"myForm\" action=\"process.php\" method=\"POST\" onsubmit=\"return validateForm()\">\n    Email: &lt;input type=\"email\" name=\"email\" id=\"email\" required>&lt;br&gt;\n    Zip Code: &lt;input type=\"text\" name=\"zip\" id=\"zip\" required>&lt;br&gt;\n    Country: &lt;select name=\"country\" id=\"country\" required>\n        &lt;option value=\"\">choose yours&lt;/option&gt;\n        &lt;option value=\"USA\">USA&lt;/option&gt;\n        &lt;option value=\"UK\">UK&lt;/option&gt;\n        &lt;option value=\"INDIA\">INDIA&lt;/option&gt;\n    &lt;/select&gt;&lt;br&gt;\n    &lt;input type=\"submit\" value=\"Submit\">\n&lt;/form&gt;\n&lt;script&gt;\nfunction validateForm() {\n    var email = document.getElementById(\"email\").value;\n    var zip = document.getElementById(\"zip\").value;\n    var country = document.getElementById(\"country\").value;\n    if (email == \"\" || zip == \"\" || country == \"\") {\n        alert(\"All fields must be filled!\"); return false;\n    }\n    var emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\n    if (!emailPattern.test(email)) {\n        alert(\"Enter a valid email!\"); return false;\n    }\n    return true;\n}\n&lt;/script&gt;",
                 "tutorial": "HTML5 required attribute + JavaScript regex validation."
               },
               {
                 "id": "b",
                 "text": "Write PHP to save form data to data2023.txt and display it back in an HTML table.",
                 "marks": 7,
-                "answer": "<?php\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    $data = $_POST['email'] . \"|\" . $_POST['zip'] . \"|\" . $_POST['country'] . \"\n\";\n    file_put_contents(\"data2023.txt\", $data, FILE_APPEND);\n}\n$lines = file(\"data2023.txt\");\necho \"<table border='1'><tr><th>Email</th><th>Zip</th><th>Country</th></tr>\";\nforeach ($lines as $line) {\n    $fields = explode(\"|\", trim($line));\n    echo \"<tr><td>$fields[0]</td><td>$fields[1]</td><td>$fields[2]</td></tr>\";\n}\necho \"</table>\";\n?>",
+                "answer": "<?php\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    $data = $_POST['email'] . \"|\" . $_POST['zip'] . \"|\" . $_POST['country'] . \"\n\";\n    file_put_contents(\"data2023.txt\", $data, FILE_APPEND);\n}\n$lines = file(\"data2023.txt\");\necho \"&lt;table border='1'>&lt;tr&gt;&lt;th&gt;Email&lt;/th&gt;&lt;th&gt;Zip&lt;/th&gt;&lt;th&gt;Country&lt;/th&gt;&lt;/tr&gt;\";\nforeach ($lines as $line) {\n    $fields = explode(\"|\", trim($line));\n    echo \"&lt;tr&gt;&lt;td&gt;$fields[0]&lt;/td&gt;&lt;td&gt;$fields[1]&lt;/td&gt;&lt;td&gt;$fields[2]&lt;/td&gt;&lt;/tr&gt;\";\n}\necho \"&lt;/table&gt;\";\n?>",
                 "tutorial": "file_put_contents with FILE_APPEND. explode() splits by delimiter."
               }
             ]
@@ -7613,7 +7613,7 @@ const examData = {
                 "id": 3,
                 "text": "Draw a diagram relating IS to organizational levels.",
                 "marks": 4,
-                "answer": "Strategic (top) → ESS\nTactical (middle) → MIS, DSS\nOperational (lower) → TPS\n\n```mermaid\nflowchart TD\n    subgraph \"Information Systems at Organizational Levels\"\n        ST[Strategic Level<br/>DSS / EIS] --> MG[Management Level<br/>MIS]\n        MG --> OP[Operational Level<br/>TPS]\n    end\n    OP -->|Transaction Data| MG\n    MG -->|Summary Reports| ST\n    ST -->|Strategic Decisions| MG\n    MG -->|Operational Plans| OP\n```"
+                "answer": "Strategic (top) → ESS\nTactical (middle) → MIS, DSS\nOperational (lower) → TPS\n\n```mermaid\nflowchart TD\n    subgraph \"Information Systems at Organizational Levels\"\n        ST[Strategic Level&lt;br/>DSS / EIS] --> MG[Management Level&lt;br/>MIS]\n        MG --> OP[Operational Level&lt;br/>TPS]\n    end\n    OP -->|Transaction Data| MG\n    MG -->|Summary Reports| ST\n    ST -->|Strategic Decisions| MG\n    MG -->|Operational Plans| OP\n```"
               },
               {
                 "id": 4,
@@ -8413,16 +8413,16 @@ const examData = {
             "questions": [
               {
                 "id": "a",
-                "text": "Given an HTML file with a submit button and a <p id='text'> element, implement js_content() in JavaScript to modify the paragraph content when the button is clicked.",
+                "text": "Given an HTML file with a submit button and a &lt;p id='text'> element, implement js_content() in JavaScript to modify the paragraph content when the button is clicked.",
                 "marks": 5,
-                "answer": "<p id=\"text\">Original text</p>\n<button onclick=\"js_content()\">Click</button>\n\n<script>\nfunction js_content() {\n    document.getElementById(\"text\").innerHTML = \"Text modified by JavaScript!\";\n}\n</script>",
+                "answer": "&lt;p id=\"text\">Original text&lt;/p&gt;\n&lt;button onclick=\"js_content()\">Click&lt;/button&gt;\n\n&lt;script&gt;\nfunction js_content() {\n    document.getElementById(\"text\").innerHTML = \"Text modified by JavaScript!\";\n}\n&lt;/script&gt;",
                 "tutorial": "document.getElementById() selects the element. innerHTML changes its content. This is a basic DOM manipulation technique."
               },
               {
                 "id": "b",
                 "text": "Given an HTML form with username, email, password, and mobile fields, and a MySQL database 'STUDENT' with table 'users' matching these fields. Write formHandler.php to receive and insert form data.",
                 "marks": 10,
-                "answer": "<!-- HTML Form -->\n<form action=\"formHandler.php\" method=\"POST\">\n    Username: <input type=\"text\" name=\"username\"><br>\n    Email: <input type=\"email\" name=\"email\"><br>\n    Password: <input type=\"password\" name=\"password\"><br>\n    Mobile: <input type=\"text\" name=\"mobile\"><br>\n    <input type=\"submit\" value=\"Submit\">\n</form>\n\n<!-- formHandler.php -->\n<?php\n$conn = mysqli_connect(\"localhost\", \"root\", \"user\", \"STUDENT\");\n\n$username = $_POST['username'];\n$email = $_POST['email'];\n$password = password_hash($_POST['password'], PASSWORD_DEFAULT);\n$mobile = $_POST['mobile'];\n\n$sql = \"INSERT INTO users (username, email, password, mobile)\n        VALUES ('$username', '$email', '$password', '$mobile')\";\n\nif (mysqli_query($conn, $sql)) {\n    echo \"Registration successful!\";\n} else {\n    echo \"Error: \" . mysqli_error($conn);\n}\n\nmysqli_close($conn);\n?>",
+                "answer": "<!-- HTML Form -->\n&lt;form action=\"formHandler.php\" method=\"POST\">\n    Username: &lt;input type=\"text\" name=\"username\">&lt;br&gt;\n    Email: &lt;input type=\"email\" name=\"email\">&lt;br&gt;\n    Password: &lt;input type=\"password\" name=\"password\">&lt;br&gt;\n    Mobile: &lt;input type=\"text\" name=\"mobile\">&lt;br&gt;\n    &lt;input type=\"submit\" value=\"Submit\">\n&lt;/form&gt;\n\n<!-- formHandler.php -->\n<?php\n$conn = mysqli_connect(\"localhost\", \"root\", \"user\", \"STUDENT\");\n\n$username = $_POST['username'];\n$email = $_POST['email'];\n$password = password_hash($_POST['password'], PASSWORD_DEFAULT);\n$mobile = $_POST['mobile'];\n\n$sql = \"INSERT INTO users (username, email, password, mobile)\n        VALUES ('$username', '$email', '$password', '$mobile')\";\n\nif (mysqli_query($conn, $sql)) {\n    echo \"Registration successful!\";\n} else {\n    echo \"Error: \" . mysqli_error($conn);\n}\n\nmysqli_close($conn);\n?>",
                 "tutorial": "The form sends data via POST to formHandler.php. PHP connects to MySQL using mysqli, retrieves POST data, hashes the password, and inserts into the users table."
               }
             ]
@@ -9055,7 +9055,7 @@ const examData = {
           "questions": [
             {
               "id": 1,
-              "text": "Given CSS/HTML:\n\n```html\n<!DOCTYPE html> <html>\n<head>\n<style>\n.relative { position: relative; left: 20px;\ntop: 10px;\n}\n.absolute {\nposition: absolute;\ntop: 50px;\nright: 30px;\n}\n.fixed {\nposition: fixed;\nbottom: 0;\nright: 0;\n}\n</style>\n</head>\n<body>\n<div class=\"relative\">Relative Positioning</div>\n<div class=\"absolute\">Absolute Positioning</div>\n<div class=\"fixed\">Fixed Positioning</div>\n</body>\n</html>\n```\n\na) Name the three positioning elements. (3 marks)\nb) Explain the function of each. (3 marks)\nc) Provide a title for the code. (3 marks)\nd) What is the purpose of this code? (3 marks)\ne) Define the function of CSS in HTML. (3 marks)",
+              "text": "Given CSS/HTML:\n\n```html\n<!DOCTYPE html> &lt;html&gt;\n&lt;head&gt;\n&lt;style&gt;\n.relative { position: relative; left: 20px;\ntop: 10px;\n}\n.absolute {\nposition: absolute;\ntop: 50px;\nright: 30px;\n}\n.fixed {\nposition: fixed;\nbottom: 0;\nright: 0;\n}\n&lt;/style&gt;\n&lt;/head&gt;\n&lt;body&gt;\n&lt;div class=\"relative\">Relative Positioning&lt;/div&gt;\n&lt;div class=\"absolute\">Absolute Positioning&lt;/div&gt;\n&lt;div class=\"fixed\">Fixed Positioning&lt;/div&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n```\n\na) Name the three positioning elements. (3 marks)\nb) Explain the function of each. (3 marks)\nc) Provide a title for the code. (3 marks)\nd) What is the purpose of this code? (3 marks)\ne) Define the function of CSS in HTML. (3 marks)",
               "marks": 15,
               "answer": "a) Three positioning elements (3 marks):\n1. Relative\n2. Absolute\n3. Fixed\n\nb) Functions (3 marks):\n1. Relative: Positioned relative to its normal position. left:20px; top:10px shifts it right and down from where it would normally appear. Original space is preserved.\n2. Absolute: Removed from normal flow. Positioned relative to nearest positioned ancestor. top:50px; right:30px. Other elements ignore its space.\n3. Fixed: Removed from normal flow. Positioned relative to viewport. Stays in place when scrolling.\n\nc) Title (3 marks): \"Understanding CSS Positioning Properties\"\n\nd) Purpose (3 marks): Demonstrates three CSS positioning schemes \u2014 relative, absolute, fixed \u2014 showing how each places elements differently.\n\ne) Function of CSS (3 marks): Controls visual presentation (colors, fonts, layout, positioning). Separates content from styling, improving maintainability.",
               "tutorial": "Static = default flow. Relative = offset from normal. Absolute = positioned to ancestor. Fixed = positioned to viewport, stays on scroll."
@@ -9525,9 +9525,9 @@ const examData = {
               },
               {
                 "id": 13,
-                "text": "Inside which HTML element do we put the JavaScript?\na. <js>\nb. <javascript>\nc. <scripting>\nd. <script>",
+                "text": "Inside which HTML element do we put the JavaScript?\na. &lt;js&gt;\nb. &lt;javascript&gt;\nc. &lt;scripting&gt;\nd. &lt;script&gt;",
                 "marks": 1,
-                "answer": "d. <script>"
+                "answer": "d. &lt;script&gt;"
               },
               {
                 "id": 14,
@@ -9729,9 +9729,9 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "How can you open a link in a new browser window?\na) <a href=\"url\" new>\nb) <a href=\"url\" target=\"new\">\nc) <a href=\"url\" target=\"_blank\">\nd) <a href=\"url\" target=\"\">",
+                "text": "How can you open a link in a new browser window?\na) &lt;a href=\"url\" new&gt;\nb) &lt;a href=\"url\" target=\"new\"&gt;\nc) &lt;a href=\"url\" target=\"_blank\"&gt;\nd) &lt;a href=\"url\" target=\"\"&gt;",
                 "marks": 1,
-                "answer": "c) <a href=\"url\" target=\"_blank\">"
+                "answer": "c) &lt;a href=\"url\" target=\"_blank\"&gt;"
               },
               {
                 "id": 2,
@@ -9801,21 +9801,21 @@ const examData = {
               },
               {
                 "id": 13,
-                "text": "Inside which HTML element do we put the JavaScript?\na) <js>\nb) <script>\nc) <scripting>\nd) <javascript>",
+                "text": "Inside which HTML element do we put the JavaScript?\na) &lt;js&gt;\nb) &lt;script&gt;\nc) &lt;scripting&gt;\nd) &lt;javascript&gt;",
                 "marks": 1,
-                "answer": "b) <script>"
+                "answer": "b) &lt;script&gt;"
               },
               {
                 "id": 14,
                 "text": "What is the output of this program:\nmain() {\n  static i=3;\n  printf(\"%d\", i);\n  return i>0 ? main() : 0;\n}\na) 123\nb) 213\nc) 321\nd) 132",
                 "marks": 1,
-                "answer": "c) 321"
+                "answer": "Infinite recursion leading to stack overflow. Static variable i is initialized to 3 once; it never decrements, so i>0 is always true and main() calls itself endlessly. None of the options are correct."
               },
               {
                 "id": 15,
                 "text": "What is the output of this Program:\nchar *foo() {\n  char result[100];\n  strcpy(result, \"anything is good\");\n  return result;\n}\nvoid main() {\n  char *j;\n  j = foo();\n  printf(\"%s\", j);\n}\na) nothing\nb) error message\nc) anything is good\nd) the program will not run",
                 "marks": 1,
-                "answer": "b) error message"
+                "answer": "Undefined behavior (garbage output). The function returns a pointer to a local array result[100] which is on the stack; after foo() returns, that memory is invalid (dangling pointer). The program compiles with a warning but runs with unpredictable output."
               },
               {
                 "id": 16,
@@ -9827,7 +9827,7 @@ const examData = {
                 "id": 17,
                 "text": "Output of this program:\nmain() {\n  int i=0;\n  for(i=0;i<20;i++) {\n    switch(i) {\n      case 0: i+=5;\n      case 1: i+=2;\n      case 5: i+=5;\n      default: i+=4; break;\n    }\n  }\n  printf(\"%d\", i);\n}\na) 0,5,9,13,17\nb) 16,21\nc) 12,17,22\nd) syntax error",
                 "marks": 1,
-                "answer": "d) syntax error"
+                "answer": "22. No syntax error. Trace: i=0, case 0: i=5, fallthrough to 1: i=7, fallthrough to 5: i=12, default: i=16, i++ = 17. Next: i=17, default: i=21, i++ = 22. Loop exits (22<20 false). Output is 22."
               },
               {
                 "id": 18,
@@ -9839,7 +9839,7 @@ const examData = {
                 "id": 19,
                 "text": "What will the following program do:\nvoid main() {\n  int i,j;\n  char a[]=\"String\";\n  char *p=\"New Sring\";\n  char *Temp;\n  Temp=a;\n  a=malloc(strlen(p)+1);\n  strcpy(a,p);\n  p=malloc(strlen(Temp)+1);\n  strcpy(p,Temp);\n  printf(\"(%s, %s)\",a,p);\n  free(p); free(a);\n}\na) Swap contents of p & a and print: (New string, string)\nb) Generate compilation error in line number 8\nc) Generate compilation error in line number 5\nd) Generate compilation error in line number 7",
                 "marks": 1,
-                "answer": "b) Generate compilation error in line number 8"
+                "answer": "b) Generate compilation error in line number 7"
               },
               {
                 "id": 20,
@@ -9867,9 +9867,9 @@ const examData = {
               },
               {
                 "id": 24,
-                "text": "Which of these tags are all <table> tags?\na) <table><head><tfoot>\nb) <table><tr><td>\nc) <table><tr><tt>\nd) <thead><body><tr>",
+                "text": "Which of these tags are all &lt;table&gt; tags?\na) &lt;table&gt;&lt;head&gt;&lt;tfoot&gt;\nb) &lt;table&gt;&lt;tr&gt;&lt;td&gt;\nc) &lt;table&gt;&lt;tr&gt;&lt;tt&gt;\nd) &lt;thead&gt;&lt;body&gt;&lt;tr&gt;",
                 "marks": 1,
-                "answer": "b) <table><tr><td>"
+                "answer": "b) &lt;table&gt;&lt;tr&gt;&lt;td&gt;"
               },
               {
                 "id": 25,
@@ -10869,7 +10869,7 @@ const examData = {
               },
               {
                 "id": 6,
-                "text": "Let f(x) be continuous and strictly decreasing on [a,b] with a<b. If f^(-1)(x)=g(x), which is TRUE?\nA. g(x) > 0\nB. g'(x) < 0\nC. g(x) < 0\nD. g'(x) > 0",
+                "text": "Let f(x) be continuous and strictly decreasing on [a,b] with a&lt;b. If f^(-1)(x)=g(x), which is TRUE?\nA. g(x) > 0\nB. g'(x) < 0\nC. g(x) < 0\nD. g'(x) > 0",
                 "marks": 1,
                 "answer": "D. g'(x) > 0"
               },
@@ -11353,13 +11353,13 @@ const examData = {
                 "id": 2,
                 "text": "Write the basic structure of an HTML template.",
                 "marks": 3,
-                "answer": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Page Title</title>\n</head>\n<body>\n  <!-- content -->\n</body>\n</html>"
+                "answer": "<!DOCTYPE html>\n&lt;html&gt;\n&lt;head&gt;\n  &lt;title&gt;Page Title&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n  <!-- content -->\n&lt;/body&gt;\n&lt;/html&gt;"
               },
               {
                 "id": 3,
                 "text": "Do all HTML tags have an end tag?",
                 "marks": 2,
-                "answer": "No. Void/self-closing tags like <br>, <img>, <input>, <hr> do not have closing tags."
+                "answer": "No. Void/self-closing tags like &lt;br&gt;, &lt;img&gt;, &lt;input&gt;, &lt;hr&gt; do not have closing tags."
               },
               {
                 "id": 4,
@@ -11371,7 +11371,7 @@ const examData = {
                 "id": 5,
                 "text": "Write HTML5 code to create a table with Roll No., Student name, Subject:\na) Ram, Physics\nb) Shyam, Math\nc) Murli, Chemistry",
                 "marks": 6,
-                "answer": "<table border='1'>\n  <tr><th>Roll No.</th><th>Student Name</th><th>Subject</th></tr>\n  <tr><td>1</td><td>Ram</td><td>Physics</td></tr>\n  <tr><td>2</td><td>Shyam</td><td>Math</td></tr>\n  <tr><td>3</td><td>Murli</td><td>Chemistry</td></tr>\n</table>"
+                "answer": "&lt;table border='1'>\n  &lt;tr&gt;&lt;th&gt;Roll No.&lt;/th&gt;&lt;th&gt;Student Name&lt;/th&gt;&lt;th&gt;Subject&lt;/th&gt;&lt;/tr&gt;\n  &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Ram&lt;/td&gt;&lt;td&gt;Physics&lt;/td&gt;&lt;/tr&gt;\n  &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Shyam&lt;/td&gt;&lt;td&gt;Math&lt;/td&gt;&lt;/tr&gt;\n  &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;Murli&lt;/td&gt;&lt;td&gt;Chemistry&lt;/td&gt;&lt;/tr&gt;\n&lt;/table&gt;"
               },
               {
                 "id": 6,
@@ -11383,7 +11383,7 @@ const examData = {
                 "id": 7,
                 "text": "Name two new tags included in HTML5.",
                 "marks": 2,
-                "answer": "<header>, <nav>, <article>, <section>, <footer>, <video>, <audio>, <canvas>"
+                "answer": "&lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;section&gt;, &lt;footer&gt;, &lt;video&gt;, &lt;audio&gt;, &lt;canvas&gt;"
               },
               {
                 "id": 8,
@@ -11491,7 +11491,7 @@ const examData = {
               },
               {
                 "id": 9,
-                "text": "74HC85 comparator, A=1000, B=1010. Outputs:\na) A>B=0, A<B=0, A=B=0\nb) A>B=0, A<B=0, A=B=1\nc) A>B=0, A<B=1, A=B=0\nd) A>B=0, A<B=1, A=B=1",
+                "text": "74HC85 comparator, A=1000, B=1010. Outputs:\na) A>B=0, A&lt;B=0, A=B=0\nb) A&gt;B=0, A&lt;B=0, A=B=1\nc) A&gt;B=0, A&lt;B=1, A=B=0\nd) A&gt;B=0, A<B=1, A=B=1",
                 "marks": 1,
                 "answer": "c) A>B=0, A<B=1, A=B=0"
               },
@@ -11607,7 +11607,7 @@ const examData = {
                 "id": 7,
                 "text": "Sketch Harvard and Von-Neumann architectures and explain differences.",
                 "marks": 5,
-                "answer": "Von-Neumann: single shared memory for instructions and data, single bus. Harvard: separate memory and buses for instructions and data.\n\nDifferences: Harvard allows simultaneous access (faster), prevents instruction corruption, used in microcontrollers. Von-Neumann simpler, more flexible, used in general-purpose computers.\n\n```mermaid\nflowchart LR\n    subgraph \"Von Neumann Architecture\"\n        CPU1[CPU] <--> BUS1[Single System Bus]\n        BUS1 <--> MEM1[Memory<br/>Program + Data]\n    end\n    subgraph \"Harvard Architecture\"\n        CPU2[CPU] <--> IB[Instruction Bus]\n        CPU2 <--> DB[Data Bus]\n        IB <--> PM[Program Memory]\n        DB <--> DM[Data Memory]\n    end\n```\n\n**Key differences:**\n1. Von Neumann uses one shared memory for program + data; Harvard uses separate memories.\n2. Von Neumann has one bus (bottleneck); Harvard has two buses (parallel fetch).\n3. Harvard is faster but more complex.\n4. Von Neumann is used in general-purpose CPUs; Harvard in DSPs and microcontrollers."
+                "answer": "Von-Neumann: single shared memory for instructions and data, single bus. Harvard: separate memory and buses for instructions and data.\n\nDifferences: Harvard allows simultaneous access (faster), prevents instruction corruption, used in microcontrollers. Von-Neumann simpler, more flexible, used in general-purpose computers.\n\n```mermaid\nflowchart LR\n    subgraph \"Von Neumann Architecture\"\n        CPU1[CPU] <--> BUS1[Single System Bus]\n        BUS1 <--> MEM1[Memory&lt;br/>Program + Data]\n    end\n    subgraph \"Harvard Architecture\"\n        CPU2[CPU] <--> IB[Instruction Bus]\n        CPU2 <--> DB[Data Bus]\n        IB <--> PM[Program Memory]\n        DB <--> DM[Data Memory]\n    end\n```\n\n**Key differences:**\n1. Von Neumann uses one shared memory for program + data; Harvard uses separate memories.\n2. Von Neumann has one bus (bottleneck); Harvard has two buses (parallel fetch).\n3. Harvard is faster but more complex.\n4. Von Neumann is used in general-purpose CPUs; Harvard in DSPs and microcontrollers."
               },
               {
                 "id": 8,
@@ -12145,7 +12145,7 @@ const examData = {
                 "id": 1,
                 "text": "A company needs an online interview form with:\n- Name (required)\n- Surname (required)\n- Email (required, must contain @)\n- Birth date\n- Place of birth\n- Phone\n\nTasks:\n1) Reproduce the HTML form with CSS and JavaScript validation (5 marks)\n2) Create MySQL database 'Online_registration' and table 'Online' (5 marks)\n3) Use PHP to connect form to database (5 marks)",
                 "marks": 15,
-                "answer": "1) HTML form:\n<form id=\"interviewForm\" onsubmit=\"return validateForm()\">\n  Name: <input type=\"text\" name=\"name\" required><br>\n  Surname: <input type=\"text\" name=\"surname\" required><br>\n  Email: <input type=\"email\" name=\"email\" required><br>\n  Birth date: <input type=\"text\" placeholder=\"dd/mm/yyyy\"><br>\n  Place: <input type=\"text\"><br>\n  Phone: <input type=\"tel\"><br>\n  <input type=\"submit\">\n</form>\n<script>\nfunction validateForm() {\n  var email = document.querySelector('[name=email]').value;\n  if (email.indexOf('@') === -1) { alert('Email must contain @'); return false; }\n  return true;\n}\n</script>\n\n2) CREATE DATABASE Online_registration;\nCREATE TABLE Online (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(50), surname VARCHAR(50), email VARCHAR(100), birth_date VARCHAR(10), place VARCHAR(50), phone VARCHAR(20));\n\n3) PHP:\n<?php\n$conn = mysqli_connect('localhost','root','','Online_registration');\n$name = $_POST['name'];\n$surname = $_POST['surname'];\n$email = $_POST['email'];\n$sql = \"INSERT INTO Online (name,surname,email) VALUES ('$name','$surname','$email')\";\nmysqli_query($conn, $sql);\nmysqli_close($conn);\n?>"
+                "answer": "1) HTML form:\n&lt;form id=\"interviewForm\" onsubmit=\"return validateForm()\">\n  Name: &lt;input type=\"text\" name=\"name\" required>&lt;br&gt;\n  Surname: &lt;input type=\"text\" name=\"surname\" required>&lt;br&gt;\n  Email: &lt;input type=\"email\" name=\"email\" required>&lt;br&gt;\n  Birth date: &lt;input type=\"text\" placeholder=\"dd/mm/yyyy\">&lt;br&gt;\n  Place: &lt;input type=\"text\">&lt;br&gt;\n  Phone: &lt;input type=\"tel\">&lt;br&gt;\n  &lt;input type=\"submit\">\n&lt;/form&gt;\n&lt;script&gt;\nfunction validateForm() {\n  var email = document.querySelector('[name=email]').value;\n  if (email.indexOf('@') === -1) { alert('Email must contain @'); return false; }\n  return true;\n}\n&lt;/script&gt;\n\n2) CREATE DATABASE Online_registration;\nCREATE TABLE Online (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(50), surname VARCHAR(50), email VARCHAR(100), birth_date VARCHAR(10), place VARCHAR(50), phone VARCHAR(20));\n\n3) PHP:\n<?php\n$conn = mysqli_connect('localhost','root','','Online_registration');\n$name = $_POST['name'];\n$surname = $_POST['surname'];\n$email = $_POST['email'];\n$sql = \"INSERT INTO Online (name,surname,email) VALUES ('$name','$surname','$email')\";\nmysqli_query($conn, $sql);\nmysqli_close($conn);\n?>"
               }
             ]
           },
