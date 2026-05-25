@@ -7769,422 +7769,405 @@ const examData = {
           }
         ]
       },
-      {
+            {
         "title": "Computer Technology",
-        "duration": "3 hours",
+        "duration": "4 hours",
         "credits": 6,
-        "description": "Specialty: SOFTWARE ENGINEERING | 2023 Session",
+        "description": "Specialty: SOFTWARE ENGINEERING (SWE) | 2023 Session",
         "sections": [
           {
-            "title": "Section A: System Architecture and UML",
+            "title": "Section A: MCQs",
             "marks": 40,
             "questions": [
               {
                 "id": 1,
-                "text": "Which is a temporal storage device? A) ROM B) RAM C) Hard drive D) Flash",
-                "marks": 2,
-                "answer": "B) RAM"
+                "text": "Which of the following programming language is whitespace insensitive?\na. HTML\nb. CSS\nc. PHP\nd. JAVASCRIPT",
+                "marks": 1,
+                "answer": "c. PHP"
               },
               {
                 "id": 2,
-                "text": "From which generation did OS originate? A) First B) Second C) Third D) Fourth",
-                "marks": 2,
-                "answer": "B) Second generation"
+                "text": "How many layers does OSI Reference Model has?\na. 4\nb. 5\nc. 6\nd. 7",
+                "marks": 1,
+                "answer": "d. 7"
               },
               {
                 "id": 3,
-                "text": "Which generation is still under development? A) Fourth B) Fifth C) Sixth D) Seventh",
-                "marks": 2,
-                "answer": "B) Fifth Generation"
+                "text": "DHCP is the abbreviation of\na. Dynamic Host Control Protocol\nb. Dynamic Host Configuration Protocol\nc. Dynamic Hyper Control Protocol\nd. Dynamic Hyper Configuration Protocol",
+                "marks": 1,
+                "answer": "b. Dynamic Host Configuration Protocol"
               },
               {
                 "id": 4,
-                "text": "Which software is suitable for numerical analysis? A) Database B) Document processor C) Graphics D) Spreadsheet",
-                "marks": 2,
-                "answer": "D) Spreadsheet"
+                "text": "An example of Private IP address is:\na. 10.2.5.8.9\nb. 195.25.87.96\nc. 204.14.88.96\nd. 173.29.178.66",
+                "marks": 1,
+                "answer": "a. 10.2.5.8 (private IP range 10.0.0.0/8)"
               },
               {
                 "id": 5,
-                "text": "What type of core-relationship is represented by the UML symbol in the figure below?\n\n```mermaid\nflowchart LR\n    subgraph \"UML Relationship Symbols\"\n        C1[Class A] ---|<>--- C2[Class B]\n    end\n```\n\nThe diamond symbol (♢) attached to Class B indicates:\n\nA) Aggregation\nB) Dependency\nC) Generalization\nD) Association",
-                "marks": 2,
-                "answer": "A) Aggregation"
+                "text": "An example of Public IP address is:\na. 10.2.5.8\nb. 192.168.87.96\nc. 204.14.88.96\nd. 172.29.178.66",
+                "marks": 1,
+                "answer": "c. 204.14.88.96 (public IP; 10.x.x.x and 192.168.x.x are private, 172.29.x.x falls in 172.16.0.0/12 private range)"
               },
               {
                 "id": 6,
-                "text": "Rectangle with 3 compartments (name, attributes, methods) represents: A) Node B) Interface C) Class D) Component",
-                "marks": 2,
-                "answer": "C) Class"
+                "text": "SNMP protocol means:\na. Simple Network Mail Protocol\nb. System Network Management Protocol\nc. Simple Network Management Protocol\nd. All above",
+                "marks": 1,
+                "answer": "c. Simple Network Management Protocol"
               },
               {
                 "id": 7,
-                "text": "Shape class and Square class relationship: A) Realization B) Generalization C) Aggregation D) Dependency",
-                "marks": 2,
-                "answer": "B) Generalization (inheritance)"
+                "text": "The language used in application programs to request data from the DBMS is referred to as the:\na. DML\nb. DDL\nc. VDL\nd. SDL",
+                "marks": 1,
+                "answer": "a. DML (Data Manipulation Language)"
               },
               {
                 "id": 8,
-                "text": "Time-oriented diagram showing interactions: A) Sequence B) Collaboration C) Class D) Use Case",
-                "marks": 2,
-                "answer": "A) Sequence Diagram"
+                "text": "int z, x=5, y=-10, a=4, b=2; z = x++ - --y * b / a;\nWhat number will z in the sample code above contain?\na. [Blank]\nb. 5\nc. 6\nd. 10\ne. 11",
+                "marks": 1,
+                "answer": "d. 10 (x++ uses x=5 then increments to 6; --y decrements y from -10 to -11; z = 5 - (-11)*2/4 = 5 - (-22)/4 = 5 - (-5) = 10)"
               },
               {
                 "id": 9,
-                "text": "Structural model showing other systems in environment: A) System context B) Interaction C) Environmental D) Both",
-                "marks": 2,
-                "answer": "A) System context model"
+                "text": "With every use of a memory allocation function, what function should be used to release allocated memory which is no longer needed?\na. dropmem()\nb. dealloc()\nc. release()\nd. free()",
+                "marks": 1,
+                "answer": "d. free()"
               },
               {
                 "id": 10,
-                "text": "Model describing static structure with classes: A) Sequence B) Subsystem C) Dynamic D) Structural",
-                "marks": 2,
-                "answer": "D) Structural model"
+                "text": "What function will read a specified number of elements from a file?\na. fileread()\nb. readfile()\nc. fread()\nd. gets()",
+                "marks": 1,
+                "answer": "c. fread()"
               },
               {
                 "id": 11,
-                "text": "Which is NOT a construct? A) Sequence B) Condition C) Repetition D) Inheritance",
-                "marks": 2,
-                "answer": "D) Inheritance"
+                "text": "What is a difference between a declaration and a definition of a variable?\na. Both can occur multiple times, but a declaration must occur first.\nb. There is no difference between them.\nc. A definition occurs once, but a declaration may occur many times.\nd. A declaration occurs once, but a definition may occur many times.",
+                "marks": 1,
+                "answer": "c. A definition occurs once, but a declaration may occur many times."
               },
               {
                 "id": 12,
-                "text": "Three major steps of database design?",
-                "marks": 5,
-                "answer": "1. Conceptual: abstract model (ER diagram).\n2. Logical: relational schema (tables, normalization).\n3. Physical: implementation in specific DBMS (indexes, storage)."
+                "text": "What is a proper method of opening a file for writing as binary file?\na. FILE *f = fwrite(\"test.bin\", \"b\");\nb. FILE *f = fopenb(\"test.bin\", \"w\");\nc. FILE *f = fopen(\"test.bin\", \"wb\");\nd. FILE *f = fopen(\"test.bin\", \"bw\");",
+                "marks": 1,
+                "answer": "c. FILE *f = fopen(\"test.bin\", \"wb\");"
               },
               {
                 "id": 13,
-                "text": "Types of participation constraints?",
-                "marks": 5,
-                "answer": "1. Total (mandatory): all entities participate (double line).\n2. Partial (optional): some may not participate (single line)."
+                "text": "A collection of hyperlinked documents on the internet forms the:\na. World Wide Web (WWW)\nb. E-mail system\nc. Mailing list\nd. Hypertext markup language",
+                "marks": 1,
+                "answer": "a. World Wide Web (WWW)"
               },
               {
                 "id": 14,
-                "text": "What are ACID properties?",
-                "marks": 4,
-                "answer": "1. Atomicity: all-or-nothing.\n2. Consistency: valid states maintained.\n3. Isolation: concurrent execution appears serial.\n4. Durability: committed changes persist."
+                "text": "A proxy server is used as the computer?\na. with external access\nb. acting as a backup\nc. performing file handling\nd. accessing user permissions",
+                "marks": 1,
+                "answer": "a. with external access"
               },
               {
                 "id": 15,
-                "text": "Write SQL to count dogs arrived on 18 April 2000 at Humane Society.",
-                "marks": 4,
-                "answer": "SELECT COUNT(*) FROM Animal WHERE Species='Dog' AND DateArrived='2000-04-18';"
-              }
-            ]
-          },
-          {
-            "title": "Section B: Operating Systems and Networking",
-            "marks": 40,
-            "questions": [
-              {
-                "id": 1,
-                "text": "Difference between mainframe and supercomputer?",
-                "marks": 2,
-                "answer": "Mainframe: high I/O, many simultaneous users, transaction processing.\nSupercomputer: maximum computational power, complex scientific calculations, high FLOPS."
-              },
-              {
-                "id": 2,
-                "text": "Describe: Router, Switch, Access point, Firewall, Repeater.",
-                "marks": 11,
-                "answer": "Router: connects networks, routes packets by IP (Layer 3).\nSwitch: connects devices in LAN, forwards by MAC (Layer 2).\nAccess point: provides Wi-Fi connectivity.\nFirewall: filters traffic based on security rules.\nRepeater: regenerates signals to extend range."
-              },
-              {
-                "id": 3,
-                "text": "What is the Internet? Difference between Internet and internet?",
-                "marks": 4,
-                "answer": "Internet (capital I): global TCP/IP network.\ninternet (lowercase): any interconnected network.\nThe Internet is the largest internet."
-              },
-              {
-                "id": 4,
-                "text": "Classify networks by geographical distance. Suitable type for a school campus?",
-                "marks": 6,
-                "answer": "PAN (~10m), LAN (~1km), CAN (~10km), MAN (~100km), WAN (1000+km).\nSchool campus: CAN or LAN."
-              },
-              {
-                "id": 5,
-                "text": "What is a Wi-Fi device? List 3 mobile devices and 5 smartphone features.",
-                "marks": 11,
-                "answer": "Wi-Fi device: connects to wireless network (IEEE 802.11).\nMobile devices: smartphone, tablet, laptop.\nSmartphone features: touchscreen, camera, GPS, Wi-Fi/Bluetooth, apps."
-              },
-              {
-                "id": 6,
-                "text": "What does download mean? What does a graphic card do?",
-                "marks": 4,
-                "answer": "Download: transferring data from internet to computer.\nGraphic card: renders images, video, and animations for display."
-              },
-              {
-                "id": 7,
-                "text": "What is the brain of a computer system?",
-                "marks": 2,
-                "answer": "The CPU (Central Processing Unit)."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "title": "Mathematics",
-        "duration": "3 hours",
-        "credits": 6,
-        "description": "Specialty: SOFTWARE ENGINEERING | 2023 Session",
-        "sections": [
-          {
-            "title": "Section A: Statistics",
-            "marks": 40,
-            "questions": [
-              {
-                "id": 1,
-                "text": "Sample mean=50, SD=8, n=25. Calculate: a) 95% CI b) 99% CI for population mean.",
-                "marks": 12,
-                "answer": "a) 95% CI: 50 ± 1.96×(8/5) = 50 ± 3.136 = (46.864, 53.136)\nb) 99% CI: 50 ± 2.576×(8/5) = 50 ± 4.122 = (45.878, 54.122)",
-                "tutorial": "CI = x̄ ± Z(σ/√n). Z=1.96 for 95%, 2.576 for 99%."
-              },
-              {
-                "id": 2,
-                "text": "Calculate expected profit, variance, and standard deviation from a probability distribution.",
-                "marks": 17,
-                "answer": "E(X) = Σ(xi×pi)\nVar(X) = Σ((xi-μ)²×pi) = E(X²)-μ²\nσ = √Var(X)\nExample: X={100,200,300}, P={0.3,0.5,0.2}\nE(X)=190, Var(X)=4900, σ=70",
-                "tutorial": "Expected value is weighted average. Variance measures dispersion."
-              },
-              {
-                "id": 3,
-                "text": "P(X=x)=k(x+1) for x=1,2,3 and k(x-3) for x=4,5,6. Find k, mean, variance.",
-                "marks": 11,
-                "answer": "ΣP=1: k(2+3+4+1+2+3)=15k=1 => k=1/15\nMean = (2+6+12+4+10+18)/15 = 52/15 = 3.467\nE(X²) = (2+12+36+16+50+108)/15 = 224/15\nVar = 224/15 - (52/15)² = 656/225 = 2.916",
-                "tutorial": "First normalize distribution, then compute moments."
-              }
-            ]
-          },
-          {
-            "title": "Section B: Probability",
-            "marks": 40,
-            "questions": [
-              {
-                "id": 4,
-                "text": "5% of candidates qualified. Interview until first qualified. a) Mean? b) P(5th is first qualified)?",
-                "marks": 10,
-                "answer": "Geometric distribution, p=0.05.\na) Mean = 1/0.05 = 20 applicants.\nb) P(X=5) = (0.95)⁴×0.05 = 0.8145×0.05 = 0.0407",
-                "tutorial": "Geometric: P(X=n) = (1-p)^(n-1)×p."
-              },
-              {
-                "id": 5,
-                "text": "Machine X: 60%, faulty=0.02. Y: 40%, faulty=0.03. Find: a) P(faulty) b) P(faulty or from Y) c) P(from X|faulty)",
-                "marks": 10,
-                "answer": "a) P(F)=0.02(0.6)+0.03(0.4)=0.024\nb) P(F∪Y)=0.024+0.4-0.012=0.412\nc) P(X|F)=0.012/0.024=0.5",
-                "tutorial": "Law of total probability, addition rule, Bayes' theorem."
-              },
-              {
-                "id": 6,
-                "text": "Roll a fair die. Let X be outcome. a) E(X) b) Var(X) c) P(X=6) exact d) Markov bound e) Chebyshev bound",
-                "marks": 12,
-                "answer": "a) E(X)=3.5\nb) Var(X)=91/6 - 12.25 = 2.917\nc) P(X=6)=1/6=0.1667\nd) Markov: P(X≥6) ≤ 3.5/6 = 0.5833\ne) Chebyshev: k=2.5/1.708=1.464, P≤1/1.464²=0.467",
-                "tutorial": "Markov and Chebyshev provide bounds without exact distribution."
-              },
-              {
-                "id": 7,
-                "text": "70% brand A (70% large), 30% brand B (40% small). a) Tree diagram b) P(small) c) P(A|small)",
-                "marks": 8,
-                "answer": "a) Tree: A(0.7)→Large(0.7), Small(0.3); B(0.3)→Large(0.6), Small(0.4)\nb) P(Small)=0.3(0.7)+0.4(0.3)=0.33\nc) P(A|Small)=0.21/0.33=0.636",
-                "tutorial": "Bayes' theorem for inverse probability."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "title": "Computer Fundamentals",
-        "duration": "2 hours",
-        "credits": 1,
-        "description": "All Specialties | 2023 Session",
-        "sections": [
-          {
-            "title": "Section A: General Computer Knowledge",
-            "marks": 50,
-            "questions": [
-              {
-                "id": 1,
-                "text": "Which program is used for database? A) MS Word B) MS Excel C) MS PowerPoint D) MS Access",
+                "text": "Which one of the following would breach the integrity of a system?\na. Looking the room to prevent theft\nb. Full access rights for all users\nc. Fitting the system with an anti-theft device\nd. Protecting the device against willful or accidental damage",
                 "marks": 1,
-                "answer": "D) MS Access"
-              },
-              {
-                "id": 2,
-                "text": "SRAM stands for: A) Standard RAM B) Static Read Access Memory C) Static Random Access Memory D) Standard Read Access Memory",
-                "marks": 1,
-                "answer": "C) Static Random Access Memory"
-              },
-              {
-                "id": 3,
-                "text": "Getting information from internet to computer is: A) Downloading B) Browsing C) Uploading D) Recording",
-                "marks": 1,
-                "answer": "A) Downloading"
-              },
-              {
-                "id": 4,
-                "text": "Language used by computer: A) French B) Computer language C) Binary language D) English",
-                "marks": 1,
-                "answer": "C) Binary language"
-              },
-              {
-                "id": 5,
-                "text": "To center a title in MS Word, use: A) Font size B) Font style C) Spacing D) Alignment",
-                "marks": 1,
-                "answer": "D) Alignment"
-              },
-              {
-                "id": 6,
-                "text": "Save file with different name: A) Save B) Save As C) Send to D) Page setup",
-                "marks": 1,
-                "answer": "B) Save As"
-              },
-              {
-                "id": 7,
-                "text": "Add geometric shapes in PowerPoint: A) Drawing B) Formatting C) Reviewing D) Illustrations",
-                "marks": 1,
-                "answer": "D) Illustrations"
-              },
-              {
-                "id": 8,
-                "text": "Peripherals like printers are: A) Information B) Data C) Software D) Hardware",
-                "marks": 1,
-                "answer": "D) Hardware"
-              },
-              {
-                "id": 9,
-                "text": "Motherboard is also called: A) Central board B) System board C) Computer board D) Mouse",
-                "marks": 1,
-                "answer": "B) System board"
-              },
-              {
-                "id": 10,
-                "text": "Computers controlling processes use: A) Infinite loop B) Feedback loop C) Data highway D) Traffic pattern",
-                "marks": 1,
-                "answer": "B) Feedback loop"
-              },
-              {
-                "id": 11,
-                "text": "Reads handwritten text to digital image: A) Touch pad B) Laser beam C) Printer D) Scanner",
-                "marks": 1,
-                "answer": "D) Scanner"
-              },
-              {
-                "id": 12,
-                "text": "Brain of computer: A) Secondary storage B) CPU C) Data input D) RAM",
-                "marks": 1,
-                "answer": "B) CPU"
-              },
-              {
-                "id": 13,
-                "text": "Rules for data transmission: A) IP address B) Domains C) Protocol D) Gateway",
-                "marks": 1,
-                "answer": "C) Protocol"
-              },
-              {
-                "id": 14,
-                "text": "Guards against unauthorized access: A) Hacker-proof B) Firewall C) Hacker-resistant D) Encryption",
-                "marks": 1,
-                "answer": "B) Firewall"
-              },
-              {
-                "id": 15,
-                "text": "Restrict system access: A) User logins B) Password C) Computer keys D) Access control",
-                "marks": 1,
-                "answer": "B) Password"
+                "answer": "b. Full access rights for all users"
               },
               {
                 "id": 16,
-                "text": "Malicious software: A) Badware B) Malware C) Maliciousware D) Illegalware",
+                "text": "Which software prevents the external access to a system?\na. Firewall\nb. Gateway\nc. Router\nd. Virus checker",
                 "marks": 1,
-                "answer": "B) Malware"
+                "answer": "a. Firewall"
               },
               {
                 "id": 17,
-                "text": "Does NOT store data permanently: A) ROM B) RAM C) Floppy disk D) Hard drive",
+                "text": "Where is linear searching used?\na. When the list has only a few elements\nb. When performing a single search in an unordered list\nc. Used all the time\nd. When the list has only a few elements and When performing a single search in an unordered list",
                 "marks": 1,
-                "answer": "B) RAM"
+                "answer": "d. When the list has only a few elements and When performing a single search in an unordered list"
               },
               {
                 "id": 18,
-                "text": "Booting performs: A) Integrity test B) POST C) Functioning test D) Reliability test",
+                "text": "What is the best case for linear search?\na. O(nlogn)\nb. O(logn)\nc. O(n)\nd. O(1)",
                 "marks": 1,
-                "answer": "B) Power-on-self-test (POST)"
+                "answer": "d. O(1) (element found at the first position)"
               },
               {
                 "id": 19,
-                "text": "NOT a basic computer function: A) Store data B) Accept input C) Process data D) Copy test",
+                "text": "Which of the following is a disadvantage of linear search?\na. Requires more space\nb. Greater time complexities compared to other searching algorithms\nc. Not easy to understand\nd. Not easy to implement",
                 "marks": 1,
-                "answer": "D) Copy test"
+                "answer": "b. Greater time complexities compared to other searching algorithms"
               },
               {
                 "id": 20,
-                "text": "What is an OS? Give two examples.",
-                "marks": 7,
-                "answer": "OS is system software managing hardware and software resources, providing services for programs. Examples: Windows, Linux, macOS."
+                "text": "Which of the following is a disadvantage of linear search?\na. Requires more space\nb. Greater time complexities compared to other searching algorithms\nc. Not easy to understand\nd. Not easy to implement",
+                "marks": 1,
+                "answer": "b. Greater time complexities compared to other searching algorithms"
               },
               {
                 "id": 21,
-                "text": "Difference between system software and application software?",
-                "marks": 6,
-                "answer": "System software manages hardware (OS, drivers). Application software performs user tasks (Word, Excel)."
+                "text": "Which of the following concepts make extensive use of arrays?\na. Binary trees\nb. Scheduling of processes\nc. Caching\nd. Spatial locality",
+                "marks": 1,
+                "answer": "d. Spatial locality"
               },
               {
                 "id": 22,
-                "text": "What is cloud computing? Three benefits?",
-                "marks": 6,
-                "answer": "On-demand delivery of computing services over internet.\nBenefits: 1) Cost efficiency, 2) Scalability, 3) Accessibility."
+                "text": "Assuming int is of 4bytes, what is the size of int arr[15];?\na. 15\nb. 19\nc. 11\nd. 60",
+                "marks": 1,
+                "answer": "d. 60 (15 * 4 = 60)"
               },
               {
                 "id": 23,
-                "text": "What is computer security? Three threats?",
-                "marks": 6,
-                "answer": "Protection from theft, damage, unauthorized access.\nThreats: 1) Viruses/Malware, 2) Phishing, 3) Hacking."
+                "text": "The data structure required for Breadth First Traversal on a graph is?\na. Stack\nb. Array\nc. Queue\nd. Tree",
+                "marks": 1,
+                "answer": "c. Queue"
               },
               {
                 "id": 24,
-                "text": "What is a database? Give an example.",
-                "marks": 3,
-                "answer": "An organized collection of structured data for efficient storage and retrieval. Examples: MySQL, MS Access, Oracle."
+                "text": "Cartesian product in relational algebra is\na. Binary operator\nb. Unary operator\nc. Ternary operator\nd. Not defined",
+                "marks": 1,
+                "answer": "a. Binary operator (operates on two relations)"
               },
               {
                 "id": 25,
-                "text": "Difference between data and information?",
-                "marks": 3,
-                "answer": "Data: raw, unprocessed facts. Information: processed, organized data with meaning."
+                "text": "The view of total database content is:\na. Conceptual view\nb. Internal view\nc. Physical view\nd. External view",
+                "marks": 1,
+                "answer": "a. Conceptual view"
+              },
+              {
+                "id": 26,
+                "text": "Architecture of a database can be viewed as:\na. One level\nb. Two levels\nc. Three levels\nd. Four levels",
+                "marks": 1,
+                "answer": "c. Three levels (external, conceptual, internal)"
+              },
+              {
+                "id": 27,
+                "text": "Database schema is written in:\na. DML\nb. HCL\nc. DDL\nd. DCL",
+                "marks": 1,
+                "answer": "c. DDL (Data Definition Language)"
+              },
+              {
+                "id": 28,
+                "text": "Which technique is used for data protection?\na. Data piracy\nb. Authentication\nc. Encryption\nd. None of these",
+                "marks": 1,
+                "answer": "c. Encryption"
+              },
+              {
+                "id": 29,
+                "text": "Coaxial cables used in _________ networks\na. Telephone\nb. Cable TV\nc. Both A and B\nd. NONE OF these",
+                "marks": 1,
+                "answer": "c. Both A and B (telephone and cable TV)"
+              },
+              {
+                "id": 30,
+                "text": "Optical Fiber transmit _________.\na. light signal\nb. radio signal\nc. electrical signal\nd. Both A and B",
+                "marks": 1,
+                "answer": "a. light signal"
+              },
+              {
+                "id": 31,
+                "text": "HTTP port number used is _________.\na. 80\nb. 441\nc. 443\nd. 449",
+                "marks": 1,
+                "answer": "a. 80 (HTTP default port)"
+              },
+              {
+                "id": 32,
+                "text": "In the handshake protocol which is the message type first sent between client and server?\na. server_hello\nb. client_hello\nc. hello_request\nd. certificate_request",
+                "marks": 1,
+                "answer": "b. client_hello"
+              },
+              {
+                "id": 33,
+                "text": "Inside which HTML element do we put the JavaScript?\na. &lt;js&gt;\nb. &lt;javascript&gt;\nc. &lt;scripting&gt;\nd. &lt;script&gt;",
+                "marks": 1,
+                "answer": "d. &lt;script&gt;"
+              },
+              {
+                "id": 34,
+                "text": "Which one is not a programming language?\na. HTML\nb. CSS\nc. JavaScript\nd. PHP",
+                "marks": 1,
+                "answer": "a. HTML (HyperText Markup Language is a markup language, not a programming language)"
+              },
+              {
+                "id": 35,
+                "text": "Which one is a method of inserting a style sheet?\na. Inline style sheet\nb. External style sheet\nc. Internal style sheet\nd. All above",
+                "marks": 1,
+                "answer": "d. All above (inline, external, and internal style sheets are all valid methods)"
+              },
+              {
+                "id": 36,
+                "text": "An example of a variable declaration in JavaScript:\na. $a;\nb. Var a;\nc. Variable a;\nd. None above",
+                "marks": 1,
+                "answer": "d. None above (var a; is correct but Var a; with capital V is not; $a; is not a declaration)"
+              },
+              {
+                "id": 37,
+                "text": "An example of a variable declaration in PHP:\na. $a;\nb. Var a;\nc. Variable a;\nd. None above",
+                "marks": 1,
+                "answer": "a. $a; (PHP variables start with $)"
+              },
+              {
+                "id": 38,
+                "text": "The RSA signature uses which hash algorithm?\na. MD5\nb. SHA-1\nc. MD5 and SHA-1\nd. None of the mentioned",
+                "marks": 1,
+                "answer": "d. None of the mentioned (RSA typically uses SHA-256 or other modern hashes)"
+              },
+              {
+                "id": 39,
+                "text": "Choose the function of a router\na. changing the data from one format to another\nb. error detection in data\nc. send the packet to the uplinks\nd. None of the above",
+                "marks": 1,
+                "answer": "c. send the packet to the uplinks"
+              },
+              {
+                "id": 40,
+                "text": "Which utility is used to find the number of routers between a source and destination?\na. route\nb. Traceroute\nc. Ifconfig\nd. Ipconfig",
+                "marks": 1,
+                "answer": "b. Traceroute"
               }
             ]
           },
           {
-            "title": "Section B: Web and Digital Society",
+            "title": "Section B: A. Programming",
             "marks": 20,
             "questions": [
               {
                 "id": 1,
-                "text": "Differentiate: i) Intranet vs Extranet ii) Browser vs Search engine iii) Static vs Dynamic webpage",
-                "marks": 6,
-                "answer": "i) Intranet: private internal network. Extranet: extended to authorized external parties.\nii) Browser: displays web pages (Chrome). Search engine: indexes web content (Google).\niii) Static: fixed content. Dynamic: generated on-the-fly with databases."
+                "marks": 2,
+                "text": "What is a Programming Paradigm?",
+                "answer": "A programming paradigm is a fundamental style or approach to programming that provides a framework for structuring code. Examples: procedural, object-oriented, functional, and logic programming paradigms."
               },
               {
                 "id": 2,
-                "text": "State 4 social media platforms.",
-                "marks": 4,
-                "answer": "Facebook, Twitter/X, Instagram, WhatsApp."
+                "marks": 2,
+                "text": "Is it true that Operating Systems like Windows, Linux and UNIX are written in C?",
+                "answer": "Yes, it is true. The core kernels of Windows (NT kernel), Linux, and UNIX are predominantly written in the C programming language due to its efficiency, low-level memory access, and portability across hardware architectures."
               },
               {
                 "id": 3,
-                "text": "Requirements to build a WAN?",
-                "marks": 4,
-                "answer": "Routers, leased lines/fiber, TCP/IP, modems, firewalls."
+                "marks": 2,
+                "text": "What do you mean by scope of a variable? What are the different types of scopes that a variable can have?",
+                "answer": "Scope of a variable defines the region of the program where the variable can be accessed. Types: 1) Local scope - accessible only within the block/function where declared. 2) Global scope - accessible throughout the entire program. 3) Function scope - accessible within a function. 4) Block scope - accessible within a block {}. In C: local, global, and static scope."
               },
               {
                 "id": 4,
-                "text": "What is URL? Give an example.",
-                "marks": 3,
-                "answer": "URL (Uniform Resource Locator): web address. Format: protocol://domain/path. Example: https://example.com/page"
+                "marks": 2,
+                "text": "Which of the following statement is a declaration and which is a definition?\nextern int i;\nint j = 0;",
+                "answer": "extern int i; is a declaration (declares that i exists somewhere, no memory allocation). int j = 0; is a definition (declares j AND allocates memory with initial value 0). A declaration introduces a name; a definition provides the actual storage."
               },
               {
                 "id": 5,
-                "text": "What is digital literacy? Why important?",
+                "marks": 2,
+                "text": "What are the differences between a declaration and a definition?",
+                "answer": "Declaration: introduces a name and its type to the compiler, can occur multiple times, does not allocate memory. Definition: allocates memory for the variable/function, occurs exactly once (ODR - One Definition Rule). Every definition is also a declaration, but not vice versa."
+              },
+              {
+                "id": 6,
+                "marks": 2,
+                "text": "Is it true that a global variable may have several declarations, but only one definition? [Yes/No]",
+                "answer": "Yes. A global variable can be declared multiple times using the extern keyword across different source files, but it must have exactly one definition (where storage is allocated). Multiple declarations are allowed; multiple definitions violate the One Definition Rule."
+              },
+              {
+                "id": 7,
+                "marks": 2,
+                "text": "Is it true that a function may have several declarations, but only one definition? [Yes/No]",
+                "answer": "Yes. A function can have multiple declarations (prototypes) across different files, but only one definition. This follows the One Definition Rule (ODR) in C/C++."
+              },
+              {
+                "id": 8,
+                "marks": 2,
+                "text": "When we mention the prototype of a function are we defining the function or declaring it?",
+                "answer": "We are declaring it. A function prototype (signature) tells the compiler the function's name, return type, and parameter types without providing the implementation. The actual implementation (body) is the definition."
+              },
+              {
+                "id": 9,
+                "marks": 2,
+                "text": "If you are to share the variables or functions across several source files, how would you ensure that all definitions and declarations are consistent?",
+                "answer": "Use header files (.h). Place declarations (extern variables, function prototypes) in a header file, then #include the header in all source files that need them. Define the variable/function in exactly one .c file. This ensures type consistency because the compiler checks declarations against definitions."
+              },
+              {
+                "id": 10,
+                "marks": 2,
+                "text": "Global variables are available to all functions. Does there exist a mechanism by way of which I can make it available to some and not to others?",
+                "answer": "Yes. Use static keyword for file-scope (global) variables: static int x; limits the variable's visibility to the current source file only (internal linkage). Functions in other files cannot access it. For finer control, pass the variable as a function parameter instead of making it global."
+              }
+            ]
+          },
+          {
+            "title": "Section B: B. Database",
+            "marks": 15,
+            "questions": [
+              {
+                "id": 1,
+                "marks": 4,
+                "text": "Differentiate Table Scan from Index Scan.",
+                "answer": "Table Scan: reads every row of the table sequentially (full table scan). Used when no index exists or query returns large portion of rows. Slower for selective queries. I/O intensive.\n\nIndex Scan: uses an index structure to locate rows directly. Faster for selective queries (small percentage of rows). Requires index to exist on the searched columns. More efficient for point queries and range queries with high selectivity."
+              },
+              {
+                "id": 2,
+                "marks": 4,
+                "text": "List some commands of DDL.",
+                "answer": "DDL (Data Definition Language) commands: CREATE (create database objects), ALTER (modify structure), DROP (delete objects), TRUNCATE (remove all rows), RENAME (rename objects). Examples: CREATE TABLE Students (...), ALTER TABLE Students ADD age INT, DROP TABLE Students, TRUNCATE TABLE Students."
+              },
+              {
+                "id": 3,
                 "marks": 3,
-                "answer": "Ability to use digital technology effectively. Important for participation in digital economy, education, and society."
+                "text": "Why is group-clause used?",
+                "answer": "The GROUP BY clause is used in SQL to group rows that have the same values in specified columns into summary rows. It is typically used with aggregate functions (COUNT, SUM, AVG, MAX, MIN) to produce grouped results. Example: SELECT department, AVG(salary) FROM employees GROUP BY department; — calculates average salary per department."
+              },
+              {
+                "id": 4,
+                "marks": 4,
+                "text": "What are the various kinds of interactions catered by DBMS?",
+                "answer": "DBMS interactions: 1) DDL (Data Definition Language) - define/modify database structure. 2) DML (Data Manipulation Language) - query and modify data (SELECT, INSERT, UPDATE, DELETE). 3) DCL (Data Control Language) - access control (GRANT, REVOKE). 4) TCL (Transaction Control Language) - manage transactions (COMMIT, ROLLBACK, SAVEPOINT)."
+              }
+            ]
+          },
+          {
+            "title": "Section B: C. Networking",
+            "marks": 15,
+            "questions": [
+              {
+                "id": 1,
+                "marks": 3,
+                "text": "What is OSI and what role does it play in computer networks?",
+                "answer": "OSI (Open Systems Interconnection) is a reference model developed by ISO that standardizes network communication into 7 layers: Physical, Data Link, Network, Transport, Session, Presentation, Application. Role: provides a universal standard for network protocols, enables interoperability between different vendors, simplifies troubleshooting by isolating issues to specific layers, and serves as a teaching/conceptual framework."
+              },
+              {
+                "id": 2,
+                "marks": 4,
+                "text": "What is the purpose of cables being shielded and having twisted pairs?",
+                "answer": "Shielding: metal foil/braid around conductors protects against electromagnetic interference (EMI) from external sources and prevents signal leakage. Twisted pairs: twisting two wires together cancels out electromagnetic noise from adjacent pairs (crosstalk). The twists ensure both wires receive the same interference, which is canceled at the receiving end via differential signaling. Used in Ethernet (Cat5e, Cat6) and telephone cables."
+              },
+              {
+                "id": 3,
+                "marks": 4,
+                "text": "One way of securing a network is through the use of passwords. What can be considered as good passwords?",
+                "answer": "Good passwords: at least 12-16 characters, mix of uppercase/lowercase letters, numbers, and special characters, avoid dictionary words and personal information, unique for each account. Best practices: use passphrases (e.g., 'Correct-Horse-Battery-Staple'), enable multi-factor authentication, use a password manager, change passwords periodically, and never share passwords."
+              },
+              {
+                "id": 4,
+                "marks": 4,
+                "text": "Name the two data link sublayers and their purposes.",
+                "answer": "1) LLC (Logical Link Control) sublayer - upper sublayer that provides multiplexing between network layer protocols, flow control, and error control. Manages frame synchronization and multiplexes protocols (e.g., IP, IPX) over the same link.\n\n2) MAC (Media Access Control) sublayer - lower sublayer that controls how devices access the shared medium, handles frame addressing (MAC addresses), and detects collisions. Determines which device transmits at a given time (CSMA/CD for Ethernet)."
+              }
+            ]
+          },
+          {
+            "title": "Section B: D. Algorithms and Data Structure",
+            "marks": 10,
+            "questions": [
+              {
+                "id": 1,
+                "marks": 3,
+                "text": "How to find whether the linked list has a loop?",
+                "answer": "Use Floyd's Cycle Detection Algorithm (Tortoise and Hare): use two pointers, slow (moves 1 step) and fast (moves 2 steps). If they meet at any point, the linked list has a loop. If fast reaches null (end), no loop exists. Time complexity: O(n), Space complexity: O(1). Also called the cycle detection algorithm."
+              },
+              {
+                "id": 2,
+                "marks": 4,
+                "text": "Differentiate between best case scenario and worst case scenario of an algorithm.",
+                "answer": "Best case: minimum time/resources the algorithm takes for the most favorable input. Example: linear search best case is O(1) when target is the first element. \n\nWorst case: maximum time/resources the algorithm takes for the least favorable input. Example: linear search worst case is O(n) when target is last or not present.\n\nAnalysis: best case is rarely useful; worst case gives guaranteed upper bound (performance guarantee). Average case gives expected performance over all inputs. Big-O notation typically refers to worst case."
+              },
+              {
+                "id": 3,
+                "marks": 3,
+                "text": "Describe the two principal operations that can be performed on a Stack.",
+                "answer": "1) Push: adds an element to the top of the stack. If stack is full, overflow condition occurs. Time complexity: O(1).\n\n2) Pop: removes and returns the top element from the stack. If stack is empty, underflow condition occurs. Time complexity: O(1).\n\nAdditional operations: Peek/Top (view top element without removing), isEmpty (check if stack is empty), isFull (check if stack is full). Stack follows LIFO (Last In, First Out) principle."
               }
             ]
           }

@@ -185,7 +185,8 @@ const _notesYear1 = {
                { "year": "2022", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },,
                { "year": "2025", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },
               { "year": "2021", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Memorize the truth tables for all 7 gates — AND, OR, NOT, NAND, NOR, XOR, XNOR", "Universal gates (NAND, NOR) can be used to build any other gate — this is a classic exam question", "XOR is the basis for binary addition circuits"]
         },
@@ -210,7 +211,8 @@ const _notesYear1 = {
                { "year": "2020", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },,
                { "year": "2022", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },,
                { "year": "2025", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["De Morgan's theorem is the MOST frequently tested topic — memorize both forms cold", "When simplifying, show each step and cite which law you used (exams give marks for the method)", "Practice simplifying increasingly complex expressions"]
         },
@@ -230,7 +232,8 @@ const _notesYear1 = {
                { "year": "2020", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },,
                { "year": "2022", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },,
                { "year": "2025", "paper": "Digital Electronics", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know the characteristic table and excitation table for each flip-flop type", "The SR flip-flop has an invalid state (S=1,R=1) — the JK flip-flop fixes this by toggling instead", "D flip-flops are the most commonly used for building registers"]
         }
@@ -261,7 +264,8 @@ const _notesYear1 = {
               { "year": "2023", "paper": "Mathematics", "section": "Section A", "qid": "Q1" }
             ,
                { "year": "2021", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know which measure of central tendency to use for different types of data", "Variance = (standard deviation)\u00b2; Standard deviation = \u221a(variance)", "The 68-95-99.7 rule for normal distribution appears regularly"]
         },
@@ -282,7 +286,8 @@ const _notesYear1 = {
               { "year": "2022", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },
               { "year": "2023", "paper": "Mathematics", "section": "Section A", "qid": "Q1" }
             ,
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Tree diagrams are your best friend for multi-stage probability — draw them for every problem", "Distinguish carefully between mutually exclusive (cannot both happen) and independent (one does not affect the other)", "P(not happening) = 1 - P(happening)"]
         },
@@ -304,7 +309,8 @@ const _notesYear1 = {
                { "year": "2021", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },,
                { "year": "2022", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },,
                { "year": "2023", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know when to use Binomial vs Poisson", "The 68-95-99.7 rule is your shortcut for normal distribution problems", "Z-score formula: Z = (x - \u03bc) / \u03c3"]
         },
@@ -326,7 +332,8 @@ const _notesYear1 = {
                { "year": "2021", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },,
                { "year": "2022", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },,
                { "year": "2023", "paper": "Mathematics", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know the formula for Pearson's r and what values mean (strong/weak, positive/negative)", "CORRELATION DOES NOT IMPLY CAUSATION — this is a guaranteed exam question", "Regression equation Y = a + bX — learn how to calculate b (slope)"]
         }
@@ -356,7 +363,8 @@ const _notesYear1 = {
               { "year": "2023", "paper": "Enterprise Creation", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },
               { "year": "2024", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know the difference between entrepreneur (risk-taker, business starter) and manager (employee, runs operations)", "Intrapreneurship = entrepreneurship within an existing organization"]
         },
@@ -376,7 +384,8 @@ const _notesYear1 = {
               { "year": "2022", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
               { "year": "2023", "paper": "Enterprise Creation", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Be able to list and explain all 8 components of a business plan — this is a common question", "The executive summary is the MOST important part — it is often the only part investors read"]
         },
@@ -403,7 +412,8 @@ const _notesYear1 = {
               { "year": "2022", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Limited liability is the most important concept — it protects personal assets from business debts", "Double taxation (corporation pays tax, then shareholders pay tax on dividends) is a key disadvantage of C corporations"]
         },
@@ -428,7 +438,8 @@ const _notesYear1 = {
               { "year": "2023", "paper": "Enterprise Creation", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Memorize the 4Ps (Product, Price, Place, Promotion) and be able to explain each with an example", "Primary research = new data you collect yourself; Secondary = existing data collected by others"]
         }
@@ -456,7 +467,8 @@ const _notesYear1 = {
               { "year": "2023", "paper": "Enterprise Creation", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Opportunity cost is the foundation of economics — be ready to calculate it in any scenario", "Marginal analysis: compare additional (not average) benefits vs additional costs", "A PPF shifts outward when resources increase or technology improves"]
         },
@@ -478,7 +490,8 @@ const _notesYear1 = {
                { "year": "2022", "paper": "General Economics", "section": "Section A", "qid": "Q1" },
               { "year": "2023", "paper": "Enterprise Creation", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Be able to draw supply and demand curves and show equilibrium, surplus, and shortage", "Distinguish between movement ALONG a curve (price change) and SHIFT of the curve (other factors)", "Ceteris paribus = 'all other things being equal'"]
         },
@@ -505,7 +518,8 @@ const _notesYear1 = {
               { "year": "2023", "paper": "Enterprise Creation", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["The key distinguishing factors: number of firms, product differentiation, and entry barriers", "Monopoly has maximum market power (price maker); perfect competition has zero (price taker)"]
         },
@@ -529,7 +543,8 @@ const _notesYear1 = {
               { "year": "2023", "paper": "Enterprise Creation", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Fiscal policy = government taxes + spending; Monetary policy = central bank interest rates + money supply", "The business cycle has four phases: expansion, peak, contraction/recession, trough"]
         }
@@ -559,7 +574,8 @@ const _notesYear1 = {
               { "year": "2022", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },,
               { "year": "2023", "paper": "Enterprise Creation", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Enterprise Creation and Entrepreneurship", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Private vs Public: private cannot sell shares to the public, public can", "Memorandum deals with external matters (name, objectives); Articles deal with internal management (rules)"]
         },
@@ -577,7 +593,8 @@ const _notesYear1 = {
               { "year": "2020", "paper": "Company Law", "section": "Section B", "qid": "Q1" }
             ,
               { "year": "2020", "paper": "Company Law", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Directors owe duties to the COMPANY, not to shareholders individually", "Fiduciary duty is the most important — act in good faith and in the company's best interest"]
         },
@@ -596,7 +613,8 @@ const _notesYear1 = {
               { "year": "2020", "paper": "Company Law", "section": "Section B", "qid": "Q2" }
             ,
               { "year": "2020", "paper": "Company Law", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Shareholders OWN the company; directors MANAGE the company", "AGM is held once per year; EGM is for urgent matters between AGMs"]
         },
@@ -613,7 +631,8 @@ const _notesYear1 = {
               { "year": "2021", "paper": "Company Law", "section": "Section B", "qid": "Q2" }
             ,
               { "year": "2020", "paper": "Company Law", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know the order of payment in liquidation — this is frequently tested", "The priority: secured creditors \u2192 preferential \u2192 floating charge \u2192 unsecured \u2192 shareholders"]
         }
@@ -642,7 +661,8 @@ const _notesYear1 = {
                { "year": "2024", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },,
                { "year": "2025", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },
               { "year": "2021", "paper": "Law and Citizenship", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Cameroon's bijural system (English Common Law + French Civil Law) is a unique feature", "The hierarchy: Written law \u2192 Customary law \u2192 Case law \u2192 Doctrine"]
         },
@@ -664,7 +684,8 @@ const _notesYear1 = {
                { "year": "2023", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },,
                { "year": "2024", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },,
                { "year": "2025", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Jus sanguinis (blood/parentage) vs Jus soli (birthplace) — the most tested distinction", "Know how citizenship can be acquired AND lost"]
         },
@@ -686,7 +707,8 @@ const _notesYear1 = {
                { "year": "2024", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },,
                { "year": "2025", "paper": "Law and Citizenship Education", "section": "Section A", "qid": "Q1" },
               { "year": "2021", "paper": "Law and Citizenship", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know the three generations: Civil/Political (freedom from interference), Economic/Social (right to services), Environmental (collective rights)", "Rights are not absolute — they can be limited for public good"]
         }
@@ -718,7 +740,8 @@ const _notesYear1 = {
                { "year": "2022", "paper": "French Language", "section": "Section A", "qid": "Q1" },,
                { "year": "2023", "paper": "French Language", "section": "Section A", "qid": "Q1" },,
                { "year": "2025", "paper": "French Language", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Learn present tense of four essential verbs: \u00eatre, avoir, aller, faire", "Negation: ne ... pas around the verb"]
         },
@@ -738,7 +761,8 @@ const _notesYear1 = {
                { "year": "2022", "paper": "French Language", "section": "Section A", "qid": "Q1" },,
                { "year": "2023", "paper": "French Language", "section": "Section A", "qid": "Q1" },,
                { "year": "2025", "paper": "French Language", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Practice writing short paragraphs about yourself (name, age, nationality, occupation, family)", "Know numbers 1-100 thoroughly"]
         }
@@ -766,7 +790,8 @@ const _notesYear1 = {
               { "year": "2022", "paper": "English Language", "section": "Section A", "qid": "Q1" },,
               { "year": "2023", "paper": "English Language", "section": "Section A", "qid": "Q1" },
               { "year": "2024", "paper": "English", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Subject-verb agreement is the most frequently tested grammar rule", "Know the difference between: your/you're, its/it's, their/there/they're, affect/effect"]
         },
@@ -784,7 +809,8 @@ const _notesYear1 = {
               { "year": "2021", "paper": "English Language", "section": "Section A", "qid": "Q1" },,
               { "year": "2022", "paper": "English Language", "section": "Section A", "qid": "Q1" },,
               { "year": "2023", "paper": "English Language", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["For summaries: identify main points, omit examples, use your own words, stay within word limit", "Read the questions BEFORE re-reading the passage in detail"]
         },
@@ -802,7 +828,8 @@ const _notesYear1 = {
               { "year": "2021", "paper": "English Language", "section": "Section A", "qid": "Q1" },,
               { "year": "2022", "paper": "English Language", "section": "Section A", "qid": "Q1" },,
               { "year": "2023", "paper": "English Language", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Every essay needs: introduction (with thesis), body paragraphs (one idea each), conclusion", "Formal letter: Yours faithfully for Dear Sir; Yours sincerely for Dear Mr. Name"]
         }

@@ -22,7 +22,8 @@ const _notesYear2 = {
               { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
               { "year": "2023", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Every C program MUST have a main() function — execution starts here", "printf() is standard output; scanf() is standard input", "Always match opening braces { with closing braces }"]
         },
@@ -43,7 +44,8 @@ const _notesYear2 = {
               { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
               { "year": "2023", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know size and range: int=4B, float=4B, double=8B, char=1B", "Integer division truncates: 5/2 = 2, not 2.5", "Format specifiers: %d=int, %f=float, %lf=double, %c=char"]
         },
@@ -66,7 +68,8 @@ const _notesYear2 = {
               { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
               { "year": "2023", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["switch works only with integer/char expressions (not floats/strings)", "for = known count; while = condition matters; do-while = must run at least once", "Don't forget break in switch cases"]
         },
@@ -86,7 +89,8 @@ const _notesYear2 = {
               { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
               { "year": "2023", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["C uses pass by value by default — the function gets a copy", "To modify the original variable, use pointers (pass by reference)", "A function prototype tells the compiler about the function before it's defined"]
         },
@@ -105,7 +109,8 @@ const _notesYear2 = {
               { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
               { "year": "2023", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Array indices start at 0 — always remember!", "C does NOT check array bounds — accessing outside is dangerous", "Strings are null-terminated ('\\0') char arrays"]
         },
@@ -124,7 +129,8 @@ const _notesYear2 = {
               { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
               { "year": "2023", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["& gives address; * gives value at address (dereference)", "Always check if malloc() returned NULL (allocation failed)", "Every malloc() must have a corresponding free()"]
         },
@@ -145,7 +151,8 @@ const _notesYear2 = {
               { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
               { "year": "2023", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Always close files after use (fclose)", "fgets() is safer than gets() — prevents buffer overflow", "Check if fopen() returned NULL (file couldn't be opened)"]
         }
@@ -175,7 +182,8 @@ const _notesYear2 = {
               { "year": "2025", "paper": "Case Study", "section": "Section A", "qid": "Q1" },
               { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know the 4 pillars with definitions and examples — this is a guaranteed question", "Be able to read and draw UML class diagrams representing OOP design"]
         },
@@ -194,7 +202,8 @@ const _notesYear2 = {
             ,
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Case Study", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Constructor has same name as class and no return type — called when object is created", "Destructor (~ClassName) is called when object is destroyed"]
         },
@@ -214,7 +223,8 @@ const _notesYear2 = {
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Case Study", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["virtual keyword enables runtime polymorphism in C++", "Pure virtual function (=0) makes a class abstract — cannot instantiate"]
         },
@@ -233,7 +243,8 @@ const _notesYear2 = {
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Case Study", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Java does NOT support multiple class inheritance — only multiple interface implementation", "this keyword refers to the current instance", "Garbage collection = automatic memory management (no delete keyword)"]
         }
@@ -263,7 +274,8 @@ const _notesYear2 = {
               { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
               { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Big-O describes growth rate as n\u2192\u221e, ignoring constants and lower terms", "Know best, average, and worst case for common algorithms", "O(log n) is the fastest for searching; O(1) is the fastest overall"]
         },
@@ -291,7 +303,8 @@ const _notesYear2 = {
               { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },,
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Quick sort uses divide-and-conquer with a pivot; worst case occurs when pivot is smallest/largest", "Merge sort is stable, O(n log n) guaranteed, but needs O(n) extra space"]
         },
@@ -307,7 +320,8 @@ const _notesYear2 = {
               { "year": "2021", "paper": "Algorithms & DS", "section": "Section A", "qid": "Q2" }
             ,
               { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Binary search only works on SORTED arrays", "Calculate mid as l + (r-l)/2 to avoid integer overflow"]
         },
@@ -324,7 +338,8 @@ const _notesYear2 = {
               { "year": "2020", "paper": "Algorithms & DS", "section": "Section A", "qid": "Q3" }
             ,
               { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Linked lists use dynamic memory allocation (no fixed size like arrays)", "Insertion/deletion at beginning is O(1); at end is O(n) for singly linked"]
         },
@@ -340,7 +355,8 @@ const _notesYear2 = {
               { "year": "2020", "paper": "Algorithms & DS", "section": "Section B", "qid": "Q1" }
             ,
               { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Stack overflow = push when full; Stack underflow = pop when empty", "Know how to implement stack/queue using both arrays and linked lists"]
         },
@@ -360,7 +376,8 @@ const _notesYear2 = {
               { "year": "2020", "paper": "Algorithms & DS", "section": "Section A", "qid": "Q1" },
               { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Inorder traversal of BST gives sorted order", "BST worst case O(n) when tree is skewed — AVL trees fix this (self-balancing)", "BFS uses queue, DFS uses stack"]
         }
@@ -392,7 +409,8 @@ const _notesYear2 = {
               { "year": "2021", "paper": "System Analysis & Design", "section": "Section A", "qid": "Q1" },,
               { "year": "2022", "paper": "System Analysis and Design", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "System Analysis and Design", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Waterfall vs Agile differences are frequently tested", "Know which fact-finding method (interview, questionnaire, observation) is best for each scenario"]
         },
@@ -441,7 +459,8 @@ const _notesYear2 = {
               { "year": "2021", "paper": "System Analysis & Design", "section": "Section A", "qid": "Q1" },,
               { "year": "2022", "paper": "System Analysis and Design", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "System Analysis and Design", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["DFD shows data flow — NOT control flow (that's a flowchart)", "ERD cardinalities: || = exactly one, o{ = zero or many, |{ = one or many"]
         },
@@ -458,7 +477,8 @@ const _notesYear2 = {
               { "year": "2020", "paper": "System Analysis & Design", "section": "Section A", "qid": "Q1" },,
               { "year": "2022", "paper": "System Analysis and Design", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "System Analysis and Design", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Functional describes features; non-functional describes quality attributes", "Select the BEST fact-finding technique based on scenario (interviews for depth, questionnaires for breadth)"]
         }
@@ -486,7 +506,8 @@ const _notesYear2 = {
               { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Data independence: logical (change conceptual without affecting external) and physical (change storage without affecting conceptual)", "PK uniquely identifies rows; FK links tables together"]
         },
@@ -516,7 +537,8 @@ const _notesYear2 = {
             ,
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Case Study", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["SQL keywords are case-insensitive but conventionally UPPERCASE", "HAVING filters groups (after GROUP BY); WHERE filters rows (before GROUP BY)", "Learn JOIN syntax: INNER JOIN, LEFT JOIN, RIGHT JOIN"]
         },
@@ -533,7 +555,8 @@ const _notesYear2 = {
               { "year": "2021", "paper": "Database & SQL", "section": "Section A", "qid": "Q1" }
             ,
               { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Functional dependency: X\u2192Y means X determines Y (if you know X, you can find Y)", "Normalization reduces redundancy and prevents anomalies (insert, update, delete)"]
         },
@@ -549,7 +572,8 @@ const _notesYear2 = {
               { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["M:N relationships always produce a new intersection/cross-reference table", "For 1:M, put the FK in the table on the M (many) side"]
         },
@@ -568,7 +592,8 @@ const _notesYear2 = {
               { "year": "2021", "paper": "Database & SQL", "section": "Section A", "qid": "Q3" }
             ,
               { "year": "2021", "paper": "Practice of Computer", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["COMMIT makes changes permanent; ROLLBACK undoes changes", "Isolation levels: Read Uncommitted (lowest) to Serializable (highest)"]
         }
@@ -596,7 +621,8 @@ const _notesYear2 = {
               { "year": "2025", "paper": "Case Study", "section": "Section A", "qid": "Q1" },
               { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Semantic HTML improves accessibility and SEO", "CSS specificity: inline > id > class > element. !important overrides everything"]
         },
@@ -614,7 +640,8 @@ const _notesYear2 = {
             ,
               { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["== vs ===: always prefer === (strict comparison, no type coercion)", "let and const are block-scoped; var is function-scoped", "DOM = browser's tree representation of HTML"]
         },
@@ -630,7 +657,8 @@ const _notesYear2 = {
             ,
               { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Always use prepared statements to prevent SQL injection — NEVER use string concatenation for queries with user input", "$_GET shows data in URL; $_POST hides data in request body"]
         }
@@ -657,7 +685,8 @@ const _notesYear2 = {
             ,
               { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Star topology is most common in modern LANs (Ethernet switches)", "Mesh is used in WANs and critical systems where reliability is paramount"]
         },
@@ -680,7 +709,8 @@ const _notesYear2 = {
               { "year": "2024", "paper": "Case Study", "section": "Networking", "qid": "Q6" }
             ,
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Mnemonic: Please Do Not Throw Sausage Pizza Away (Physical to Application)", "TCP/IP model has 4 layers vs OSI's 7 layers — TCP/IP merges upper 3 into Application"]
         },
@@ -699,7 +729,8 @@ const _notesYear2 = {
               { "year": "2020", "paper": "Networking", "section": "Section A", "qid": "Q1" },
               { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Private IP ranges: 10.x.x.x, 172.16-31.x.x, 192.168.x.x", "CIDR notation: /n means first n bits are network portion"]
         },
@@ -725,7 +756,8 @@ const _notesYear2 = {
               { "year": "2021", "paper": "Networking", "section": "Section A", "qid": "Q1" },
               { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know common port numbers: HTTP(80), HTTPS(443), FTP(21), SMTP(25), DNS(53), SSH(22)", "DNS converts domain names to IP addresses — the \"phonebook of the Internet\""]
         }
@@ -747,7 +779,8 @@ const _notesYear2 = {
               { "year": "2020", "paper": "Operating Systems", "section": "Section A", "qid": "Q1" }
             ,
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Multitasking = one CPU, rapid switching; Multiprocessing = multiple CPUs", "Real-time OS must guarantee deadlines (hard RT vs soft RT)"]
         },
@@ -766,7 +799,8 @@ const _notesYear2 = {
             ,
               { "year": "2021", "paper": "Operating Systems", "section": "Section A", "qid": "Q1" },
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Preemptive = CPU can be taken away; Non-preemptive = process keeps CPU until it yields", "Round Robin: quantum size is critical — too large = FCFS, too small = too many context switches"]
         },
@@ -784,7 +818,8 @@ const _notesYear2 = {
             ,
               { "year": "2020", "paper": "Operating Systems", "section": "Section A", "qid": "Q1" },
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Thrashing = excessive paging due to too many active processes", "Paging eliminates external fragmentation; segmentation allows logical divisions"]
         },
@@ -800,7 +835,8 @@ const _notesYear2 = {
             ,
               { "year": "2020", "paper": "Operating Systems", "section": "Section A", "qid": "Q1" },
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["SCAN algorithm behaves like an elevator — fair and avoids starvation", "Know the difference between FAT, NTFS, ext4"]
         }
@@ -825,7 +861,8 @@ const _notesYear2 = {
               { "year": "2022", "paper": "Information System", "section": "Section A", "qid": "Q1" },,
               { "year": "2023", "paper": "Information Systems", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Information Systems", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Information \u2260 Data. Data is raw; information is processed data with meaning", "Know the 5 components of an IS: Hardware, Software, Data, Procedures, People"]
         },
@@ -845,7 +882,8 @@ const _notesYear2 = {
               { "year": "2022", "paper": "Information System", "section": "Section A", "qid": "Q1" },,
               { "year": "2023", "paper": "Information Systems", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Information Systems", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["TPS processes structured data about daily operations; EIS provides strategic data for top-level decisions", "Know which system supports which management level: TPS=operational, MIS/DSS=tactical, EIS=strategic"]
         },
@@ -866,7 +904,8 @@ const _notesYear2 = {
               { "year": "2022", "paper": "Information System", "section": "Section A", "qid": "Q1" },,
               { "year": "2023", "paper": "Information Systems", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Information Systems", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Know the difference between B2B, B2C, C2C, G2C", "E-commerce challenges: security, trust, logistics, legal issues"]
         }
@@ -893,7 +932,8 @@ const _notesYear2 = {
               { "year": "2020", "paper": "Mobile Programming", "section": "Section A", "qid": "Q1" },
               { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["Activity lifecycle is frequently tested — memorize the callback order", "Intents are used for navigation between activities and passing data"]
         },
@@ -911,7 +951,8 @@ const _notesYear2 = {
               { "year": "2020", "paper": "Mobile Programming", "section": "Section A", "qid": "Q1" },
               { "year": "2020", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },,
               { "year": "2021", "paper": "Case Study - SWE", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["dp for sizes, sp for fonts (both scale with screen density)", "match_parent = fill container; wrap_content = fit content size"]
         }
@@ -937,7 +978,8 @@ const _notesYear2 = {
               { "year": "2022", "paper": "Discrete Mathematics", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Discrete Mathematics", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Discrete Mathematics", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["De Morgan's laws: complement of union = intersection of complements, complement of intersection = union of complements", "Truth tables are the standard way to evaluate logical expressions"]
         },
@@ -957,7 +999,8 @@ const _notesYear2 = {
               { "year": "2022", "paper": "Discrete Mathematics", "section": "Section A", "qid": "Q1" },,
               { "year": "2024", "paper": "Discrete Mathematics", "section": "Section A", "qid": "Q1" },,
               { "year": "2025", "paper": "Discrete Mathematics", "section": "Section A", "qid": "Q1" },
-              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
+              { "year": "2024", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" },
+              { "year": "2023", "paper": "Computer Technology", "section": "Section A", "qid": "Q1" }]}
           ],
           "examTips": ["A graph has an Eulerian circuit iff all vertices have even degree", "In a tree, number of edges = vertices - 1", "Equivalence relation = reflexive + symmetric + transitive"]
         }
