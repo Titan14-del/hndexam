@@ -12,9 +12,9 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "Write structured pseudocode for the given flowcharts.\n\n**Flowchart A:**\n```mermaid\nflowchart TD\n    START([Start]) --> I1[Input x]\n    I1 --> D1{x > 0?}\n    D1 -->|Yes| O1[Display POSITIVE]\n    D1 -->|No| D2{x = 0?}\n    D2 -->|Yes| O2[Display ZERO]\n    D2 -->|No| O3[Display NEGATIVE]\n    O1 --> END([End])\n    O2 --> END\n    O3 --> END\n```\n\n**Flowchart B:**\n```mermaid\nflowchart TD\n    START2([Start]) --> I2[a = 1]\n    I2 --> D3{a <= 5?}\n    D3 -->|Yes| O4[Display a]\n    O4 --> I3[a = a + 1]\n    I3 --> D3\n    D3 -->|No| END2([End])\n```",
+                "text": "Write structured pseudocode for given flowcharts.",
                 "marks": 5,
-                "answer": "Flowchart A:\nBEGIN\n  INPUT x\n  IF x>0 THEN\n    DISPLAY \"POSITIVE\"\n  ELSE IF x=0 THEN\n    DISPLAY \"ZERO\"\n  ELSE\n    DISPLAY \"NEGATIVE\"\n  ENDIF\nEND\n\nFlowchart B:\nBEGIN\n  a = 1\n  WHILE a <= 5\n    DISPLAY a\n    a = a + 1\n  ENDWHILE\nEND"
+                "answer": "BEGIN\\nINPUT x\\nIF x>0 THEN\\n  DISPLAY \\\"Positive\\\"\\nELSE\\n  DISPLAY \\\"Non-positive\\\"\\nENDIF\\nEND"
               },
               {
                 "id": 2,
@@ -31,14 +31,14 @@ const examData = {
               {
                 "id": 1,
                 "text": "C variable rules.",
-                "marks": 4,
+                "marks": 3,
                 "answer": "Letter/underscore start, alnum+underscore, case-sensitive, no keywords."
               },
               {
                 "id": 2,
                 "text": "4 function declaration ways.",
-                "marks": 7,
-                "answer": "Four ways to declare a function in C (1.75 marks each):\n\n(1) void f(void); — Function with no parameters and no return value. Used for actions that don't need input or output (e.g., print a message).\n\n(2) void f(int); — Function with parameters but no return value. Used when you need to pass data in but don't need a result back (e.g., display a value).\n\n(3) int f(void); — Function with no parameters but returns an integer. Used when you need a computed value without any input (e.g., get current time).\n\n(4) int f(int); — Function with parameters and a return value. The most general form; takes input and produces output (e.g., calculate square)."
+                "marks": 5,
+                "answer": "void f(void); void f(int); int f(void); int f(int);"
               },
               {
                 "id": 3,
@@ -79,8 +79,8 @@ const examData = {
               {
                 "id": 4,
                 "text": "Person->MathsTeacher,Footballer. OOP concepts & output.",
-                "marks": 9,
-                "answer": "Inheritance (2 marks): A mechanism where a class (child/derived) inherits properties and methods from another class (parent/base). It promotes code reuse. In this case, MathsTeacher and Footballer both inherit from Person — they share attributes like name and age while adding their own specific behavior.\n\nEncapsulation (2 marks): The bundling of data (attributes) and methods that operate on that data within a single unit (class), hiding internal state and requiring all interaction through public methods. Access modifiers (private, public, protected) enforce this.\n\nCalculated Output (5 marks):\nprofession = Teacher\nage = 30\nsalary = 50000\nbonus = 5000\nprofession = Footballer\nage = 25\nsalary = 80000\n\nPerson is the base class with name/age. MathsTeacher extends Person adding subject/salary. Footballer extends Person adding club/salary. Both override a display method to show their specific details."
+                "marks": 6,
+                "answer": "Inheritance, Encapsulation. Output: profession, age, walk, talk, teach/play."
               }
             ]
           },
@@ -104,13 +104,13 @@ const examData = {
                 "id": 1,
                 "text": "Customer fields explanation.",
                 "marks": 8,
-                "answer": "Field types and their uses (2 marks each):\n\n(1) Auto-number (Auto-increment): A numeric field that automatically increments for each new record. Used for primary keys (e.g., CustomerID) to uniquely identify each customer without manual input.\n\n(2) Text (VARCHAR): Stores alphanumeric data such as names, addresses, and phone numbers. Maximum length should be defined (e.g., VARCHAR(100) for customer name). Used for fields that don't need calculations.\n\n(3) Decimal (FLOAT/DECIMAL): Stores numeric values with decimal precision. Used for monetary amounts (e.g., account balance, order total) where exact decimal representation is required.\n\n(4) Date: Stores date and optionally time values. Used for birth dates, registration dates, order dates — enables date arithmetic (e.g., age calculation, days since last purchase)."
+                "answer": "Auto=auto-increment ID. Text=VARCHAR. Decimal=exact money. Date=YMD."
               },
               {
                 "id": 2,
                 "text": "VEHICLE_OPERATOR normalization.",
                 "marks": 12,
-                "answer": "Normalization reduces redundancy. 1NF: atomic values, no repeating groups. 2NF: 1NF + full dependency on PK. 3NF: 2NF + no transitive dependency. BCNF: every determinant is candidate key. Higher forms: 4NF (multi-valued), 5NF (join dependency)."
+                "answer": "See 2021 answer."
               }
             ]
           },
@@ -121,14 +121,14 @@ const examData = {
               {
                 "id": 1,
                 "text": "Define PHP and tools.",
-                "marks": 4,
+                "marks": 3,
                 "answer": "Server-side scripting. Tools: Apache, MySQL, IDE."
               },
               {
                 "id": 2,
-                "text": "Login form + PHP processing (see figure below).\n\n**Figure 1: Login Form**\n```\n+------------------------------------------+\n|                  LOGIN                    |\n+------------------------------------------+\n|                                          |\n|  Username: [__________________________]  |\n|                                          |\n|  Password: [__________________________]  |\n|                                          |\n|           [ Submit ]                     |\n|                                          |\n+------------------------------------------+\n```\n\nCreate the HTML form (as shown above) and write the PHP code to process the login.",
-                "marks": 11,
-                "answer": "&lt;form method=post&gt;&lt;input name=login&gt;&lt;input type=password name=pass&gt;&lt;input type=submit&gt;\n<?php echo $_POST['login'];?>"
+                "text": "Login form + PHP processing.",
+                "marks": 8,
+                "answer": "<form method=post><input name=login><input type=password name=pass><input type=submit>\\n<?php echo $_POST['login'];?>"
               }
             ]
           },
@@ -454,7 +454,7 @@ const examData = {
                 "id": 3,
                 "text": "Draw the logic diagram for a half adder and explain its operation.",
                 "marks": 6,
-                "answer": "Half adder has two inputs (A, B) and two outputs (Sum, Carry).\nSum = A XOR B\nCarry = A AND B\nLogic: XOR gate for Sum, AND gate for Carry.\n\n```mermaid\nflowchart LR\n    A[A] --> XOR[XOR Gate]\n    A --> AND[AND Gate]\n    B[B] --> XOR\n    B --> AND\n    XOR --> S[Sum = A XOR B]\n    AND --> C[Carry = A AND B]\n```\n\n*Truth table:*\n| A | B | Sum | Carry |\n|---|---|-----|-------|\n| 0 | 0 |  0  |   0   |\n| 0 | 1 |  1  |   0   |\n| 1 | 0 |  1  |   0   |\n| 1 | 1 |  0  |   1   |"
+                "answer": "Half adder has two inputs (A, B) and two outputs (Sum, Carry).\nSum = A XOR B\nCarry = A AND B\nLogic: XOR gate for Sum, AND gate for Carry."
               },
               {
                 "id": 4,
@@ -466,7 +466,7 @@ const examData = {
                 "id": 5,
                 "text": "What is a truth table? Draw the truth table for a 3-input NAND gate.",
                 "marks": 4,
-                "answer": "A truth table lists all possible input combinations and the corresponding output.\n3-input NAND: Output = (ABC)' = 0 only when all inputs are 1.\nTruth: 000->1, 001->1, 010->1, 011->1, 100->1, 101->1, 110->1, 111->0\n\n```mermaid\nflowchart LR\n    A[A] --> N[NAND Gate]\n    B[B] --> N\n    C[C] --> N\n    N --> Y[Y = NOT(A AND B AND C)]\n```\n\n*Truth table for 3-input NAND gate:*\n| A | B | C | A+B+C | Y = (A+B+C)` |\n|---|---|-------|--------|\n| 0 | 0 | 0 |   0   |     1     |\n| 0 | 0 | 1 |   0   |     1     |\n| 0 | 1 | 0 |   0   |     1     |\n| 0 | 1 | 1 |   0   |     1     |\n| 1 | 0 | 0 |   0   |     1     |\n| 1 | 0 | 1 |   0   |     1     |\n| 1 | 1 | 0 |   0   |     1     |\n| 1 | 1 | 1 |   1   |     0     |"
+                "answer": "A truth table lists all possible input combinations and the corresponding output.\n3-input NAND: Output = (ABC)' = 0 only when all inputs are 1.\nTruth: 000->1, 001->1, 010->1, 011->1, 100->1, 101->1, 110->1, 111->0"
               },
               {
                 "id": 6,
@@ -737,31 +737,31 @@ const examData = {
               {
                 "id": 1,
                 "text": "Fill in the blank with the correct form of the word in brackets: 'My brother _____ (ready) finished his homework when I arrived.'",
-                "marks": 2,
+                "marks": 1,
                 "answer": "had already"
               },
               {
                 "id": 2,
                 "text": "Fill in: 'She has _____ (know) him for a long time.'",
-                "marks": 2,
+                "marks": 1,
                 "answer": "known"
               },
               {
                 "id": 3,
                 "text": "Fill in: 'My sister spoke _____ (honest) about the matter in court.'",
-                "marks": 2,
+                "marks": 1,
                 "answer": "honestly"
               },
               {
                 "id": 4,
                 "text": "Match: 'Bintu went to the forest' with: A) unless we stop destroying our forests B) to find fuel wood for her kitchen C) in order to fatten them D) because he wanted to know his HIV status E) if I hadn't been bitten by black flies",
-                "marks": 2,
+                "marks": 1,
                 "answer": "B) to find fuel wood for her kitchen"
               },
               {
                 "id": 5,
                 "text": "Match: 'The desert will continue to advance' with the correct ending.",
-                "marks": 2,
+                "marks": 1,
                 "answer": "A) unless we stop destroying our forests"
               },
               {
@@ -906,13 +906,13 @@ const examData = {
                 "id": 3,
                 "text": "Transcribe the word 'lotto' phonetically.",
                 "marks": 3,
-                "answer": "Key point 1: An important aspect of this topic, relevant to understanding the subject matter.\nKey point 2: An important aspect of this topic, relevant to understanding the subject matter."
+                "answer": "/ˈlɒtəʊ/"
               },
               {
                 "id": 4,
                 "text": "Transcribe the word 'lotion' phonetically.",
-                "marks": 5,
-                "answer": "Key point 1: An important aspect of this topic, relevant to understanding the subject matter.\nKey point 2: An important aspect of this topic, relevant to understanding the subject matter."
+                "marks": 4,
+                "answer": "/ˈləʊʃən/"
               },
               {
                 "id": 5,
@@ -990,79 +990,79 @@ const examData = {
               {
                 "id": 1,
                 "text": "La phrase de ponctuation correcte est : a) Me voici à Douala ! b) Me voici à Douala ? c) Me voici à Douala...",
-                "marks": 2,
+                "marks": 1,
                 "answer": "a) Me voici à Douala !"
               },
               {
                 "id": 2,
                 "text": "Phrase correctement ponctuée : a) elle riait, elle sautait, tapait des pieds et des mains. b) elle riait elle sautait, tapait des pieds et des mains. c) elle riait, elle sautait, tapait, des pieds et des mains.",
-                "marks": 2,
+                "marks": 1,
                 "answer": "a) elle riait, elle sautait, tapait des pieds et des mains."
               },
               {
                 "id": 3,
                 "text": "Phrase correcte : a) Il faisait très chaud ; la terre était desséchée. b) il faisait très chaud, la terre était desséchée. c) il faisait très chaud. La terre était desséchée.",
-                "marks": 2,
+                "marks": 1,
                 "answer": "a) Il faisait très chaud ; la terre était desséchée."
               },
               {
                 "id": 4,
                 "text": "Ponctuation correcte : a) Viens immédiatement ! b) Viens immédiatement ? c) Viens immédiatement.",
-                "marks": 2,
+                "marks": 1,
                 "answer": "a) Viens immédiatement !"
               },
               {
                 "id": 5,
                 "text": "Phrase correcte : a) Si monsieur veut bien prendre la peine... b) Si monsieur veut bien prendre la peine, c) Si monsieur veut bien prendre la peine !",
-                "marks": 2,
+                "marks": 1,
                 "answer": "a) Si monsieur veut bien prendre la peine..."
               },
               {
                 "id": 6,
                 "text": "À quel temps est conjugué 'fut' dans : 'Tchourouma fut frappé de stupeur.' a) futur antérieur b) passé simple c) passé antérieur",
-                "marks": 2,
+                "marks": 1,
                 "answer": "b) passé simple"
               },
               {
                 "id": 7,
                 "text": "À quel temps est 'vis' dans : 'À travers mes larmes, je vis mon agresseur.' a) présent de l'indicatif b) passé simple c) imparfait",
-                "marks": 2,
+                "marks": 1,
                 "answer": "b) passé simple"
               },
               {
                 "id": 8,
                 "text": "À quel temps est 'accourions' dans : 'Nous accourions à lui.' a) imparfait de l'indicatif b) futur simple c) conditionnel",
-                "marks": 2,
+                "marks": 1,
                 "answer": "a) imparfait de l'indicatif"
               },
               {
                 "id": 9,
                 "text": "À quel temps est 'grouillait' dans : 'Le marché grouillait de monde.' a) plus-que-parfait b) imparfait de l'indicatif c) passé simple",
-                "marks": 2,
+                "marks": 1,
                 "answer": "b) imparfait de l'indicatif"
               },
               {
                 "id": 10,
                 "text": "À quel temps est 'ai signé' dans : 'J'ai signé moi aussi.' a) passé composé b) impératif présent c) futur antérieur",
-                "marks": 2,
+                "marks": 1,
                 "answer": "a) passé composé"
               },
               {
                 "id": 11,
                 "text": "À quel mode est 'Fais' dans : 'Fais-le cuire doucement.' a) Impératif présent b) Présent de l'indicatif c) Présent simple",
-                "marks": 2,
+                "marks": 1,
                 "answer": "a) Impératif présent"
               },
               {
                 "id": 12,
                 "text": "Phrase correctement accordée : a) La voiture a été heurtée par le camion. b) La voiture a été heurté par le camion. c) La voiture a été heurter par le camion.",
-                "marks": 2,
+                "marks": 1,
                 "answer": "a) La voiture a été heurtée par le camion."
               },
               {
                 "id": 13,
                 "text": "Phrase correcte : a) La voiture et le camion sont entrés en collision. b) La voiture et le camion sont entrées en collision. c) La voiture et le camion sont entré en collision.",
-                "marks": 2,
+                "marks": 1,
                 "answer": "a) La voiture et le camion sont entrés en collision."
               },
               {
@@ -1638,7 +1638,7 @@ const examData = {
               {
                 "id": 1,
                 "text": "How many generations of computers are there? Name and explain each.",
-                "marks": 4,
+                "marks": 5,
                 "answer": "Five generations:\n1st (1940-56): Vacuum tubes, machine language, ENIAC.\n2nd (1956-63): Transistors, assembly language, batch processing.\n3rd (1964-71): Integrated circuits, high-level languages, time-sharing.\n4th (1971-present): Microprocessors, VLSI, personal computers, GUIs.\n5th (present-future): AI, parallel processing, quantum computing."
               },
               {
@@ -1728,7 +1728,7 @@ const examData = {
               {
                 "id": 16,
                 "text": "Give 3 examples of input devices and 3 examples of output devices. State the use of each.",
-                "marks": 2,
+                "marks": 3,
                 "answer": "Input devices: 1) Keyboard - typing text and commands. 2) Mouse - pointing and selecting. 3) Scanner - digitizing documents/images.\n\nOutput devices: 1) Monitor - displaying visual output. 2) Printer - producing paper copies. 3) Speakers - outputting audio/sound."
               },
               {
@@ -1891,7 +1891,7 @@ const examData = {
                 "id": 7,
                 "text": "Write main() to demonstrate all functions.",
                 "marks": 2,
-                "answer": "int main(){struct Product p[100];int n;collectData(p,&n);printf(\"Tot:%.2f\nMost:%s\nBest:%s\nWorst:%s\",benefit(p,n),mostSold(p,n),bestProduct(p,n),worstProduct(p,n));}"
+                "answer": "int main(){struct Product p[100];int n;collectData(p,&n);printf(\"Tot:%.2f\\nMost:%s\\nBest:%s\\nWorst:%s\",benefit(p,n),mostSold(p,n),bestProduct(p,n),worstProduct(p,n));}"
               }
             ]
           },
@@ -1901,7 +1901,7 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "Implement the Circle class as illustrated in the class diagram and instance diagrams below.\n\n**Class Diagram:**\n```mermaid\nclassDiagram\n    class Circle {\n        - radius: double\n        - color: String\n        + Circle()\n        + Circle(radius: double)\n        + Circle(radius: double, color: String)\n        + getRadius(): double\n        + setRadius(radius: double): void\n        + getColor(): String\n        + setColor(color: String): void\n        + getArea(): double\n    }\n```\n\n**Instance Diagrams:**\n```\ncl: Circle\n- radius = 1.0\n- color = \"red\"\n\nc2: Circle\n- radius = 2.0\n- color = \"blue\"\n\nc3: Circle\n- radius = 3.0\n- color = \"green\"\n```\n\nCreate three instances of Circle (cl, c2, c3) with different radius values and display their properties.",
+                "text": "Implement Circle class with radius,color,getRadius(),getColor(),getArea(). Create 3 instances and display.",
                 "marks": 10,
                 "answer": "class Circle{private double r=1.0;String c=\"red\";Circle(){}Circle(double r){this.r=r;}Circle(double r,String c){this.r=r;this.c=c;}double getR(){return r;}String getC(){return c;}double getA(){return Math.PI*r*r;}}",
                 "tutorial": "Encapsulation: private fields with public getters."
@@ -1922,19 +1922,19 @@ const examData = {
               {
                 "id": 1,
                 "text": "SQL for jobs table with defaults.",
-                "marks": 6,
+                "marks": 5,
                 "answer": "CREATE TABLE jobs(job_id VARCHAR(10) PRIMARY KEY,job_title VARCHAR(35) DEFAULT '',min_salary DECIMAL(6,0) DEFAULT 8000,max_salary DECIMAL(6,0) DEFAULT NULL);"
               },
               {
                 "id": 2,
                 "text": "Display name, salary, PF(15% of salary).",
-                "marks": 7,
-                "answer": "Query to display first name, last name, salary, and 15% tax:\n\n```sql\nSELECT first_name, last_name, salary,\n       salary * 0.15 AS tax\nFROM employees;\n```\n\nExplanation (2 marks per clause):\n(1) SELECT first_name, last_name — retrieves employee names (1 mark).\n(2) salary — retrieves the base salary (1 mark).\n(3) salary * 0.15 AS tax — calculates 15% of salary and labels the column \"tax\" (2 marks). The AS keyword creates an alias.\n(4) FROM employees — specifies the source table (1 mark)."
+                "marks": 5,
+                "answer": "SELECT first_name,last_name,salary,salary*0.15 AS PF FROM employees;"
               },
               {
                 "id": 3,
                 "text": "Display full name and salary where salary NOT BETWEEN 7000 and 15000, sorted.",
-                "marks": 7,
+                "marks": 5,
                 "answer": "SELECT CONCAT(first_name,' ',last_name) AS name,salary FROM employees WHERE salary NOT BETWEEN 7000 AND 15000 ORDER BY name ASC;"
               }
             ]
@@ -1947,13 +1947,13 @@ const examData = {
                 "id": 1,
                 "text": "HTML button calling displaymessage() that prompts for name, shows alert.",
                 "marks": 4,
-                "answer": "&lt;button onclick='displaymessage()'>Click&lt;/button&gt;&lt;script&gt;function displaymessage(){var n=prompt('Name:');alert('Your name is '+n);}&lt;/script&gt;"
+                "answer": "<button onclick='displaymessage()'>Click</button><script>function displaymessage(){var n=prompt('Name:');alert('Your name is '+n);}</script>"
               },
               {
                 "id": 2,
                 "text": "HTML5 form with placeholders and required.",
                 "marks": 6,
-                "answer": "&lt;form&gt;&lt;input type='text' placeholder='TUBUO' required>&lt;br&gt;&lt;input type='email' placeholder='...' required>&lt;br&gt;&lt;input type='submit'>&lt;/form&gt;"
+                "answer": "<form><input type='text' placeholder='TUBUO' required><br><input type='email' placeholder='...' required><br><input type='submit'></form>"
               },
               {
                 "id": 3,
@@ -2001,8 +2001,8 @@ const examData = {
               {
                 "id": 2,
                 "text": "Weight avg algorithm: a)Control structures? b)Flowchart. c)Algorithm vs program.",
-                "marks": 10,
-                "answer": "a)Sequence + Selection. b)Start->Input->If negative?→Error/Compute→Display->End. c)Algorithm=conceptual; Program=executable.\n\n```mermaid\nflowchart TD\n    START([Start]) --> I1[Input scores a1, a2, a3]\n    I1 --> I2[Input weights w1, w2, w3]\n    I2 --> CALC[Calculate weighted average&lt;br/>avg = a1×w1 + a2×w2 + a3×w3]\n    CALC --> DEC{avg >= 50?}\n    DEC -->|Yes| P[Display PASS]\n    DEC -->|No| F[Display FAIL]\n    P --> END([End])\n    F --> END\n```"
+                "marks": 11,
+                "answer": "a)Sequence + Selection. b)Start->Input->If negative?→Error/Compute→Display->End. c)Algorithm=conceptual; Program=executable."
               },
               {
                 "id": 3,
@@ -2025,7 +2025,7 @@ const examData = {
               {
                 "id": 1,
                 "text": "a)Define C variable. b)Syntax. c)Outputs for a=20,b=10,c=15,d=5.",
-                "marks": 15,
+                "marks": 8,
                 "answer": "a)Named typed memory. b)type name; c)90,90,90,35"
               }
             ]
@@ -2037,13 +2037,13 @@ const examData = {
               {
                 "id": 1,
                 "text": "Explain auto numeric,text,decimal,date fields in Customer table.",
-                "marks": 4,
+                "marks": 8,
                 "answer": "Auto=auto-increment unique. Text=VARCHAR. Decimal=exact currency. Date=YYYY-MM-DD."
               },
               {
                 "id": 2,
                 "text": "University Department class.",
-                "marks": 6,
+                "marks": 10,
                 "answer": "class Dept{String n,p,l,s;Dept(n,p,l,s){this.n=n;this.p=p;this.l=l;this.s=s;}void display(){System.out.println(n+' '+p+' '+l+' '+s);}}"
               }
             ]
@@ -2055,7 +2055,7 @@ const examData = {
               {
                 "id": 1,
                 "text": "VEHICLE_OPERATOR: 1NF, FDs, anomalies, schema, normal form.",
-                "marks": 20,
+                "marks": 12,
                 "answer": "1NF: split repeats. FDs: VehicleID→Desc, {VehID,Op}→Route,Tariff. Anomalies: insert/delete/update. Not 2NF."
               }
             ]
@@ -2067,31 +2067,31 @@ const examData = {
               {
                 "id": 1,
                 "text": "HTML5 new form elements?",
-                "marks": 3,
+                "marks": 2,
                 "answer": "datalist, output, progress, meter."
               },
               {
                 "id": 2,
                 "text": "Meta charset tag.",
-                "marks": 2,
-                "answer": "&lt;meta charset='UTF-8'>"
+                "marks": 1,
+                "answer": "<meta charset='UTF-8'>"
               },
               {
                 "id": 3,
                 "text": "CSS vs CSS3?",
-                "marks": 2,
+                "marks": 1,
                 "answer": "CSS3 adds flexbox, grid, animations, rounded corners."
               },
               {
                 "id": 4,
                 "text": "Types of CSS?",
-                "marks": 5,
-                "answer": "There are three types of CSS:\n\n(1) Inline CSS (1 mark): Applied directly to an HTML element using the style attribute. Example: &lt;p style=\"color:red\">Text&lt;/p&gt;. Affects only that single element.\n\n(2) Internal CSS (2 marks): Defined within the &lt;style&gt; tag inside the &lt;head&gt; section of an HTML page. Affects all elements of that type on the same page. Example: &lt;style&gt; p { color: red; } &lt;/style&gt;.\n\n(3) External CSS (2 marks): Written in a separate .css file linked via &lt;link&gt; in HTML. Affects all pages that link to it. Best for large sites — separates content from presentation entirely. Example: &lt;link rel=\"stylesheet\" href=\"styles.css\">."
+                "marks": 3,
+                "answer": "Inline, Internal, External."
               },
               {
                 "id": 5,
                 "text": "window.onload vs DOMContentLoaded?",
-                "marks": 3,
+                "marks": 2,
                 "answer": "onload waits all assets. DOMContentLoaded fires when DOM ready."
               }
             ]
@@ -2103,14 +2103,14 @@ const examData = {
               {
                 "id": 1,
                 "text": "TCP vs UDP?",
-                "marks": 5,
+                "marks": 3,
                 "answer": "TCP: reliable, ordered, connection-oriented. UDP: fast, connectionless."
               },
               {
                 "id": 2,
                 "text": "Ring vs Star topology.",
-                "marks": 10,
-                "answer": "Ring: predictable, single break stops all. Star: fault isolation, hub SPOF.\n\n```mermaid\nflowchart LR\n    subgraph \"Star Topology\"\n        HUB[Central Hub/Switch] --- N1[Node 1]\n        HUB --- N2[Node 2]\n        HUB --- N3[Node 3]\n        HUB --- N4[Node 4]\n    end\n    subgraph \"Ring Topology\"\n        R1[Node A] --- R2[Node B]\n        R2 --- R3[Node C]\n        R3 --- R4[Node D]\n        R4 --- R1\n    end\n```"
+                "marks": 6,
+                "answer": "Ring: predictable, single break stops all. Star: fault isolation, hub SPOF."
               }
             ]
           }
@@ -2135,7 +2135,7 @@ const examData = {
                 "id": 2,
                 "text": "List and describe the two types of widely used network architectures illustrating the diagram of each.",
                 "marks": 9,
-                "answer": "(1) Client-Server Architecture (4 marks): A centralized model where clients (workstations) request services from a central server that manages resources and security.\n\n```mermaid\nflowchart TD\n    subgraph \"Client-Server Architecture\"\n        S[Central Server] --- SW[Switch/Hub]\n        SW --- C1[Client 1]\n        SW --- C2[Client 2]\n        SW --- C3[Client 3]\n        SW --- C4[Client 4]\n    end\n    C1 -.->|Request| S\n    C2 -.->|Request| S\n    C3 -.->|Request| S\n    C4 -.->|Request| S\n    S -.->|Response| C1\n    S -.->|Response| C2\n    S -.->|Response| C3\n    S -.->|Response| C4\n```\n\n(2) Peer-to-Peer (P2P) Architecture (4 marks): A decentralized model where each node acts as both client and server, sharing resources directly without a central server.\n\n```mermaid\nflowchart LR\n    subgraph \"Peer-to-Peer (P2P) Architecture\"\n        N1[Node/Peer 1] <--> N2[Node/Peer 2]\n        N1 <--> N3[Node/Peer 3]\n        N1 <--> N4[Node/Peer 4]\n        N2 <--> N3\n        N2 <--> N4\n        N3 <--> N4\n    end\n```\n\n+1 mark for naming both correctly."
+                "answer": "(1) Client-Server Architecture (4 marks): A centralized model where clients (workstations) request services from a central server that manages resources and security. Diagram: server in center connected to multiple clients via switch/hub.\n(2) Peer-to-Peer (P2P) Architecture (4 marks): A decentralized model where each node acts as both client and server, sharing resources directly without a central server. Diagram: nodes connected in a mesh-like network.\n+1 mark for naming both correctly."
               },
               {
                 "id": 3,
@@ -2153,7 +2153,7 @@ const examData = {
                 "id": 5,
                 "text": "What is Cloud Computing? Give an illustration of it.",
                 "marks": 4,
-                "answer": "Cloud computing is the on-demand delivery of computing services (servers, storage, databases, networking, software) over the internet on a pay-as-you-go basis (2 marks).\n\n```mermaid\nflowchart LR\n    subgraph \"Cloud Computing Model\"\n        USERS[Users/Devices] --> NET[Internet]\n        NET --> CLOUD[Cloud Provider Infrastructure]\n        subgraph \"Service Models\"\n            I[IaaS&lt;br/>Servers, Storage]\n            P[PaaS&lt;br/>Platform, Runtime]\n            S[SaaS&lt;br/>Google Drive, Office 365]\n        end\n        CLOUD --- I\n        CLOUD --- P\n        CLOUD --- S\n    end\n    USERS -.-> S\n```\n\nIllustration (2 marks): Google Drive — users store files on Google's servers and access them from any device anywhere; Google manages the infrastructure and the user only pays for storage needed."
+                "answer": "Cloud computing is the on-demand delivery of computing services (servers, storage, databases, networking, software) over the internet on a pay-as-you-go basis (2 marks).\nIllustration (2 marks): Google Drive — users store files on Google's servers and access them from any device anywhere; Google manages the infrastructure and the user only pays for storage needed."
               },
               {
                 "id": 6,
@@ -2345,7 +2345,7 @@ const examData = {
               },
               {
                 "id": 2,
-                "text": "Consider the ER model (Figure 1) for a pharmacy chain below:\n\n```mermaid\nerDiagram\n    PharmaceuticalCompany ||--o{ Drug : manufactures\n    Pharmacy ||--o{ Drug : sells\n    Pharmacy ||--o{ Contract : signs\n    PharmaceuticalCompany ||--o{ Contract : signs\n    Patient ||--o{ Prescription : receives\n    Drug ||--o{ Prescription : contained_in\n    PharmaceuticalCompany {\n        int companyId PK\n        string name\n        string phone\n    }\n    Drug {\n        int drugId PK\n        string name\n    }\n    Pharmacy {\n        int pharmacyId PK\n        string name\n        string address\n    }\n    Contract {\n        int contractId PK\n        date startDate\n    }\n    Patient {\n        int patientId PK\n        string name\n    }\n    Prescription {\n        int prescriptionId PK\n        date date\n    }\n```\n\nCan a pharmaceutical company have multiple phone numbers? If not, what do you need to do?",
+                "text": "Consider an ER model for a pharmacy chain. Can a pharmaceutical company have multiple phone numbers? If not, what do you need to do?",
                 "marks": 5,
                 "answer": "As a single-valued attribute, it cannot. Add a multi-valued attribute (phoneNumbers) or split into a separate Phone table with 1-to-many relationship."
               },
@@ -2389,13 +2389,13 @@ const examData = {
                 "id": 1,
                 "text": "What are tags? Give two HTML tags that don't come in a pair (self-closing).",
                 "marks": 4,
-                "answer": "Tags are markup elements in HTML. Self-closing: &lt;br&gt;, &lt;hr&gt;, &lt;img&gt;, &lt;input&gt;."
+                "answer": "Tags are markup elements in HTML. Self-closing: <br>, <hr>, <img>, <input>."
               },
               {
                 "id": 2,
                 "text": "What are style sheets? Explain three ways of applying style sheets in a web document.",
                 "marks": 5,
-                "answer": "CSS defines presentation. Three ways: (1) Inline — style attribute on element; (2) Internal — &lt;style&gt; tag in &lt;head&gt;; (3) External — linked .css file via &lt;link&gt;."
+                "answer": "CSS defines presentation. Three ways: (1) Inline — style attribute on element; (2) Internal — <style> tag in <head>; (3) External — linked .css file via <link>."
               },
               {
                 "id": 3,
@@ -2413,13 +2413,13 @@ const examData = {
                 "id": 5,
                 "text": "What are some of the common lists that can be used when designing a page?",
                 "marks": 5,
-                "answer": "Ordered list (&lt;ol&gt;), Unordered list (&lt;ul&gt;), Definition list (&lt;dl&gt;), Nested lists, Menu list (&lt;menu&gt;)."
+                "answer": "Ordered list (<ol>), Unordered list (<ul>), Definition list (<dl>), Nested lists, Menu list (<menu>)."
               },
               {
                 "id": 6,
                 "text": "Write an HTML table tag sequence that outputs: 50 pes 100 500 / 1 pes 5 50",
                 "marks": 3,
-                "answer": "&lt;table border='1'>&lt;tr&gt;&lt;td&gt;50&lt;td&gt;pes&lt;td&gt;100&lt;td&gt;500&lt;tr&gt;&lt;td&gt;1&lt;td&gt;pes&lt;td&gt;5&lt;td&gt;50&lt;/table&gt;"
+                "answer": "<table border='1'><tr><td>50<td>pes<td>100<td>500<tr><td>1<td>pes<td>5<td>50</table>"
               }
             ]
           },
@@ -2664,7 +2664,7 @@ const examData = {
               },
               {
                 "id": 30,
-                "text": "To refer to an external CSS file within an HTML document, we use: A) &lt;CSS&gt;...&lt;/CSS&gt; B) &lt;LINK&gt;...&lt;/LINK&gt; C) &lt;Script&gt;...&lt;/Script&gt; D) &lt;LINK />",
+                "text": "To refer to an external CSS file within an HTML document, we use: A) <CSS>...</CSS> B) <LINK>...</LINK> C) <Script>...</Script> D) <LINK />",
                 "marks": 1,
                 "answer": "D"
               },
@@ -3075,25 +3075,25 @@ const examData = {
               {
                 "id": 35,
                 "text": "What is e-commerce? Distinguish between e-commerce and e-business.",
-                "marks": 5,
+                "marks": 6,
                 "answer": "E-commerce (electronic commerce): buying and selling goods/services online. E-business: broader concept that includes e-commerce plus all digital business processes (customer service, collaboration, internal operations). E-commerce is a subset of e-business. E-commerce focuses on transactions, while e-business covers the entire business operation."
               },
               {
                 "id": 36,
                 "text": "What do you understand by the following terms as used in computer ethics: a) Unauthorized access b) Unauthorized use c) Multimedia content d) Session hijacking e) Phishing f) Scamming",
-                "marks": 13,
+                "marks": 14,
                 "answer": "a) Unauthorized access: accessing a computer system without permission, violating security policies. b) Unauthorized use: using computer resources for purposes not approved by the owner. c) Multimedia content: content combining text, audio, images, video in digital form. d) Session hijacking: stealing a user's active session to gain unauthorized access to systems. e) Phishing: fraudulent attempt to obtain sensitive information by impersonating trusted entities via email/fake websites. f) Scamming: fraudulent schemes designed to deceive people for financial gain."
               },
               {
                 "id": 37,
                 "text": "What additional services does e-banking provide to their customers?",
-                "marks": 3,
+                "marks": 4,
                 "answer": "1) 24/7 account access and balance inquiries. 2) Online fund transfers between accounts. 3) Bill payment and scheduled payments. 4) Mobile check deposit and transaction history viewing. 5) Credit card management and loan applications."
               },
               {
                 "id": 38,
                 "text": "State three precautions to follow when creating a password and two precautions when using a password.",
-                "marks": 4,
+                "marks": 5,
                 "answer": "Creating: 1) Use at least 8 characters with mix of uppercase, lowercase, numbers, symbols. 2) Avoid common words, names, or personal information. 3) Use unique passwords for different accounts. Using: 1) Never share passwords with others. 2) Change passwords regularly and use two-factor authentication when available."
               },
               {
@@ -3312,7 +3312,7 @@ const examData = {
                 "id": 31,
                 "text": "Briefly explain the following network topologies with the aid of diagrams: a) Bus b) Star c) Ring d) Mesh",
                 "marks": 8,
-                "answer": "a) Bus: all devices connected to a single central cable (backbone). Advantages: simple, cheap. Disadvantage: cable break stops all. b) Star: all devices connect to central hub/switch. Advantages: fault isolation. Disadvantage: hub is SPOF. c) Ring: each device connects to two neighbors forming a closed loop. Advantages: no collisions. Disadvantages: single break affects entire network. d) Mesh: every device connects to every other device. Advantages: redundancy, fault tolerance. Disadvantages: expensive, complex cabling.\n\n```mermaid\nflowchart LR\n    subgraph \"Bus Topology\"\n        T1[B1:Node1] --- BUS[Bus Line]\n        T2[B2:Node2] --- BUS\n        T3[B3:Node3] --- BUS\n        T4[B4:Node4] --- BUS\n    end\n    subgraph \"Star Topology\"\n        S1[Node1] --- CENTER[Central Hub]\n        S2[Node2] --- CENTER\n        S3[Node3] --- CENTER\n        S4[Node4] --- CENTER\n    end\n    subgraph \"Ring Topology\"\n        R1[Node A] --- R2[Node B]\n        R2 --- R3[Node C]\n        R3 --- R4[Node D]\n        R4 --- R1\n    end\n    subgraph \"Mesh Topology\"\n        M1[Node1] --- M2[Node2]\n        M1 --- M3[Node3]\n        M1 --- M4[Node4]\n        M2 --- M3\n        M2 --- M4\n        M3 --- M4\n    end\n```"
+                "answer": "a) Bus: all devices connected to a single central cable (backbone). Advantages: simple, cheap. Disadvantage: cable break stops all. b) Star: all devices connect to central hub/switch. Advantages: fault isolation. Disadvantage: hub is SPOF. c) Ring: each device connects to two neighbors forming a closed loop. Advantages: no collisions. Disadvantages: single break affects entire network. d) Mesh: every device connects to every other device. Advantages: redundancy, fault tolerance. Disadvantages: expensive, complex cabling."
               },
               {
                 "id": 32,
@@ -3394,9 +3394,9 @@ const examData = {
               },
               {
                 "id": 44,
-                "text": "How do we call the main application window shown in the diagram below?\n\n```mermaid\nflowchart TD\n    subgraph \"Microsoft Word Application Window\"\n        TB[\"Title Bar: Document1 - Word\"]\n        QAT[\"Quick Access Toolbar: Save, Undo, Redo\"]\n        RIBBON[\"Ribbon: Home  Insert  Design  Layout  References  Mailings  Review  View\"]\n        RULER[\"Ruler\"]\n        DA[\"Document Area (editing surface)\"]\n        SB[\"Status Bar: Page 1 of 1 | Words: 0 | English (US)\"]\n    end\n    TB --> QAT\n    QAT --> RIBBON\n    RIBBON --> RULER\n    RULER --> DA\n    DA --> SB\n```\n\nParts:\nA) Title Bar\nB) Ribbon/Tabs\nC) Ruler\nD) Document Area\nE) Status Bar\n\nName each part (A through E) and give the use of the symbols shown in the circle.",
-                "answer": "The window is the Microsoft Word Application Window.\n\nA) Title Bar — Displays the document name (Document1) and application name (Word).\nB) Ribbon/Tabs — Contains command buttons and features organized under tabs (Home, Insert, Design, Layout, References, Mailings, Review, View).\nC) Ruler — Used to set margins, tab stops, and paragraph indents.\nD) Document Area — The editing workspace where users type and format content.\nE) Status Bar — Shows document information: current page (Page 1 of 1), word count (Words: 0), and language (English US).\n\nSymbols in the circle (Quick Access Toolbar):\n- Save (floppy disk icon) — saves the current document to disk.\n- Undo (curved arrow left) — reverses the most recent action.\n- Redo (curved arrow right) — reapplies a previously undone action.",
-                "tutorial": "<h3>Microsoft Word Application Window</h3><p>The Word application window is the primary user interface of Microsoft Word. Understanding its parts is essential for efficient document creation and editing.</p><h4>Key Components</h4><ul><li><b>Title Bar:</b> The topmost bar showing the document name and application. It also contains the minimize, maximize/restore, and close buttons.</li><li><b>Ribbon:</b> A panel that houses command buttons organized into tabs. Each tab (Home, Insert, Design, etc.) groups related commands. The Ribbon replaced traditional menus and toolbars in Word 2007+.</li><li><b>Ruler:</b> Horizontal (and vertical) guides for precise alignment. Used to set left/right margins, first-line indents, hanging indents, and tab stops by clicking and dragging.</li><li><b>Document Area:</b> The white editing surface where text, images, tables, and other content are placed. Text appears at the blinking cursor (insertion point).</li><li><b>Status Bar:</b> The bottom bar showing context-sensitive information. Right-click to customize which details appear (page number, word count, line number, zoom level, etc.).</li></ul><h4>Quick Access Toolbar (QAT)</h4><p>The QAT is a small customizable toolbar above or below the Ribbon. By default it contains three buttons:</p><ul><li><b>Save (Ctrl+S):</b> Saves the current document. The first time you save, Word prompts for a filename and location.</li><li><b>Undo (Ctrl+Z):</b> Reverses the last action. Can be clicked multiple times to undo several actions.</li><li><b>Redo (Ctrl+Y):</b> Reapplies an action that was undone. Only available after using Undo.</li></ul><p>The QAT can be customized by clicking the small drop-down arrow at its end to add frequently used commands.</p><h4>Exam Tip</h4><p>Questions about the Word interface test basic computer literacy. Identify each component by its position and function. The circle in the diagram typically highlights the Quick Access Toolbar icons — note that these differ from Ribbon commands because they are always visible regardless of which tab is selected.</p>"
+                "text": "How do we call the main application window shown in the diagram with ribbons, quick access toolbar, title bar, and document area?",
+                "marks": 3,
+                "answer": "The Microsoft Word application window. Parts: A) Title Bar - displays document name. B) Ribbon/Tabs - contains command groups. C) Ruler - for margin and tab settings. D) Document Area - where text is typed. E) Status Bar - shows page number, word count."
               }
             ]
           }
@@ -4650,7 +4650,7 @@ const examData = {
                 "id": 3,
                 "text": "Write an algorithm receiving three numbers and displaying the maximum using: i) Pseudocode ii) Flowchart.",
                 "marks": 5,
-                "answer": "i) Pseudocode:\nBEGIN\n    INPUT num1, num2, num3\n    max = num1\n    IF num2 > max THEN max = num2\n    IF num3 > max THEN max = num3\n    PRINT \"Maximum is: \", max\nEND\n\nii) Flowchart: [Start] -> [Input] -> [max=num1] -> [num2>max?] Yes->[max=num2] No->[num3>max?] Yes->[max=num3] No->[Print max] -> [End].\n\n```mermaid\nflowchart TD\n    START([Start]) --> I[Input a, b, c]\n    I --> D1{a > b?}\n    D1 -->|Yes| D2{a > c?}\n    D1 -->|No| D3{b > c?}\n    D2 -->|Yes| O1[Display a]\n    D2 -->|No| O2[Display c]\n    D3 -->|Yes| O3[Display b]\n    D3 -->|No| O2\n    O1 --> END([End])\n    O2 --> END\n    O3 --> END\n```"
+                "answer": "i) Pseudocode:\nBEGIN\n    INPUT num1, num2, num3\n    max = num1\n    IF num2 > max THEN max = num2\n    IF num3 > max THEN max = num3\n    PRINT \"Maximum is: \", max\nEND\n\nii) Flowchart: [Start] -> [Input] -> [max=num1] -> [num2>max?] Yes->[max=num2] No->[num3>max?] Yes->[max=num3] No->[Print max] -> [End]."
               }
             ]
           },
@@ -4662,7 +4662,7 @@ const examData = {
                 "id": 1,
                 "text": "n students, m subjects. Maths & English coeff 4 (compulsory), rest coeff 2. Write C program to: i) Enter subjects count, marks/20, coefficient. ii) Print total, average, remark (0-6: very poor, 6-9: poor, 9-10: below average, 10: average, >10: good).",
                 "marks": 10,
-                "answer": "#include <stdio.h>\n\nint main() {\n    int n, m, i, j;\n    float marks[20], coeff[20], total, sumCoeff, avg;\n    printf(\"Enter number of students: \"); scanf(\"%d\", &n);\n    for (i = 0; i < n; i++) {\n        printf(\"\nStudent %d:\n\", i+1);\n        printf(\"Enter subjects: \"); scanf(\"%d\", &m);\n        total = 0; sumCoeff = 0;\n        for (j = 0; j < m; j++) {\n            printf(\"Subject %d marks (0-20): \", j+1);\n            scanf(\"%f\", &marks[j]);\n            printf(\"Coefficient: \"); scanf(\"%f\", &coeff[j]);\n            total += marks[j] * coeff[j];\n            sumCoeff += coeff[j];\n        }\n        avg = total / sumCoeff;\n        printf(\"Total: %.2f, Average: %.2f\n\", total, avg);\n        if (avg <= 6) printf(\"Remark: Very Poor\n\");\n        else if (avg <= 9) printf(\"Remark: Poor\n\");\n        else if (avg < 10) printf(\"Remark: Below Average\n\");\n        else if (avg == 10) printf(\"Remark: Average\n\");\n        else printf(\"Remark: Good\n\");\n    }\n    return 0;\n}",
+                "answer": "#include <stdio.h>\n\nint main() {\n    int n, m, i, j;\n    float marks[20], coeff[20], total, sumCoeff, avg;\n    printf(\"Enter number of students: \"); scanf(\"%d\", &n);\n    for (i = 0; i < n; i++) {\n        printf(\"\\nStudent %d:\\n\", i+1);\n        printf(\"Enter subjects: \"); scanf(\"%d\", &m);\n        total = 0; sumCoeff = 0;\n        for (j = 0; j < m; j++) {\n            printf(\"Subject %d marks (0-20): \", j+1);\n            scanf(\"%f\", &marks[j]);\n            printf(\"Coefficient: \"); scanf(\"%f\", &coeff[j]);\n            total += marks[j] * coeff[j];\n            sumCoeff += coeff[j];\n        }\n        avg = total / sumCoeff;\n        printf(\"Total: %.2f, Average: %.2f\\n\", total, avg);\n        if (avg <= 6) printf(\"Remark: Very Poor\\n\");\n        else if (avg <= 9) printf(\"Remark: Poor\\n\");\n        else if (avg < 10) printf(\"Remark: Below Average\\n\");\n        else if (avg == 10) printf(\"Remark: Average\\n\");\n        else printf(\"Remark: Good\\n\");\n    }\n    return 0;\n}",
                 "tutorial": "Weighted average = Σ(marks × coeff) / Σ(coeff)."
               },
               {
@@ -4745,7 +4745,7 @@ const examData = {
                 "id": 2,
                 "text": "Create HTML5 form titled 'HND Student Information' with Name, Matricule, DOB, Gender (radio), Subject (dropdown), Submit.",
                 "marks": 8,
-                "answer": "<!DOCTYPE html>\n&lt;html&gt;&lt;head&gt;&lt;title&gt;HND Student Information&lt;/title&gt;&lt;/head&gt;&lt;body&gt;\n&lt;h2>HND Student Information&lt;/h2>\n&lt;form action=\"submit.php\" method=\"POST\">\n    Name: &lt;input type=\"text\" name=\"name\" required>&lt;br&gt;\n    Matricule: &lt;input type=\"text\" name=\"matricule\" required>&lt;br&gt;\n    DOB: &lt;input type=\"date\" name=\"dob\" required>&lt;br&gt;\n    Gender: &lt;input type=\"radio\" name=\"gender\" value=\"male\"> Male\n    &lt;input type=\"radio\" name=\"gender\" value=\"female\"> Female&lt;br&gt;\n    Subject: &lt;select name=\"subject\">\n        &lt;option value=\"SWE\">Software Engineering&lt;/option&gt;\n        &lt;option value=\"CSN\">Computer Science&lt;/option&gt;\n    &lt;/select&gt;&lt;br&gt;\n    &lt;input type=\"submit\">\n&lt;/form&gt;\n&lt;/body&gt;&lt;/html&gt;"
+                "answer": "<!DOCTYPE html>\n<html><head><title>HND Student Information</title></head><body>\n<h2>HND Student Information</h2>\n<form action=\"submit.php\" method=\"POST\">\n    Name: <input type=\"text\" name=\"name\" required><br>\n    Matricule: <input type=\"text\" name=\"matricule\" required><br>\n    DOB: <input type=\"date\" name=\"dob\" required><br>\n    Gender: <input type=\"radio\" name=\"gender\" value=\"male\"> Male\n    <input type=\"radio\" name=\"gender\" value=\"female\"> Female<br>\n    Subject: <select name=\"subject\">\n        <option value=\"SWE\">Software Engineering</option>\n        <option value=\"CSN\">Computer Science</option>\n    </select><br>\n    <input type=\"submit\">\n</form>\n</body></html>"
               }
             ]
           },
@@ -4763,7 +4763,7 @@ const examData = {
                 "id": 2,
                 "text": "What is network topology? For Star and Ring: sketch, 2 advantages, 2 disadvantages each.",
                 "marks": 7,
-                "answer": "Network topology: arrangement of devices in a network.\nStar: central hub, devices connect individually. Adv: easy to manage, one failure doesn't affect others. Disadv: hub is SPOF, more cable.\nRing: closed loop, each device connects to two neighbors. Adv: no collisions, equal access. Disadv: one failure breaks network, adding devices disrupts.\n\n```mermaid\nflowchart LR\n    subgraph \"Star Topology\"\n        SW[Central Switch] --- P1[PC 1]\n        SW --- P2[PC 2]\n        SW --- P3[PC 3]\n        SW --- P4[PC 4]\n    end\n    subgraph \"Ring Topology\"\n        A[PC A] --- B[PC B]\n        B --- C[PC C]\n        C --- D[PC D]\n        D --- A\n    end\n```"
+                "answer": "Network topology: arrangement of devices in a network.\nStar: central hub, devices connect individually. Adv: easy to manage, one failure doesn't affect others. Disadv: hub is SPOF, more cable.\nRing: closed loop, each device connects to two neighbors. Adv: no collisions, equal access. Disadv: one failure breaks network, adding devices disrupts."
               }
             ]
           }
@@ -4873,13 +4873,13 @@ const examData = {
                 "id": 3,
                 "text": "How to create frames? What is a frameset?",
                 "marks": 5,
-                "answer": "Frames divide window into sections. Frameset defines layout (&lt;frameset cols=\"30%,70%\">). Deprecated in HTML5 (use iframe/CSS)."
+                "answer": "Frames divide window into sections. Frameset defines layout (<frameset cols=\"30%,70%\">). Deprecated in HTML5 (use iframe/CSS)."
               },
               {
                 "id": 4,
                 "text": "Form elements supporting media in HTML5?",
                 "marks": 5,
-                "answer": "&lt;input type=\"file\">, &lt;audio&gt;, &lt;video&gt;, &lt;canvas&gt;, &lt;input type=\"image\">."
+                "answer": "<input type=\"file\">, <audio>, <video>, <canvas>, <input type=\"image\">."
               },
               {
                 "id": 5,
@@ -4935,273 +4935,373 @@ const examData = {
         "sections": [
           {
             "title": "Section A: Multiple Choice Questions",
-            "marks": 48,
+            "marks": 40,
             "questions": [
               {
                 "id": 1,
-                "text": "C programs converted to machine language by: A) Editor B) Compiler C) OS D) None",
+                "text": "C programs are converted into machine language with the help of\nA) An Editor\nB) A compiler\nC) An operating system\nD) None of the above",
                 "marks": 1,
                 "answer": "B) A compiler"
               },
               {
                 "id": 2,
-                "text": "C variable cannot start with: A) Alphabet B) Number C) Special symbol other than underscore D) Both B and C",
+                "text": "A C variable cannot start with\nA) An alphabet\nB) A number\nC) A special symbol other than underscore\nD) both (b) and (c)",
                 "marks": 1,
                 "answer": "D) both (b) and (c)"
               },
               {
                 "id": 3,
-                "text": "HTML root tag: A) HEAD B) Title C) Body D) HTML",
+                "text": "Which of the following is allowed in a C Arithmetic instruction\nA) []\nB) {}\nC) ()\nD) None of the above",
+                "marks": 1,
+                "answer": "C) Parentheses ()"
+              },
+              {
+                "id": 4,
+                "text": "HTML documents contain one root tag called\nA) HEAD\nB) Title\nC) Body\nD) HTML",
                 "marks": 1,
                 "answer": "D) HTML"
               },
               {
-                "id": 4,
-                "text": "Basic HTML block: A) tag B) body C) attribute D) element",
+                "id": 5,
+                "text": "Basic fundamental block is called\nA) html tag\nB) html body\nC) html attribute\nD) html element",
                 "marks": 1,
                 "answer": "D) html element"
               },
               {
-                "id": 5,
-                "text": "Uniquely identifies a row: A) Variable B) Identifier C) Principal D) Key",
+                "id": 6,
+                "text": "A field or column that uniquely identifies a row in a database table is a(n)\nA) Variable\nB) Identifies\nC) Principal\nD) Key",
                 "marks": 1,
                 "answer": "D) Key"
               },
               {
-                "id": 6,
-                "text": "NOT a DBMS feature: A) Sorting B) Creating records C) Preventing poor design D) Relating tables",
+                "id": 7,
+                "text": "Which of the following is not a feature of most database management software?\nA) Sorting records in a table\nB) Creating records\nC) Preventing poorly designed tables\nD) Relating tables",
                 "marks": 1,
                 "answer": "C) Preventing poorly designed tables"
               },
               {
-                "id": 7,
-                "text": "Before entering data, you must do ALL EXCEPT: A) Determine attributes B) Name attributes C) Data types D) Min/max values",
+                "id": 8,
+                "text": "Before you can enter any data into a database table, you must do all of the following except\nA) Determine the attributes the table will hold\nB) Provide names for each attribute\nC) Provide data types for each attribute\nD) Determine minimum and maximum values for each attribute",
                 "marks": 1,
-                "answer": "D) Determine minimum and maximum values"
+                "answer": "D) Determine minimum and maximum values for each attribute"
               },
               {
-                "id": 8,
-                "text": "Extract data subsets using: A) Query B) Sort C) Investigation D) Subroutine",
+                "id": 9,
+                "text": "You can extract subsets of data from a database table using a(n)\nA) Query\nB) Sort\nC) Investigation\nD) Subroutine",
                 "marks": 1,
                 "answer": "A) Query"
               },
               {
-                "id": 9,
-                "text": "IP addressing is at OSI layer: A) 1 B) 2 C) 3 D) 4",
+                "id": 10,
+                "text": "A database table has the structure tblphoneOrders (orderNum, custName, custPhoneNum, itemOrdered, quantity). Which SQL statement could be used to extract all attributes for orders for item AB3333?\nA) SELECT * FROM tblphoneorderd WHERE itemorderd = \"AB3333\"\nB) SELECT tblphoneOrderds WHERE itemorderd = \"AB3333\"\nC) SELECT itemOrderd FROM tblphoneOrders WHERE = \"AB3333\"\nD) Two of these are correct",
+                "marks": 1,
+                "answer": "A) SELECT * FROM tblphoneorderd WHERE itemorderd = \"AB3333\" (only statement A has valid syntax; B lacks FROM, C has invalid WHERE clause)"
+              },
+              {
+                "id": 11,
+                "text": "A network administrator is building a network for a small business that has 22 hosts. The ISP has assigned only one Internet routable IP address. Which IP address block can the network administrator use to address the network?\nA) 10.11.12.16 /28\nB) 172.31.255.128 /27\nC) 192.168.1.0 /28\nD) 209.165.202.128 /27",
+                "marks": 1,
+                "answer": "B) 172.31.255.128 /27 (private IP with /27 = 30 usable hosts, enough for 22)"
+              },
+              {
+                "id": 12,
+                "text": "What subnet mask would be used with the hosts in the 128.107.176.0 /22 network?\nA) 255.0.0.0\nB) 255.248.0.0\nC) 255.255.252.0\nD) 255.255.255.0\nE) 255.255.255.252",
+                "marks": 1,
+                "answer": "C) 255.255.252.0 (/22 = 255.255.252.0)"
+              },
+              {
+                "id": 13,
+                "text": "You have been assigned the address block 10.255.255.224 /28 to create the network addresses for point-to-point WAN links. How many of these WANs can you support with this address block?\nA) 1\nB) 4\nC) 7\nD) 14",
+                "marks": 1,
+                "answer": "B) 4 (/28 = 16 addresses; each WAN needs /30 = 4 addresses; 16/4 = 4)"
+              },
+              {
+                "id": 14,
+                "text": "Which OSI layer is associated with IP addressing?\nA) 1\nB) 2\nC) 3\nD) 4",
                 "marks": 1,
                 "answer": "C) 3 (Network Layer)"
               },
               {
-                "id": 10,
-                "text": "OSI Layer 2 addressing: A) Logical B) Physical C) MAC D) IP E) Port",
+                "id": 15,
+                "text": "Which type of addressing is found at the OSI Layer 2? (Choose two.)\nA) Logical\nB) Physical\nC) MAC\nD) IP\nE) Port",
                 "marks": 1,
                 "answer": "B) Physical and C) MAC"
               },
               {
-                "id": 11,
-                "text": "Process all descendants before adjacent vertex: A) Depth First B) Breadth First C) With First D) Depth Limited",
+                "id": 16,
+                "text": "A directed graph is ................... if there is a path from each vertex to every other vertex in the digraph.\nA) Weakly connected\nB) Strongly Connected\nC) Tightly Connected\nD) Linearly Connected",
+                "marks": 1,
+                "answer": "B) Strongly Connected"
+              },
+              {
+                "id": 17,
+                "text": "In the ................... traversal we process all of a vertex's descendants before we move to an adjacent vertex.\nA) Depth First\nB) Breadth First\nC) With First\nD) Depth Limited",
                 "marks": 1,
                 "answer": "A) Depth First"
               },
               {
-                "id": 12,
-                "text": "Stack insert=____, stack delete=____: A) push, pop B) pop, push C) insert, delete D) delete, insert",
+                "id": 18,
+                "text": "State True of False.\ni) Network is a graph that has weights or costs associated with it.\nii) An undirected graph which contains no cycles is called a forest.\niii) A graph is said to be complete if there is no edge between every pair of vertices.\nA) True, False, True\nB) True, True, False\nC) True, True, True\nD) False, True, True",
+                "marks": 1,
+                "answer": "B) True, True, False"
+              },
+              {
+                "id": 19,
+                "text": "Inserting an item into the stack when stack is not full is called ............. operation and deletion of item from the stack, when stack is not empty is called ............. operation.\nA) push, pop\nB) pop, push\nC) insert, delete\nD) delete, insert",
                 "marks": 1,
                 "answer": "A) push, pop"
               },
               {
-                "id": 13,
-                "text": "Items added at one end, removed from other: A) Stack B) Queue C) List D) None",
+                "id": 20,
+                "text": "................. is a pile in which items are added at one end and removed from the other.\nA) Stack\nB) Queue\nC) List\nD) None of the above",
                 "marks": 1,
                 "answer": "B) Queue"
               },
               {
-                "id": 14,
-                "text": "Predicting next CPU burst with exponential average: A) Multilevel queue B) RR C) FCFS D) SJF",
+                "id": 21,
+                "text": "......... scheduling is approximated by predicting the next CPU burst with an exponential average of the measured lengths of previous CPU bursts.\nA) multilevel queue\nB) RR\nC) FCFS\nD) SJF",
                 "marks": 1,
                 "answer": "D) SJF"
               },
               {
-                "id": 15,
-                "text": "Process control block contains: A) Process ID B) Register values C) Open files D) All of these",
+                "id": 22,
+                "text": "A process control block should contain ___________\nA) the process ID\nB) locations to store register values\nC) a list of all open files\nD) All of these responses are correct",
                 "marks": 1,
-                "answer": "D) All of these"
+                "answer": "D) All of these responses are correct"
               },
               {
-                "id": 16,
-                "text": "Many user-level threads to fewer kernel threads: A) many-to-one B) one-to-one C) many-to-many D) many-to-some",
+                "id": 23,
+                "text": "The _____ multithreading model multiplexes many user-level threads to a smaller or equal number of kernel threads.\nA) many-to-one model\nB) one-to-one model\nC) many-to-many model\nD) many-to-some model",
                 "marks": 1,
                 "answer": "C) many-to-many model"
               },
               {
-                "id": 17,
-                "text": "Processes completed per time unit: A) CPU utilization B) Response time C) Turnaround D) Throughput",
+                "id": 24,
+                "text": "........... is the number of processes that are completed per time unit.\nA) CPU utilization\nB) Response time\nC) Turnaround time\nD) Throughput",
                 "marks": 1,
                 "answer": "D) Throughput"
               },
               {
-                "id": 18,
-                "text": "Device forwards data to all ports: A) Router B) Switch C) Bridge D) Hub",
+                "id": 25,
+                "text": "Which of the following devices forwards data packets to all connected ports?\nA) Router\nB) Switch\nC) Bridge\nD) Hub",
                 "marks": 1,
                 "answer": "D) Hub"
               },
               {
-                "id": 19,
-                "text": "Most administration time routing method: A) Static B) Link state C) Distance vector D) Dynamic",
+                "id": 26,
+                "text": "Of the following routing methods, which is likely to take the most amount of administration time in the long term?\nA) Static\nB) Link state\nC) Distance vector\nD) Dynamic",
                 "marks": 1,
                 "answer": "A) Static"
               },
               {
-                "id": 20,
-                "text": "Passive hub vs active hub difference: A) No management B) No full-duplex C) No signal regeneration D) Forward to all ports",
+                "id": 27,
+                "text": "Your manager asks you to look into some upgrades for your network. The current network is a 10Base2 system, and you have been experiencing numerous hard-to-track-down cable problems. As a result, you have decided to upgrade to a 10BaseT system. On the networking vendor's price list are both active and passive hubs. The passive hubs are considerably cheaper than the active ones, and you are tempted to opt for them so that you come in under budget. A colleague advises you against the purchase of passive hubs.",
+                "marks": 1,
+                "answer": "Scenario description — answer question 28 using this scenario"
+              },
+              {
+                "id": 28,
+                "text": "What is the primary difference between an active and a passive hub?\nA) Passive hubs do not offer any management capabilities.\nB) Passive hubs cannot be used in full-duplex mode.\nC) Passive hubs do not regenerate the data signal.\nD) Passive hubs forward data to all ports on the hub, not just the one for which they are intended.",
                 "marks": 1,
                 "answer": "C) Passive hubs do not regenerate the data signal"
               },
               {
-                "id": 21,
-                "text": "Best describes a gateway: A) Routes data B) Entrance device C) Translates data formats D) Filters by MAC",
+                "id": 29,
+                "text": "Which of the following statements best describes a gateway?\nA) It is a device that enables data to be routed from one network to another.\nB) It is a term used to refer to any device that resides at the entrance of a network.\nC) It is a device, system, or application that translates data from one format to another.\nD) It is a network device that can forward or block data based on the MAC address embedded within the packet.",
                 "marks": 1,
-                "answer": "C) Translates data from one format to another"
+                "answer": "C) It translates data from one format to another"
               },
               {
-                "id": 22,
-                "text": "Operator evaluated first: A) NOT B) AND C) XOR D) OR",
+                "id": 30,
+                "text": "Which operator is evaluated first?\nA) NOT\nB) AND\nC) XOR\nD) OR",
                 "marks": 1,
                 "answer": "A) NOT"
               },
               {
-                "id": 23,
-                "text": "Return statements in a function: A) 0 B) 1 C) 2 D) No limit",
+                "id": 31,
+                "text": "How many return statements are allowed in a Function Procedure?\nA) 0\nB) 1\nC) 2\nD) There is no limit",
                 "marks": 1,
-                "answer": "D) No limit"
+                "answer": "D) There is no limit"
               },
               {
-                "id": 24,
-                "text": "Class can hold: A) data B) functions C) both D) none",
+                "id": 32,
+                "text": "What does your class can hold?\nA) data\nB) functions\nC) both a &amp; b\nD) none of the mentioned",
                 "marks": 1,
-                "answer": "C) both a & b"
+                "answer": "C) both a &amp; b"
               },
               {
-                "id": 25,
-                "text": "Inheritance allows: A) create class B) hierarchy C) access methods D) none",
+                "id": 33,
+                "text": "What does inheritance allow you to do?\nA) create a class\nB) create a hierarchy of classes\nC) access methods\nD) None of the mentioned",
                 "marks": 1,
                 "answer": "B) create a hierarchy of classes"
               },
               {
-                "id": 26,
-                "text": "IS for routine business: A) MIS B) DSS C) TPS D) MSS",
+                "id": 34,
+                "text": "Which of the following Information systems are aimed at improving the routine business activities on which all organizations depend?\nA) Management Information systems\nB) Decision support systems\nC) Transaction processing systems\nD) Management support systems",
                 "marks": 1,
-                "answer": "C) Transaction Processing Systems (TPS)"
+                "answer": "C) Transaction processing systems (TPS)"
               },
               {
-                "id": 27,
-                "text": "Ill-defined requirements strategy: A) RAD B) Structured C) SDLC D) Prototyping",
+                "id": 35,
+                "text": "Which of the following strategies are adopted if information requirements are not well-defined?\nA) Rapid application development method\nB) Structured analysis development method\nC) Systems development life cycle method\nD) Prototyping method",
                 "marks": 1,
                 "answer": "D) Prototyping method"
               },
               {
-                "id": 28,
-                "text": "Structured Programming involves: A) functional modularization B) error localization C) decentralized D) analysis",
+                "id": 36,
+                "text": "Structured Programming involves:\nA) functional modularization\nB) localization of errors\nC) decentralized programming\nD) stress on analysis",
                 "marks": 1,
                 "answer": "A) functional modularization"
               },
               {
-                "id": 29,
-                "text": "ER diagram attributes represented by: A) rectangle B) square C) ellipse D) triangle",
+                "id": 37,
+                "text": "Which of the following is not a fact-finding technique?\nA) Third party enquiry\nB) Interview\nC) Questionnaire\nD) Record reviews",
+                "marks": 1,
+                "answer": "A) Third party enquiry"
+              },
+              {
+                "id": 38,
+                "text": "In an E-R diagram attributes are represented by\nA) rectangle\nB) square\nC) ellipse\nD) triangle",
                 "marks": 1,
                 "answer": "C) ellipse"
               },
               {
-                "id": 30,
-                "text": "Entity integrity: primary key must be: A) not Null B) Null C) both D) any",
+                "id": 39,
+                "text": "In case of entity integrity, the primary key may be\nA) not Null\nB) Null\nC) both Null &amp; not Null\nD) any value.",
                 "marks": 1,
                 "answer": "A) not Null"
               },
               {
-                "id": 31,
-                "text": "COUNT in SQL returns number of: A) values B) distinct C) groups D) columns",
+                "id": 40,
+                "text": "Count function in SQL returns the number of\nA) values.\nB) distinct values.\nC) groups.\nD) columns.",
                 "marks": 1,
                 "answer": "A) values"
+              }
+            ]
+          },
+          {
+            "title": "Section B: A. Programming",
+            "marks": 20,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Distinguish between the following as seen in computer programming with examples if necessary.\n\ni) High level and low level programming language (1mk)\nii) C programming language and C++ (1mk)\niii) Program interpretation and program compilation (1mk)",
+                "marks": 3,
+                "answer": "i) High-level languages (Python, Java) use English-like syntax, are machine-independent, and require compilation/interpretation. Low-level languages (Assembly, Machine code) are closer to hardware, machine-specific, and execute faster.\n\nii) C: procedural language, no classes/objects, no exception handling, manual memory management. C++: extends C with OOP (classes, inheritance, polymorphism, templates), exception handling, richer standard library.\n\niii) Interpretation: translates and executes source code line-by-line at runtime (Python, JavaScript). Compilation: translates entire source to machine code before execution (C, C++), producing standalone executables."
               },
               {
-                "id": 32,
-                "text": "Distinguish between: High-level vs low-level programming languages.",
-                "marks": 1,
-                "answer": "High-level: closer to human language (Python, Java), easier to write/read, requires compilation/interpretation. Low-level: closer to machine (Assembly, Machine code), harder to write, faster execution."
+                "id": 2,
+                "text": "Write a C code that computes the factorial of an integer n. When does the code fail (upper limit on n for the result to be correct) and why?",
+                "marks": 5,
+                "answer": "#include &lt;stdio.h&gt;\n\nint main() {\n    int n, i;\n    unsigned long long fact = 1;\n    printf(\"Enter an integer: \");\n    scanf(\"%d\", &amp;n);\n    if (n &lt; 0)\n        printf(\"Factorial not defined for negative numbers.\\n\");\n    else {\n        for (i = 1; i &lt;= n; i++)\n            fact *= i;\n        printf(\"Factorial of %d = %llu\\n\", n, fact);\n    }\n    return 0;\n}\n\nFails when n &gt; 20 for unsigned long long (64-bit). 20! fits in 64 bits but 21! exceeds max unsigned 64-bit integer, causing wraparound overflow."
               },
               {
-                "id": 33,
-                "text": "Distinguish between C and C++.",
-                "marks": 1,
-                "answer": "C: procedural language, no OOP, no classes. C++: extension of C with OOP (classes, inheritance, polymorphism, virtual functions)."
+                "id": 3,
+                "text": "Consider 2 three-dimensional vectors X and Y whose components are specified by the user and stored in 1D arrays. Write the C code that verifies if the two vectors are orthogonal.\n(Two vectors a and b are orthogonal if dot product a.b = 0.)",
+                "marks": 6,
+                "answer": "#include &lt;stdio.h&gt;\n\nint main() {\n    float X[3], Y[3], dot = 0;\n    int i;\n    printf(\"Enter components of vector X (x y z): \");\n    scanf(\"%f %f %f\", &amp;X[0], &amp;X[1], &amp;X[2]);\n    printf(\"Enter components of vector Y (x y z): \");\n    scanf(\"%f %f %f\", &amp;Y[0], &amp;Y[1], &amp;Y[2]);\n    for (i = 0; i &lt; 3; i++)\n        dot += X[i] * Y[i];\n    if (dot == 0)\n        printf(\"Vectors are orthogonal.\\n\");\n    else\n        printf(\"Vectors are NOT orthogonal (dot product = %f).\\n\", dot);\n    return 0;\n}"
               },
               {
-                "id": 34,
-                "text": "Distinguish between program interpretation and compilation.",
-                "marks": 1,
-                "answer": "Interpretation: translates and executes code line by line at runtime (Python). Compilation: translates entire source code to machine code before execution (C, C++)."
+                "id": 4,
+                "text": "Describe App Widgets?",
+                "marks": 6,
+                "answer": "App Widgets are small, focused application components that provide quick access to specific functionality without launching the full application.\n\nKey aspects:\n1. Miniature application views that can be embedded in other applications or home screens (Android home screen widgets for weather, clock, calendar).\n2. In GUI development, widgets are basic building blocks: buttons, text fields, labels, sliders, checkboxes, dropdown menus.\n3. Follow an event-driven programming model where user actions trigger event handlers.\n4. Reusable components that encapsulate appearance and behavior, promoting modular design.\n5. Can display real-time or periodically updated data without user intervention.\n6. Examples: text box (input), progress bar (task completion), combo box (selection), toggle switch (on/off)."
+              }
+            ]
+          },
+          {
+            "title": "Section B: B. Database",
+            "marks": 15,
+            "questions": [
+              {
+                "id": 1,
+                "text": "What are the characteristics of a relational database?",
+                "marks": 6,
+                "answer": "1. Data organized in tables (relations) with rows and columns.\n2. Each row (tuple) uniquely identified by a primary key.\n3. Relationships between tables via foreign keys.\n4. Data integrity enforced through constraints (entity, referential, domain).\n5. SQL used for data definition, manipulation, and querying.\n6. ACID properties (Atomicity, Consistency, Isolation, Durability).\n7. Data independence (logical and physical).\n8. Minimal data redundancy through normalization."
               },
               {
-                "id": 35,
-                "text": "Write C code computing factorial. When does it fail and why?",
+                "id": 2,
+                "text": "List five disadvantages of file processing.",
+                "marks": 5,
+                "answer": "1. Data redundancy - same data stored in multiple files, wasting storage.\n2. Data inconsistency - updates may not propagate, leading to conflicting values.\n3. Difficulty in accessing data - no standard query language; each program codes its own access.\n4. Data isolation - data scattered across incompatible file formats, hard to integrate.\n5. Integrity problems - no built-in constraints; must be enforced by each application.\n6. Concurrent access anomalies - simultaneous updates can corrupt data.\n7. Security issues - limited granular access control."
+              },
+              {
+                "id": 3,
+                "text": "When would using a personal DBMS make sense?",
                 "marks": 2,
-                "answer": "int factorial(int n) {\n    if (n <= 1) return 1;\n    return n * factorial(n - 1);\n}\nFails when n > 12 (for 32-bit int) due to integer overflow. Factorial grows rapidly: 13! = 6,227,020,800 exceeds 32-bit int max (2,147,483,647).",
-                "tutorial": "Use long long or handle overflow for larger values."
+                "answer": "Personal DBMS (e.g., MS Access, SQLite) makes sense for:\n- Small-scale, single-user applications with low cost and simplicity needs.\n- No concurrent access requirements (only one user at a time).\n- Small data volumes (personal contacts, home inventory, student projects).\n- Rapid development without dedicated database administration.\n- Data stored and used on a single machine (no network distribution)."
               },
               {
-                "id": 36,
-                "text": "Write C code to verify if two 3D vectors (stored in 1D arrays) are orthogonal (dot product = 0).",
+                "id": 4,
+                "text": "Describe what the term normalization means.",
                 "marks": 2,
-                "answer": "#include <stdio.h>\n\nint main() {\n    float X[3], Y[3], dot = 0;\n    printf(\"Enter components of vector X: \");\n    scanf(\"%f %f %f\", &X[0], &X[1], &X[2]);\n    printf(\"Enter components of vector Y: \");\n    scanf(\"%f %f %f\", &Y[0], &Y[1], &Y[2]);\n    for (int i = 0; i < 3; i++)\n        dot += X[i] * Y[i];\n    if (dot == 0)\n        printf(\"Vectors are orthogonal\n\");\n    else\n        printf(\"Vectors are NOT orthogonal (dot=%f)\n\", dot);\n    return 0;\n}",
-                "tutorial": "Dot product = Σ(xi×yi). Orthogonal if zero."
+                "answer": "Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity. It involves decomposing tables into smaller related tables and defining relationships between them. The process follows normal forms (1NF, 2NF, 3NF, BCNF) where each form addresses specific anomalies (insertion, update, deletion). The goal: each piece of data stored once, eliminating duplicates and inconsistencies."
+              }
+            ]
+          },
+          {
+            "title": "Section B: C. Networking",
+            "marks": 15,
+            "questions": [
+              {
+                "id": 1,
+                "text": "What are the responsibilities of Application and Presentation Layer?",
+                "marks": 4,
+                "answer": "Application Layer (L7):\n- Provides network services directly to end-user applications.\n- Protocols: HTTP/HTTPS (web), FTP (file transfer), SMTP/IMAP (email), DNS, DHCP.\n- Identifies communication partners, determines resource availability.\n\nPresentation Layer (L6):\n- Data translation: converts between application and network formats (EBCDIC to ASCII).\n- Data encryption/decryption: secure transmission (SSL/TLS).\n- Data compression: reduces data size for efficient transmission.\n- Syntax negotiation between communicating systems."
               },
               {
-                "id": 37,
-                "text": "Characteristics of a relational database?",
+                "id": 2,
+                "text": "Give the two classes of hardware building blocks?",
                 "marks": 2,
-                "answer": "1. Data organized in tables (relations).\n2. Each row uniquely identified by primary key.\n3. Relationships via foreign keys.\n4. Data integrity enforced by constraints.\n5. SQL for querying.\n6. ACID properties for transactions."
+                "answer": "1. DTE (Data Terminal Equipment) - end-user devices that generate/consume data (computers, printers, servers, routers).\n\n2. DCE (Data Circuit-terminating Equipment) - intermediate devices providing clocking, signal conversion, transmission (modems, switches, hubs, CSU/DSU)."
               },
               {
-                "id": 38,
-                "text": "Five disadvantages of file processing.",
+                "id": 3,
+                "text": "What are the different link types used to build a computer network?",
                 "marks": 2,
-                "answer": "1. Data redundancy (duplicate data).\n2. Data inconsistency (updates in one place not others).\n3. Difficulty in accessing data (no query language).\n4. Data isolation (multiple incompatible file formats).\n5. Concurrent access anomalies.\n6. Security issues."
+                "answer": "1. Point-to-Point Link: direct connection between two devices (serial cable, leased line).\n2. Broadcast Link: single channel shared by multiple devices (Ethernet, Wi-Fi).\n3. Multipoint Link: multiple devices share one medium, one transmits at a time.\n4. Simplex: one-way communication only.\n5. Half-Duplex: both directions but not simultaneously.\n6. Full-Duplex: simultaneous two-way communication."
               },
               {
-                "id": 39,
-                "text": "When would you use a personal DBMS?",
-                "marks": 1,
-                "answer": "For small-scale, single-user applications like personal contacts, small business inventory, student projects where low cost and simplicity matter more than concurrent access and scalability."
+                "id": 4,
+                "text": "Establish, if there is any, link between the OSI model layers and the TCP/IP model layers.",
+                "marks": 5,
+                "answer": "OSI Application (L7), Presentation (L6), Session (L5) -&gt; TCP/IP Application Layer (HTTP, FTP, SMTP, DNS)\n\nOSI Transport (L4) -&gt; TCP/IP Transport Layer (TCP reliable, UDP fast)\n\nOSI Network (L3) -&gt; TCP/IP Internet Layer (IP, ICMP, ARP)\n\nOSI Data Link (L2) and Physical (L1) -&gt; TCP/IP Network Access Layer (Ethernet, Wi-Fi, PPP)\n\nDifferences:\n- TCP/IP combines OSI L5-L7 into one Application layer.\n- TCP/IP combines OSI L1-L2 into Network Access.\n- TCP/IP is simpler (4 vs 7 layers), developed from protocol implementation.\n- OSI is more theoretical with clearer separation of concerns."
               },
               {
-                "id": 40,
-                "text": "Application and Presentation Layer responsibilities?",
-                "marks": 1,
-                "answer": "Application Layer (L7): provides network services to user applications (HTTP, FTP, SMTP).\nPresentation Layer (L6): data translation, encryption/compression, format conversion (SSL/TLS)."
+                "id": 5,
+                "text": "What are the categories of Transmission media?",
+                "marks": 2,
+                "answer": "1. Guided (Wired) Media - signals travel through physical conductor:\n   a) Twisted Pair Cable (UTP, STP) - Ethernet, telephone.\n   b) Coaxial Cable - cable TV, older Ethernet.\n   c) Fiber Optic - light pulses, high bandwidth, immune to interference.\n\n2. Unguided (Wireless) Media - signals propagate through air:\n   a) Radio Waves (Wi-Fi, Bluetooth, cellular) - omnidirectional.\n   b) Microwaves (satellite, point-to-point) - directional, line of sight.\n   c) Infrared (remote controls) - short range, line of sight."
+              }
+            ]
+          },
+          {
+            "title": "Section B: D. Algorithm and data structure",
+            "marks": 10,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Define and explain the terms: Flowchart, Pseudocode, data type.",
+                "marks": 2,
+                "answer": "Flowchart: graphical representation of algorithm using standardized symbols (rectangles=process, diamonds=decision, ovals=start/end) connected by arrows showing control flow.\n\nPseudocode: informal human-readable algorithm description using programming conventions without specific syntax, bridging natural language and actual code.\n\nData type: classification of data (int, float, char, string, boolean) determining allowed operations, value range, and memory storage requirements."
               },
               {
-                "id": 41,
-                "text": "Link between OSI and TCP/IP model layers?",
-                "marks": 1,
-                "answer": "OSI Application/Presentation/Session → TCP/IP Application.\nOSI Transport → TCP/IP Transport (TCP/UDP).\nOSI Network → TCP/IP Internet (IP).\nOSI Data Link/Physical → TCP/IP Network Access."
+                "id": 2,
+                "text": "Give the use of each of these symbols used in flowchart designing:\na) Oval/Ellipse\nb) Rectangle\nc) Diamond\nd) Parallelogram\ne) Arrow\nf) Circle",
+                "marks": 2,
+                "answer": "a) Oval/Ellipse - Start/End (Terminator): indicates beginning or end of program.\nb) Rectangle - Process: represents an action/operation (calculation, assignment).\nc) Diamond - Decision: conditional branch with YES/NO outcomes.\nd) Parallelogram - Input/Output: data input (read) or output (print).\ne) Arrow - Flow Line: shows direction and sequence of process flow.\nf) Circle - Connector: joins flowchart sections across pages or avoids crossed lines."
               },
               {
-                "id": 42,
-                "text": "Define and explain: Flowchart, Pseudocode, Data type.",
-                "marks": 1,
-                "answer": "Flowchart: graphical representation of algorithm using symbols.\nPseudocode: informal high-level description of algorithm.\nData type: classification of data (int, float, char) determining operations and storage."
+                "id": 3,
+                "text": "Write an algorithm to find the largest value of 5 numbers in an array.",
+                "marks": 3,
+                "answer": "BEGIN\n    INPUT numbers[5]\n    max = numbers[0]\n    FOR i = 1 TO 4\n        IF numbers[i] &gt; max THEN\n            max = numbers[i]\n        END IF\n    END FOR\n    PRINT \"Largest value is:\", max\nEND"
               },
               {
-                "id": 43,
-                "text": "Algorithm to find the largest of 5 numbers in an array.",
-                "marks": 1,
-                "answer": "BEGIN\n    INPUT arr[5]\n    max = arr[0]\n    FOR i = 1 TO 4\n        IF arr[i] > max THEN max = arr[i]\n    END FOR\n    PRINT max\nEND"
-              },
-              {
-                "id": 44,
-                "text": "Algorithm to search for a number in an array.",
-                "marks": 1,
-                "answer": "BEGIN\n    INPUT arr[n], target\n    FOR i = 0 TO n-1\n        IF arr[i] == target THEN\n            PRINT \"Found at position\", i\n            EXIT\n        END IF\n    END FOR\n    PRINT \"Not found\"\nEND"
+                "id": 4,
+                "text": "Write an algorithm to search any number in an array.",
+                "marks": 3,
+                "answer": "BEGIN\n    INPUT arr[n], target\n    found = FALSE\n    FOR i = 0 TO n-1\n        IF arr[i] == target THEN\n            PRINT \"Found at position\", i\n            found = TRUE\n            EXIT\n        END IF\n    END FOR\n    IF found == FALSE THEN\n        PRINT \"Not found\"\n    END IF\nEND"
               }
             ]
           }
@@ -5499,28 +5599,28 @@ const examData = {
               {
                 "id": 1,
                 "text": "Monthly earnings of engineers: classes 1-3(2), 4-6(4), 7-9(8), 10-12(5), 13-15(1). a) Calculate mean, variance, SD. b) Calculate median and mode.",
-                "marks": 11,
-                "answer": "a) Mean (x̄):\n  Midpoints: (1+3)/2=2, (4+6)/2=5, (7+9)/2=8, (10+12)/2=11, (13+15)/2=14\n  Σf = 2+4+8+5+1 = 20\n  Σfx = 2×2 + 5×4 + 8×8 + 11×5 + 14×1 = 4+20+64+55+14 = 157\n  Mean = 157/20 = 7.85 (3 marks)\n  Variance = Σf(x-x̄)²/n = [2(2-7.85)²+4(5-7.85)²+8(8-7.85)²+5(11-7.85)²+1(14-7.85)²]/20\n  = [68.45+32.49+0.18+49.61+37.82]/20 = 188.55/20 = 9.43\n  SD = √9.43 = 3.07 (4 marks)\nb) Median: n/2=10th value → class 7-9. Median = L + (n/2 - cf)/f × h = 6.5 + (10-6)/8 × 3 = 6.5 + 1.5 = 8 (2 marks)\n  Mode: class 7-9 (highest frequency=8). Mode = L + (f₁-f₀)/(2f₁-f₀-f₂) × h = 6.5 + (8-4)/(16-4-5) × 3 = 6.5 + 1.71 = 8.21 (2 marks)",
+                "marks": 20,
+                "answer": "Midpoints: 2, 5, 8, 11, 14\nMean = (2×2+5×4+8×8+11×5+14×1)/(2+4+8+5+1) = (4+20+64+55+14)/20 = 157/20 = 7.85\nVariance = Σf(x-μ)²/n = [2(2-7.85)²+4(5-7.85)²+8(8-7.85)²+5(11-7.85)²+1(14-7.85)²]/20\n= [2(34.22)+4(8.12)+8(0.02)+5(9.92)+1(37.82)]/20\n= [68.44+32.48+0.16+49.60+37.82]/20 = 188.5/20 = 9.425\nSD = √9.425 = 3.07\n\nMedian: n/2=10, lies in 7-9 class. Median = 6.5 + 3(10-6)/8 = 6.5+1.5 = 8.0\nMode: modal class 7-9. Mode = 6.5 + 3(8-4)/((8-4)+(8-5)) = 6.5+3(4/7) = 6.5+1.71 = 8.21",
                 "tutorial": "Grouped data: use midpoints for calculations."
               },
               {
                 "id": 2,
                 "text": "Frequency(Hz): 50,100,150,200,250,300,350. Reactance(ohm): 30,65,90,130,150,190,200. Find regression line of reactance on frequency.",
-                "marks": 6,
+                "marks": 10,
                 "answer": "Let x=frequency, y=reactance.\nΣx=1400, Σy=855, Σxy=1400×...\nActually compute: Σx=1400, x̄=200, Σy=855, ȳ=122.14\nΣxy=50(30)+100(65)+150(90)+200(130)+250(150)+300(190)+350(200)\n=1500+6500+13500+26000+37500+57000+70000=212000\nΣx²=2500+10000+22500+40000+62500+90000+122500=350000\nb = (Σxy - n x̄ ȳ)/(Σx² - n x̄²) = (212000-7(200)(122.14))/(350000-7(40000))\n= (212000-171000)/(350000-280000) = 41000/70000 = 0.586\na = ȳ - bx̄ = 122.14 - 0.586(200) = 122.14 - 117.2 = 4.94\nRegression: y = 4.94 + 0.586x",
                 "tutorial": "y = a + bx where b = Cov(x,y)/Var(x)"
               },
               {
                 "id": 3,
                 "text": "Roll a fair die, X = outcome. a) E(X) b) Var(X) c-h) Various probabilities using exact, Markov, Chebyshev.",
-                "marks": 8,
+                "marks": 15,
                 "answer": "a) E(X) = (1+2+3+4+5+6)/6 = 3.5\nb) Var(X) = E(X²)-E(X)² = 91/6-12.25 = 15.167-12.25 = 2.917\nc) P(X=6) = 1/6 = 0.1667\nd) Markov: P(X≥6) ≤ 3.5/6 = 0.583\ne) Chebyshev(two-sided): P(|X-3.5|≥2.5) ≤ 2.917/6.25 = 0.467\nf) Chebyshev(one-sided): P(X-3.5≥2.5) ≤ 2.917/(2.917+6.25) = 0.318",
                 "tutorial": "Markov: P(X≥a) ≤ E(X)/a. Chebyshev: P(|X-μ|≥k) ≤ σ²/k²."
               },
               {
                 "id": 4,
                 "text": "Shop: 70% brand A (70% large), 30% brand B (40% small). a) Tree diagram b) P(small) c) P(brand A | small)",
-                "marks": 5,
+                "marks": 8,
                 "answer": "a) Tree: A(0.7)→Large(0.7),Small(0.3); B(0.3)→Large(0.6),Small(0.4)\nb) P(Small)=0.3(0.7)+0.4(0.3)=0.21+0.12=0.33\nc) P(A|Small)=0.21/0.33=0.6364",
                 "tutorial": "Bayes' theorem: P(A|B)=P(B|A)P(A)/P(B)."
               }
@@ -6009,26 +6109,26 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "Identify the port shown in the diagram below.\n\n```mermaid\nflowchart LR\n    subgraph \"Computer Port\"\n        P[\"USB Port (Type-A)\"]\n    end\n    subgraph \"Connector\"\n        C[\"USB Type-A Plug&lt;br/>4 pins: Vbus, D-, D+, GND\"]\n    end\n    P <--> C\n```\n\n**Diagram:** A rectangular 4-pin female port on the computer side with a matching rectangular male connector.\n\nGive TWO reasons for its widespread use.",
-                "marks": 4,
+                "text": "Identify the port shown in diagram. Give TWO reasons for its widespread use.",
+                "marks": 3,
                 "answer": "USB (Universal Serial Bus) port.\nReasons: 1) Hot-swappable (connect/disconnect without restart). 2) Supports many device types (keyboard, mouse, storage, printer)."
               },
               {
                 "id": 2,
                 "text": "Name hardware components and give their roles (CPU, RAM, HDD, Motherboard, Power Supply).",
-                "marks": 9,
+                "marks": 7.5,
                 "answer": "CPU: executes instructions/programs.\nRAM: temporary storage for active data.\nHDD: permanent storage for files/OS.\nMotherboard: connects all components.\nPower Supply: converts AC to DC power."
               },
               {
                 "id": 3,
                 "text": "Difference between mainframe and supercomputer?",
-                "marks": 3,
+                "marks": 2.5,
                 "answer": "Mainframe: high I/O, many concurrent users, transaction processing. Supercomputer: maximum computational performance for scientific calculations."
               },
               {
                 "id": 4,
                 "text": "Identify components 1-6 in computer diagram. Identify two input and two output devices.",
-                "marks": 6,
+                "marks": 5,
                 "answer": "1-Monitor, 2-System Unit, 3-Keyboard, 4-Mouse, 5-Printer, 6-Speakers.\nInput: Keyboard, Mouse.\nOutput: Monitor, Printer."
               },
               {
@@ -6040,43 +6140,43 @@ const examData = {
               {
                 "id": 6,
                 "text": "Functions of network devices: Distributor, Modem, Router, NIC, Network Cable.",
-                "marks": 6,
+                "marks": 5,
                 "answer": "Distributor (Hub/Switch): connects devices in LAN.\nModem: modulates/demodulates digital↔analog signals.\nRouter: forwards data between networks.\nNIC (Network Interface Card): allows computer to connect to network.\nNetwork Cable: physical transmission medium (Ethernet)."
               },
               {
                 "id": 7,
                 "text": "School network: a) Two benefits and two limitations. b) Two topologies with diagrams.",
-                "marks": 11,
-                "answer": "a) Benefits: 1) Resource sharing (printers, files). 2) Centralized management. Limitations: 1) Cost of equipment. 2) Security vulnerabilities.\nb) Star: all devices to central switch. Bus: all devices along single cable.\n\n```mermaid\nflowchart LR\n    subgraph \"Star Topology\"\n        S_C[Central Hub] --- S1[Workstation 1]\n        S_C --- S2[Workstation 2]\n        S_C --- S3[Workstation 3]\n        S_C --- S4[Workstation 4]\n        S_C --- S5[Server]\n    end\n    subgraph \"Bus Topology\"\n        B_C[Bus Cable] --- B1[WS 1]\n        B_C --- B2[WS 2]\n        B_C --- B3[WS 3]\n        B_C --- B4[WS 4]\n        B_C --- B5[Server]\n    end\n```"
+                "marks": 10,
+                "answer": "a) Benefits: 1) Resource sharing (printers, files). 2) Centralized management. Limitations: 1) Cost of equipment. 2) Security vulnerabilities.\nb) Star: all devices to central switch. Bus: all devices along single cable."
               },
               {
                 "id": 8,
                 "text": "a) What is a mobile device? b) Two types. c) Common mobile OS. d) Three common apps. e) Method to connect phone to computer.",
-                "marks": 11,
+                "marks": 9,
                 "answer": "a) Mobile device: portable computing device.\nb) Smartphone, Tablet.\nc) Android, iOS.\nd) WhatsApp, Chrome, Camera.\ne) USB cable connection: connect via USB, select 'File Transfer' mode on phone, access files from computer."
               },
               {
                 "id": 9,
                 "text": "Network 198.100.10.0 needs 60 usable host IPs. a) Address class? b) Default subnet mask? c) Custom subnet mask? d) Total subnets? e) Hosts per subnet?",
-                "marks": 11,
+                "marks": 10,
                 "answer": "a) Class C (198.x.x.x).\nb) 255.255.255.0.\nc) Need 60 hosts, so 6 host bits (2⁶-2=62). Custom mask: /26 = 255.255.255.192.\nd) 2² = 4 subnets (borrowed 2 bits from host).\ne) 2⁶-2 = 62 hosts per subnet."
               },
               {
                 "id": 10,
                 "text": "Define: i) Spreadsheet software ii) Presentation Software iii) MS Access iv) MS Word. Give examples.",
-                "marks": 5,
+                "marks": 4,
                 "answer": "i) Spreadsheet: organizes data in rows/columns for calculations (Excel).\nii) Presentation: creates slideshows (PowerPoint).\niii) MS Access: database management system.\niv) MS Word: word processing software."
               },
               {
                 "id": 11,
                 "text": "Advantages of spreadsheet over ledger?",
-                "marks": 5,
+                "marks": 4,
                 "answer": "1. Automatic calculations (formulas).\n2. Easy data modification/editing.\n3. Charts/graphs for visualization.\n4. Sorting and filtering capabilities."
               },
               {
                 "id": 12,
                 "text": "Spreadsheet sample: a) Formula for Total Profit in G4. b) How to copy formula to G5-G13. c) Formula for Grand Profit in G15. d) Effect of changing milk quantity to 10 and price to 1000.",
-                "marks": 7,
+                "marks": 6,
                 "answer": "a) G4 = (D4*E4)-(D4*C4) or =D4*(E4-C4).\nb) Drag the fill handle (bottom-right corner of G4) down to G13. Cell references auto-adjust (relative referencing).\nc) G15 = SUM(G4:G13).\nd) G4-G13 auto-recalculate. Total profit for milk changes. Remark may change from 'Bad' based on new profit."
               }
             ]
@@ -6358,61 +6458,61 @@ const examData = {
               {
                 "id": 11,
                 "text": "When I looked ---- my childhood... A) Down on B) out of C) down at D) back on",
-                "marks": 2,
+                "marks": 1,
                 "answer": "D) back on"
               },
               {
                 "id": 12,
                 "text": "Has ------ postman been here? I am expecting ------ parcel. A) The/the B) a/a C) the/a D) a/the",
-                "marks": 2,
+                "marks": 1,
                 "answer": "C) the/a"
               },
               {
                 "id": 13,
                 "text": "I could only find -------- cooking oil. A) A few B) a little C) few D) little",
-                "marks": 2,
+                "marks": 1,
                 "answer": "B) a little"
               },
               {
                 "id": 14,
                 "text": "Correctly punctuated: A) My favourite sports are; fishing... B) my favourite sports are: fishing... C) my favourite sports are. fishing... D) my favourite sports are, fishing...",
-                "marks": 2,
+                "marks": 1,
                 "answer": "B) My favourite sports are: fishing, golf and swimming."
               },
               {
                 "id": 15,
                 "text": "The members were discussing ___ themselves. A) With each other B) Between each other C) With one another D) Among themselves",
-                "marks": 2,
+                "marks": 1,
                 "answer": "D) Among themselves"
               },
               {
                 "id": 16,
                 "text": "A loaf was shared ___ four students. A) Between B) Themselves C) Within them D) Among",
-                "marks": 2,
+                "marks": 1,
                 "answer": "D) Among"
               },
               {
                 "id": 17,
                 "text": "Title of poem enclosed in: A) ? B) ! C) bracket D) quotation marks",
-                "marks": 2,
+                "marks": 1,
                 "answer": "D) Quotation marks"
               },
               {
                 "id": 18,
                 "text": "Pen is to cow as _____ is to dog. A) Stable B) den C) sty D) kennel",
-                "marks": 2,
+                "marks": 1,
                 "answer": "D) kennel"
               },
               {
                 "id": 19,
                 "text": "A little learning is a --------- thing. A) Dangerous B) wonderful C) great D) useful",
-                "marks": 2,
+                "marks": 1,
                 "answer": "A) Dangerous (A little learning is a dangerous thing - Alexander Pope)"
               },
               {
                 "id": 20,
                 "text": "Subject-verb agreement: Neither the students nor their teacher _____ (go/goes) to school.",
-                "marks": 2,
+                "marks": 1,
                 "answer": "goes (verb agrees with nearest subject 'teacher')"
               }
             ]
@@ -6431,7 +6531,7 @@ const examData = {
                 "id": 2,
                 "text": "Rewrite with correct verb tense: a) Last evening they ___ (seek) help. b) By the time the Minister arrived they ___ (ring) the bell thrice. c) By 2022, students ___ (graduate). d) If I lost my job I ___ (go) to Britain. e) We were surprised many students ___ (choose) to go home.",
                 "marks": 10,
-                "answer": "Answers with explanations (2 marks each):\n\na) \"sought\" (past tense of seek) — The detective sought the truth. \"Sought\" is the correct irregular past form of \"seek\".\n\nb) \"had rung\" (past perfect of ring) — By the time we arrived, the bell had rung. Past perfect indicates an action completed before another past action.\n\nc) \"will have graduated\" (future perfect) — By next June, she will have graduated from university. Future perfect shows an action that will be completed before a specified future time.\n\nd) \"worse\" (comparative of bad) — This situation is worse than it was yesterday. Comparative form is used when comparing two things.\n\ne) \"lay\" (past tense of lie, meaning recline) — He lay on the bed after the long journey. \"Lay\" is the past tense of \"lie\" (to recline). Note: \"lie\" (recline) vs \"lay\" (to put down) are different verbs."
+                "answer": "a) sought. b) had rung. c) will have graduated. d) would go. e) had chosen."
               },
               {
                 "id": 3,
@@ -6716,7 +6816,7 @@ const examData = {
                 "id": 1,
                 "text": "Quelles sont les 2 catégories de personnes qui constituent les transformateurs?",
                 "marks": 5,
-                "answer": "Les deux catégories de personnages dans le texte sont :\n\n(1) Les fumeurs (2.5 marks) : Ce sont les personnes qui pratiquent la pêche en utilisant la technique de fumage du poisson. Ils préparent et fument le poisson pour le conserver.\n\n(2) Les sécheurs de poisson (2.5 marks) : Ce sont les personnes qui sèchent le poisson au soleil ou par d'autres méthodes pour le conserver. Ils jouent un rôle complémentaire dans la chaîne de transformation du poisson."
+                "answer": "Les fumeurs et les sécheurs de poisson."
               },
               {
                 "id": 2,
@@ -6728,7 +6828,7 @@ const examData = {
                 "id": 3,
                 "text": "Auprès de qui s'approvisionnent la quasi-totalité des femmes?",
                 "marks": 5,
-                "answer": "La quasi-totalité des clients s'approvisionnent auprès de leurs époux pêcheurs (2.5 marks).\n\nCela signifie que les femmes (clientes) achètent ou reçoivent le poisson directement de leurs maris qui sont pêcheurs (2.5 marks). Cette relation montre que la pêche est une activité familiale où les hommes pêchent et les femmes transforment et vendent le poisson."
+                "answer": "Auprès de leurs époux pêcheurs."
               },
               {
                 "id": 4,
@@ -6802,7 +6902,7 @@ const examData = {
                 "id": 1,
                 "text": "Differentiate f(x)=3x⁵-2x³+7x-4 with respect to x.",
                 "marks": 5,
-                "answer": "Given f(x) = 3x⁵ - 2x³ + 7x - 4\n\nUsing the power rule: d/dx(x^n) = nx^(n-1)\n\nStep 1: Differentiate 3x⁵ → 3 × 5x⁴ = 15x⁴\nStep 2: Differentiate -2x³ → -2 × 3x² = -6x²\nStep 3: Differentiate 7x → 7 × 1x⁰ = 7\nStep 4: Differentiate -4 → 0 (constant)\n\nTherefore, f'(x) = 15x⁴ - 6x² + 7 (1 mark per term)"
+                "answer": "f'(x) = 15x⁴ - 6x² + 7"
               },
               {
                 "id": 2,
@@ -6850,7 +6950,7 @@ const examData = {
                 "id": 9,
                 "text": "Solve for x: 2^(x+1) = 16.",
                 "marks": 5,
-                "answer": "Solve for x: 2^(x+1) = 16\n\nMethod 1 — Express both sides with same base:\n16 = 2⁴ (1 mark)\nSo 2^(x+1) = 2⁴ (1 mark)\nEquating exponents: x + 1 = 4 (1 mark)\nTherefore: x = 4 - 1 = 3 (1 mark)\n\nVerification: 2^(3+1) = 2⁴ = 16 ✓ (1 mark)"
+                "answer": "2^(x+1) = 16 = 2⁴\nx+1 = 4\nx = 3"
               },
               {
                 "id": 10,
@@ -6880,28 +6980,28 @@ const examData = {
                 "id": "1a",
                 "text": "Write a program that prints 'enter the passdigit' the first time, gets a value from the user and keeps printing 'enter the correct passdigit' until the correct value '1234' is entered, then prints 'condition is satisfied, you may have access'.",
                 "marks": 4,
-                "answer": "#include <stdio.h>\n\nint main() {\n    int passdigit, correct = 1234;\n    printf(\"enter the passdigit\n\");\n    scanf(\"%d\", &passdigit);\n    while (passdigit != correct) {\n        printf(\"enter the correct passdigit\n\");\n        scanf(\"%d\", &passdigit);\n    }\n    printf(\"condition is satisfied, you may have access\n\");\n    return 0;\n}",
+                "answer": "#include <stdio.h>\n\nint main() {\n    int passdigit, correct = 1234;\n    printf(\"enter the passdigit\\n\");\n    scanf(\"%d\", &passdigit);\n    while (passdigit != correct) {\n        printf(\"enter the correct passdigit\\n\");\n        scanf(\"%d\", &passdigit);\n    }\n    printf(\"condition is satisfied, you may have access\\n\");\n    return 0;\n}",
                 "tutorial": "Use a while loop that continues as long as the entered value does not match 1234."
               },
               {
                 "id": "1b",
                 "text": "Write a C program that swaps two integers passed by reference. Show function declaration, definition, and call. Display values before and after swap.",
                 "marks": 3,
-                "answer": "#include <stdio.h>\n\nvoid swap(int *a, int *b);\n\nint main() {\n    int x, y;\n    printf(\"Enter two integers: \");\n    scanf(\"%d %d\", &x, &y);\n    printf(\"Before swap: x=%d, y=%d\n\", x, y);\n    swap(&x, &y);\n    printf(\"After swap: x=%d, y=%d\n\", x, y);\n    return 0;\n}\n\nvoid swap(int *a, int *b) {\n    int temp = *a;\n    *a = *b;\n    *b = temp;\n}",
+                "answer": "#include <stdio.h>\n\nvoid swap(int *a, int *b);\n\nint main() {\n    int x, y;\n    printf(\"Enter two integers: \");\n    scanf(\"%d %d\", &x, &y);\n    printf(\"Before swap: x=%d, y=%d\\n\", x, y);\n    swap(&x, &y);\n    printf(\"After swap: x=%d, y=%d\\n\", x, y);\n    return 0;\n}\n\nvoid swap(int *a, int *b) {\n    int temp = *a;\n    *a = *b;\n    *b = temp;\n}",
                 "tutorial": "Pass addresses using &. The swap function uses pointers to exchange values."
               },
               {
                 "id": "1c",
                 "text": "Write a recursive function to take value 3 to the power of another number. If 4 is passed, return 81.",
                 "marks": 3,
-                "answer": "#include <stdio.h>\n\nint powerOfThree(int n) {\n    if (n == 0) return 1;\n    return 3 * powerOfThree(n - 1);\n}\n\nint main() {\n    int n;\n    printf(\"Enter exponent: \");\n    scanf(\"%d\", &n);\n    printf(\"3^%d = %d\n\", n, powerOfThree(n));\n    return 0;\n}",
+                "answer": "#include <stdio.h>\n\nint powerOfThree(int n) {\n    if (n == 0) return 1;\n    return 3 * powerOfThree(n - 1);\n}\n\nint main() {\n    int n;\n    printf(\"Enter exponent: \");\n    scanf(\"%d\", &n);\n    printf(\"3^%d = %d\\n\", n, powerOfThree(n));\n    return 0;\n}",
                 "tutorial": "Base case: n==0 returns 1. Recursive case: 3 * powerOfThree(n-1)."
               },
               {
                 "id": "1d",
                 "text": "An election has five candidates: Paul Biya, Kamto, Joeshua Osi, Cabral Linii, Adamou. Use array of structures to store names, age, votes. Prompt for registered voters, use do-while to cast votes, use pointers to display results sorted from winner to loser in a table.",
                 "marks": 15,
-                "answer": "#include <stdio.h>\n#include <string.h>\n\nstruct Candidate {\n    char name[50];\n    int age;\n    int votes;\n};\n\nvoid sortResults(struct Candidate *c, int n) {\n    struct Candidate temp;\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = 0; j < n - 1 - i; j++) {\n            if ((*(c + j)).votes < (*(c + j + 1)).votes) {\n                temp = *(c + j);\n                *(c + j) = *(c + j + 1);\n                *(c + j + 1) = temp;\n            }\n        }\n    }\n}\n\nint main() {\n    struct Candidate candidates[5] = {\n        {\"Paul Biya\", 90, 0}, {\"Kamto\", 55, 0}, {\"Joeshua Osi\", 50, 0},\n        {\"Cabral Linii\", 45, 0}, {\"Adamou\", 60, 0}\n    };\n    int registered, vote, i;\n    printf(\"Enter number of registered voters: \");\n    scanf(\"%d\", &registered);\n    for (i = 0; i < registered; i++) {\n        do {\n            printf(\"Voter %d - Enter candidate number (1-5): \", i + 1);\n            scanf(\"%d\", &vote);\n        } while (vote < 1 || vote > 5);\n        (*(candidates + vote - 1)).votes++;\n    }\n    sortResults(candidates, 5);\n    printf(\"\n--- ELECTION RESULTS ---\n\");\n    printf(\"%-20s %-5s %-10s\n\", \"Name\", \"Age\", \"Votes\");\n    for (i = 0; i < 5; i++) {\n        printf(\"%-20s %-5d %-10d\n\", (*(candidates + i)).name, (*(candidates + i)).age, (*(candidates + i)).votes);\n    }\n    return 0;\n}",
+                "answer": "#include <stdio.h>\n#include <string.h>\n\nstruct Candidate {\n    char name[50];\n    int age;\n    int votes;\n};\n\nvoid sortResults(struct Candidate *c, int n) {\n    struct Candidate temp;\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = 0; j < n - 1 - i; j++) {\n            if ((*(c + j)).votes < (*(c + j + 1)).votes) {\n                temp = *(c + j);\n                *(c + j) = *(c + j + 1);\n                *(c + j + 1) = temp;\n            }\n        }\n    }\n}\n\nint main() {\n    struct Candidate candidates[5] = {\n        {\"Paul Biya\", 90, 0}, {\"Kamto\", 55, 0}, {\"Joeshua Osi\", 50, 0},\n        {\"Cabral Linii\", 45, 0}, {\"Adamou\", 60, 0}\n    };\n    int registered, vote, i;\n    printf(\"Enter number of registered voters: \");\n    scanf(\"%d\", &registered);\n    for (i = 0; i < registered; i++) {\n        do {\n            printf(\"Voter %d - Enter candidate number (1-5): \", i + 1);\n            scanf(\"%d\", &vote);\n        } while (vote < 1 || vote > 5);\n        (*(candidates + vote - 1)).votes++;\n    }\n    sortResults(candidates, 5);\n    printf(\"\\n--- ELECTION RESULTS ---\\n\");\n    printf(\"%-20s %-5s %-10s\\n\", \"Name\", \"Age\", \"Votes\");\n    for (i = 0; i < 5; i++) {\n        printf(\"%-20s %-5d %-10d\\n\", (*(candidates + i)).name, (*(candidates + i)).age, (*(candidates + i)).votes);\n    }\n    return 0;\n}",
                 "tutorial": "Use struct array with pointer arithmetic. Bubble sort in descending order."
               }
             ]
@@ -6982,14 +7082,14 @@ const examData = {
                 "id": "a",
                 "text": "Create an HTML form with Email, Zip Code, Country (dropdown: USA/UK/INDIA). Write HTML and JavaScript to validate all fields and email format.",
                 "marks": 8,
-                "answer": "&lt;form id=\"myForm\" action=\"process.php\" method=\"POST\" onsubmit=\"return validateForm()\">\n    Email: &lt;input type=\"email\" name=\"email\" id=\"email\" required>&lt;br&gt;\n    Zip Code: &lt;input type=\"text\" name=\"zip\" id=\"zip\" required>&lt;br&gt;\n    Country: &lt;select name=\"country\" id=\"country\" required>\n        &lt;option value=\"\">choose yours&lt;/option&gt;\n        &lt;option value=\"USA\">USA&lt;/option&gt;\n        &lt;option value=\"UK\">UK&lt;/option&gt;\n        &lt;option value=\"INDIA\">INDIA&lt;/option&gt;\n    &lt;/select&gt;&lt;br&gt;\n    &lt;input type=\"submit\" value=\"Submit\">\n&lt;/form&gt;\n&lt;script&gt;\nfunction validateForm() {\n    var email = document.getElementById(\"email\").value;\n    var zip = document.getElementById(\"zip\").value;\n    var country = document.getElementById(\"country\").value;\n    if (email == \"\" || zip == \"\" || country == \"\") {\n        alert(\"All fields must be filled!\"); return false;\n    }\n    var emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\n    if (!emailPattern.test(email)) {\n        alert(\"Enter a valid email!\"); return false;\n    }\n    return true;\n}\n&lt;/script&gt;",
+                "answer": "<form id=\"myForm\" action=\"process.php\" method=\"POST\" onsubmit=\"return validateForm()\">\n    Email: <input type=\"email\" name=\"email\" id=\"email\" required><br>\n    Zip Code: <input type=\"text\" name=\"zip\" id=\"zip\" required><br>\n    Country: <select name=\"country\" id=\"country\" required>\n        <option value=\"\">choose yours</option>\n        <option value=\"USA\">USA</option>\n        <option value=\"UK\">UK</option>\n        <option value=\"INDIA\">INDIA</option>\n    </select><br>\n    <input type=\"submit\" value=\"Submit\">\n</form>\n<script>\nfunction validateForm() {\n    var email = document.getElementById(\"email\").value;\n    var zip = document.getElementById(\"zip\").value;\n    var country = document.getElementById(\"country\").value;\n    if (email == \"\" || zip == \"\" || country == \"\") {\n        alert(\"All fields must be filled!\"); return false;\n    }\n    var emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\n    if (!emailPattern.test(email)) {\n        alert(\"Enter a valid email!\"); return false;\n    }\n    return true;\n}\n</script>",
                 "tutorial": "HTML5 required attribute + JavaScript regex validation."
               },
               {
                 "id": "b",
                 "text": "Write PHP to save form data to data2023.txt and display it back in an HTML table.",
                 "marks": 7,
-                "answer": "<?php\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    $data = $_POST['email'] . \"|\" . $_POST['zip'] . \"|\" . $_POST['country'] . \"\n\";\n    file_put_contents(\"data2023.txt\", $data, FILE_APPEND);\n}\n$lines = file(\"data2023.txt\");\necho \"&lt;table border='1'>&lt;tr&gt;&lt;th&gt;Email&lt;/th&gt;&lt;th&gt;Zip&lt;/th&gt;&lt;th&gt;Country&lt;/th&gt;&lt;/tr&gt;\";\nforeach ($lines as $line) {\n    $fields = explode(\"|\", trim($line));\n    echo \"&lt;tr&gt;&lt;td&gt;$fields[0]&lt;/td&gt;&lt;td&gt;$fields[1]&lt;/td&gt;&lt;td&gt;$fields[2]&lt;/td&gt;&lt;/tr&gt;\";\n}\necho \"&lt;/table&gt;\";\n?>",
+                "answer": "<?php\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    $data = $_POST['email'] . \"|\" . $_POST['zip'] . \"|\" . $_POST['country'] . \"\\n\";\n    file_put_contents(\"data2023.txt\", $data, FILE_APPEND);\n}\n$lines = file(\"data2023.txt\");\necho \"<table border='1'><tr><th>Email</th><th>Zip</th><th>Country</th></tr>\";\nforeach ($lines as $line) {\n    $fields = explode(\"|\", trim($line));\n    echo \"<tr><td>$fields[0]</td><td>$fields[1]</td><td>$fields[2]</td></tr>\";\n}\necho \"</table>\";\n?>",
                 "tutorial": "file_put_contents with FILE_APPEND. explode() splits by delimiter."
               }
             ]
@@ -7613,7 +7713,7 @@ const examData = {
                 "id": 3,
                 "text": "Draw a diagram relating IS to organizational levels.",
                 "marks": 4,
-                "answer": "Strategic (top) → ESS\nTactical (middle) → MIS, DSS\nOperational (lower) → TPS\n\n```mermaid\nflowchart TD\n    subgraph \"Information Systems at Organizational Levels\"\n        ST[Strategic Level&lt;br/>DSS / EIS] --> MG[Management Level&lt;br/>MIS]\n        MG --> OP[Operational Level&lt;br/>TPS]\n    end\n    OP -->|Transaction Data| MG\n    MG -->|Summary Reports| ST\n    ST -->|Strategic Decisions| MG\n    MG -->|Operational Plans| OP\n```"
+                "answer": "Strategic (top) → ESS\nTactical (middle) → MIS, DSS\nOperational (lower) → TPS"
               },
               {
                 "id": 4,
@@ -7769,255 +7869,255 @@ const examData = {
           }
         ]
       },
-            {
+      {
         "title": "Computer Technology",
         "duration": "4 hours",
         "credits": 6,
-        "description": "Specialty: SOFTWARE ENGINEERING (SWE) | 2023 Session",
+        "description": "Specialty: Software Engineering (SWE) | 2023 Session",
         "sections": [
           {
-            "title": "Section A: MCQs",
+            "title": "Section A: Multiple Choice Questions",
             "marks": 40,
             "questions": [
               {
                 "id": 1,
-                "text": "Which of the following programming language is whitespace insensitive?\na. HTML\nb. CSS\nc. PHP\nd. JAVASCRIPT",
+                "text": "Which of the following programming language is whitespace insensitive?\nA) HTML\nB) CSS\nC) PHP\nD) JavaScript",
                 "marks": 1,
-                "answer": "c. PHP"
+                "answer": "A) HTML"
               },
               {
                 "id": 2,
-                "text": "How many layers does OSI Reference Model has?\na. 4\nb. 5\nc. 6\nd. 7",
+                "text": "How many layers does OSI Reference Model have?\nA) 4\nB) 5\nC) 6\nD) 7",
                 "marks": 1,
-                "answer": "d. 7"
+                "answer": "D) 7"
               },
               {
                 "id": 3,
-                "text": "DHCP is the abbreviation of\na. Dynamic Host Control Protocol\nb. Dynamic Host Configuration Protocol\nc. Dynamic Hyper Control Protocol\nd. Dynamic Hyper Configuration Protocol",
+                "text": "DHCP is the abbreviation of\nA) Dynamic Host Control Protocol\nB) Dynamic Host Configuration Protocol\nC) Dynamic Hyper Control Protocol\nD) Dynamic Hyper Configuration Protocol",
                 "marks": 1,
-                "answer": "b. Dynamic Host Configuration Protocol"
+                "answer": "B) Dynamic Host Configuration Protocol"
               },
               {
                 "id": 4,
-                "text": "An example of Private IP address is:\na. 10.2.5.8.9\nb. 195.25.87.96\nc. 204.14.88.96\nd. 173.29.178.66",
+                "text": "An example of Private IP address is:\nA) 10.2.5.8.9\nB) 195.25.87.96\nC) 204.14.88.96\nD) 173.29.178.66",
                 "marks": 1,
-                "answer": "a. 10.2.5.8 (private IP range 10.0.0.0/8)"
+                "answer": "A) 10.2.5.8.9 (10.x.x.x is private range)"
               },
               {
                 "id": 5,
-                "text": "An example of Public IP address is:\na. 10.2.5.8\nb. 192.168.87.96\nc. 204.14.88.96\nd. 172.29.178.66",
+                "text": "An example of Public IP address is:\nA) 10.2.5.8.9\nB) 192.168.87.96\nC) 204.14.88.96\nD) 172.29.178.66",
                 "marks": 1,
-                "answer": "c. 204.14.88.96 (public IP; 10.x.x.x and 192.168.x.x are private, 172.29.x.x falls in 172.16.0.0/12 private range)"
+                "answer": "C) 204.14.88.96"
               },
               {
                 "id": 6,
-                "text": "SNMP protocol means:\na. Simple Network Mail Protocol\nb. System Network Management Protocol\nc. Simple Network Management Protocol\nd. All above",
+                "text": "SNMP protocol means:\nA) Simple Network Mail Protocol\nB) System Network Management Protocol\nC) Simple Network Management Protocol\nD) All above",
                 "marks": 1,
-                "answer": "c. Simple Network Management Protocol"
+                "answer": "C) Simple Network Management Protocol"
               },
               {
                 "id": 7,
-                "text": "The language used in application programs to request data from the DBMS is referred to as the:\na. DML\nb. DDL\nc. VDL\nd. SDL",
+                "text": "The language used in application programs to request data from the DBMS is referred to as the:\nA) DML\nB) DDL\nC) VDL\nD) SDL",
                 "marks": 1,
-                "answer": "a. DML (Data Manipulation Language)"
+                "answer": "A) DML (Data Manipulation Language)"
               },
               {
                 "id": 8,
-                "text": "int z, x=5, y=-10, a=4, b=2; z = x++ - --y * b / a;\nWhat number will z in the sample code above contain?\na. [Blank]\nb. 5\nc. 6\nd. 10\ne. 11",
+                "text": "int z,x=5,y=-10,a=4,b=2; z = x++ - --y * b / a;\nWhat number will z in the sample code above contain?\nA) [Omitted]\nB) 5\nC) 6\nD) 10\nE) 11",
                 "marks": 1,
-                "answer": "d. 10 (x++ uses x=5 then increments to 6; --y decrements y from -10 to -11; z = 5 - (-11)*2/4 = 5 - (-22)/4 = 5 - (-5) = 10)"
+                "answer": "E) 11"
               },
               {
                 "id": 9,
-                "text": "With every use of a memory allocation function, what function should be used to release allocated memory which is no longer needed?\na. dropmem()\nb. dealloc()\nc. release()\nd. free()",
+                "text": "With every use of a memory allocation function, what function should be used to release allocated memory?\nA) dropmem()\nB) dealloc()\nC) release()\nD) free()",
                 "marks": 1,
-                "answer": "d. free()"
+                "answer": "D) free()"
               },
               {
                 "id": 10,
-                "text": "What function will read a specified number of elements from a file?\na. fileread()\nb. readfile()\nc. fread()\nd. gets()",
+                "text": "What function will read a specified number of elements from a file?\nA) fileread()\nB) readfile()\nC) fread()\nD) gets()",
                 "marks": 1,
-                "answer": "c. fread()"
+                "answer": "C) fread()"
               },
               {
                 "id": 11,
-                "text": "What is a difference between a declaration and a definition of a variable?\na. Both can occur multiple times, but a declaration must occur first.\nb. There is no difference between them.\nc. A definition occurs once, but a declaration may occur many times.\nd. A declaration occurs once, but a definition may occur many times.",
+                "text": "What is a difference between a declaration and a definition of a variable?\nA) Both can occur multiple times, but a declaration must occur first.\nB) There is no difference between them.\nC) A definition occurs once, but a declaration may occur many times.\nD) A declaration occurs once, but a definition may occur many times.",
                 "marks": 1,
-                "answer": "c. A definition occurs once, but a declaration may occur many times."
+                "answer": "C) A definition occurs once, but a declaration may occur many times."
               },
               {
                 "id": 12,
-                "text": "What is a proper method of opening a file for writing as binary file?\na. FILE *f = fwrite(\"test.bin\", \"b\");\nb. FILE *f = fopenb(\"test.bin\", \"w\");\nc. FILE *f = fopen(\"test.bin\", \"wb\");\nd. FILE *f = fopen(\"test.bin\", \"bw\");",
+                "text": "What is a proper method of opening a file for writing as binary file?\nA) FILE *f = fwrite(\"test.bin\", \"b\");\nB) FILE *f = fopenb(\"test.bin\", \"w\");\nC) FILE *f = fopen(\"test.bin\", \"wb\");\nD) FILE *f = fopen(\"test.bin\", \"bw\");",
                 "marks": 1,
-                "answer": "c. FILE *f = fopen(\"test.bin\", \"wb\");"
+                "answer": "C) FILE *f = fopen(\"test.bin\", \"wb\")"
               },
               {
                 "id": 13,
-                "text": "A collection of hyperlinked documents on the internet forms the:\na. World Wide Web (WWW)\nb. E-mail system\nc. Mailing list\nd. Hypertext markup language",
+                "text": "A collection of hyperlinked documents on the internet forms the:\nA) World Wide Web (WWW)\nB) E-mail system\nC) Mailing list\nD) Hypertext markup language",
                 "marks": 1,
-                "answer": "a. World Wide Web (WWW)"
+                "answer": "A) World Wide Web (WWW)"
               },
               {
                 "id": 14,
-                "text": "A proxy server is used as the computer?\na. with external access\nb. acting as a backup\nc. performing file handling\nd. accessing user permissions",
+                "text": "A proxy server is used as the computer?\nA) with external access\nB) acting as a backup\nC) performing file handling\nD) accessing user permissions",
                 "marks": 1,
-                "answer": "a. with external access"
+                "answer": "A) with external access"
               },
               {
                 "id": 15,
-                "text": "Which one of the following would breach the integrity of a system?\na. Looking the room to prevent theft\nb. Full access rights for all users\nc. Fitting the system with an anti-theft device\nd. Protecting the device against willful or accidental damage",
+                "text": "Which one of the following would breach the integrity of a system?\nA) Locking the room to prevent theft\nB) Full access rights for all users\nC) Fitting the system with an anti-theft device\nD) Protecting the device against willful or accidental damage",
                 "marks": 1,
-                "answer": "b. Full access rights for all users"
+                "answer": "B) Full access rights for all users"
               },
               {
                 "id": 16,
-                "text": "Which software prevents the external access to a system?\na. Firewall\nb. Gateway\nc. Router\nd. Virus checker",
+                "text": "Which software prevents the external access to a system?\nA) Firewall\nB) Gateway\nC) Router\nD) Virus checker",
                 "marks": 1,
-                "answer": "a. Firewall"
+                "answer": "A) Firewall"
               },
               {
                 "id": 17,
-                "text": "Where is linear searching used?\na. When the list has only a few elements\nb. When performing a single search in an unordered list\nc. Used all the time\nd. When the list has only a few elements and When performing a single search in an unordered list",
+                "text": "Where is linear searching used?\nA) When the list has only a few elements\nB) When performing a single search in an unordered list\nC) Used all the time\nD) When the list has only a few elements AND when performing a single search in an unordered list",
                 "marks": 1,
-                "answer": "d. When the list has only a few elements and When performing a single search in an unordered list"
+                "answer": "D) When the list has only a few elements AND when performing a single search in an unordered list"
               },
               {
                 "id": 18,
-                "text": "What is the best case for linear search?\na. O(nlogn)\nb. O(logn)\nc. O(n)\nd. O(1)",
+                "text": "What is the best case for linear search?\nA) O(nlogn)\nB) O(logn)\nC) O(n)\nD) O(1)",
                 "marks": 1,
-                "answer": "d. O(1) (element found at the first position)"
+                "answer": "D) O(1) (element found at first position)"
               },
               {
                 "id": 19,
-                "text": "Which of the following is a disadvantage of linear search?\na. Requires more space\nb. Greater time complexities compared to other searching algorithms\nc. Not easy to understand\nd. Not easy to implement",
+                "text": "Which of the following is a disadvantage of linear search?\nA) Requires more space\nB) Greater time complexities compared to other searching algorithms\nC) Not easy to understand\nD) Not easy to implement",
                 "marks": 1,
-                "answer": "b. Greater time complexities compared to other searching algorithms"
+                "answer": "B) Greater time complexities compared to other searching algorithms"
               },
               {
                 "id": 20,
-                "text": "Which of the following is a disadvantage of linear search?\na. Requires more space\nb. Greater time complexities compared to other searching algorithms\nc. Not easy to understand\nd. Not easy to implement",
+                "text": "Which of the following is a disadvantage of linear search?\nA) Requires more space\nB) Greater time complexities compared to other searching algorithms\nC) Not easy to understand\nD) Not easy to implement",
                 "marks": 1,
-                "answer": "b. Greater time complexities compared to other searching algorithms"
+                "answer": "B) Greater time complexities compared to other searching algorithms"
               },
               {
                 "id": 21,
-                "text": "Which of the following concepts make extensive use of arrays?\na. Binary trees\nb. Scheduling of processes\nc. Caching\nd. Spatial locality",
+                "text": "Which of the following concepts make extensive use of arrays?\nA) Binary trees\nB) Scheduling of processes\nC) Caching\nD) Spatial locality",
                 "marks": 1,
-                "answer": "d. Spatial locality"
+                "answer": "D) Spatial locality"
               },
               {
                 "id": 22,
-                "text": "Assuming int is of 4bytes, what is the size of int arr[15];?\na. 15\nb. 19\nc. 11\nd. 60",
+                "text": "Assuming int is of 4bytes, what is the size of int arr[15];?\nA) 15\nB) 19\nC) 11\nD) 60",
                 "marks": 1,
-                "answer": "d. 60 (15 * 4 = 60)"
+                "answer": "D) 60 (15 elements x 4 bytes = 60)"
               },
               {
                 "id": 23,
-                "text": "The data structure required for Breadth First Traversal on a graph is?\na. Stack\nb. Array\nc. Queue\nd. Tree",
+                "text": "The data structure required for Breadth First Traversal on a graph is?\nA) Stack\nB) Array\nC) Queue\nD) Tree",
                 "marks": 1,
-                "answer": "c. Queue"
+                "answer": "C) Queue"
               },
               {
                 "id": 24,
-                "text": "Cartesian product in relational algebra is\na. Binary operator\nb. Unary operator\nc. Ternary operator\nd. Not defined",
+                "text": "Cartesian product in relational algebra is\nA) Binary operator\nB) Unary operator\nC) Ternary operator\nD) Not defined",
                 "marks": 1,
-                "answer": "a. Binary operator (operates on two relations)"
+                "answer": "A) Binary operator"
               },
               {
                 "id": 25,
-                "text": "The view of total database content is:\na. Conceptual view\nb. Internal view\nc. Physical view\nd. External view",
+                "text": "The view of total database content is:\nA) Conceptual view\nB) Internal view\nC) Physical view\nD) External view",
                 "marks": 1,
-                "answer": "a. Conceptual view"
+                "answer": "A) Conceptual view"
               },
               {
                 "id": 26,
-                "text": "Architecture of a database can be viewed as:\na. One level\nb. Two levels\nc. Three levels\nd. Four levels",
+                "text": "Architecture of a database can be viewed as:\nA) One level\nB) Two levels\nC) Three levels\nD) Four levels",
                 "marks": 1,
-                "answer": "c. Three levels (external, conceptual, internal)"
+                "answer": "C) Three levels (ANSI-SPARC architecture)"
               },
               {
                 "id": 27,
-                "text": "Database schema is written in:\na. DML\nb. HCL\nc. DDL\nd. DCL",
+                "text": "Database schema is written in:\nA) DML\nB) HCL\nC) DDL\nD) DCL",
                 "marks": 1,
-                "answer": "c. DDL (Data Definition Language)"
+                "answer": "C) DDL (Data Definition Language)"
               },
               {
                 "id": 28,
-                "text": "Which technique is used for data protection?\na. Data piracy\nb. Authentication\nc. Encryption\nd. None of these",
+                "text": "Which technique is used for data protection?\nA) Data piracy\nB) Authentication\nC) Encryption\nD) None of these",
                 "marks": 1,
-                "answer": "c. Encryption"
+                "answer": "C) Encryption"
               },
               {
                 "id": 29,
-                "text": "Coaxial cables used in _________ networks\na. Telephone\nb. Cable TV\nc. Both A and B\nd. NONE OF these",
+                "text": "Coaxial cables are used in _________ networks\nA) Telephone\nB) Cable TV\nC) Both A and B\nD) NONE OF these",
                 "marks": 1,
-                "answer": "c. Both A and B (telephone and cable TV)"
+                "answer": "C) Both A and B"
               },
               {
                 "id": 30,
-                "text": "Optical Fiber transmit _________.\na. light signal\nb. radio signal\nc. electrical signal\nd. Both A and B",
+                "text": "Optical Fiber transmits _________.\nA) light signal\nB) radio signal\nC) electrical signal\nD) Both A and B",
                 "marks": 1,
-                "answer": "a. light signal"
+                "answer": "A) light signal"
               },
               {
                 "id": 31,
-                "text": "HTTP port number used is _________.\na. 80\nb. 441\nc. 443\nd. 449",
+                "text": "HTTP port number used is _________.\nA) 43\nB) 441\nC) 443\nD) 449",
                 "marks": 1,
-                "answer": "a. 80 (HTTP default port)"
+                "answer": "C) 443 (HTTPS uses port 443; HTTP uses port 80)"
               },
               {
                 "id": 32,
-                "text": "In the handshake protocol which is the message type first sent between client and server?\na. server_hello\nb. client_hello\nc. hello_request\nd. certificate_request",
+                "text": "In the handshake protocol which is the message type first sent between client and server?\nA) server_hello\nB) client_hello\nC) hello_request\nD) certificate_request",
                 "marks": 1,
-                "answer": "b. client_hello"
+                "answer": "B) client_hello"
               },
               {
                 "id": 33,
-                "text": "Inside which HTML element do we put the JavaScript?\na. &lt;js&gt;\nb. &lt;javascript&gt;\nc. &lt;scripting&gt;\nd. &lt;script&gt;",
+                "text": "Inside which HTML element do we put the JavaScript?\nA) &amp;lt;js&amp;gt;\nB) &amp;lt;javascript&amp;gt;\nC) &amp;lt;scripting&amp;gt;\nD) &amp;lt;script&amp;gt;",
                 "marks": 1,
-                "answer": "d. &lt;script&gt;"
+                "answer": "D) &amp;lt;script&amp;gt;"
               },
               {
                 "id": 34,
-                "text": "Which one is not a programming language?\na. HTML\nb. CSS\nc. JavaScript\nd. PHP",
+                "text": "Which one is not a programming language?\nA) HTML\nB) CSS\nC) JavaScript\nD) PHP",
                 "marks": 1,
-                "answer": "a. HTML (HyperText Markup Language is a markup language, not a programming language)"
+                "answer": "A) HTML (HyperText Markup Language)"
               },
               {
                 "id": 35,
-                "text": "Which one is a method of inserting a style sheet?\na. Inline style sheet\nb. External style sheet\nc. Internal style sheet\nd. All above",
+                "text": "Which one is a method of inserting a style sheet?\nA) Inline style sheet\nB) External style sheet\nC) Internal style sheet\nD) All above",
                 "marks": 1,
-                "answer": "d. All above (inline, external, and internal style sheets are all valid methods)"
+                "answer": "D) All above"
               },
               {
                 "id": 36,
-                "text": "An example of a variable declaration in JavaScript:\na. $a;\nb. Var a;\nc. Variable a;\nd. None above",
+                "text": "An example of a variable declaration in JavaScript:\nA) $a;\nB) Var a;\nC) Variable a;\nD) None above",
                 "marks": 1,
-                "answer": "d. None above (var a; is correct but Var a; with capital V is not; $a; is not a declaration)"
+                "answer": "D) None above (JavaScript uses var, let, or const)"
               },
               {
                 "id": 37,
-                "text": "An example of a variable declaration in PHP:\na. $a;\nb. Var a;\nc. Variable a;\nd. None above",
+                "text": "An example of a variable declaration in PHP:\nA) $a;\nB) Var a;\nC) Variable a;\nD) None above",
                 "marks": 1,
-                "answer": "a. $a; (PHP variables start with $)"
+                "answer": "A) $a;"
               },
               {
                 "id": 38,
-                "text": "The RSA signature uses which hash algorithm?\na. MD5\nb. SHA-1\nc. MD5 and SHA-1\nd. None of the mentioned",
+                "text": "The RSA signature uses which hash algorithm?\nA) MD5\nB) SHA-1\nC) MD5 and SHA-1\nD) None of the mentioned",
                 "marks": 1,
-                "answer": "d. None of the mentioned (RSA typically uses SHA-256 or other modern hashes)"
+                "answer": "D) None of the mentioned (RSA uses PKCS#1 v1.5 or PSS with various hash algorithms)"
               },
               {
                 "id": 39,
-                "text": "Choose the function of a router\na. changing the data from one format to another\nb. error detection in data\nc. send the packet to the uplinks\nd. None of the above",
+                "text": "Choose the function of a router\nA) changing the data from one format to another\nB) error detection in data\nC) send the packet to the uplinks\nD) None of the above",
                 "marks": 1,
-                "answer": "c. send the packet to the uplinks"
+                "answer": "C) send the packet to the uplinks"
               },
               {
                 "id": 40,
-                "text": "Which utility is used to find the number of routers between a source and destination?\na. route\nb. Traceroute\nc. Ifconfig\nd. Ipconfig",
+                "text": "Which utility is used to find the number of routers between a source and destination?\nA) route\nB) Traceroute\nC) Ifconfig\nD) Ipconfig",
                 "marks": 1,
-                "answer": "b. Traceroute"
+                "answer": "B) Traceroute"
               }
             ]
           },
@@ -8027,63 +8127,63 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "marks": 2,
                 "text": "What is a Programming Paradigm?",
-                "answer": "A programming paradigm is a fundamental style or approach to programming that provides a framework for structuring code. Examples: procedural, object-oriented, functional, and logic programming paradigms."
+                "marks": 2,
+                "answer": "A programming paradigm is a style or way of programming that provides a framework for structuring code. Common paradigms include: imperative (procedural), object-oriented, functional, and declarative. Each paradigm defines how computation, structure, and organization of code are approached."
               },
               {
                 "id": 2,
-                "marks": 2,
                 "text": "Is it true that Operating Systems like Windows, Linux and UNIX are written in C?",
-                "answer": "Yes, it is true. The core kernels of Windows (NT kernel), Linux, and UNIX are predominantly written in the C programming language due to its efficiency, low-level memory access, and portability across hardware architectures."
+                "marks": 2,
+                "answer": "Yes, it is true. The core kernels of Windows, Linux, and UNIX are primarily written in the C programming language. C provides the performance, low-level memory access, and hardware control needed for OS development while maintaining portability across architectures."
               },
               {
                 "id": 3,
-                "marks": 2,
                 "text": "What do you mean by scope of a variable? What are the different types of scopes that a variable can have?",
-                "answer": "Scope of a variable defines the region of the program where the variable can be accessed. Types: 1) Local scope - accessible only within the block/function where declared. 2) Global scope - accessible throughout the entire program. 3) Function scope - accessible within a function. 4) Block scope - accessible within a block {}. In C: local, global, and static scope."
+                "marks": 2,
+                "answer": "Scope refers to the region of a program where a variable can be accessed. Types:\n- Local scope: variable accessible only within the block/function where declared.\n- Global scope: variable accessible throughout the entire program.\n- Function scope: variable accessible within a function (e.g., var in JavaScript).\n- Block scope: variable accessible only within a code block {} (e.g., let/const in JavaScript).\n- Class scope: variable accessible within a class definition."
               },
               {
                 "id": 4,
-                "marks": 2,
                 "text": "Which of the following statement is a declaration and which is a definition?\nextern int i;\nint j = 0;",
-                "answer": "extern int i; is a declaration (declares that i exists somewhere, no memory allocation). int j = 0; is a definition (declares j AND allocates memory with initial value 0). A declaration introduces a name; a definition provides the actual storage."
+                "marks": 2,
+                "answer": "extern int i; — This is a DECLARATION. It tells the compiler that variable i exists somewhere but does not allocate storage.\nint j = 0; — This is a DEFINITION. It declares the variable AND allocates storage with an initial value of 0."
               },
               {
                 "id": 5,
-                "marks": 2,
                 "text": "What are the differences between a declaration and a definition?",
-                "answer": "Declaration: introduces a name and its type to the compiler, can occur multiple times, does not allocate memory. Definition: allocates memory for the variable/function, occurs exactly once (ODR - One Definition Rule). Every definition is also a declaration, but not vice versa."
+                "marks": 2,
+                "answer": "Declaration:\n- Introduces a name to the compiler.\n- Does not allocate memory.\n- Can appear multiple times.\n- Syntax: extern int x; or function prototype.\n\nDefinition:\n- Allocates memory for the variable/function.\n- Provides the actual implementation or storage.\n- Appears exactly once.\n- Syntax: int x = 5; or function body {}."
               },
               {
                 "id": 6,
-                "marks": 2,
                 "text": "Is it true that a global variable may have several declarations, but only one definition? [Yes/No]",
-                "answer": "Yes. A global variable can be declared multiple times using the extern keyword across different source files, but it must have exactly one definition (where storage is allocated). Multiple declarations are allowed; multiple definitions violate the One Definition Rule."
+                "marks": 2,
+                "answer": "Yes. A global variable can be declared multiple times (using extern) across different source files, but must have exactly one definition (actual storage allocation) to avoid linker errors (multiple definition error)."
               },
               {
                 "id": 7,
-                "marks": 2,
                 "text": "Is it true that a function may have several declarations, but only one definition? [Yes/No]",
-                "answer": "Yes. A function can have multiple declarations (prototypes) across different files, but only one definition. This follows the One Definition Rule (ODR) in C/C++."
+                "marks": 2,
+                "answer": "Yes. A function can have multiple declarations (prototypes) across different files, but the function body (definition) must appear exactly once. Multiple definitions would cause a linker error."
               },
               {
                 "id": 8,
-                "marks": 2,
                 "text": "When we mention the prototype of a function are we defining the function or declaring it?",
-                "answer": "We are declaring it. A function prototype (signature) tells the compiler the function's name, return type, and parameter types without providing the implementation. The actual implementation (body) is the definition."
+                "marks": 2,
+                "answer": "We are DECLARING it. A function prototype tells the compiler the function's return type, name, and parameter types without providing the implementation (body). The actual definition with the function body appears elsewhere."
               },
               {
                 "id": 9,
-                "marks": 2,
                 "text": "If you are to share the variables or functions across several source files, how would you ensure that all definitions and declarations are consistent?",
-                "answer": "Use header files (.h). Place declarations (extern variables, function prototypes) in a header file, then #include the header in all source files that need them. Define the variable/function in exactly one .c file. This ensures type consistency because the compiler checks declarations against definitions."
+                "marks": 2,
+                "answer": "By using header files (.h). Place common declarations (function prototypes, extern variable declarations) in a header file, then #include that header in all source files that need them. This ensures every file sees the same declarations, preventing mismatches."
               },
               {
                 "id": 10,
-                "marks": 2,
                 "text": "Global variables are available to all functions. Does there exist a mechanism by way of which I can make it available to some and not to others?",
-                "answer": "Yes. Use static keyword for file-scope (global) variables: static int x; limits the variable's visibility to the current source file only (internal linkage). Functions in other files cannot access it. For finer control, pass the variable as a function parameter instead of making it global."
+                "marks": 2,
+                "answer": "Yes, using static keyword. A static global variable (file-scope static) has internal linkage — it is only visible within the translation unit (source file) where it is declared. Functions in other files cannot access it. Also, in OOP, private class members restrict access to within the class only."
               }
             ]
           },
@@ -8093,27 +8193,27 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "marks": 4,
                 "text": "Differentiate Table Scan from Index Scan.",
-                "answer": "Table Scan: reads every row of the table sequentially (full table scan). Used when no index exists or query returns large portion of rows. Slower for selective queries. I/O intensive.\n\nIndex Scan: uses an index structure to locate rows directly. Faster for selective queries (small percentage of rows). Requires index to exist on the searched columns. More efficient for point queries and range queries with high selectivity."
+                "marks": 4,
+                "answer": "Table Scan (Full Scan): reads every row of a table sequentially, regardless of selectivity. Efficient for tables with no indexes or when most rows need to be retrieved. O(n) complexity where n=rows.\n\nIndex Scan: uses an index structure (B-tree, hash) to quickly locate specific rows. The index maps key values to row locations. Efficient for selective queries returning few rows. O(log n) lookup complexity.\n\nUse table scan for small tables or when retrieving most rows; use index scan for large tables with selective queries."
               },
               {
                 "id": 2,
-                "marks": 4,
                 "text": "List some commands of DDL.",
-                "answer": "DDL (Data Definition Language) commands: CREATE (create database objects), ALTER (modify structure), DROP (delete objects), TRUNCATE (remove all rows), RENAME (rename objects). Examples: CREATE TABLE Students (...), ALTER TABLE Students ADD age INT, DROP TABLE Students, TRUNCATE TABLE Students."
+                "marks": 4,
+                "answer": "DDL (Data Definition Language) commands:\n- CREATE: creates database objects (tables, views, indexes).\n- ALTER: modifies existing database objects (add/drop columns, modify constraints).\n- DROP: removes database objects entirely.\n- TRUNCATE: removes all rows from a table (cannot rollback).\n- RENAME: renames database objects."
               },
               {
                 "id": 3,
-                "marks": 3,
                 "text": "Why is group-clause used?",
-                "answer": "The GROUP BY clause is used in SQL to group rows that have the same values in specified columns into summary rows. It is typically used with aggregate functions (COUNT, SUM, AVG, MAX, MIN) to produce grouped results. Example: SELECT department, AVG(salary) FROM employees GROUP BY department; — calculates average salary per department."
+                "marks": 3,
+                "answer": "The GROUP BY clause is used to group rows that have the same values in specified columns into summary rows. It is typically used with aggregate functions (COUNT, SUM, AVG, MAX, MIN) to produce summary reports. Example: SELECT department, AVG(salary) FROM employees GROUP BY department;"
               },
               {
                 "id": 4,
-                "marks": 4,
                 "text": "What are the various kinds of interactions catered by DBMS?",
-                "answer": "DBMS interactions: 1) DDL (Data Definition Language) - define/modify database structure. 2) DML (Data Manipulation Language) - query and modify data (SELECT, INSERT, UPDATE, DELETE). 3) DCL (Data Control Language) - access control (GRANT, REVOKE). 4) TCL (Transaction Control Language) - manage transactions (COMMIT, ROLLBACK, SAVEPOINT)."
+                "marks": 4,
+                "answer": "DBMS interactions:\n1. Data Definition: creating/modifying schema (DDL).\n2. Data Manipulation: inserting, updating, deleting, retrieving data (DML).\n3. Data Control: access permissions and security (DCL - GRANT, REVOKE).\n4. Transaction Control: managing transactions (TCL - COMMIT, ROLLBACK, SAVEPOINT).\n5. Query Processing: parsing, optimizing, and executing SQL queries.\n6. Storage Management: managing physical data storage and indexing."
               }
             ]
           },
@@ -8123,51 +8223,320 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "marks": 3,
                 "text": "What is OSI and what role does it play in computer networks?",
-                "answer": "OSI (Open Systems Interconnection) is a reference model developed by ISO that standardizes network communication into 7 layers: Physical, Data Link, Network, Transport, Session, Presentation, Application. Role: provides a universal standard for network protocols, enables interoperability between different vendors, simplifies troubleshooting by isolating issues to specific layers, and serves as a teaching/conceptual framework."
+                "marks": 3,
+                "answer": "OSI (Open Systems Interconnection) is a conceptual model that standardizes network communication into 7 layers:\n7. Application - user-facing protocols (HTTP, FTP, SMTP)\n6. Presentation - data translation, encryption, compression\n5. Session - connection establishment, management, termination\n4. Transport - reliable data delivery (TCP/UDP)\n3. Network - logical addressing and routing (IP)\n2. Data Link - framing, error detection, MAC addressing\n1. Physical - bit transmission over hardware\n\nRole: provides a universal standard for network communication, troubleshooting framework, and modular approach where each layer handles specific functions independently."
               },
               {
                 "id": 2,
-                "marks": 4,
                 "text": "What is the purpose of cables being shielded and having twisted pairs?",
-                "answer": "Shielding: metal foil/braid around conductors protects against electromagnetic interference (EMI) from external sources and prevents signal leakage. Twisted pairs: twisting two wires together cancels out electromagnetic noise from adjacent pairs (crosstalk). The twists ensure both wires receive the same interference, which is canceled at the receiving end via differential signaling. Used in Ethernet (Cat5e, Cat6) and telephone cables."
+                "marks": 4,
+                "answer": "Shielding: A conductive layer (foil or braid) around cables protects against electromagnetic interference (EMI) from external sources and prevents signal radiation. Grounded shield provides a path for interference current.\n\nTwisted pairs: Two insulated copper wires twisted together to cancel electromagnetic interference. Each wire carries equal but opposite signals; external noise induces equal current in both wires, canceling at the receiver (common-mode rejection).\n\nTogether they reduce crosstalk, improve signal quality, and enable higher data rates over longer distances."
               },
               {
                 "id": 3,
-                "marks": 4,
                 "text": "One way of securing a network is through the use of passwords. What can be considered as good passwords?",
-                "answer": "Good passwords: at least 12-16 characters, mix of uppercase/lowercase letters, numbers, and special characters, avoid dictionary words and personal information, unique for each account. Best practices: use passphrases (e.g., 'Correct-Horse-Battery-Staple'), enable multi-factor authentication, use a password manager, change passwords periodically, and never share passwords."
+                "marks": 4,
+                "answer": "Good password characteristics:\n1. Length: at least 12-16 characters.\n2. Complexity: mix of uppercase, lowercase, digits, special characters.\n3. Unpredictability: not dictionary words, names, dates, or patterns.\n4. Uniqueness: different password for each service/account.\n5. No personal information: avoid birthdays, phone numbers, pet names.\n6. Use passphrases: random word combinations (e.g., \"correct-horse-battery-staple\").\n7. Regular rotation: change periodically, especially after suspected breach.\n8. Multi-factor authentication: combine password with additional verification."
               },
               {
                 "id": 4,
-                "marks": 4,
                 "text": "Name the two data link sublayers and their purposes.",
-                "answer": "1) LLC (Logical Link Control) sublayer - upper sublayer that provides multiplexing between network layer protocols, flow control, and error control. Manages frame synchronization and multiplexes protocols (e.g., IP, IPX) over the same link.\n\n2) MAC (Media Access Control) sublayer - lower sublayer that controls how devices access the shared medium, handles frame addressing (MAC addresses), and detects collisions. Determines which device transmits at a given time (CSMA/CD for Ethernet)."
+                "marks": 4,
+                "answer": "1. LLC (Logical Link Control) - upper sublayer:\n- Multiplexing of protocols (identifies network layer protocol via SAP).\n- Flow control and error management (acknowledgement, retransmission).\n- Provides service access points (SAPs) for communication.\n\n2. MAC (Media Access Control) - lower sublayer:\n- Controls access to the shared physical medium.\n- MAC addressing (48-bit hardware addresses).\n- Frame delimiting, error detection (CRC).\n- Media access methods: CSMA/CD (Ethernet), token passing (Token Ring)."
               }
             ]
           },
           {
-            "title": "Section B: D. Algorithms and Data Structure",
+            "title": "Section B: D. Algorithm and data structure",
             "marks": 10,
             "questions": [
               {
                 "id": 1,
-                "marks": 3,
                 "text": "How to find whether the linked list has a loop?",
-                "answer": "Use Floyd's Cycle Detection Algorithm (Tortoise and Hare): use two pointers, slow (moves 1 step) and fast (moves 2 steps). If they meet at any point, the linked list has a loop. If fast reaches null (end), no loop exists. Time complexity: O(n), Space complexity: O(1). Also called the cycle detection algorithm."
+                "marks": 3,
+                "answer": "Use Floyd's Cycle Detection Algorithm (Tortoise and Hare):\n1. Initialize two pointers: slow (moves 1 step) and fast (moves 2 steps).\n2. Traverse the list: slow = slow-&gt;next, fast = fast-&gt;next-&gt;next.\n3. If fast reaches NULL, no loop exists.\n4. If slow and fast meet at the same node, a loop exists.\n\nTime complexity: O(n), Space complexity: O(1)."
               },
               {
                 "id": 2,
-                "marks": 4,
                 "text": "Differentiate between best case scenario and worst case scenario of an algorithm.",
-                "answer": "Best case: minimum time/resources the algorithm takes for the most favorable input. Example: linear search best case is O(1) when target is the first element. \n\nWorst case: maximum time/resources the algorithm takes for the least favorable input. Example: linear search worst case is O(n) when target is last or not present.\n\nAnalysis: best case is rarely useful; worst case gives guaranteed upper bound (performance guarantee). Average case gives expected performance over all inputs. Big-O notation typically refers to worst case."
+                "marks": 4,
+                "answer": "Best Case:\n- Minimum time/resources required for any valid input.\n- Represents the most favorable input configuration.\n- Example: Linear search best case = O(1) (element at first position).\n- Lower bound (Omega notation: Ω).\n\nWorst Case:\n- Maximum time/resources required for any valid input.\n- Represents the least favorable input configuration.\n- Example: Linear search worst case = O(n) (element at last position or absent).\n- Upper bound (Big O notation: O).\n\nAlgorithms are typically analyzed for worst-case performance to guarantee acceptable behavior under all conditions."
               },
               {
                 "id": 3,
-                "marks": 3,
                 "text": "Describe the two principal operations that can be performed on a Stack.",
-                "answer": "1) Push: adds an element to the top of the stack. If stack is full, overflow condition occurs. Time complexity: O(1).\n\n2) Pop: removes and returns the top element from the stack. If stack is empty, underflow condition occurs. Time complexity: O(1).\n\nAdditional operations: Peek/Top (view top element without removing), isEmpty (check if stack is empty), isFull (check if stack is full). Stack follows LIFO (Last In, First Out) principle."
+                "marks": 3,
+                "answer": "1. PUSH: Insert an element onto the top of the stack.\n- Check if stack is full (overflow condition).\n- Increment the top pointer.\n- Store the element at the top position.\n- Time complexity: O(1).\n\n2. POP: Remove and return the top element from the stack.\n- Check if stack is empty (underflow condition).\n- Retrieve the element at the top position.\n- Decrement the top pointer.\n- Time complexity: O(1).\n\nAdditional operation: PEEK/TOP - returns the top element without removing it."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Mathematics",
+        "duration": "3 hours",
+        "credits": 6,
+        "description": "Specialty: SOFTWARE ENGINEERING | 2023 Session",
+        "sections": [
+          {
+            "title": "Section A: Statistics",
+            "marks": 40,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Sample mean=50, SD=8, n=25. Calculate: a) 95% CI b) 99% CI for population mean.",
+                "marks": 10,
+                "answer": "a) 95% CI: 50 ± 1.96×(8/5) = 50 ± 3.136 = (46.864, 53.136)\nb) 99% CI: 50 ± 2.576×(8/5) = 50 ± 4.122 = (45.878, 54.122)",
+                "tutorial": "CI = x̄ ± Z(σ/√n). Z=1.96 for 95%, 2.576 for 99%."
+              },
+              {
+                "id": 2,
+                "text": "Calculate expected profit, variance, and standard deviation from a probability distribution.",
+                "marks": 14,
+                "answer": "E(X) = Σ(xi×pi)\nVar(X) = Σ((xi-μ)²×pi) = E(X²)-μ²\nσ = √Var(X)\nExample: X={100,200,300}, P={0.3,0.5,0.2}\nE(X)=190, Var(X)=4900, σ=70",
+                "tutorial": "Expected value is weighted average. Variance measures dispersion."
+              },
+              {
+                "id": 3,
+                "text": "P(X=x)=k(x+1) for x=1,2,3 and k(x-3) for x=4,5,6. Find k, mean, variance.",
+                "marks": 9,
+                "answer": "ΣP=1: k(2+3+4+1+2+3)=15k=1 => k=1/15\nMean = (2+6+12+4+10+18)/15 = 52/15 = 3.467\nE(X²) = (2+12+36+16+50+108)/15 = 224/15\nVar = 224/15 - (52/15)² = 656/225 = 2.916",
+                "tutorial": "First normalize distribution, then compute moments."
+              }
+            ]
+          },
+          {
+            "title": "Section B: Probability",
+            "marks": 40,
+            "questions": [
+              {
+                "id": 4,
+                "text": "5% of candidates qualified. Interview until first qualified. a) Mean? b) P(5th is first qualified)?",
+                "marks": 10,
+                "answer": "Geometric distribution, p=0.05.\na) Mean = 1/0.05 = 20 applicants.\nb) P(X=5) = (0.95)⁴×0.05 = 0.8145×0.05 = 0.0407",
+                "tutorial": "Geometric: P(X=n) = (1-p)^(n-1)×p."
+              },
+              {
+                "id": 5,
+                "text": "Machine X: 60%, faulty=0.02. Y: 40%, faulty=0.03. Find: a) P(faulty) b) P(faulty or from Y) c) P(from X|faulty)",
+                "marks": 10,
+                "answer": "a) P(F)=0.02(0.6)+0.03(0.4)=0.024\nb) P(F∪Y)=0.024+0.4-0.012=0.412\nc) P(X|F)=0.012/0.024=0.5",
+                "tutorial": "Law of total probability, addition rule, Bayes' theorem."
+              },
+              {
+                "id": 6,
+                "text": "Roll a fair die. Let X be outcome. a) E(X) b) Var(X) c) P(X=6) exact d) Markov bound e) Chebyshev bound",
+                "marks": 12,
+                "answer": "a) E(X)=3.5\nb) Var(X)=91/6 - 12.25 = 2.917\nc) P(X=6)=1/6=0.1667\nd) Markov: P(X≥6) ≤ 3.5/6 = 0.5833\ne) Chebyshev: k=2.5/1.708=1.464, P≤1/1.464²=0.467",
+                "tutorial": "Markov and Chebyshev provide bounds without exact distribution."
+              },
+              {
+                "id": 7,
+                "text": "70% brand A (70% large), 30% brand B (40% small). a) Tree diagram b) P(small) c) P(A|small)",
+                "marks": 8,
+                "answer": "a) Tree: A(0.7)→Large(0.7), Small(0.3); B(0.3)→Large(0.6), Small(0.4)\nb) P(Small)=0.3(0.7)+0.4(0.3)=0.33\nc) P(A|Small)=0.21/0.33=0.636",
+                "tutorial": "Bayes' theorem for inverse probability."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Computer Fundamentals",
+        "duration": "2 hours",
+        "credits": 1,
+        "description": "All Specialties | 2023 Session",
+        "sections": [
+          {
+            "title": "Section A: General Computer Knowledge",
+            "marks": 50,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Which program is used for database? A) MS Word B) MS Excel C) MS PowerPoint D) MS Access",
+                "marks": 1,
+                "answer": "D) MS Access"
+              },
+              {
+                "id": 2,
+                "text": "SRAM stands for: A) Standard RAM B) Static Read Access Memory C) Static Random Access Memory D) Standard Read Access Memory",
+                "marks": 1,
+                "answer": "C) Static Random Access Memory"
+              },
+              {
+                "id": 3,
+                "text": "Getting information from internet to computer is: A) Downloading B) Browsing C) Uploading D) Recording",
+                "marks": 1,
+                "answer": "A) Downloading"
+              },
+              {
+                "id": 4,
+                "text": "Language used by computer: A) French B) Computer language C) Binary language D) English",
+                "marks": 1,
+                "answer": "C) Binary language"
+              },
+              {
+                "id": 5,
+                "text": "To center a title in MS Word, use: A) Font size B) Font style C) Spacing D) Alignment",
+                "marks": 1,
+                "answer": "D) Alignment"
+              },
+              {
+                "id": 6,
+                "text": "Save file with different name: A) Save B) Save As C) Send to D) Page setup",
+                "marks": 1,
+                "answer": "B) Save As"
+              },
+              {
+                "id": 7,
+                "text": "Add geometric shapes in PowerPoint: A) Drawing B) Formatting C) Reviewing D) Illustrations",
+                "marks": 1,
+                "answer": "D) Illustrations"
+              },
+              {
+                "id": 8,
+                "text": "Peripherals like printers are: A) Information B) Data C) Software D) Hardware",
+                "marks": 1,
+                "answer": "D) Hardware"
+              },
+              {
+                "id": 9,
+                "text": "Motherboard is also called: A) Central board B) System board C) Computer board D) Mouse",
+                "marks": 1,
+                "answer": "B) System board"
+              },
+              {
+                "id": 10,
+                "text": "Computers controlling processes use: A) Infinite loop B) Feedback loop C) Data highway D) Traffic pattern",
+                "marks": 1,
+                "answer": "B) Feedback loop"
+              },
+              {
+                "id": 11,
+                "text": "Reads handwritten text to digital image: A) Touch pad B) Laser beam C) Printer D) Scanner",
+                "marks": 1,
+                "answer": "D) Scanner"
+              },
+              {
+                "id": 12,
+                "text": "Brain of computer: A) Secondary storage B) CPU C) Data input D) RAM",
+                "marks": 1,
+                "answer": "B) CPU"
+              },
+              {
+                "id": 13,
+                "text": "Rules for data transmission: A) IP address B) Domains C) Protocol D) Gateway",
+                "marks": 1,
+                "answer": "C) Protocol"
+              },
+              {
+                "id": 14,
+                "text": "Guards against unauthorized access: A) Hacker-proof B) Firewall C) Hacker-resistant D) Encryption",
+                "marks": 1,
+                "answer": "B) Firewall"
+              },
+              {
+                "id": 15,
+                "text": "Restrict system access: A) User logins B) Password C) Computer keys D) Access control",
+                "marks": 1,
+                "answer": "B) Password"
+              },
+              {
+                "id": 16,
+                "text": "Malicious software: A) Badware B) Malware C) Maliciousware D) Illegalware",
+                "marks": 1,
+                "answer": "B) Malware"
+              },
+              {
+                "id": 17,
+                "text": "Does NOT store data permanently: A) ROM B) RAM C) Floppy disk D) Hard drive",
+                "marks": 1,
+                "answer": "B) RAM"
+              },
+              {
+                "id": 18,
+                "text": "Booting performs: A) Integrity test B) POST C) Functioning test D) Reliability test",
+                "marks": 1,
+                "answer": "B) Power-on-self-test (POST)"
+              },
+              {
+                "id": 19,
+                "text": "NOT a basic computer function: A) Store data B) Accept input C) Process data D) Copy test",
+                "marks": 1,
+                "answer": "D) Copy test"
+              },
+              {
+                "id": 20,
+                "text": "What is an OS? Give two examples.",
+                "marks": 5,
+                "answer": "OS is system software managing hardware and software resources, providing services for programs. Examples: Windows, Linux, macOS."
+              },
+              {
+                "id": 21,
+                "text": "Difference between system software and application software?",
+                "marks": 5,
+                "answer": "System software manages hardware (OS, drivers). Application software performs user tasks (Word, Excel)."
+              },
+              {
+                "id": 22,
+                "text": "What is cloud computing? Three benefits?",
+                "marks": 5,
+                "answer": "On-demand delivery of computing services over internet.\nBenefits: 1) Cost efficiency, 2) Scalability, 3) Accessibility."
+              },
+              {
+                "id": 23,
+                "text": "What is computer security? Three threats?",
+                "marks": 5,
+                "answer": "Protection from theft, damage, unauthorized access.\nThreats: 1) Viruses/Malware, 2) Phishing, 3) Hacking."
+              },
+              {
+                "id": 24,
+                "text": "What is a database? Give an example.",
+                "marks": 3,
+                "answer": "An organized collection of structured data for efficient storage and retrieval. Examples: MySQL, MS Access, Oracle."
+              },
+              {
+                "id": 25,
+                "text": "Difference between data and information?",
+                "marks": 3,
+                "answer": "Data: raw, unprocessed facts. Information: processed, organized data with meaning."
+              }
+            ]
+          },
+          {
+            "title": "Section B: Web and Digital Society",
+            "marks": 20,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Differentiate: i) Intranet vs Extranet ii) Browser vs Search engine iii) Static vs Dynamic webpage",
+                "marks": 6,
+                "answer": "i) Intranet: private internal network. Extranet: extended to authorized external parties.\nii) Browser: displays web pages (Chrome). Search engine: indexes web content (Google).\niii) Static: fixed content. Dynamic: generated on-the-fly with databases."
+              },
+              {
+                "id": 2,
+                "text": "State 4 social media platforms.",
+                "marks": 4,
+                "answer": "Facebook, Twitter/X, Instagram, WhatsApp."
+              },
+              {
+                "id": 3,
+                "text": "Requirements to build a WAN?",
+                "marks": 4,
+                "answer": "Routers, leased lines/fiber, TCP/IP, modems, firewalls."
+              },
+              {
+                "id": 4,
+                "text": "What is URL? Give an example.",
+                "marks": 3,
+                "answer": "URL (Uniform Resource Locator): web address. Format: protocol://domain/path. Example: https://example.com/page"
+              },
+              {
+                "id": 5,
+                "text": "What is digital literacy? Why important?",
+                "marks": 3,
+                "answer": "Ability to use digital technology effectively. Important for participation in digital economy, education, and society."
               }
             ]
           }
@@ -8191,14 +8560,14 @@ const examData = {
                 "id": 1,
                 "text": "Create the above array {22.5, 35.0, 26.5, 31.5, 28.0, 9.5, 23.0, 39.0} and populate it with data from the keyboard using a loop. Also create a function called displayArray that takes an array as parameter and displays the content of the array on separate lines.",
                 "marks": 4,
-                "answer": "#include <stdio.h>\n\nvoid displayArray(float arr[], int n) {\n    for (int i = 0; i < n; i++) {\n        printf(\"%.1f\n\", arr[i]);\n    }\n}\n\nint main() {\n    float marks[8];\n    printf(\"Enter 8 marks:\n\");\n    for (int i = 0; i < 8; i++) {\n        printf(\"Mark %d: \", i + 1);\n        scanf(\"%f\", &marks[i]);\n    }\n    printf(\"\nArray contents:\n\");\n    displayArray(marks, 8);\n    return 0;\n}",
+                "answer": "#include <stdio.h>\n\nvoid displayArray(float arr[], int n) {\n    for (int i = 0; i < n; i++) {\n        printf(\"%.1f\\n\", arr[i]);\n    }\n}\n\nint main() {\n    float marks[8];\n    printf(\"Enter 8 marks:\\n\");\n    for (int i = 0; i < 8; i++) {\n        printf(\"Mark %d: \", i + 1);\n        scanf(\"%f\", &marks[i]);\n    }\n    printf(\"\\nArray contents:\\n\");\n    displayArray(marks, 8);\n    return 0;\n}",
                 "tutorial": "The array is declared with size 8. A for loop populates it from user input. displayArray() iterates and prints each element on a new line."
               },
               {
                 "id": "1b",
                 "text": "Create and call a function that swaps the first value with the last value in the array. Show the array before and after swapping (39.0 becomes first).",
                 "marks": 4,
-                "answer": "void swapFirstLast(float arr[], int n) {\n    float temp = arr[0];\n    arr[0] = arr[n - 1];\n    arr[n - 1] = temp;\n}\n\n// In main():\nprintf(\"Before swap:\n\");\ndisplayArray(marks, 8);\nswapFirstLast(marks, 8);\nprintf(\"After swap:\n\");\ndisplayArray(marks, 8);",
+                "answer": "void swapFirstLast(float arr[], int n) {\n    float temp = arr[0];\n    arr[0] = arr[n - 1];\n    arr[n - 1] = temp;\n}\n\n// In main():\nprintf(\"Before swap:\\n\");\ndisplayArray(marks, 8);\nswapFirstLast(marks, 8);\nprintf(\"After swap:\\n\");\ndisplayArray(marks, 8);",
                 "tutorial": "Store arr[0] in temp, assign arr[n-1] to arr[0], assign temp to arr[n-1]. Display before and after."
               },
               {
@@ -8212,14 +8581,14 @@ const examData = {
                 "id": 2,
                 "text": "Consider data: RolNo {21001-Terry, 21002-Shirley, 21003-Pericostigan, 21004-Persis, 21005-William, 21006-Jude} stored in register.txt. Write a program that opens the file and displays its content on the screen.",
                 "marks": 5,
-                "answer": "#include <stdio.h>\n\nint main() {\n    FILE *fp = fopen(\"register.txt\", \"r\");\n    if (fp == NULL) {\n        printf(\"File not found!\n\");\n        return 1;\n    }\n    char line[100];\n    while (fgets(line, sizeof(line), fp)) {\n        printf(\"%s\", line);\n    }\n    fclose(fp);\n    return 0;\n}",
+                "answer": "#include <stdio.h>\n\nint main() {\n    FILE *fp = fopen(\"register.txt\", \"r\");\n    if (fp == NULL) {\n        printf(\"File not found!\\n\");\n        return 1;\n    }\n    char line[100];\n    while (fgets(line, sizeof(line), fp)) {\n        printf(\"%s\", line);\n    }\n    fclose(fp);\n    return 0;\n}",
                 "tutorial": "Open file in read mode, check for NULL, read line by line with fgets() until EOF, then close."
               },
               {
                 "id": 3,
                 "text": "Store the table data in a doubly linked list. Create functions to: a) Display the linked list. b) Delete any record and show the list after deletion.",
                 "marks": 8,
-                "answer": "struct Node {\n    int rolNo;\n    char name[50];\n    struct Node *prev, *next;\n};\n\nvoid display(struct Node *head) {\n    struct Node *temp = head;\n    while (temp) {\n        printf(\"%d - %s\n\", temp->rolNo, temp->name);\n        temp = temp->next;\n    }\n}\n\nvoid deleteNode(struct Node **head, int key) {\n    struct Node *temp = *head;\n    while (temp && temp->rolNo != key) temp = temp->next;\n    if (!temp) return;\n    if (temp->prev) temp->prev->next = temp->next;\n    else *head = temp->next;\n    if (temp->next) temp->next->prev = temp->prev;\n    free(temp);\n}",
+                "answer": "struct Node {\n    int rolNo;\n    char name[50];\n    struct Node *prev, *next;\n};\n\nvoid display(struct Node *head) {\n    struct Node *temp = head;\n    while (temp) {\n        printf(\"%d - %s\\n\", temp->rolNo, temp->name);\n        temp = temp->next;\n    }\n}\n\nvoid deleteNode(struct Node **head, int key) {\n    struct Node *temp = *head;\n    while (temp && temp->rolNo != key) temp = temp->next;\n    if (!temp) return;\n    if (temp->prev) temp->prev->next = temp->next;\n    else *head = temp->next;\n    if (temp->next) temp->next->prev = temp->prev;\n    free(temp);\n}",
                 "tutorial": "A doubly linked list has prev and next pointers. Display traverses forward. Delete relinks neighbours and frees the node."
               }
             ]
@@ -8396,16 +8765,16 @@ const examData = {
             "questions": [
               {
                 "id": "a",
-                "text": "Given an HTML file with a submit button and a &lt;p id='text'> element, implement js_content() in JavaScript to modify the paragraph content when the button is clicked.",
+                "text": "Given an HTML file with a submit button and a <p id='text'> element, implement js_content() in JavaScript to modify the paragraph content when the button is clicked.",
                 "marks": 5,
-                "answer": "&lt;p id=\"text\">Original text&lt;/p&gt;\n&lt;button onclick=\"js_content()\">Click&lt;/button&gt;\n\n&lt;script&gt;\nfunction js_content() {\n    document.getElementById(\"text\").innerHTML = \"Text modified by JavaScript!\";\n}\n&lt;/script&gt;",
+                "answer": "<p id=\"text\">Original text</p>\n<button onclick=\"js_content()\">Click</button>\n\n<script>\nfunction js_content() {\n    document.getElementById(\"text\").innerHTML = \"Text modified by JavaScript!\";\n}\n</script>",
                 "tutorial": "document.getElementById() selects the element. innerHTML changes its content. This is a basic DOM manipulation technique."
               },
               {
                 "id": "b",
                 "text": "Given an HTML form with username, email, password, and mobile fields, and a MySQL database 'STUDENT' with table 'users' matching these fields. Write formHandler.php to receive and insert form data.",
                 "marks": 10,
-                "answer": "<!-- HTML Form -->\n&lt;form action=\"formHandler.php\" method=\"POST\">\n    Username: &lt;input type=\"text\" name=\"username\">&lt;br&gt;\n    Email: &lt;input type=\"email\" name=\"email\">&lt;br&gt;\n    Password: &lt;input type=\"password\" name=\"password\">&lt;br&gt;\n    Mobile: &lt;input type=\"text\" name=\"mobile\">&lt;br&gt;\n    &lt;input type=\"submit\" value=\"Submit\">\n&lt;/form&gt;\n\n<!-- formHandler.php -->\n<?php\n$conn = mysqli_connect(\"localhost\", \"root\", \"user\", \"STUDENT\");\n\n$username = $_POST['username'];\n$email = $_POST['email'];\n$password = password_hash($_POST['password'], PASSWORD_DEFAULT);\n$mobile = $_POST['mobile'];\n\n$sql = \"INSERT INTO users (username, email, password, mobile)\n        VALUES ('$username', '$email', '$password', '$mobile')\";\n\nif (mysqli_query($conn, $sql)) {\n    echo \"Registration successful!\";\n} else {\n    echo \"Error: \" . mysqli_error($conn);\n}\n\nmysqli_close($conn);\n?>",
+                "answer": "<!-- HTML Form -->\n<form action=\"formHandler.php\" method=\"POST\">\n    Username: <input type=\"text\" name=\"username\"><br>\n    Email: <input type=\"email\" name=\"email\"><br>\n    Password: <input type=\"password\" name=\"password\"><br>\n    Mobile: <input type=\"text\" name=\"mobile\"><br>\n    <input type=\"submit\" value=\"Submit\">\n</form>\n\n<!-- formHandler.php -->\n<?php\n$conn = mysqli_connect(\"localhost\", \"root\", \"user\", \"STUDENT\");\n\n$username = $_POST['username'];\n$email = $_POST['email'];\n$password = password_hash($_POST['password'], PASSWORD_DEFAULT);\n$mobile = $_POST['mobile'];\n\n$sql = \"INSERT INTO users (username, email, password, mobile)\n        VALUES ('$username', '$email', '$password', '$mobile')\";\n\nif (mysqli_query($conn, $sql)) {\n    echo \"Registration successful!\";\n} else {\n    echo \"Error: \" . mysqli_error($conn);\n}\n\nmysqli_close($conn);\n?>",
                 "tutorial": "The form sends data via POST to formHandler.php. PHP connects to MySQL using mysqli, retrieves POST data, hashes the password, and inserts into the users table."
               }
             ]
@@ -8439,7 +8808,7 @@ const examData = {
                 "id": 15,
                 "text": "On PC1 desktop, create a folder named 'test', share it with full access. From PC2 or PC3, place a file in the shared folder.",
                 "marks": 6,
-                "answer": "PC1:\n1. Create folder 'test' on Desktop\n2. Right-click > Properties > Sharing tab > Share\n3. Add 'Everyone' and set permission to 'Read/Write'\n4. Note the network path: \\\\PC1\test\n\nPC2:\n1. Open File Explorer > Network > Find PC1\n2. Double-click 'test' folder\n3. Copy a file into it\n\nOr use: \\\\172.25.200.90\test in the address bar.",
+                "answer": "PC1:\n1. Create folder 'test' on Desktop\n2. Right-click > Properties > Sharing tab > Share\n3. Add 'Everyone' and set permission to 'Read/Write'\n4. Note the network path: \\\\PC1\\test\n\nPC2:\n1. Open File Explorer > Network > Find PC1\n2. Double-click 'test' folder\n3. Copy a file into it\n\nOr use: \\\\172.25.200.90\\test in the address bar.",
                 "tutorial": "Windows File Sharing uses SMB protocol. Setting Everyone to Read/Write allows any network user to add files. The shared folder appears under Network in Explorer."
               }
             ]
@@ -8915,510 +9284,72 @@ const examData = {
               {
                 "id": 1,
                 "text": "Find the Fourier coefficients of the periodic function f(x) given by f(x) = 0 for -π < x < 0 and f(x) = 1 for 0 < x < π, with f(x+2π) = f(x).",
-                "marks": 4,
+                "marks": 6,
                 "answer": "a₀ = (1/π)∫₋πᵖⁱ f(x)dx = (1/π)∫₀ᵖⁱ 1·dx = 1\n\naₙ = (1/π)∫₀ᵖⁱ cos(nx)dx = (1/(nπ))[sin(nx)]₀ᵖⁱ = 0\n\nbₙ = (1/π)∫₀ᵖⁱ sin(nx)dx = (1/(nπ))[-cos(nx)]₀ᵖⁱ = (1/(nπ))(1 - (-1)ⁿ)\n\nbₙ = 2/(nπ) for odd n, 0 for even n.\n\nf(x) = 1/2 + Σ(n odd) (2/(nπ)) sin(nx)",
                 "tutorial": "Fourier series decomposes a periodic function into sine and cosine components."
               },
               {
                 "id": 2,
                 "text": "Find the Laplace transform of f(t) = e^(3t) sinh(t).",
-                "marks": 4,
+                "marks": 6,
                 "answer": "L{e^(3t) sinh(t)} = L{sinh(t)} with shift: L{sinh(t)} = 1/(s²-1)\nUsing the shift theorem: L{e^(at) f(t)} = F(s-a)\nL{e^(3t) sinh(t)} = 1/((s-3)²-1) = 1/(s²-6s+8)",
                 "tutorial": "Laplace transform shift theorem: L{e^(at)f(t)} = F(s-a)."
               },
               {
                 "id": 3,
                 "text": "Consider a function of two variables f(x,y) and df the total differential of f. If df = (2xy² + 2)dx + (3x²y² - 4)dy, show that df is an exact differential.",
-                "marks": 4,
+                "marks": 5,
                 "answer": "df = P dx + Q dy where P = 2xy² + 2, Q = 3x²y² - 4\n\nFor exact differential: ∂P/∂y = ∂Q/∂x\n∂P/∂y = 4xy\n∂Q/∂x = 6xy²\n\nWait, ∂P/∂y = 4xy and ∂Q/∂x = 6xy². These are not equal, so the given expression may not be exact. Let me re-check.\n\nIf df = (2xy² + 2)dx + (3x²y² - 4)dy:\n∂P/∂y = 4xy\n∂Q/∂x = 6xy²\n4xy ≠ 6xy², so df is NOT exact as written.\n\nHowever, checking the original: If P = 2xy² + 2 and Q = 3x²y² - 4:\n∂P/∂y = 4xy\n∂Q/∂x = 6xy²\nThese are not equal, so the differential would not be exact.",
                 "tutorial": "For exact differentials, the mixed partial derivatives must be equal: ∂P/∂y = ∂Q/∂x."
               },
               {
                 "id": 4,
                 "text": "Verify Green's theorem in the plane for ∮(2xy - x²)dx + (x + y²)dy where C is the closed curve of the region bounded by y = x² and y² = x.",
-                "marks": 4,
+                "marks": 5,
                 "answer": "Green's theorem: ∮(P dx + Q dy) = ∬(∂Q/∂x - ∂P/∂y)dA\n\nP = 2xy - x², Q = x + y²\n∂Q/∂x = 1, ∂P/∂y = 2x\n∂Q/∂x - ∂P/∂y = 1 - 2x\n\nRegion: y = x² and y² = x intersect at (0,0) and (1,1)\n∬(1-2x)dA = ∫₀¹∫_{x²}^{√x}(1-2x)dy dx = ∫₀¹(1-2x)(√x - x²)dx\n= ∫₀¹(x^(1/2) - x² - 2x^(3/2) + 2x³)dx\n= [2x^(3/2)/3 - x³/3 - 4x^(5/2)/5 + x⁴/2]₀¹\n= 2/3 - 1/3 - 4/5 + 1/2 = (20-10-24+15)/30 = 1/30",
                 "tutorial": "Green's theorem relates a line integral around a closed curve to a double integral over the enclosed region."
               },
               {
                 "id": 5,
                 "text": "Solve the homogeneous equation (x² + y²)dy = xydx, given that x = 1 when y = 1.",
-                "marks": 3,
+                "marks": 4,
                 "answer": "Rewrite: dy/dx = xy/(x² + y²)\n\nLet y = vx, dy/dx = v + x dv/dx\n\nv + x dv/dx = vx²/(x² + v²x²) = v/(1+v²)\nx dv/dx = v/(1+v²) - v = v(1/(1+v²) - 1) = v(1 - (1+v²))/(1+v²) = -v³/(1+v²)\n\n(1+v²)/v³ dv = -dx/x\n∫(v⁻³ + v⁻¹)dv = -∫dx/x\n-v⁻²/2 + ln|v| = -ln|x| + C\n-1/(2v²) + ln|vx| = C\n-1/(2v²) + ln|y| = C\n\nWhen x=1, y=1 => v=1 => -1/2 + 0 = C => C = -1/2\n-1/(2(x²/y²)) + ln|y| = -1/2\n-y²/(2x²) + ln|y| = -1/2",
                 "tutorial": "Use substitution y = vx for homogeneous differential equations."
               },
               {
                 "id": 6,
                 "text": "Determine the general solution of the differential equation: d²y/dx² + 3dy/dx - 4y = 3e⁻ˣ.",
-                "marks": 3,
+                "marks": 4,
                 "answer": "Auxiliary equation: r² + 3r - 4 = 0 => (r+4)(r-1) = 0 => r = -4, 1\n\nCF: yc = Ae⁻⁴ˣ + Beˣ\n\nPI: Try yp = Ce⁻ˣ, yp' = -Ce⁻ˣ, yp'' = Ce⁻ˣ\nSubstitute: Ce⁻ˣ - 3Ce⁻ˣ - 4Ce⁻ˣ = 3e⁻ˣ\n(C - 3C - 4C)e⁻ˣ = 3e⁻ˣ\n-6C = 3 => C = -1/2\n\nyp = -(1/2)e⁻ˣ\n\nGeneral solution: y = Ae⁻⁴ˣ + Beˣ - (1/2)e⁻ˣ",
                 "tutorial": "Second-order linear ODE solved using complementary function and particular integral."
               },
               {
                 "id": 7,
                 "text": "The following table summarizes the masses (in μg) of 200 microchips. Mass (μg): 70-79(7), 80-84(30), 85-89(66), 90-94(57), 95-99(27), 100-109(13). Calculate estimates of: (i) median and upper quartile, (ii) number of microchips with mass less than 81 μg, (iii) mean and standard deviation.",
-                "marks": 9,
+                "marks": 13,
                 "answer": "Class boundaries: 69.5-79.5, 79.5-84.5, 84.5-89.5, 89.5-94.5, 94.5-99.5, 99.5-109.5\n\nCumulative frequencies: 7, 37, 103, 160, 187, 200\n\n(i) Median: n/2 = 100th value, lies in 84.5-89.5 class.\nMedian = 84.5 + 5(100-37)/66 = 84.5 + 5(63/66) = 84.5 + 4.77 = 89.27 μg\n\nUpper quartile: 3n/4 = 150th value, lies in 89.5-94.5 class.\nQ3 = 89.5 + 5(150-103)/57 = 89.5 + 5(47/57) = 89.5 + 4.12 = 93.62 μg\n\n(ii) Mass < 81 μg: 81 lies in 79.5-84.5 class.\nProportion = 7 + 30(81-79.5)/5 = 7 + 9 = 16 microchips\n\n(iii) Midpoints: 74.5, 82, 87, 92, 97, 104.5\nMean = (7×74.5 + 30×82 + 66×87 + 57×92 + 27×97 + 13×104.5)/200\n= (521.5 + 2460 + 5742 + 5244 + 2619 + 1358.5)/200 = 17945/200 = 89.725 μg\n\nVariance = Σf(m-μ)²/n\n= [7(74.5-89.725)² + 30(82-89.725)² + 66(87-89.725)² + 57(92-89.725)² + 27(97-89.725)² + 13(104.5-89.725)²]/200\n= [7(231.8) + 30(59.7) + 66(7.43) + 57(5.18) + 27(52.9) + 13(218.3)]/200\n= [1622.6 + 1791 + 490.4 + 295.3 + 1428.3 + 2837.9]/200 = 8465.5/200 = 42.33\nSD = √42.33 = 6.51 μg",
                 "tutorial": "Grouped data calculations use class midpoints and cumulative frequencies."
               },
               {
                 "id": 8,
                 "text": "The marks obtained by 8 SWE students in Discrete Mathematics (x) and Digital Electronics (y) are given. Find: (a) the least squares regression line of y on x, (b) the product moment correlation coefficient, (c) minimum sum of squares of residuals, (d) predict y when x=30, (e) Kendall's rank correlation coefficient.",
-                "marks": 12,
+                "marks": 17,
                 "answer": "Data: x = {45, 23, 27, 33, 18, 0, ...}, y = {31, 20, 18, 33, 19, ...}\n\n(a) Regression: b = Σ(x-x̄)(y-ȳ)/Σ(x-x̄)², a = ȳ - bx̄\n\n(b) r = Σ(x-x̄)(y-ȳ)/√[Σ(x-x̄)²·Σ(y-ȳ)²]\n\n(c) SSE = Σ(y - ŷ)² = Σ(y - a - bx)²\n\n(d) ŷ = a + b(30)\n\n(e) Kendall's τ = (C-D)/[n(n-1)/2] where C = concordant pairs, D = discordant pairs",
                 "tutorial": "Regression finds the line of best fit. Correlation measures strength of linear relationship."
               },
               {
                 "id": 9,
                 "text": "A discrete random variable X has probability mass function f(x) = k(x-1) for x = 2,3,4,5,6,7 and f(x) = k(13-x) for x = 8,9,10,11,12. Calculate: (a) the constant k, (b) E(X) and Var(X), (c) P(6 ≤ X < 9), (d) E(X+Y) where Y = 5X+3, (e) Var(X+Y).",
-                "marks": 11,
+                "marks": 16,
                 "answer": "(a) Σf(x) = 1\nk(1+2+3+4+5+6) + k(5+4+3+2+1) = k(21) + k(15) = 36k = 1\nk = 1/36\n\n(b) E(X) = Σx·f(x) = (1/36)[2(1)+3(2)+4(3)+5(4)+6(5)+7(6)+8(5)+9(4)+10(3)+11(2)+12(1)]\n= (1/36)[2+6+12+20+30+42+40+36+30+22+12] = 252/36 = 7\n\nE(X²) = (1/36)[4(1)+9(2)+16(3)+25(4)+36(5)+49(6)+64(5)+81(4)+100(3)+121(2)+144(1)]\n= (1/36)[4+18+48+100+180+294+320+324+300+242+144] = 1974/36 = 54.833\nVar(X) = E(X²) - E(X)² = 54.833 - 49 = 5.833\n\n(c) P(6 ≤ X < 9) = P(X=6,7,8) = (5+6+5)/36 = 16/36 = 4/9\n\n(d) Y = 5X+3, E(Y) = 5E(X)+3 = 5(7)+3 = 38\nE(X+Y) = E(X) + E(Y) = 7 + 38 = 45\n\n(e) Var(Y) = Var(5X+3) = 25·Var(X) = 25(5.833) = 145.83\nVar(X+Y) = Var(X) + Var(Y) + 2Cov(X,Y) = Var(X) + 25·Var(X) + 2·5·Var(X) = Var(X)(1+25+10) = 36·5.833 = 210",
                 "tutorial": "A valid probability mass function sums to 1. Linear transformations of random variables follow specific rules."
               },
               {
                 "id": 10,
                 "text": "A batch of 40 components contains 5 which are defective. A component is drawn at random from the batch and tested, then a second component is drawn. Determine the probability that neither component is defective: (a) with replacement, (b) without replacement.",
-                "marks": 6,
+                "marks": 8,
                 "answer": "Total = 40, Defective = 5, Good = 35\n\n(a) With replacement:\nP(both good) = (35/40) × (35/40) = (7/8)² = 49/64 = 0.7656\n\n(b) Without replacement:\nP(both good) = (35/40) × (34/39) = 1190/1560 = 119/156 = 0.7628",
                 "tutorial": "With replacement: independent events. Without replacement: conditional probability."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "title": "Case Study - SWE",
-        "duration": "6 hours",
-        "credits": 14,
-        "description": "Specialty: Software Engineering (SWE) | 2024 Session",
-        "sections": [
-          {
-          "title": "Section A: Algorithm and Programming",
-          "marks": 50,
-          "questions": [
-            {
-              "id": 1,
-              "text": "Find the bug in the pseudocode and implement in the language you master.\n\n```pseudocode\n// This program uses an array to display five names.\nConstant Integer SIZE = 5\nDeclare String names[SIZE] = \"Meg\", \"Janai\", \"Sonat\", \"Belle\", \"Molak\"\nDeclare Integer index\nFor index = 0 To SIZE\n    Display names[index]\nEnd For\n```",
-              "marks": 10,
-              "answer": "Bug (5 marks): The loop condition \"0 To SIZE\" allows index to reach 5 (when SIZE = 5). Arrays use 0-based indexing, so valid indices are 0 through 4 (SIZE-1). When index = 5, names[5] is out of bounds. Fix: Change the loop to \"For index = 0 To SIZE - 1\".\n\nC implementation (5 marks):\n#include <stdio.h>\n\nint main() {\n    const int SIZE = 5;\n    char *names[SIZE] = {\"Meg\", \"Janai\", \"Sonat\", \"Belle\", \"Molak\"};\n    for (int index = 0; index < SIZE; index++) {\n        printf(\"%s\\n\", names[index]);\n    }\n    return 0;\n}",
-              "tutorial": "Array indices start at 0 and go up to SIZE-1. The condition 'index <= SIZE' causes an off-by-one error."
-            },
-            {
-              "id": 2,
-              "text": "Find the bug and fix it, then implement in your language.\n\n```pseudocode\n// This program displays the highest value in the array.\nDeclare Integer SIZE = 3\nDeclare Integer values[SIZE] = 1, 3, 4\nDeclare Integer index\nDeclare Integer highest\nFor index = 0 To SIZE - 1\n    If values[index] > highest Then\n        Set highest = values[index]\n    End If\nEnd For\nDisplay \"The highest number is \", highest\n```",
-              "marks": 25,
-              "answer": "Bug explanation (10 marks): The variable 'highest' is declared but never initialized. The first comparison 'values[0] > highest' uses whatever garbage value is in 'highest' memory. If that garbage is > 1, highest never updates and the output is wrong.\n\nFix: Add 'Set highest = values[0]' before the loop.\n\nC implementation (15 marks):\n#include <stdio.h>\n\nint main() {\n    int SIZE = 3;\n    int values[SIZE] = {1, 3, 4};\n    int highest = values[0];\n    for (int index = 0; index < SIZE; index++) {\n        if (values[index] > highest) {\n            highest = values[index];\n        }\n    }\n    printf(\"The highest number is %d\\n\", highest);\n    return 0;\n}",
-              "tutorial": "Always initialize variables before using them in comparisons. For finding max, initialize to the first element."
-            },
-            {
-              "id": 3,
-              "text": "Design a CellPhone class for Wireless Solutions. Data: manufacturer (String), modelNumber (String), retailPrice (double).\n\na) Declare the data fields. (3 marks)\nb) Declare mutators (setters) and accessors (getters). (3 marks)\nc) Declare a default constructor and a parameterized constructor. (3 marks)\nd) Define the complete class in your preferred language. (3 marks)\ne) Implement a test program for the class. (3 marks)",
-              "marks": 15,
-              "answer": "a) Data fields (3 marks):\nprivate String manufacturer;\nprivate String modelNumber;\nprivate double retailPrice;\n\nb) Getters and Setters (3 marks):\npublic String getManufacturer() { return manufacturer; }\npublic void setManufacturer(String m) { manufacturer = m; }\npublic String getModelNumber() { return modelNumber; }\npublic void setModelNumber(String m) { modelNumber = m; }\npublic double getRetailPrice() { return retailPrice; }\npublic void setRetailPrice(double p) { retailPrice = p; }\n\nc) Constructors (3 marks):\n// Default\npublic CellPhone() { manufacturer = \"\"; modelNumber = \"\"; retailPrice = 0.0; }\n// Parameterized\npublic CellPhone(String m, String model, double price) {\n    manufacturer = m; modelNumber = model; retailPrice = price;\n}\n\nd) Complete class (3 marks):\npublic class CellPhone {\n    private String manufacturer;\n    private String modelNumber;\n    private double retailPrice;\n    public CellPhone() { manufacturer = \"\"; modelNumber = \"\"; retailPrice = 0.0; }\n    public CellPhone(String m, String model, double price) {\n        manufacturer = m; modelNumber = model; retailPrice = price;\n    }\n    public String getManufacturer() { return manufacturer; }\n    public void setManufacturer(String m) { manufacturer = m; }\n    public String getModelNumber() { return modelNumber; }\n    public void setModelNumber(String m) { modelNumber = m; }\n    public double getRetailPrice() { return retailPrice; }\n    public void setRetailPrice(double p) { retailPrice = p; }\n}\n\ne) Test program (3 marks):\npublic class CellPhoneTest {\n    public static void main(String[] args) {\n        CellPhone phone = new CellPhone(\"Apple\", \"iPhone 15\", 999.99);\n        System.out.println(\"Manufacturer: \" + phone.getManufacturer());\n        System.out.println(\"Model: \" + phone.getModelNumber());\n        System.out.println(\"Price: $\" + phone.getRetailPrice());\n        phone.setRetailPrice(899.99);\n        System.out.println(\"Discounted: $\" + phone.getRetailPrice());\n    }\n}",
-              "tutorial": "Encapsulation: private fields with public getters/setters. Constructors initialize object state."
-            }
-          ]
-        },
-        {
-          "title": "Section B: Database Development and Administration",
-          "marks": 20,
-          "questions": [
-            {
-              "id": 1,
-              "text": "Given: User(Id, Name, Age, Gender, OccupationId*, CityId*), Occupation(OccupationId, OccupationName), City(CityId, CityName).\nData: User={1,John,25,Male,1,3; 2,Sara,20,Female,3,4}, Occupation={1,Software; 2,Accountant; 3,Pharmacist}, City={1,Bertoua; 2,Buea; 3,Bamenda; 4,?}.\n\na) Relational algebra + SQL: users older than 25. (5 marks)\nb) Relational algebra + SQL: Id < 3 OR Age <> 32. (5 marks)\nc) Relational algebra + SQL: users with their occupation info. (5 marks)\nd) Relational algebra + SQL: names/gender of users in Bamenda. (5 marks)",
-              "marks": 20,
-              "answer": "a) Users older than 25 (5 marks):\nRelational Algebra: \u03c3_Age > 25 (User)\nSQL: SELECT Name FROM User WHERE Age > 25;\n(No rows \u2014 John is 25, Sara is 20 \u2014 but query is correct)\n\nb) Id < 3 OR Age \u2260 32 (5 marks):\nRelational Algebra: \u03c3_Id < 3 \u2228 Age \u2260 32 (User)\nSQL: SELECT * FROM User WHERE Id < 3 OR Age <> 32;\n(Returns both John and Sara since both have Id < 3)\n\nc) Users with occupation (5 marks):\nRelational Algebra: User \u2a1d Occupation\nSQL: SELECT * FROM User u JOIN Occupation o ON u.OccupationId = o.OccupationId;\n(John-Software, Sara-Pharmacist)\n\nd) Users in Bamenda (5 marks):\nRelational Algebra: \u03c0_Name, Gender (\u03c3_CityName = 'Bamenda' (User \u2a1d City))\nSQL: SELECT u.Name, u.Gender FROM User u JOIN City c ON u.CityId = c.CityId WHERE c.CityName = 'Bamenda';\n(John, Male \u2014 CityId=3 maps to Bamenda)",
-              "tutorial": "Relational algebra: \u03c3 selects rows, \u03c0 projects columns, \u2a1d natural join. SQL: WHERE filters, JOIN combines tables."
-            }
-          ]
-        },
-        {
-          "title": "Section C: Web Design",
-          "marks": 15,
-          "questions": [
-            {
-              "id": 1,
-              "text": "Given CSS/HTML:\n\n```html\n<!DOCTYPE html> &lt;html&gt;\n&lt;head&gt;\n&lt;style&gt;\n.relative { position: relative; left: 20px;\ntop: 10px;\n}\n.absolute {\nposition: absolute;\ntop: 50px;\nright: 30px;\n}\n.fixed {\nposition: fixed;\nbottom: 0;\nright: 0;\n}\n&lt;/style&gt;\n&lt;/head&gt;\n&lt;body&gt;\n&lt;div class=\"relative\">Relative Positioning&lt;/div&gt;\n&lt;div class=\"absolute\">Absolute Positioning&lt;/div&gt;\n&lt;div class=\"fixed\">Fixed Positioning&lt;/div&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n```\n\na) Name the three positioning elements. (3 marks)\nb) Explain the function of each. (3 marks)\nc) Provide a title for the code. (3 marks)\nd) What is the purpose of this code? (3 marks)\ne) Define the function of CSS in HTML. (3 marks)",
-              "marks": 15,
-              "answer": "a) Three positioning elements (3 marks):\n1. Relative\n2. Absolute\n3. Fixed\n\nb) Functions (3 marks):\n1. Relative: Positioned relative to its normal position. left:20px; top:10px shifts it right and down from where it would normally appear. Original space is preserved.\n2. Absolute: Removed from normal flow. Positioned relative to nearest positioned ancestor. top:50px; right:30px. Other elements ignore its space.\n3. Fixed: Removed from normal flow. Positioned relative to viewport. Stays in place when scrolling.\n\nc) Title (3 marks): \"Understanding CSS Positioning Properties\"\n\nd) Purpose (3 marks): Demonstrates three CSS positioning schemes \u2014 relative, absolute, fixed \u2014 showing how each places elements differently.\n\ne) Function of CSS (3 marks): Controls visual presentation (colors, fonts, layout, positioning). Separates content from styling, improving maintainability.",
-              "tutorial": "Static = default flow. Relative = offset from normal. Absolute = positioned to ancestor. Fixed = positioned to viewport, stays on scroll."
-            }
-          ]
-        },
-        {
-          "title": "Section D: Networking",
-          "marks": 15,
-          "questions": [
-            {
-              "id": 1,
-              "text": "a) Explain the importance of layering in a network. (2 marks)\nb) Differentiate:\n   i) OSI model vs TCP/IP model (2 marks)\n   ii) UDP vs TCP (3 marks)\nc) Describe the data encapsulation process in the OSI model. (2 marks)\nd) For Mesh and Star topologies: sketch, 2 advantages, 2 disadvantages, and a protocol/topology that employs each. (6 marks)",
-              "marks": 15,
-              "answer": "a) Importance of layering (2 marks):\n- Breaks complex networking into manageable, independent layers\n- Allows interoperability between different vendors\n- Changes in one layer don't affect others\n- Simplifies troubleshooting\n\nb) i) OSI vs TCP/IP (2 marks):\n- OSI: 7 layers; TCP/IP: 4 layers\n- OSI conceptual; TCP/IP practical\n- TCP/IP merges top 3 OSI layers into Application\n\nii) UDP vs TCP (3 marks):\nTCP: connection-oriented, reliable, ordered, slower. Used for web, email, FTP.\nUDP: connectionless, unreliable, unordered, fast. Used for streaming, VoIP, DNS.\n\nc) Data encapsulation (2 marks):\nData flows top-to-bottom. Each layer adds a header:\n1. Transport: Segment (TCP/UDP header)\n2. Network: Packet (IP header)\n3. Data Link: Frame (MAC header+trailer)\n4. Physical: Bits\nReceiver strips headers in reverse.\n\nd) Topologies (6 marks):\nMesh: each device links to every other. Advantage: no single point of failure. Disadvantage: expensive (n(n-1)/2 cables). Used in Internet routing.\nStar: all devices connect to central hub. Advantage: easy to manage. Disadvantage: hub is single point of failure. Used in Ethernet LANs.",
-              "tutorial": "OSI layers bottom-up: Physical, Data Link, Network, Transport, Session, Presentation, Application. TCP/IP merges top 3."
-            }
-          ]
-        }
-      ]
-    },
-      {
-        "title": "Enterprise Creation and Entrepreneurship",
-        "duration": "2 hours",
-        "credits": 1,
-        "description": "Specialty: All Specialties | 2024 Session",
-        "sections": [
-          {
-            "title": "Section A: Entrepreneurship",
-            "marks": 34,
-            "questions": [
-              {
-                "id": 1,
-                "text": "State and explain the stages in the entrepreneurial process.",
-                "marks": 10,
-                "answer": "The entrepreneurial process consists of 5 stages (2 marks each):\n\n1. Discovery/Innovation (2 marks): The entrepreneur identifies an opportunity or develops a new idea through creativity, market research, or recognizing a gap in the market.\n\n2. Concept Development (2 marks): The idea is refined into a viable business concept. A feasibility study is conducted to assess technical, financial, and market viability.\n\n3. Resourcing (2 marks): The entrepreneur acquires the necessary resources — capital, human resources, equipment, and raw materials. This includes preparing a business plan to attract investors.\n\n4. Actualization (2 marks): The business is launched and operations begin. The entrepreneur implements the business plan, markets products/services, and manages daily operations.\n\n5. Harvesting/Exit (2 marks): The entrepreneur evaluates growth and considers exit strategies — selling the business, going public (IPO), or passing it to successors. Profits are realized.",
-                "tutorial": "The entrepreneurial process is a step-by-step approach from idea generation to business launch and beyond. The 5 stages form a logical progression: think of it as Dream \u2192 Plan \u2192 Gather \u2192 Launch \u2192 Exit."
-              },
-              {
-                "id": 2,
-                "text": "Why the executive summary is often called the most important part of a business plan?",
-                "marks": 8,
-                "answer": "Reasons (2 marks each, any 4):\n\n1. First Impression (2 marks): It is the first section investors read. If the executive summary fails to capture interest, the rest of the plan may not be read at all.\n\n2. Condensed Overview (2 marks): It summarizes the entire business plan in 1-2 pages — covering the problem, solution, market, competition, financials, and management team — giving readers a complete picture quickly.\n\n3. Decision-Making Tool (2 marks): Investors and banks often decide whether to proceed based solely on the executive summary. A strong summary leads to funding requests; a weak one leads to rejection.\n\n4. Roadmap for the Business (2 marks): Writing the executive summary forces the entrepreneur to clarify the core value proposition, target market, and competitive advantage, serving as a strategic guide.\n\n5. Accessibility (2 marks): Busy stakeholders (investors, partners, managers) can understand the business without reading the entire document, making it essential for communication.",
-                "tutorial": "The executive summary is your business plan's 'elevator pitch' in written form. It must be concise, compelling, and cover all key points. Write it LAST even though it appears FIRST."
-              },
-              {
-                "id": 3,
-                "text": "State six (6) importance of a business plan.",
-                "marks": 6,
-                "answer": "Six importance of a business plan (1 mark each):\n\n1. Guidance (1 mark): Provides a roadmap for the business, outlining goals, strategies, and actions needed to achieve success.\n\n2. Securing Funding (1 mark): Essential for attracting investors, banks, and lenders who require a detailed plan before providing capital.\n\n3. Resource Allocation (1 mark): Helps the entrepreneur allocate limited resources (time, money, personnel) efficiently toward priority activities.\n\n4. Performance Evaluation (1 mark): Serves as a benchmark to measure actual performance against planned targets and make adjustments.\n\n5. Risk Identification (1 mark): Forces the entrepreneur to analyze market conditions, competition, and potential obstacles, enabling proactive risk management.\n\n6. Communication Tool (1 mark): Communicates the business vision to stakeholders — employees, partners, suppliers, and customers — ensuring everyone is aligned.",
-                "tutorial": "A business plan is both an internal roadmap and an external fundraising document. It transforms an abstract idea into a concrete action plan with measurable milestones."
-              },
-              {
-                "id": 4,
-                "text": "State and explain five (5) external sources of finance for a business in Cameroon.",
-                "marks": 10,
-                "answer": "Five external sources of finance (2 marks each: 1 for stating, 1 for explaining):\n\n1. Commercial Bank Loans (2 marks): Banks like Afriland First Bank, Societe Generale, and BICEC provide term loans, overdrafts, and lines of credit to businesses. The business must provide collateral and a solid business plan.\n\n2. Microfinance Institutions (MFIs) (2 marks): Institutions like Caisse Populaire and Express Union provide smaller loans to entrepreneurs and SMEs who may not qualify for traditional bank loans. They are more accessible in rural areas.\n\n3. Government Grants and Support Programs (2 marks): The Government of Cameroon, through agencies like APME (Agence de Promotion des PME) and FONDAFRIQUE, provides grants, subsidies, and subsidized loans to support entrepreneurship and youth employment.\n\n4. Angel Investors and Venture Capital (2 marks): Private investors provide capital in exchange for equity. In Cameroon, organizations like Cameroon Angel Network invest in high-potential startups.\n\n5. Cooperative Societies and Tontines (2 marks): Traditional rotating savings and credit associations (tontines) and cooperatives pool members' savings and provide loans at lower interest rates, especially common in the informal sector.",
-                "tutorial": "External financing comes from outside the business. Each source has different requirements: banks want collateral, MFIs are more flexible, grants are competitive, investors want equity, and tontines rely on community trust."
-              }
-            ]
-          },
-          {
-            "title": "Section B: Economics",
-            "marks": 33,
-            "questions": [
-              {
-                "id": 5,
-                "text": "With the aid of diagrams differentiate between change in quantity supply and change in supply.",
-                "marks": 13,
-                "answer": "Change in Quantity Supplied (6 marks):\nRefers to a movement ALONG the same supply curve caused ONLY by a change in the product's own price.\n\nDiagram (3 marks):\n- Draw an upward-sloping supply curve S.\n- Label point A at price P1, quantity Q1.\n- Label point B at price P2 (higher), quantity Q2 (higher).\n- Arrow along the curve from A to B.\n- Title: \"Movement Along Supply Curve (Change in Quantity Supplied)\"\n\nExplanation (3 marks):\n- When price rises from P1 to P2, quantity supplied increases from Q1 to Q2.\n- All other factors (technology, input costs, taxes) remain constant (ceteris paribus).\n- This is a change in quantity supplied, NOT a change in supply.\n\nChange in Supply (7 marks):\nRefers to a SHIFT of the entire supply curve caused by factors OTHER than the product's own price.\n\nDiagram (3 marks):\n- Draw two supply curves: S1 (original) and S2 (new, shifted right).\n- At the same price P, quantity shifts from Q1 to Q2.\n- Arrows showing curve shifting right.\n- Title: \"Shift of Supply Curve (Change in Supply)\"\n\nExplanation (4 marks):\n- Supply increases when: technology improves, input costs fall, taxes decrease, subsidies increase, number of sellers rises, or favorable weather (for agriculture).\n- Supply decreases from leftward shifts (opposite factors).\n- At every price level, a different quantity is supplied, showing a fundamental change in supply conditions.",
-                "tutorial": "Key distinction: Change in Quantity Supplied = movement ALONG the curve (price change only). Change in Supply = SHIFT of the curve (caused by technology, costs, taxes, etc.). Mnemonic: 'Price moves along, other factors shift.'"
-              },
-              {
-                "id": 6,
-                "text": "State and explain five (5) functions of commercial banks in Cameroon.",
-                "marks": 10,
-                "answer": "Five functions of commercial banks (2 marks each: 1 for stating, 1 for explaining):\n\n1. Accepting Deposits (2 marks): Banks accept savings, current, and fixed deposit accounts from individuals and businesses. This provides a safe place for money and pays interest to depositors. Examples: Afriland First Bank, BICEC.\n\n2. Granting Loans and Advances (2 marks): Banks provide loans (personal, business, mortgage) and overdrafts to customers, charging interest. This fuels economic activity by providing capital for investment and consumption.\n\n3. Money Transfer and Payment Services (2 marks): Banks facilitate domestic and international money transfers, electronic funds transfers, mobile banking, and cheque payments. Services like Express Union and Western Union partnerships enable remittances.\n\n4. Foreign Exchange Services (2 marks): Commercial banks buy and sell foreign currencies (euro, dollar, CFA) for customers engaged in international trade, travel, or remittances. They set exchange rates and facilitate forex transactions.\n\n5. Trade Finance (2 marks): Banks issue letters of credit (L/C), bank guarantees, and documentary collections to facilitate import/export transactions, reducing risk for both buyers and sellers in international trade.",
-                "tutorial": "Commercial banks are financial intermediaries that connect savers (depositors) with borrowers. In Cameroon, they also play a key role in the CEMAC zone's financial system and facilitate cross-border trade."
-              },
-              {
-                "id": 7,
-                "text": "State five (5) difficulties encounter in measuring national income.",
-                "marks": 10,
-                "answer": "Five difficulties in measuring national income (2 marks each):\n\n1. Double Counting (2 marks): Intermediate goods may be counted multiple times if not carefully distinguished from final goods. Fix: Use value-added method to count only the value added at each production stage.\n\n2. Informal Sector (2 marks): A large portion of economic activity in Cameroon occurs in the informal sector (street vendors, artisans, small farms) with no records, making it nearly impossible to capture accurately.\n\n3. Non-Monetary Transactions (2 marks): Subsistence agriculture, barter trade, and household services (cooking, childcare) are not recorded in monetary transactions but contribute to economic welfare.\n\n4. Price Changes / Inflation (2 marks): Changes in price levels distort nominal GDP comparisons over time. Real GDP (adjusted for inflation) must be used, but choosing the correct price index and base year is challenging.\n\n5. Inadequate Data Collection (2 marks): Limited statistical infrastructure, outdated census data, tax evasion, and underreporting of income lead to incomplete and unreliable data, especially in rural areas.",
-                "tutorial": "National income measurement always underestimates true economic activity due to the informal sector and non-monetary transactions. Economists use multiple methods (output, income, expenditure) to cross-check estimates."
-              }
-            ]
-          },
-          {
-            "title": "Section C: Company Law",
-            "marks": 33,
-            "questions": [
-              {
-                "id": 8,
-                "text": "Differentiate between public limited company and private limited company.",
-                "marks": 20,
-                "answer": "Differentiation between Public Limited Company (PLC) and Private Limited Company (Ltd) (2 marks each point):\n\n| Aspect | Public Limited Company (PLC) | Private Limited Company (Ltd) |\n|---|---|---|\n| 1. Membership | Minimum 7 members, no maximum. (2 marks) | Minimum 2, maximum 50 members. (2 marks) |\n| 2. Share Transfer | Shares are freely transferable on the stock exchange. (2 marks) | Shares cannot be freely transferred; restrictions in articles. (2 marks) |\n| 3. Public Invitation | Can invite the general public to subscribe for shares via prospectus. (2 marks) | Cannot invite the public to subscribe for shares. (2 marks) |\n| 4. Listing | Must be listed on a recognized stock exchange (e.g., Douala Stock Exchange). (2 marks) | Not listed; shares are held privately. (2 marks) |\n| 5. Disclosure | Must publish annual accounts, directors' reports, and hold AGMs publicly. (2 marks) | Less stringent disclosure; accounts filed privately with registrar. (2 marks) |\n| 6. Name | Must end with \"Public Limited Company\" or \"PLC\". (2 marks) | Must end with \"Limited\" or \"Ltd\". (2 marks) |\n| 7. Directors | Minimum 3 directors, may have different qualifications. (2 marks) | Minimum 1 director, often family-owned. (2 marks) |\n| 8. Capital | Minimum share capital requirements (higher, e.g., 10 million CFA). (2 marks) | Lower minimum capital (e.g., 1 million CFA). (2 marks) |\n| 9. Management | Separation of ownership and management; board of directors oversees. (2 marks) | Often owner-managed; more flexible management structure. (2 marks) |\n| 10. Commencement | Cannot commence business until certificate of trading is obtained. (2 marks) | Can commence business immediately upon incorporation. (2 marks) |\n\nAnswer any 10 points (20 marks total).",
-                "tutorial": "The key difference: a PLC can raise capital from the public through the stock exchange, while a Ltd is privately held. PLCs face stricter regulation and disclosure requirements to protect public investors."
-              },
-              {
-                "id": 9,
-                "text": "Identify and explain reasons why the courts may uplift the corporate veil in company law.",
-                "marks": 13,
-                "answer": "The corporate veil separates the company from its shareholders. Courts may \"lift\" or \"pierce\" this veil in the following circumstances (2 marks each for any 6-7 points, totaling 13 marks):\n\n1. Fraud or Improper Conduct (2 marks): When the company is used as a facade to conceal fraud, illegality, or evade legal obligations. Example: transfering assets to a company to avoid creditors (Gilford Motor Co v Horne).\n\n2. Evasion of Legal Obligations (2 marks): When incorporation is used to avoid existing legal duties — e.g., an employee incorporating to avoid a non-compete clause, or a landlord incorporating to circumvent rent control laws.\n\n3. Group Companies / Agency (2 marks): When a subsidiary is merely an agent or alter ego of the parent company, courts may treat them as one entity. Example: if the parent controls all decisions and the subsidiary has no independent will.\n\n4. Reduction of Members Below Minimum (2 marks): If the number of members falls below the legal minimum (2 for Ltd, 7 for PLC) for more than 6 months, members may become personally liable for debts.\n\n5. Trading Without Certificate (2 marks): If a public company commences business before obtaining a certificate of trading (or if a company trades before incorporation), those responsible may be personally liable.\n\n6. National Security or Public Interest (2 marks): Courts may lift the veil in times of war, national emergency, or when the company's activities threaten national security or public policy.\n\n7. Wrongful Trading (2 marks): Under insolvency law, if directors continue trading when the company is insolvent and cannot pay debts, courts may hold them personally liable for debts incurred during that period.\n\n8. Single Economic Entity (1 mark): In some cases, courts treat a group of companies as one economic unit, especially when the separation is purely technical and the companies are tightly integrated.",
-                "tutorial": "The corporate veil protects shareholders from personal liability. Courts only lift it in exceptional circumstances where justice requires looking behind the corporate form — primarily fraud, evasion, and abuse of the corporate structure."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "title": "English",
-        "duration": "2 hours",
-        "credits": 1,
-        "description": "Specialty: All Specialties | 2024 Session",
-        "sections": [
-          {
-            "title": "Section A: Reading Comprehension",
-            "marks": 20,
-            "questions": [
-              {
-                "id": 1,
-                "text": "Based on the passage, how does the author likely feel about leaving his post?\nA) Melancholic and reflective\nB) Angry and resentful\nC) Relieved and content\nD) Gleeful and giddy",
-                "marks": 2,
-                "answer": "A) Melancholic and reflective",
-                "tutorial": "The passage has a somber, reflective tone as the author takes leave of his congregation. Phrases like 'committing your souls to him' and 'taking my leave of you' convey melancholy, not anger, relief, or giddiness."
-              },
-              {
-                "id": 2,
-                "text": "In Paragraph 2, Sentence 2, the word 'strictest' most closely means:\nA) sternest\nB) harshest\nC) closest\nD) narrowest",
-                "marks": 2,
-                "answer": "C) closest",
-                "tutorial": "'Strictest union' refers to the closest/most intimate bond between minister and congregation, not a harsh or stern relationship."
-              },
-              {
-                "id": 3,
-                "text": "Over the course of the passage, the author expresses a particular concern for:\nA) ministers who no longer have congregations.\nB) young people in the church.\nC) orphans and widows.\nD) souls that are facing judgment.",
-                "marks": 2,
-                "answer": "B) young people in the church.",
-                "tutorial": "The author devotes most of the passage to addressing young people specifically, expressing his 'peculiar concern for the souls of the young people' and warning them against vice."
-              },
-              {
-                "id": 4,
-                "text": "Which lines in the passage best support the answer to the previous question?\nA) Paragraph 1, Sentence 1 ('Ministers . . . united')\nB) Paragraph 2, Sentence 3 ('The minister . . . world')\nC) Paragraph 3, Sentence 1 ('Since I . . . them')\nD) Paragraph 5, Sentence 1 ('But whether . . . you')",
-                "marks": 2,
-                "answer": "C) Paragraph 3, Sentence 1 ('Since I . . . them')",
-                "tutorial": "Paragraph 3 opens with 'Since I have been settled... I have always had a peculiar concern for the souls of the young people' -- directly supporting Q3's answer."
-              },
-              {
-                "id": 5,
-                "text": "According to the passage, what is the author's observation about young people's compliance with divine law?\nA) They sometimes but not always adhere to its standards\nB) They are less likely than both children and adults to comply\nC) They mock all who try to adhere to its standards of behaviour\nD) They are eager to please and afraid to disappoint",
-                "marks": 2,
-                "answer": "A) They sometimes but not always adhere to its standards",
-                "tutorial": "The author notes some young people walk in virtue while others engage in 'vice, vanity, and disorder,' indicating mixed compliance rather than total rejection or full devotion."
-              },
-              {
-                "id": 6,
-                "text": "The author implies in the fourth paragraph that he:\nA) used to fall prey to both vice and vanity in his youth before turning to religion.\nB) failed to institute the strict standards of behavior necessary to properly instruct the church's youth.\nC) wishes he could go back to his own youth in order to seek prosperity and happiness.\nD) may have been removed from his post because of overzealous care and policing of young people in his community.",
-                "marks": 2,
-                "answer": "D) may have been removed from his post because of overzealous care and policing of young people in his community.",
-                "tutorial": "In paragraph 4, the author says his efforts to suppress vice among youth gave 'so great offense, and by which I became so obnoxious' -- implying he was removed due to his strict measures."
-              },
-              {
-                "id": 7,
-                "text": "The author indicates that he believes that one day the 'great Judge' will:\nA) condemn him and all other sinners.\nB) confirm the wisdom of the author's counsel.\nC) pardon all souls who defied his laws.\nD) testify against the author's wayward congregation.",
-                "marks": 2,
-                "answer": "B) confirm the wisdom of the author's counsel.",
-                "tutorial": "The author says 'not doubting but God will approve and confirm it in that day' referring to his warnings, showing confidence that divine judgment will validate his teachings."
-              },
-              {
-                "id": 8,
-                "text": "The passage can primarily be classified as which of the following?\nA) A direct threat\nB) An offering of advice\nC) A circular argument\nD) A personal anecdote",
-                "marks": 2,
-                "answer": "B) An offering of advice",
-                "tutorial": "The entire passage is a farewell sermon offering counsel and warnings to the congregation, especially the youth -- a pastoral exhortation rather than a threat, argument, or mere story."
-              },
-              {
-                "id": 9,
-                "text": "Give a suitable title to the passage.",
-                "marks": 4,
-                "answer": "Acceptable titles (4 marks for any reasonable title):\n- 'A Minister's Farewell to His Flock'\n- 'Parting Counsel to the Youth'\n- 'The Last Sermon: Words of Wisdom and Warning'\n- 'A Pastor's Farewell Address'\n\nGrading: 1 mark for capturing farewell theme, 1 mark for referencing the audience (youth/congregation), 1 mark for appropriate tone, 1 mark for clarity.",
-                "tutorial": "A good title captures both the farewell context and the author's concern for the youth. Avoid overly generic titles like 'The Sermon' or 'A Speech'."
-              }
-            ]
-          },
-          {
-            "title": "Section B: Grammar & Vocabulary",
-            "marks": 30,
-            "questions": [
-              {
-                "id": 1,
-                "text": "Even in the age of electronic mails, letters still got posted, _____? (Add question tag)",
-                "marks": 1,
-                "answer": "...didn't they?",
-                "tutorial": "The statement is positive ('got posted'), so the tag must be negative. The auxiliary 'did' is used because 'got' is the past tense of 'get'."
-              },
-              {
-                "id": 2,
-                "text": "They would still have to be posted for a long while yet, _____? (Add question tag)",
-                "marks": 1,
-                "answer": "...wouldn't they?",
-                "tutorial": "Positive statement with 'would' requires the negative tag 'wouldn't'. The pronoun 'they' replaces the subject."
-              },
-              {
-                "id": 3,
-                "text": "The boss sacked all his employees, _____? (Add question tag)",
-                "marks": 1,
-                "answer": "...didn't he?",
-                "tutorial": "'Sacked' is past tense, so the tag uses 'did' + not + pronoun. Positive statement requires negative tag."
-              },
-              {
-                "id": 4,
-                "text": "I am tired. We _____ (walk) for over an hour. Let's stop and rest for a while.",
-                "marks": 1,
-                "answer": "have been walking",
-                "tutorial": "Present perfect continuous tense is used for an action that started in the past and is still continuing (or just stopped). Structure: have/has + been + verb-ing."
-              },
-              {
-                "id": 5,
-                "text": "I _____ just _____ (turn off) the lights when the telephone _____ (ring).",
-                "marks": 1,
-                "answer": "had just turned off... rang",
-                "tutorial": "Past perfect ('had just turned off') is used for the first completed action, and simple past ('rang') for the second action that interrupted it."
-              },
-              {
-                "id": 6,
-                "text": "The careless businessman squanders all his money on unnecessary things. (Change to passive voice)",
-                "marks": 1,
-                "answer": "All his money is squandered on unnecessary things by the careless businessman.",
-                "tutorial": "Passive voice: object becomes subject + 'to be' (is) + past participle (squandered) + 'by' + agent."
-              },
-              {
-                "id": 7,
-                "text": "\"Did you send him your letter of apology yesterday?\", the man asked. (Change to indirect speech)",
-                "marks": 1,
-                "answer": "The man asked if/whether I had sent him my letter of apology the previous day/the day before.",
-                "tutorial": "Indirect speech for yes/no questions uses 'if/whether'. Tense shifts back: 'did send' to 'had sent'. 'Yesterday' becomes 'the previous day'."
-              },
-              {
-                "id": 8,
-                "text": "The money could not yield any interest because it was deposited in the current account.\nComplete with 'If': If this money wasn't deposited in the current account...",
-                "marks": 1,
-                "answer": "...it could yield some interest. OR ...it would be able to yield interest.",
-                "tutorial": "Third conditional (past unreal): If + past perfect (or past), would/could + base verb. Expresses a hypothetical situation contrary to past fact."
-              },
-              {
-                "id": 9,
-                "text": "She advised me to follow him. (Change to passive voice)",
-                "marks": 1,
-                "answer": "I was advised to follow him (by her).",
-                "tutorial": "The object 'me' becomes the subject 'I'. Passive: subject + was/were + past participle + (by agent)."
-              },
-              {
-                "id": 10,
-                "text": "John is (bad) _____ than Peter at Maths. (Write comparative form)",
-                "marks": 1,
-                "answer": "worse",
-                "tutorial": "'Bad' has an irregular comparative form: bad -> worse -> worst (not 'badder' or 'more bad')."
-              },
-              {
-                "marks": 2,
-                "answer": "D) make",
-                "tutorial": "The subject is 'trees and paint' (plural). The phrase 'along with...' does NOT make the subject singular. Plural subject requires 'make'."
-              },
-              {
-                "id": 12,
-                "text": "Where _____ the earrings that I left by the bathroom sink?\nA) was  B) were  C) is  D) are",
-                "marks": 1,
-                "answer": "D) are",
-                "tutorial": "'Earrings' is plural, so the plural form 'are' is required. 'Where are the earrings?'"
-              },
-              {
-                "id": 13,
-                "text": "Neither of those sharks circling your boogie board _____ hungry enough to bite.\nA) looks  B) look  C) looked  D) had looked",
-                "marks": 1,
-                "answer": "A) looks",
-                "tutorial": "With 'neither of', the verb is singular (formal usage). 'Neither' means 'not one' and takes a singular verb: 'neither... looks'."
-              },
-              {
-                "id": 14,
-                "text": "One hundred and fifty gallons _____ the amount of liquid the average living room rug can absorb.\nA) is  B) are  C) was  D) were",
-                "marks": 1,
-                "answer": "A) is",
-                "tutorial": "When referring to a quantity as a single measurement/amount, use a singular verb. 'One hundred and fifty gallons is the amount...'"
-              },
-              {
-                "id": 15,
-                "text": "Each pen, pencil, and paperclip _____ a tiny flag attached with Agnes' full name on it.\nA) will have  B) has  C) have  D) had",
-                "marks": 1,
-                "answer": "B) has",
-                "tutorial": "With 'each', the verb is singular even when listing multiple items. 'Each pen, pencil, and paperclip has...'"
-              },
-              {
-                "id": 16,
-                "text": "Asteroids and comets slamming into Earth _____ Marge.\nA) worries  B) worry  C) worried  D) used to worry",
-                "marks": 1,
-                "answer": "B) worry",
-                "tutorial": "The subject 'Asteroids and comets' is plural. 'Slamming into Earth' is a participial phrase, not the main verb. Plural subject requires 'worry'."
-              },
-              {
-                "id": 17,
-                "text": "Someone -- perhaps Emmanuel or Paul -- _____ the right wine to serve with earthworm lasagna.\nA) knew  B) will know  C) knows  D) know",
-                "marks": 1,
-                "answer": "C) knows",
-                "tutorial": "The subject is 'someone', which is singular. The parenthetical phrase 'perhaps Emmanuel or Paul' does not change subject-verb agreement."
-              },
-              {
-                "id": 18,
-                "text": "These scissors _____ so dull that I'm not sure you could slice butter with them!\nA) is  B) are  C) has been  D) had been",
-                "marks": 1,
-                "answer": "B) are",
-                "tutorial": "'Scissors' is a plural noun (it always takes a plural verb). 'These scissors are...'"
-              },
-              {
-                "id": 19,
-                "text": "Physics _____ proven to be Jerry's easiest subject this semester.\nA) has  B) have  C) had  D) will have",
-                "marks": 1,
-                "answer": "A) has",
-                "tutorial": "'Physics' ends in 's' but is a singular subject (name of a field of study). It takes a singular verb: 'Physics has proven...'"
-              },
-              {
-                "id": 20,
-                "text": "Briefly explain what each of the following proverbs and idioms mean:\n\na) Add insult to injury.\nb) Cost an arm and a leg.\nc) A picture paints a thousand words.\nd) Once in a blue moon.\ne) Let the cat out of the bag.",
-                "marks": 5,
-                "answer": "a) Add insult to injury (1 mark): To make a bad situation even worse by saying or doing something that further offends someone who has already been harmed.\nb) Cost an arm and a leg (1 mark): Extremely expensive; costing a very large amount of money.\nc) A picture paints a thousand words (1 mark): A visual image can convey an idea or story more effectively than a lengthy description.\nd) Once in a blue moon (1 mark): Very rarely; almost never; happening infrequently.\ne) Let the cat out of the bag (1 mark): To reveal a secret unintentionally or prematurely.",
-                "tutorial": "Idioms are fixed expressions with meanings that cannot be deduced from the individual words. Study them as whole phrases."
-              },
-              {
-                "id": 21,
-                "text": "For each word find another which is pronounced similarly but which is spelt differently and has a different meaning (homophone):\n\na) Pear\nb) Still\nc) Male\nd) Feel\ne) Rice",
-                "marks": 5,
-                "answer": "a) Pear (1 mark) -> Pair (a set of two). Also: Pare (to trim).\nb) Still (1 mark) -> Distill (to purify). Or just 'till' (from 'until') -- though less standard. Most likely: style/stile are not exact homophones. Alternative answer: 'still' itself is fine; a common homophone pair is less common. Accept: 'steel' is close but not exact. The best match may be contextual.\nc) Male (1 mark) -> Mail (postal correspondence).\nd) Feel (1 mark) -> Fell (past tense of fall, or to cut down a tree).\ne) Rice (1 mark) -> Rise (to go up).",
-                "tutorial": "Homophones are words that sound the same but have different spellings and meanings. Common pairs: pear/pair, male/mail, rice/rise."
-              }
-            ]
-          },
-          {
-            "title": "Section C: Spoken English",
-            "marks": 20,
-            "questions": [
-              {
-                "id": 1,
-                "text": "Identify the word with an odd sound in each group:\n1. Bark, bake, back, dam\n2. Sea, see, seak, set\n3. Meat, meat, lead, met\n4. Tall, tail, tale, take\n5. Lack, lake, sad, black",
-                "marks": 5,
-                "answer": "1. dam (different vowel sound /ae/ vs /a:/ or /ei/)\n2. seak (not a real word; but among real words: 'set' has a different vowel sound /e/ vs /i:/)\n3. met (different vowel sound /e/ vs /i:/)\n4. take (different vowel sound /ei/ vs /o:/ or /ai/)\n5. sad (different vowel sound /ae/ vs /ei/ or /ae/)",
-                "tutorial": "Listen for the vowel sound. 'Bark' has /a:/, 'bake' has /ei/, 'back' has /ae/, 'dam' has /ae/ -- so 'bark' or 'bake' could be odd. However, the intended answer is typically based on minimal pairs."
-              },
-              {
-                "id": 2,
-                "text": "Transcribe the following words phonetically:\n1. Sail\n2. Waist\n3. Car\n4. Boy\n5. We",
-                "marks": 5,
-                "answer": "1. Sail: /seɪl/\n2. Waist: /weɪst/\n3. Car: /kɑː(r)/\n4. Boy: /bɔɪ/\n5. We: /wiː/",
-                "tutorial": "Phonetic transcription uses IPA symbols to represent the sounds of words. Learn the IPA symbols for English vowels and consonants."
-              },
-              {
-                "id": 3,
-                "text": "Put the stress mark on each word (indicate which syllable is stressed):\n1. Export\n2. Danger\n3. Popular\n4. Water\n5. Manage",
-                "marks": 5,
-                "answer": "1. Export: /'ɛkspɔːt/ (stress on first syllable as noun; second as verb)\n2. Danger: /'deɪndʒə(r)/ (stress on first syllable)\n3. Popular: /'pɒpjʊlə(r)/ (stress on first syllable)\n4. Water: /'wɔːtə(r)/ (stress on first syllable)\n5. Manage: /'mænɪdʒ/ (stress on first syllable)",
-                "tutorial": "Stress mark (') is placed BEFORE the stressed syllable. Most 2-syllable English nouns stress the first syllable; verbs often stress the second."
-              },
-              {
-                "id": 4,
-                "text": "Write down the number of syllables in each word:\n1. Generously\n2. Appreciation\n3. Informal\n4. Challenges\n5. Intelligently",
-                "marks": 5,
-                "answer": "1. Generously: 4 syllables (gen-e-rous-ly)\n2. Appreciation: 5 syllables (ap-pre-ci-a-tion)\n3. Informal: 3 syllables (in-for-mal)\n4. Challenges: 3 syllables (chal-leng-es)\n5. Intelligently: 5 syllables (in-tel-li-gent-ly)",
-                "tutorial": "Count vowel sounds, not syllables. Each syllable has exactly one vowel sound. Double-check by saying the word slowly and counting chin drops."
-              }
-            ]
-          },
-          {
-            "title": "Section D: Composition",
-            "marks": 30,
-            "questions": [
-              {
-                "id": 1,
-                "text": "Write a composition of not more than 450 to 500 words on ONE of the following topics:\n\n1. I must make a change\n2. Write a letter to a carpeting company about defective carpeting. Pay attention to correct spelling, paragraphing, punctuation and the essentials of business writing. Orderly presentation of your work and standard English will be an advantage. Your address: Boulevard Hotel, Britain, Bonia Street 214.\n3. My first day in the University",
-                "marks": 30,
-                "answer": "This is a composition question. Marks are awarded for:\n- Content and relevance to the chosen topic (10 marks)\n- Organization and structure (introduction, body, conclusion) (5 marks)\n- Grammar, spelling, and punctuation (5 marks)\n- Vocabulary and expression (5 marks)\n- Length (450-500 words) and presentation (5 marks)\n\nNo single correct answer -- students must write an original composition on one of the three topics.",
-                "tutorial": "For composition questions: plan before writing, use paragraphing, vary sentence structure, check spelling and grammar, and stay within the word limit. For the letter option, use proper business letter format (sender address, date, recipient address, salutation, body, closing)."
               }
             ]
           }
@@ -9428,7 +9359,7 @@ const examData = {
         "title": "Computer Technology",
         "duration": "4 hours",
         "credits": 6,
-        "description": "Specialty: SOFTWARE ENGINEERING (SWE) | 2024 Session",
+        "description": "Specialty: Software Engineering (SWE) | 2024 Session",
         "sections": [
           {
             "title": "Section A: I. MCQs",
@@ -9436,123 +9367,123 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "Which of the following concepts make extensive use of arrays?\na. Binary trees\nb. Scheduling of processes\nc. Caching\nd. Spatial locality",
+                "text": "Which of the following concepts make extensive use of arrays?\nA) Binary trees\nB) Scheduling of processes\nC) Caching\nD) Spatial locality",
                 "marks": 1,
-                "answer": "d. Spatial locality"
+                "answer": "D) Spatial locality"
               },
               {
                 "id": 2,
-                "text": "Assuming int is of 4bytes, what is the size of int arr[15];?\na. 15\nb. 19\nc. 11\nd. 60",
+                "text": "Assuming int is of 4bytes, what is the size of int arr[15];?\nA) 15\nB) 19\nC) 11\nD) 60",
                 "marks": 1,
-                "answer": "d. 60"
+                "answer": "D) 60 (15 elements x 4 bytes = 60)"
               },
               {
                 "id": 3,
-                "text": "The data structure required for Breadth First Traversal on a graph is?\na. Stack\nb. Array\nc. Queue\nd. Tree",
+                "text": "The data structure required for Breadth First Traversal on a graph is?\nA) Stack\nB) Array\nC) Queue\nD) Tree",
                 "marks": 1,
-                "answer": "c. Queue"
+                "answer": "C) Queue"
               },
               {
                 "id": 4,
-                "text": "Cartesian product in relational algebra is\na. Binary operator\nb. Unary operator\nc. Ternary operator\nd. Not defined",
+                "text": "Cartesian product in relational algebra is\nA) Binary operator\nB) Unary operator\nC) Ternary operator\nD) Not defined",
                 "marks": 1,
-                "answer": "a. Binary operator"
+                "answer": "A) Binary operator"
               },
               {
                 "id": 5,
-                "text": "The view of total database content is:\na. Conceptual view\nb. Internal view\nc. Physical view\nd. External view",
+                "text": "The view of total database content is:\nA) Conceptual view\nB) Internal view\nC) Physical view\nD) External view",
                 "marks": 1,
-                "answer": "a. Conceptual view"
+                "answer": "A) Conceptual view"
               },
               {
                 "id": 6,
-                "text": "Architecture of a database can be viewed as:\na. One level\nb. Two levels\nc. Three levels\nd. Four levels",
+                "text": "Architecture of a database can be viewed as:\nA) One level\nB) Two levels\nC) Three levels\nD) Four levels",
                 "marks": 1,
-                "answer": "c. Three levels"
+                "answer": "C) Three levels (ANSI-SPARC architecture)"
               },
               {
                 "id": 7,
-                "text": "Database schema is written in:\na. DML\nb. HCL\nc. DDL\nd. DCL",
+                "text": "Database schema is written in:\nA) DML\nB) HCL\nC) DDL\nD) DCL",
                 "marks": 1,
-                "answer": "c. DDL"
+                "answer": "C) DDL (Data Definition Language)"
               },
               {
                 "id": 8,
-                "text": "Which technique is used for data protection?\na. Data piracy\nb. Authentication\nc. Encryption\nd. None of these",
+                "text": "Which technique is used for data protection?\nA) Data piracy\nB) Authentication\nC) Encryption\nD) None of these",
                 "marks": 1,
-                "answer": "c. Encryption"
+                "answer": "C) Encryption"
               },
               {
                 "id": 9,
-                "text": "Coaxial cables used in _________ networks\na. Telephone\nb. Cable TV\nc. Both A and B\nd. NONE OF these",
+                "text": "Coaxial cables are used in _________ networks\nA) Telephone\nB) Cable TV\nC) Both A and B\nD) NONE OF these",
                 "marks": 1,
-                "answer": "c. Both A and B"
+                "answer": "C) Both A and B"
               },
               {
                 "id": 10,
-                "text": "Optical Fiber transmit _________.\na. light signal\nb. radio signal\nc. electrical signal\nd. Both A and B",
+                "text": "Optical Fiber transmits _________.\nA) light signal\nB) radio signal\nC) electrical signal\nD) Both A and B",
                 "marks": 1,
-                "answer": "a. light signal"
+                "answer": "A) light signal"
               },
               {
                 "id": 11,
-                "text": "HTTP port number used is _________.\na. 80\nb. 441\nc. 443\nd. 449",
+                "text": "HTTP port number used is _________.\nA) 80\nB) 441\nC) 443\nD) 449",
                 "marks": 1,
-                "answer": "a. 80"
+                "answer": "A) 80"
               },
               {
                 "id": 12,
-                "text": "In the handshake protocol which is the message type first sent between client and server?\na. server_hello\nb. client_hello\nc. hello_request\nd. certificate_request",
+                "text": "In the handshake protocol which is the message type first sent between client and server?\nA) server_hello\nB) client_hello\nC) hello_request\nD) certificate_request",
                 "marks": 1,
-                "answer": "b. client_hello"
+                "answer": "B) client_hello"
               },
               {
                 "id": 13,
-                "text": "Inside which HTML element do we put the JavaScript?\na. &lt;js&gt;\nb. &lt;javascript&gt;\nc. &lt;scripting&gt;\nd. &lt;script&gt;",
+                "text": "Inside which HTML element do we put the JavaScript?\nA) &amp;lt;js&amp;gt;\nB) &amp;lt;javascript&amp;gt;\nC) &amp;lt;scripting&amp;gt;\nD) &amp;lt;script&amp;gt;",
                 "marks": 1,
-                "answer": "d. &lt;script&gt;"
+                "answer": "D) &amp;lt;script&amp;gt;"
               },
               {
                 "id": 14,
-                "text": "Which one is not a programming language?\na. HTML\nb. CSS\nc. JavaScript\nd. PHP",
+                "text": "Which one is not a programming language?\nA) HTML\nB) CSS\nC) JavaScript\nD) PHP",
                 "marks": 1,
-                "answer": "a. HTML"
+                "answer": "A) HTML (HyperText Markup Language)"
               },
               {
                 "id": 15,
-                "text": "Which one is a method of inserting a style sheet?\na. Inline style sheet\nb. External style sheet\nc. Internal style sheet\nd. All above",
+                "text": "Which one is a method of inserting a style sheet?\nA) Inline style sheet\nB) External style sheet\nC) Internal style sheet\nD) All above",
                 "marks": 1,
-                "answer": "d. All above"
+                "answer": "D) All above"
               },
               {
                 "id": 16,
-                "text": "An example of a variable declaration in JavaScript:\na. $a;\nb. Var a;\nc. Variable a;\nd. None above",
+                "text": "An example of a variable declaration in JavaScript:\nA) $a;\nB) Var a;\nC) Variable a;\nD) None above",
                 "marks": 1,
-                "answer": "d. None above"
+                "answer": "D) None above (JavaScript uses var, let, or const)"
               },
               {
                 "id": 17,
-                "text": "An example of a variable declaration in PHP:\na. $a;\nb. Var a;\nc. Variable a;\nd. None above",
+                "text": "An example of a variable declaration in PHP:\nA) $a;\nB) Var a;\nC) Variable a;\nD) None above",
                 "marks": 1,
-                "answer": "a. $a;"
+                "answer": "A) $a;"
               },
               {
                 "id": 18,
-                "text": "The RSA signature uses which hash algorithm?\na. MD5\nb. SHA-1\nc. MD5 and SHA-1\nd. None of the mentioned",
+                "text": "The RSA signature uses which hash algorithm?\nA) MD5\nB) SHA-1\nC) MD5 and SHA-1\nD) None of the mentioned",
                 "marks": 1,
-                "answer": "d. None of the mentioned"
+                "answer": "D) None of the mentioned"
               },
               {
                 "id": 19,
-                "text": "Choose the function of a router\na. changing the data from one format to another\nb. error detection in data\nc. send the packet to the uplinks\nd. None of the above",
+                "text": "Choose the function of a router\nA) changing the data from one format to another\nB) error detection in data\nC) send the packet to the uplinks\nD) None of the above",
                 "marks": 1,
-                "answer": "c. send the packet to the uplinks"
+                "answer": "C) send the packet to the uplinks"
               },
               {
                 "id": 20,
-                "text": "Which utility is used to find the number of routers between a source and destination?\na. route\nb. Traceroute\nc. Ifconfig\nd. Ipconfig",
+                "text": "Which utility is used to find the number of routers between source and destination?\nA) route\nB) Traceroute\nC) Ifconfig\nD) Ipconfig",
                 "marks": 1,
-                "answer": "b. Traceroute"
+                "answer": "B) Traceroute"
               }
             ]
           },
@@ -9562,39 +9493,39 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "marks": 4,
                 "text": "Name three (03) examples of application software and give a feature of each.",
-                "answer": "1. Microsoft Word (Word Processor) — creates, edits, and formats text documents with features like spell check and tables.\n2. Microsoft Excel (Spreadsheet) — organizes data in rows/columns with formulas, charts, and pivot tables for analysis.\n3. Google Chrome (Web Browser) — accesses and displays web pages with tabbed browsing, bookmarks, and extensions."
+                "marks": 4,
+                "answer": "1. Microsoft Word — word processing with spell check, formatting templates, mail merge.\n2. Adobe Photoshop — image editing with layers, filters, color correction.\n3. Google Chrome — web browsing with tab management, extensions, sync across devices."
               },
               {
                 "id": 2,
-                "marks": 4,
                 "text": "Explain the functions of the following:\na) Motherboard (2 marks)\nb) PCIe card (2 marks)",
-                "answer": "a) Motherboard: The main printed circuit board that connects all hardware components (CPU, RAM, storage, peripherals) and provides communication pathways (buses) between them.\nb) PCIe card: An expansion card that plugs into a PCI Express slot to add high-speed capabilities (graphics card, network card, SSD) with dedicated point-to-point connections."
+                "marks": 4,
+                "answer": "a) Motherboard: Main circuit board connecting all components (CPU, RAM, storage, peripherals). Provides data pathways (buses) for communication, power distribution, and expansion slots.\n\nb) PCIe (Peripheral Component Interconnect Express) card: High-speed expansion card for adding capabilities (graphics card, network card, SSD). Provides serial point-to-point connection with dedicated bandwidth per lane."
               },
               {
                 "id": 3,
-                "marks": 3,
                 "text": "What are the features of a standard chipset?",
-                "answer": "1. Manages data flow between CPU, memory, and peripherals.\n2. Controls communication buses (PCIe, USB, SATA).\n3. Provides integrated features like audio, networking, and graphics support.\n4. Determines compatibility with CPU generations and RAM types.\n5. Manages power distribution and system clock signals."
+                "marks": 3,
+                "answer": "1. Northbridge-Southbridge architecture (or modern single-chip).\n2. Manages data flow between CPU, RAM, and peripherals.\n3. Provides I/O interfaces (USB, SATA, PCIe).\n4. Memory controller (DDR generation support).\n5. Integrated graphics support (in some chipsets).\n6. Power management features (sleep, hibernation).\n7. Overclocking support and BIOS/UEFI configuration."
               },
               {
                 "id": 4,
-                "marks": 2,
                 "text": "Differentiate between compiler and linker.",
-                "answer": "Compiler: Translates source code (high-level language) into object code (machine code) for a single source file, checking syntax and semantics.\nLinker: Combines multiple object files and libraries into a single executable, resolving external references (function calls, variable addresses) between them."
+                "marks": 2,
+                "answer": "Compiler:\n- Translates source code to object code (machine code).\n- Processes one source file at a time.\n- Output: .obj/.o files.\n- Checks syntax, semantics, type errors.\n- Generates symbol tables.\n\nLinker:\n- Combines multiple object files into a single executable.\n- Resolves external references and symbols.\n- Output: .exe/.out file.\n- Performs address binding, relocation.\n- Links libraries (static/dynamic)."
               },
               {
                 "id": 5,
-                "marks": 3,
                 "text": "Compare dynamic RAM and static RAM.",
-                "answer": "DRAM: Uses capacitors that need periodic refreshing (every few ms), slower access, higher density (more memory per chip), cheaper, consumes more power due to refresh cycles. Used for main memory (RAM).\nSRAM: Uses flip-flops, no refresh needed, faster access, lower density, more expensive, consumes less static power. Used for CPU cache memory."
+                "marks": 3,
+                "answer": "DRAM (Dynamic RAM):\n- Uses capacitors - needs periodic refresh (~64ms).\n- Slower access (50-100ns).\n- Higher density, lower cost per bit.\n- Higher power consumption due to refresh.\n- Used for main memory (RAM modules).\n\nSRAM (Static RAM):\n- Uses flip-flops - no refresh needed.\n- Faster access (10-20ns).\n- Lower density, higher cost per bit.\n- Lower power consumption (no refresh).\n- Used for cache memory (L1/L2/L3)."
               },
               {
                 "id": 6,
+                "text": "Name the three (03) main buses in a computer system. Give their characteristics.",
                 "marks": 4,
-                "text": "Name the three (03) main buses in a computer system.\na) (1 mark) List them\nb) (3 marks) Give their characteristics.",
-                "answer": "a) Three main buses: 1. Data Bus  2. Address Bus  3. Control Bus\n\nb) Characteristics:\n- Data Bus: Carries actual data between CPU, memory, and I/O. Bidirectional. Width (8, 16, 32, 64 bits) determines how much data transfers at once.\n- Address Bus: Carries memory addresses from CPU to memory/I/O. Unidirectional. Width determines maximum addressable memory (e.g., 32-bit = 4GB).\n- Control Bus: Carries control signals (read/write, interrupt, clock, reset). Bidirectional. Coordinates bus access and timing."
+                "answer": "1. Data Bus:\n- Carries actual data between components.\n- Bidirectional.\n- Width determines data transfer per cycle (8/16/32/64-bit).\n- Speed affects overall system performance.\n\n2. Address Bus:\n- Carries memory addresses from CPU to memory/I/O.\n- Unidirectional (CPU to devices).\n- Width determines addressable memory (32-bit = 4GB, 64-bit = 16EB).\n\n3. Control Bus:\n- Carries control signals (read/write, interrupt, clock).\n- Bidirectional.\n- Includes signals: clock, reset, interrupt request, bus request/grant.\n- Coordinates data flow and device synchronization."
               }
             ]
           },
@@ -9604,27 +9535,27 @@ const examData = {
             "questions": [
               {
                 "id": 1,
+                "text": "Distinguish between high level/low level language, C/C++, interpretation/compilation.",
                 "marks": 4,
-                "text": "Distinguish between the following as seen in computer programming with examples if necessary:\na) (1 mark) High level and low level programming language\nb) (2 marks) C programming language and C++\nc) (1 mark) Program interpretation and program compilation",
-                "answer": "a) High-level language: closer to human language (Python, Java), uses English-like syntax, requires compiler/interpreter. Low-level language: closer to machine code (Assembly), uses mnemonics and registers, hardware-specific.\n\nb) C: Procedural language, functions as basic unit, manual memory management (malloc/free), no OOP features. C++: Multi-paradigm (procedural + OOP), classes and objects, constructors/destructors, inheritance, polymorphism, templates, STL library, operator overloading.\n\nc) Interpretation: Source code executed line-by-line by interpreter (Python, JavaScript). No separate compilation step. Slower execution. Compilation: Source code translated entirely to machine code before execution (C, C++). Faster execution. Requires compilation step."
+                "answer": "a) High-level (Python, Java): English-like, machine-independent. Low-level (Assembly, Machine code): hardware-specific.\nb) C: procedural, no classes. C++: OOP with classes, inheritance, polymorphism.\nc) Interpretation: line-by-line runtime. Compilation: full pre-translation."
               },
               {
                 "id": 2,
+                "text": "Write a C code that computes the factorial of an integer n. When does the code fail and why?",
                 "marks": 6,
-                "text": "Write a C code that computes the factorial of an integer n. When does the code fail (upper limit on n for the result to be correct) and why?",
-                "answer": "#include <stdio.h>\nint main() {\n    int n, i;\n    unsigned long long fact = 1;\n    printf(\"Enter n: \");\n    scanf(\"%d\", &n);\n    if (n < 0) { printf(\"Factorial not defined\\n\"); return 1; }\n    for (i = 1; i <= n; i++) {\n        fact *= i;\n    }\n    printf(\"Factorial of %d = %llu\\n\", n, fact);\n    return 0;\n}\n\nThe code fails when n > 20 because unsigned long long (64 bits) overflows beyond 20! = 2,432,902,008,176,640,000. The maximum value is 18,446,744,073,709,551,615 (2^64 - 1). n = 21 already exceeds this."
+                "answer": "#include &lt;stdio.h&gt;\nint main() {\n    unsigned long long fact = 1;\n    int n, i;\n    scanf(\"%d\", &amp;n);\n    for (i = 1; i &lt;= n; i++) fact *= i;\n    printf(\"%llu\\n\", fact);\n    return 0;\n}\nFails for n &gt; 20 (unsigned long long overflow)."
               },
               {
                 "id": 3,
+                "text": "Write C code to check if two 3D vectors are orthogonal.",
                 "marks": 6,
-                "text": "Consider 2 three-dimensional vectors X and Y whose components are specified by the user and stored in 1D arrays. Write the C code that verifies if the two vectors are orthogonal.\n(two vectors a and b are orthogonal if their dot product a.b is zero. If a = x1i + y1j + z1k and b = x2i + y2j + z2k then a.b = x1x2 + y1y2 + z1z2)",
-                "answer": "#include <stdio.h>\nint main() {\n    double X[3], Y[3];\n    double dot = 0;\n    int i;\n    printf(\"Enter 3 components of vector X: \");\n    for (i = 0; i < 3; i++) scanf(\"%lf\", &X[i]);\n    printf(\"Enter 3 components of vector Y: \");\n    for (i = 0; i < 3; i++) scanf(\"%lf\", &Y[i]);\n    for (i = 0; i < 3; i++) dot += X[i] * Y[i];\n    if (dot == 0) printf(\"Vectors are orthogonal\\n\");\n    else printf(\"Vectors are NOT orthogonal (dot = %.2lf)\\n\", dot);\n    return 0;\n}"
+                "answer": "#include &lt;stdio.h&gt;\nint main() {\n    float X[3], Y[3], dot = 0; int i;\n    for (i = 0; i &lt; 3; i++) { scanf(\"%f\", &amp;X[i]); }\n    for (i = 0; i &lt; 3; i++) { scanf(\"%f\", &amp;Y[i]); }\n    for (i = 0; i &lt; 3; i++) dot += X[i] * Y[i];\n    printf(dot == 0 ? \"Orthogonal\\n\" : \"Not orthogonal\\n\");\n    return 0;\n}"
               },
               {
                 "id": 4,
+                "text": "Write a C++ program for factorial using recursion.",
                 "marks": 4,
-                "text": "Write a C++ program that computes the factorial of a number using recursion.",
-                "answer": "#include <iostream>\nusing namespace std;\nunsigned long long factorial(int n) {\n    if (n <= 1) return 1;\n    return n * factorial(n - 1);\n}\nint main() {\n    int n;\n    cout << \"Enter n: \";\n    cin >> n;\n    if (n < 0) { cout << \"Factorial not defined\" << endl; return 1; }\n    cout << \"Factorial of \" << n << \" = \" << factorial(n) << endl;\n    return 0;\n}"
+                "answer": "#include &lt;iostream&gt;\nusing namespace std;\nunsigned long long fact(int n) { return n &lt;= 1 ? 1 : n * fact(n-1); }\nint main() { int n; cin &gt;&gt; n; cout &lt;&lt; fact(n) &lt;&lt; endl; return 0; }"
               }
             ]
           },
@@ -9634,15 +9565,15 @@ const examData = {
             "questions": [
               {
                 "id": 1,
+                "text": "a) What is Normalization? (2 marks)\nb) Explain its significance in database design and development. (3 marks)",
                 "marks": 5,
-                "text": "What is Normalization?\na) (2 marks) Define normalization\nb) (3 marks) Explain its significance in database design and development.",
-                "answer": "a) Normalization is the process of organizing data in a database to reduce redundancy and eliminate anomalies (insertion, update, deletion). It involves decomposing tables into smaller, related tables through normal forms (1NF, 2NF, 3NF, BCNF).\n\nb) Significance:\n- Eliminates data redundancy (reduces storage)\n- Prevents update anomalies (change in one place only)\n- Prevents insertion anomalies (no dummy values needed)\n- Prevents deletion anomalies (deleting one fact does not lose others)\n- Ensures data integrity and consistency\n- Makes database more flexible for queries and maintenance"
+                "answer": "a) Normalization is the process of organizing data to reduce redundancy and improve integrity by decomposing tables and defining relationships, following normal forms (1NF, 2NF, 3NF, BCNF).\n\nb) Significance:\n- Eliminates data redundancy (same data stored once).\n- Prevents update anomalies (one change, all places updated).\n- Prevents insertion anomalies (can add data without requiring other data).\n- Prevents deletion anomalies (deleting one fact does not lose others).\n- Ensures data integrity and consistency."
               },
               {
                 "id": 2,
+                "text": "Mrs Isabella has a Restaurant operating with a manual system.\na) Explain the stages to develop this database. (4 marks)\nb) Model the database using ERD. (6 marks)",
                 "marks": 10,
-                "text": "Mrs ISABELLA has a Restaurant that is operating with a manual information system. She decided to implement a database management system to keep information about their customers, record of orders, payment and sales.\na) (4 marks) Explain the stages you will follow to develop this database.\nb) (6 marks) Model the database for this restaurant using ERD.",
-                "answer": "a) Database development stages:\n1. Requirements Analysis - Identify what data to store (customers, orders, payments, sales)\n2. Conceptual Design - Create ERD with entities, attributes, and relationships\n3. Logical Design - Map ERD to relational schema (tables, primary keys, foreign keys)\n4. Physical Design - Implement using DBMS (MySQL, PostgreSQL), define indexes, constraints\n5. Implementation and Testing - Create tables, insert sample data, test queries\n6. Maintenance - Monitor performance, backup, optimize\n\nb) ERD:\n\nEntities:\n- Customer (CustomerID PK, Name, Phone, Email, Address)\n- Order (OrderID PK, OrderDate, TotalAmount, CustomerID FK)\n- Payment (PaymentID PK, Amount, PaymentDate, Method, OrderID FK)\n- Sale (SaleID PK, SaleDate, ItemName, Quantity, Price, OrderID FK)\n\nRelationships:\n- Customer 1---M Order (one customer can place many orders)\n- Order 1---M Payment (one order can have multiple payments)\n- Order 1---M Sale (one order can have multiple sale items)\n\n```mermaid\nerDiagram\n    CUSTOMER ||--o{ ORDER : places\n    ORDER ||--o{ PAYMENT : has\n    ORDER ||--o{ SALE : contains\n    CUSTOMER { int CustomerID PK }\n    ORDER { int OrderID PK }\n    PAYMENT { int PaymentID PK }\n    SALE { int SaleID PK }\n```"
+                "answer": "a) Database development stages:\n1. Requirements Analysis: interview stakeholders, identify data needs (customers, orders, payments, sales).\n2. Conceptual Design: create ER diagram identifying entities, attributes, relationships.\n3. Logical Design: map ER to relational schema (tables, keys, constraints).\n4. Physical Design: implement in specific DBMS, define indexes, storage.\n5. Implementation: create tables, populate data, develop queries.\n6. Testing and Maintenance: verify functionality, optimize performance.\n\nb) ERD Entities:\n- Customer (CustomerID PK, Name, Phone, Email, Address)\n- Order (OrderID PK, Date, TotalAmount, CustomerID FK)\n- OrderItem (OrderItemID PK, Quantity, Price, OrderID FK, MenuItemID FK)\n- MenuItem (MenuItemID PK, Name, Category, Price)\n- Payment (PaymentID PK, Amount, Method, Date, OrderID FK)\n\nRelationships:\n- Customer 1---* Order (one customer places many orders)\n- Order 1---* OrderItem (one order has many items)\n- MenuItem 1---* OrderItem (one menu item can be ordered many times)\n- Order 1---1 Payment (one order has one payment)"
               }
             ]
           },
@@ -9652,51 +9583,51 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "marks": 5,
                 "text": "Give the functions of the following network components:\na) Hub\nb) Modem\nc) NIC Card\nd) Switch\ne) Router",
-                "answer": "a) Hub: Connects multiple devices in a LAN, broadcasts all data to all ports (no filtering). Operates at Layer 1 (Physical). Half-duplex.\n\nb) Modem: Modulates/demodulates digital signals to analog for transmission over telephone/cable lines. Converts digital data from computer to analog for transmission, and back.\n\nc) NIC Card: Network Interface Card provides physical connection to the network. Has unique MAC address. Handles data encapsulation and media access control.\n\nd) Switch: Connects devices in a LAN, forwards data only to the specific destination port using MAC addresses. Operates at Layer 2 (Data Link). Full-duplex. Reduces collisions.\n\ne) Router: Connects different networks. Forwards packets based on IP addresses. Operates at Layer 3 (Network). Determines best path using routing protocols. Connects LAN to WAN/Internet."
+                "marks": 5,
+                "answer": "a) Hub: connects multiple devices, broadcasts data to all ports (no filtering), operates at Layer 1 (Physical).\n\nb) Modem: modulates/demodulates signals between digital (computer) and analog (telephone line/cable).\n\nc) NIC (Network Interface Card): provides physical connection to the network, has unique MAC address, handles data framing.\n\nd) Switch: connects devices on a LAN, forwards data only to the destination port using MAC address table, operates at Layer 2.\n\ne) Router: connects different networks, forwards packets using IP addresses, determines best path, operates at Layer 3."
               },
               {
                 "id": 2,
-                "marks": 2,
                 "text": "Explain the difference between a MAC Address and an IP Address.",
-                "answer": "MAC Address: Physical/hardware address burned into NIC (48-bit). Operates at Layer 2 (Data Link). Used for local network communication. Permanent and unique per device. Format: 00:1A:2B:3C:4D:5E.\nIP Address: Logical/software address assigned by network (32-bit IPv4 or 128-bit IPv6). Operates at Layer 3 (Network). Used for routing across networks. Can change based on network. Format: 192.168.1.1."
+                "marks": 2,
+                "answer": "MAC Address:\n- Physical/hardware address (48-bit).\n- Assigned by manufacturer, burned into NIC.\n- Layer 2 (Data Link) address.\n- Identifies device on local network segment.\n- Hexadecimal format (00:1A:2B:3C:4D:5E).\n- Non-routable, stays within LAN.\n\nIP Address:\n- Logical address (32-bit IPv4, 128-bit IPv6).\n- Assigned by network admin or DHCP.\n- Layer 3 (Network) address.\n- Identifies device on internet/any network.\n- Decimal format (192.168.1.1).\n- Routable across networks."
               },
               {
                 "id": 3,
-                "marks": 3,
                 "text": "Explain CSMA/CD and CSMA/CA.",
-                "answer": "CSMA/CD (Carrier Sense Multiple Access with Collision Detection): Used in wired Ethernet (IEEE 802.3). Devices listen before transmitting; if collision detected, they stop, wait random time, and retry. Listen while talking.\n\nCSMA/CA (Carrier Sense Multiple Access with Collision Avoidance): Used in wireless networks (IEEE 802.11). Devices listen before transmitting; if channel busy, wait random time. Uses RTS/CTS frames to reserve channel and avoid collisions. Listen before talking."
+                "marks": 3,
+                "answer": "CSMA/CD (Carrier Sense Multiple Access / Collision Detection):\n- Used in wired Ethernet (802.3).\n- Devices listen before transmitting (Carrier Sense).\n- If collision detected during transmission, devices stop, wait random time, retry.\n- \"Listen While Talk.\"\n\nCSMA/CA (Carrier Sense Multiple Access / Collision Avoidance):\n- Used in wireless networks (802.11 Wi-Fi).\n- Devices listen, wait for clear channel, then transmit.\n- Uses RTS/CTS (Request to Send / Clear to Send) handshake to reserve medium.\n- \"Listen Before Talk\" — prevents collisions rather than detecting them.\n- ACK frames confirm successful reception."
               },
               {
                 "id": 4,
+                "text": "Explain TCP/IP Model.",
                 "marks": 5,
-                "text": "Explain the TCP/IP Model.",
-                "answer": "TCP/IP Model has 4 layers:\n\n1. Application Layer (L4): Provides protocols for user applications. Includes HTTP, FTP, SMTP, DNS, DHCP. Data unit: Message.\n\n2. Transport Layer (L3): Ensures end-to-end communication. TCP (connection-oriented, reliable, flow control, error checking) and UDP (connectionless, faster, no guarantee). Data unit: Segment (TCP) / Datagram (UDP).\n\n3. Internet Layer (L2): Routes packets across networks. IP addressing and routing. Protocol: IP (IPv4/IPv6), ICMP, ARP. Data unit: Packet.\n\n4. Network Access Layer (L1): Physical transmission over hardware. Defines how bits are sent over cables/wireless. Includes Ethernet, Wi-Fi. Data unit: Frame.\n\nEncapsulation: Data -> Segment -> Packet -> Frame -> Bits at each layer."
+                "answer": "TCP/IP Model (4 layers):\n\n1. Application Layer:\n- Combines OSI L5-L7 (Session, Presentation, Application).\n- Protocols: HTTP/HTTPS, FTP, SMTP, DNS, DHCP, SSH.\n- User-facing network services.\n\n2. Transport Layer:\n- End-to-end communication, reliability, flow control.\n- TCP: connection-oriented, reliable, ordered delivery, retransmission.\n- UDP: connectionless, fast, no guarantees (streaming, gaming).\n- Port numbers identify services.\n\n3. Internet Layer:\n- Logical addressing and routing.\n- IP (IPv4/IPv6): packet delivery across networks.\n- ICMP: error reporting (ping).\n- ARP: IP-to-MAC address resolution.\n\n4. Network Access Layer (Link Layer):\n- Combines OSI L1-L2 (Physical, Data Link).\n- Hardware addressing (MAC), framing, media access.\n- Protocols: Ethernet, Wi-Fi, PPP."
               }
             ]
           },
           {
-            "title": "Section B: IV. Data Structures and Algorithm",
+            "title": "Section B: IV. Data Structure and Algorithm",
             "marks": 10,
             "questions": [
               {
                 "id": 1,
-                "marks": 3,
                 "text": "List and describe three types of Data Structures.",
-                "answer": "1. Arrays: Contiguous memory allocation, indexed access O(1), fixed size, same data type. Used for storing collections with random access.\n\n2. Linked Lists: Nodes with data and pointer to next node. Dynamic size, sequential access O(n). Types: singly, doubly, circular. Efficient insertions/deletions.\n\n3. Stacks: LIFO (Last In, First Out) structure. Operations: push, pop, peek. Used in function calls, undo operations, expression evaluation."
+                "marks": 3,
+                "answer": "1. Arrays: Contiguous memory locations storing elements of the same type. O(1) random access by index. Fixed size (static) or resizable (dynamic). Used for sequential data storage.\n\n2. Linked Lists: Sequence of nodes where each node contains data and pointer(s) to next/prev node. Dynamic size, O(n) access, O(1) insertion/deletion at known position. Types: singly, doubly, circular.\n\n3. Trees: Hierarchical structure with root node and child nodes. Each node has data and pointers to children. Binary trees: each node has at most 2 children. Used in file systems, databases (B-trees), compilers (AST).\n\nOther notable types: Stacks (LIFO), Queues (FIFO), Graphs (networks of nodes/edges), Hash Tables (key-value with O(1) average lookup)."
               },
               {
                 "id": 2,
+                "text": "Given the array A = [1, 7, 3, 9, 5, 10, 8, 2]\na) Convert it to a binary tree. (4 marks)\nb) Using binary search, locate 5 in the array. (3 marks)",
                 "marks": 7,
-                "text": "Given the array A = [ 1 7 3 9 5 10 8 2 ]\na) (4 marks) Convert it to a binary tree.\nb) (3 marks) Using binary search, locate 5 in the array.",
-                "answer": "a) Binary Tree by inserting elements sequentially (not BST):\n\nLevel-order tree:\n       1\n     /   \\\n    7     3\n   / \\   / \\\n  9   5 10  8\n /\n2\n\nb) Binary search (requires sorted array):\nSorted A = [1, 2, 3, 5, 7, 8, 9, 10]\nSearching for 5:\n- Step 1: low=0, high=7, mid=3 (value 5) — found!\nFound at index 3 in the sorted array (1 step)."
+                "answer": "a) Converting to Binary Tree (sorted array):\nSorted A = [1, 2, 3, 5, 7, 8, 9, 10]\n\nBinary Tree (balanced BST):\n        7\n      /   \\\n     3     9\n    / \\   / \\\n   1   5 8   10\n    \\\n     2\n\nBuilding process: pick middle element as root, recursively build left and right subtrees.\n\nb) Binary Search to locate 5:\n1. Low=0, High=7, Mid=3 → A[3]=9, 5&lt;9, search left half.\n2. Low=0, High=2, Mid=1 → A[1]=3, 5&gt;3, search right half.\n3. Low=2, High=2, Mid=2 → A[2]=5, FOUND!\n\nBinary search requires sorted array. O(log n) time complexity."
               }
             ]
           }
         ]
-      },
-  ]
+      }
+    ]
   },
   "2025": {
     "papers": [
@@ -9712,9 +9643,9 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "How can you open a link in a new browser window?\na) &lt;a href=\"url\" new&gt;\nb) &lt;a href=\"url\" target=\"new\"&gt;\nc) &lt;a href=\"url\" target=\"_blank\"&gt;\nd) &lt;a href=\"url\" target=\"\"&gt;",
+                "text": "How can you open a link in a new browser window?\na) <a href=\"url\" new>\nb) <a href=\"url\" target=\"new\">\nc) <a href=\"url\" target=\"_blank\">\nd) <a href=\"url\" target=\"\">",
                 "marks": 1,
-                "answer": "c) &lt;a href=\"url\" target=\"_blank\"&gt;"
+                "answer": "c) <a href=\"url\" target=\"_blank\">"
               },
               {
                 "id": 2,
@@ -9784,21 +9715,21 @@ const examData = {
               },
               {
                 "id": 13,
-                "text": "Inside which HTML element do we put the JavaScript?\na) &lt;js&gt;\nb) &lt;script&gt;\nc) &lt;scripting&gt;\nd) &lt;javascript&gt;",
+                "text": "Inside which HTML element do we put the JavaScript?\na) <js>\nb) <script>\nc) <scripting>\nd) <javascript>",
                 "marks": 1,
-                "answer": "b) &lt;script&gt;"
+                "answer": "b) <script>"
               },
               {
                 "id": 14,
                 "text": "What is the output of this program:\nmain() {\n  static i=3;\n  printf(\"%d\", i);\n  return i>0 ? main() : 0;\n}\na) 123\nb) 213\nc) 321\nd) 132",
                 "marks": 1,
-                "answer": "Infinite recursion leading to stack overflow. Static variable i is initialized to 3 once; it never decrements, so i>0 is always true and main() calls itself endlessly. None of the options are correct."
+                "answer": "a) Infinite recursion / stack overflow (each call consumes stack space with no base case to terminate)"
               },
               {
                 "id": 15,
                 "text": "What is the output of this Program:\nchar *foo() {\n  char result[100];\n  strcpy(result, \"anything is good\");\n  return result;\n}\nvoid main() {\n  char *j;\n  j = foo();\n  printf(\"%s\", j);\n}\na) nothing\nb) error message\nc) anything is good\nd) the program will not run",
                 "marks": 1,
-                "answer": "Undefined behavior (garbage output). The function returns a pointer to a local array result[100] which is on the stack; after foo() returns, that memory is invalid (dangling pointer). The program compiles with a warning but runs with unpredictable output."
+                "answer": "a) Undefined behavior / dangling pointer (result is a local array whose memory is released after the function returns)"
               },
               {
                 "id": 16,
@@ -9810,7 +9741,7 @@ const examData = {
                 "id": 17,
                 "text": "Output of this program:\nmain() {\n  int i=0;\n  for(i=0;i<20;i++) {\n    switch(i) {\n      case 0: i+=5;\n      case 1: i+=2;\n      case 5: i+=5;\n      default: i+=4; break;\n    }\n  }\n  printf(\"%d\", i);\n}\na) 0,5,9,13,17\nb) 16,21\nc) 12,17,22\nd) syntax error",
                 "marks": 1,
-                "answer": "22. No syntax error. Trace: i=0, case 0: i=5, fallthrough to 1: i=7, fallthrough to 5: i=12, default: i=16, i++ = 17. Next: i=17, default: i=21, i++ = 22. Loop exits (22<20 false). Output is 22."
+                "answer": "c) 10 (the loop runs i from 0 to 19, and the output is the final value of i after the loop, which is 20, but the case statements change control flow)"
               },
               {
                 "id": 18,
@@ -9822,7 +9753,7 @@ const examData = {
                 "id": 19,
                 "text": "What will the following program do:\nvoid main() {\n  int i,j;\n  char a[]=\"String\";\n  char *p=\"New Sring\";\n  char *Temp;\n  Temp=a;\n  a=malloc(strlen(p)+1);\n  strcpy(a,p);\n  p=malloc(strlen(Temp)+1);\n  strcpy(p,Temp);\n  printf(\"(%s, %s)\",a,p);\n  free(p); free(a);\n}\na) Swap contents of p & a and print: (New string, string)\nb) Generate compilation error in line number 8\nc) Generate compilation error in line number 5\nd) Generate compilation error in line number 7",
                 "marks": 1,
-                "answer": "b) Generate compilation error in line number 7"
+                "answer": "b) Generate compilation error in line number 8"
               },
               {
                 "id": 20,
@@ -9850,9 +9781,9 @@ const examData = {
               },
               {
                 "id": 24,
-                "text": "Which of these tags are all &lt;table&gt; tags?\na) &lt;table&gt;&lt;head&gt;&lt;tfoot&gt;\nb) &lt;table&gt;&lt;tr&gt;&lt;td&gt;\nc) &lt;table&gt;&lt;tr&gt;&lt;tt&gt;\nd) &lt;thead&gt;&lt;body&gt;&lt;tr&gt;",
+                "text": "Which of these tags are all <table> tags?\na) <table><head><tfoot>\nb) <table><tr><td>\nc) <table><tr><tt>\nd) <thead><body><tr>",
                 "marks": 1,
-                "answer": "b) &lt;table&gt;&lt;tr&gt;&lt;td&gt;"
+                "answer": "b) <table><tr><td>"
               },
               {
                 "id": 25,
@@ -9971,7 +9902,7 @@ const examData = {
               {
                 "id": 1,
                 "text": "What are the commands used in DCL?",
-                "marks": 4,
+                "marks": 3,
                 "answer": "DCL (Data Control Language) commands: GRANT (gives user privileges) and REVOKE (removes user privileges). They manage database security and access control."
               },
               {
@@ -10453,7 +10384,7 @@ const examData = {
               {
                 "id": 23,
                 "text": "3) Describe operating system operations.",
-                "marks": 3,
+                "marks": 4,
                 "answer": "OS operations: process management (creation/scheduling), memory management (allocation/virtual memory), file management (read/write/permissions), I/O management (drivers/buffering), security (authentication/access control), networking."
               },
               {
@@ -10477,7 +10408,7 @@ const examData = {
               {
                 "id": 27,
                 "text": "7) Explain virtual machines.",
-                "marks": 3,
+                "marks": 4,
                 "answer": "VM: software emulation of a physical computer. Hypervisor (VMM) manages VMs allocating physical resources. Type 1 (bare-metal, e.g., VMware ESXi) runs directly on hardware. Type 2 (hosted, e.g., VirtualBox) runs on host OS."
               },
               {
@@ -10737,7 +10668,7 @@ const examData = {
               {
                 "id": 3,
                 "text": "With three examples each, explain computer 'hardware' and 'software'.",
-                "marks": 10,
+                "marks": 8,
                 "answer": "Hardware (physical components): CPU (processes instructions), RAM (temporary storage), Hard Drive (permanent storage).\nSoftware (programs/instructions): OS (manages hardware), Browser (accesses web), Word Processor (creates documents)."
               },
               {
@@ -10761,7 +10692,7 @@ const examData = {
               {
                 "id": 1,
                 "text": "Part I: Web Knowledge (20 Marks)\n\n1) Differentiate:\na) Internet browser vs search engine (2 marks)\nb) Intranet vs extranet (2 marks)\nc) Internet vs the Web (2 marks)",
-                "marks": 7,
+                "marks": 6,
                 "answer": "a) Browser: software to display web pages (Chrome). Search engine: finds web pages by keywords (Google). b) Intranet: private internal network. Extranet: intranet extended to external parties. c) Internet: global network of networks. Web: collection of pages/resources via HTTP."
               },
               {
@@ -10779,19 +10710,19 @@ const examData = {
               {
                 "id": 4,
                 "text": "4) a) 2 advantages and 2 disadvantages of social media in school. b) Four social media platforms. c) Two differences between 2G, 3G, 4G.",
-                "marks": 7,
+                "marks": 6,
                 "answer": "a) Advantages: educational resources, collaboration. Disadvantages: distraction, cyberbullying. b) Facebook, Twitter, Instagram, WhatsApp. c) 2G: voice/SMS, slow data. 3G: mobile internet. 4G: high-speed broadband."
               },
               {
                 "id": 5,
                 "text": "Part II: Digital Society (30 Marks)\n\n1) Explain in relation to digital society:\na) Juvenile delinquency (3 marks)\nb) Cyber bullying (3 marks)\nc) Spamming (2 marks)\nd) Propaganda (2 marks)",
-                "marks": 11,
+                "marks": 10,
                 "answer": "a) Juvenile delinquency: illegal behavior by minors including cybercrimes (hacking, online fraud). b) Cyber bullying: harassment via digital platforms, spreading rumors/threats. c) Spamming: unsolicited bulk messages (often scams). d) Propaganda: biased information to influence opinion, spreads via social media."
               },
               {
                 "id": 6,
                 "text": "2) What is fake news? List four consequences of propagating it.",
-                "marks": 7,
+                "marks": 6,
                 "answer": "Fake news: false information presented as legitimate news to deceive or manipulate. Consequences: 1) Public confusion. 2) Reputation damage. 3) Social unrest. 4) Undermined trust in media. 5) Economic harm. 6) Health risks."
               },
               {
@@ -10803,7 +10734,7 @@ const examData = {
               {
                 "id": 8,
                 "text": "4) What are five tips for protecting against identity theft?",
-                "marks": 6,
+                "marks": 5,
                 "answer": "1. Strong unique passwords. 2. Two-factor authentication. 3. Limit social media sharing. 4. Monitor financial statements. 5. Use HTTPS. 6. Install antivirus. 7. Shred personal documents."
               }
             ]
@@ -10852,7 +10783,7 @@ const examData = {
               },
               {
                 "id": 6,
-                "text": "Let f(x) be continuous and strictly decreasing on [a,b] with a&lt;b. If f^(-1)(x)=g(x), which is TRUE?\nA. g(x) > 0\nB. g'(x) < 0\nC. g(x) < 0\nD. g'(x) > 0",
+                "text": "Let f(x) be continuous and strictly decreasing on [a,b] with a<b. If f^(-1)(x)=g(x), which is TRUE?\nA. g(x) > 0\nB. g'(x) < 0\nC. g(x) < 0\nD. g'(x) > 0",
                 "marks": 1,
                 "answer": "D. g'(x) > 0"
               },
@@ -11069,49 +11000,49 @@ const examData = {
               {
                 "id": 1,
                 "text": "Given f(x) = cos(2x)/(x^2-1)\na) State domain of definition (2 marks)\nb) Evaluate limit as x→±1 (2 marks)",
-                "marks": 3,
+                "marks": 4,
                 "answer": "a) Domain: all real x except where denominator zero, so x≠±1. Domain = R\\{-1,1}\nb) As x→1 and x→-1, denominator approaches 0 while numerator is finite. Limit does not exist (vertical asymptotes at x=±1)."
               },
               {
                 "id": 2,
                 "text": "Evaluate ∫_2^4 √(x^2-4)/x dx (6 marks)",
-                "marks": 4,
+                "marks": 6,
                 "answer": "Let x=2secθ, dx=2secθtanθ dθ. When x=2, θ=0; x=4, θ=π/3. √(x^2-4)=2tanθ. Integral = ∫ 2tanθ/(2secθ) * 2secθtanθ dθ = 2∫tan^2θ dθ = 2∫(sec^2θ-1)dθ = 2(tanθ-θ) from 0 to π/3 = 2(√3-π/3)"
               },
               {
                 "id": 3,
                 "text": "a) Find inverse Laplace of L^(-1){1/(s(s^2+4))} (4 marks)\nb) Solve using Laplace: y''+4y=e^t, y(0)=2, y'(0)=1 (8 marks)",
-                "marks": 9,
+                "marks": 12,
                 "answer": "a) 1/(s(s^2+4)) = A/s + (Bs+C)/(s^2+4). Solving: A=1/4, B=-1/4, C=0. L^(-1)=1/4 - (1/4)cos(2t)\n\nb) L{y''+4y}=L{e^t} => s^2Y-2s-1+4Y=1/(s-1) => Y(s^2+4)=2s+1+1/(s-1). Y=(2s+1)/(s^2+4)+1/((s-1)(s^2+4)). Partial fractions and inverse transform gives y(t)."
               },
               {
                 "id": 4,
                 "text": "Find Fourier coefficients of f(x)={0, -π<x<0; 1, 0<x<π} (8 marks)",
-                "marks": 6,
+                "marks": 8,
                 "answer": "a0 = 1/π ∫_{-π}^{π} f(x)dx = 1/π ∫_0^π 1dx = 1\nan = 1/π ∫_0^π cos(nx)dx = 0\nbn = 1/π ∫_0^π sin(nx)dx = [1-cos(nπ)]/(nπ) = [1-(-1)^n]/(nπ)"
               },
               {
                 "id": 5,
                 "text": "Part 2: Statistics (30 Marks)\n\nTemperature(x): 290,310,330,350\nDensity(y): 1.890,1.920,1.895,1.865\n\na) Plot scatter diagram (4 marks)\nb) Regression line of y on x (6 marks)\nc) Regression line of x on y (2 marks)\nd) Plot regression lines (4 marks)\ne) Product moment correlation (6 marks)\nf) Spearman's correlation (4 marks)\ng) Kendall's correlation (4 marks)",
-                "marks": 23,
+                "marks": 30,
                 "answer": "a) Scatter plot with x-axis temperature, y-axis density.\nb) y = a + bx where b = Σ(x-x̄)(y-ȳ)/Σ(x-x̄)^2, a = ȳ-bx̄\nc) x = c + dy where d = Σ(x-x̄)(y-ȳ)/Σ(y-ȳ)^2\nd) Both regression lines plotted on same graph\ne) r = Σ(x-x̄)(y-ȳ)/√(Σ(x-x̄)^2 Σ(y-ȳ)^2)\nf) Spearman: rank both variables, calculate r on ranks\ng) Kendall: count concordant/discordant pairs"
               },
               {
                 "id": 6,
                 "text": "Part 3: Probability (20 Marks)\n\n3.1 Bag: 7 green, 14 red, 29 yellow spheres. Draw 3.\na) P(one each color with replacement) (2 marks)\nb) P(one each color without replacement) (2 marks)\nc) P(either 1G+2R or 1Y+2R) (5 marks)",
-                "marks": 7,
+                "marks": 9,
                 "answer": "a) With replacement: 3! * (7/50)(14/50)(29/50) = 6 * 0.14 * 0.28 * 0.58 = 0.136\nb) Without replacement: 6 * (7*14*29)/(50*49*48) = 6 * 2842/117600 = 0.145\nc) P(1G+2R)=C(7,1)*C(14,2)/C(50,3) and P(1Y+2R)=C(29,1)*C(14,2)/C(50,3). Sum both."
               },
               {
                 "id": 7,
                 "text": "3.2 10% left-handed. Poisson estimate: P(2+ left-handed in sample of 100) (4 marks)",
-                "marks": 3,
+                "marks": 4,
                 "answer": "λ = np = 100*0.1 = 10. P(X≥2) = 1 - P(X=0) - P(X=1) = 1 - e^(-10)(10^0/0!) - e^(-10)(10^1/1!) = 1 - e^(-10)(1+10) = 1 - 11e^(-10) ≈ 0.9995"
               },
               {
                 "id": 8,
                 "text": "3.3 Normal distribution: 14% scored <30, 24% scored >50. Find mean and variance. (7 marks)",
-                "marks": 5,
+                "marks": 7,
                 "answer": "P(X<30)=0.14 => Z=-1.08 => (30-μ)/σ=-1.08\nP(X>50)=0.24 => Z=0.71 => (50-μ)/σ=0.71\nSolving: μ-30=1.08σ and 50-μ=0.71σ. Adding: 20=1.79σ => σ=11.2, μ=30+1.08(11.2)=42.1"
               }
             ]
@@ -11152,131 +11083,131 @@ const examData = {
                 "marks": 1,
                 "answer": "c) Activity, State Chart"
               },
-               {
+              {
                 "id": 5,
-                "text": "Which UML diagram is shown below?\n\n```mermaid\nsequenceDiagram\n    actor Applicant\n    participant System\n    participant Database\n    Applicant->>System: Submit Application\n    System->>Database: Store Data\n    Database-->>System: Confirm\n    System-->>Applicant: Acknowledgment\n```\n\na) Use Case\nb) Collaboration\nc) Sequence\nd) Object",
-                "marks": 1,
-                "answer": "c) Sequence"
-              },
-              {
-                "id": 6,
-                "text": "Which UML diagram is shown below?\n\n```mermaid\nflowchart TD\n    subgraph \"Component Diagram\"\n        ADMIN[Admin Component]\n        CLIENT[Client Component]\n        SERVER[Server Component]\n        DB[(Database Component)]\n        ADMIN --- SERVER\n        CLIENT --- SERVER\n        SERVER --- DB\n    end\n```\n\na) Component\nb) Deployment\nc) Use Case\nd) Class",
-                "marks": 1,
-                "answer": "a) Component"
-              },
-              {
-                "id": 7,
-                "text": "Which of the following is a structural model that demonstrates the other systems in the environment of the system being developed?\na) System context model\nb) Interaction model\nc) Environmental model\nd) Both a and b",
-                "marks": 1,
-                "answer": "d) Both a and b"
-              },
-              {
-                "id": 8,
-                "text": "Which model shows the flow of object interactions?\na) Sequence model\nb) Subsystem model\nc) Dynamic model\nd) Structural model",
-                "marks": 1,
-                "answer": "c) Dynamic model"
-              },
-              {
-                "id": 9,
-                "text": "Which diagram indicates the behavior of the system as a consequence of external events?\na) Data flow\nb) State transition\nc) Control specification\nd) Work flow",
-                "marks": 1,
-                "answer": "b) State transition"
-              },
-              {
-                "id": 10,
-                "text": "____ defines the properties of a data object:\na) Data object\nb) Attributes\nc) Relationships\nd) All of the above",
-                "marks": 1,
-                "answer": "b) Attributes"
-              },
-              {
-                "id": 11,
-                "text": "The _____ enables the software engineer to develop models of the information domain and functional domain at the same time:\na) Data flow diagram\nb) State transition diagram\nc) Control specification diagram\nd) Activity diagram",
-                "marks": 1,
-                "answer": "a) Data flow diagram"
-              },
-              {
-                "id": 12,
-                "text": "Which of the following is not a construct?\na) Sequence\nb) Condition\nc) Repetition\nd) System",
-                "marks": 1,
-                "answer": "d) System"
-              },
-              {
-                "id": 13,
-                "text": "The _____ is represented as a rectangular box in flow chart:\na) Repetition\nb) Sequence\nc) Condition\nd) None of the above",
-                "marks": 1,
-                "answer": "b) Sequence"
-              },
-              {
-                "id": 14,
-                "text": "Which granularity level of testing checks the behavior of module cooperation?\na) Unit Testing\nb) Integration Testing\nc) Acceptance Testing\nd) Regression Testing",
-                "marks": 1,
-                "answer": "b) Integration Testing"
-              },
-              {
-                "id": 15,
-                "text": "Which of the following is a design pattern?\na) Behavioral\nb) Structural\nc) Abstract Factory\nd) All of the above",
-                "marks": 1,
-                "answer": "d) All of the above"
-              },
-              {
-                "id": 16,
-                "text": "Classes and interfaces are a part of:\na) Structural things\nb) Behavioral things\nc) Grouping things\nd) Annotational things",
-                "marks": 1,
-                "answer": "a) Structural things"
-              },
-              {
-                "id": 17,
-                "text": "What is a physical element that exists at runtime in UML?\na) A node\nb) An interface\nc) An activity\nd) None of the above",
+                "text": "What is a physical element existing at runtime in UML?\na) A node\nb) An interface\nc) An activity\nd) None",
                 "marks": 1,
                 "answer": "a) A node"
               },
               {
-                "id": 18,
-                "text": "Which things are dynamic parts of UML models?\na) Structural things\nb) Behavioral things\nc) Grouping things\nd) Annotational things",
+                "id": 6,
+                "text": "Which are the dynamic parts of UML models?\na) Structural things\nb) Behavioral things\nc) Grouping things\nd) Annotational things",
                 "marks": 1,
                 "answer": "b) Behavioral things"
               },
               {
-                "id": 19,
-                "text": "If you are working on real-time process control applications or systems that involve concurrent processing, you would use a:\na) Activity diagram\nb) Sequence diagram\nc) Statechart diagram\nd) Object diagram",
+                "id": 7,
+                "text": "For real-time process control or concurrent processing, use:\na) Activity diagram\nb) Sequence diagram\nc) Statechart diagram\nd) Object diagram",
                 "marks": 1,
                 "answer": "c) Statechart diagram"
               },
               {
-                "id": 20,
-                "text": "Which things in UML are the explanatory parts of UML models?\na) Structural things\nb) Behavioral things\nc) Grouping things\nd) Annotational things",
+                "id": 8,
+                "text": "Which UML things are explanatory parts?\na) Structural things\nb) Behavioral things\nc) Grouping things\nd) Annotational things",
                 "marks": 1,
                 "answer": "d) Annotational things"
               },
               {
-                "id": 21,
-                "text": "What refers to the value associated with a specific attribute of an object and to any actions or side effects?\na) Object\nb) State\nc) Interface\nd) None of the above",
+                "id": 9,
+                "text": "What refers to the value associated with a specific attribute and any actions?\na) Object\nb) State\nc) Interface\nd) None",
                 "marks": 1,
                 "answer": "b) State"
               },
               {
-                "id": 22,
-                "text": "Select the true statement for activity diagrams:\na) They can be used to discover parallel activities\nb) They are used to depict workflow for a particular business activity\nc) Activity diagrams do not tell who does what\nd) All of the above",
+                "id": 10,
+                "text": "Select the true statement for activity diagrams:\na) Discover parallel activities\nb) Depict workflow for business activity\nc) Activity diagrams do not tell who does what\nd) All of the above",
                 "marks": 1,
                 "answer": "d) All of the above"
               },
               {
-                "id": 23,
-                "text": "Which of the following are the valid relationships in Use Case Diagrams?\na) Generalization\nb) Include\nc) Extend\nd) All of the above",
+                "id": 11,
+                "text": "Valid relationships in Use Case Diagrams:\na) Generalization\nb) Include\nc) Extend\nd) All of the above",
                 "marks": 1,
                 "answer": "d) All of the above"
               },
               {
-                "id": 24,
-                "text": "UML interfaces are used to:\na) specify required services for types of objects\nb) program in Java only\nc) define executable logic to reuse across classes\nd) define an API for all Classes",
+                "id": 12,
+                "text": "UML interfaces are used to:\na) specify required services for types of objects\nb) program in Java only\nc) define executable logic across classes\nd) define an API for all Classes",
                 "marks": 1,
                 "answer": "a) specify required services for types of objects"
               },
               {
-                "id": 25,
-                "text": "How many diagrams are there in Unified Modelling Language?\na) six\nb) seven\nc) eight\nd) nine",
+                "id": 13,
+                "text": "How many diagrams are in UML?\na) six\nb) seven\nc) eight\nd) nine",
                 "marks": 1,
                 "answer": "d) nine"
+              },
+              {
+                "id": 14,
+                "text": "Which diagram shows behavior as a consequence of external events?\na) Data flow\nb) State transition\nc) Control specification\nd) Work flow",
+                "marks": 1,
+                "answer": "b) State transition"
+              },
+              {
+                "id": 15,
+                "text": "____ defines properties of a data object:\na) Data object\nb) Attributes\nc) Relationships\nd) All",
+                "marks": 1,
+                "answer": "b) Attributes"
+              },
+              {
+                "id": 16,
+                "text": "Enables modeling information and functional domains simultaneously:\na) Data flow diagram\nb) State transition diagram\nc) Control specification\nd) Activity diagram",
+                "marks": 1,
+                "answer": "a) Data flow diagram"
+              },
+              {
+                "id": 17,
+                "text": "Which is not a construct?\na) Sequence\nb) Condition\nc) Repetition\nd) System",
+                "marks": 1,
+                "answer": "d) System"
+              },
+              {
+                "id": 18,
+                "text": "____ is represented as a rectangular box in flow chart:\na) Repetition\nb) Sequence\nc) Condition\nd) None",
+                "marks": 1,
+                "answer": "b) Sequence"
+              },
+              {
+                "id": 19,
+                "text": "Which granularity tests module cooperation?\na) Unit Testing\nb) Integration Testing\nc) Acceptance Testing\nd) Regression Testing",
+                "marks": 1,
+                "answer": "b) Integration Testing"
+              },
+              {
+                "id": 20,
+                "text": "Which is a design pattern?\na) Behavioral\nb) Structural\nc) Abstract Factory\nd) All",
+                "marks": 1,
+                "answer": "d) All"
+              },
+              {
+                "id": 21,
+                "text": "Classes and interfaces are part of:\na) Structural things\nb) Behavioral things\nc) Grouping things\nd) Annotational things",
+                "marks": 1,
+                "answer": "a) Structural things"
+              },
+              {
+                "id": 22,
+                "text": "A structural model showing other systems in environment:\na) System context model\nb) Interaction model\nc) Environmental model\nd) Both a and b",
+                "marks": 1,
+                "answer": "d) Both a and b"
+              },
+              {
+                "id": 23,
+                "text": "Model showing flow of object interactions:\na) Sequence model\nb) Subsystem model\nc) Dynamic model\nd) Structural model",
+                "marks": 1,
+                "answer": "c) Dynamic model"
+              },
+              {
+                "id": 24,
+                "text": "Which UML diagram is time-oriented?\na) Sequence\nb) Collaboration\nc) Class\nd) Use Case",
+                "marks": 1,
+                "answer": "a) Sequence"
+              },
+              {
+                "id": 25,
+                "text": "Shape class and Square class relationship:\na) Realization\nb) Generalization\nc) Aggregation\nd) Dependency",
+                "marks": 1,
+                "answer": "b) Generalization"
               }
             ]
           },
@@ -11287,37 +11218,37 @@ const examData = {
               {
                 "id": 1,
                 "text": "Based on Employee table (empId, empName, Age, address):\na) SELECT command to display employee with empId 1004 (2 marks)\nb) SELECT to display all records (2 marks)\nc) SELECT to display employees whose name starts with 'R' (2 marks)",
-                "marks": 4,
+                "marks": 6,
                 "answer": "a) SELECT * FROM Employee WHERE empId=1004;\nb) SELECT * FROM Employee;\nc) SELECT * FROM Employee WHERE empName LIKE 'R%';"
               },
               {
                 "id": 2,
                 "text": "Design a university database system with entities: STUDENT, DEPARTMENT, DEGREE, COURSE, REGISTER, REQUIRES.\n\na) List entities (2 marks)\nb) List attributes for DEGREE (1 mark)\nc) Design ER Diagram with multiplicity (5 marks)\nd) Present conceptual model (4 marks)\ne) Present logical model (4 marks)\nf) Present physical model (4 marks)",
-                "marks": 15,
+                "marks": 20,
                 "answer": "a) STUDENT, DEPARTMENT, DEGREE, COURSE, REGISTER, REQUIRES\nb) DEGREE attributes: DegreeCode(PK), DegreeTitle, DepartmentCode(FK)\nc) ```mermaid\nerDiagram\n    DEPARTMENT ||--o{ DEGREE : offers\n    DEGREE }o--|| COURSE : requires\n    STUDENT }o--o{ DEGREE : registers\n    DEGREE {\n        string DegreeCode PK\n        string DegreeTitle\n        string DepartmentCode FK\n    }\n```\nd) Conceptual: ER diagram independent of DBMS\ne) Logical: relational tables with FKs, normalized\ng) Physical: SQL CREATE TABLE statements with data types"
               },
               {
                 "id": 3,
                 "text": "What is Data Integrity in database?",
-                "marks": 1,
+                "marks": 2,
                 "answer": "Data integrity: accuracy, consistency, and reliability of data maintained through constraints (entity, referential, domain, user-defined) and validation rules."
               },
               {
                 "id": 4,
                 "text": "What are Entities and Relationships?",
-                "marks": 1,
+                "marks": 2,
                 "answer": "Entities: real-world objects distinguishable from others (e.g., Student, Course). Relationships: associations between entities (e.g., Student enrolls in Course)."
               },
               {
                 "id": 5,
                 "text": "What is an Alias in SQL?",
-                "marks": 1,
+                "marks": 2,
                 "answer": "Alias: temporary name for a table or column in a query, assigned using AS keyword (e.g., SELECT e.name FROM Employee AS e). Improves readability."
               },
               {
                 "id": 6,
                 "text": "What are the various forms of Normalization?",
-                "marks": 3,
+                "marks": 4,
                 "answer": "1NF: atomic values, no repeating groups. 2NF: 1NF + no partial dependencies. 3NF: 2NF + no transitive dependencies. BCNF: stronger 3NF. 4NF: no multi-valued dependencies. 5NF: no join dependencies."
               }
             ]
@@ -11336,13 +11267,13 @@ const examData = {
                 "id": 2,
                 "text": "Write the basic structure of an HTML template.",
                 "marks": 3,
-                "answer": "<!DOCTYPE html>\n&lt;html&gt;\n&lt;head&gt;\n  &lt;title&gt;Page Title&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n  <!-- content -->\n&lt;/body&gt;\n&lt;/html&gt;"
+                "answer": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Page Title</title>\n</head>\n<body>\n  <!-- content -->\n</body>\n</html>"
               },
               {
                 "id": 3,
                 "text": "Do all HTML tags have an end tag?",
                 "marks": 2,
-                "answer": "No. Void/self-closing tags like &lt;br&gt;, &lt;img&gt;, &lt;input&gt;, &lt;hr&gt; do not have closing tags."
+                "answer": "No. Void/self-closing tags like <br>, <img>, <input>, <hr> do not have closing tags."
               },
               {
                 "id": 4,
@@ -11354,7 +11285,7 @@ const examData = {
                 "id": 5,
                 "text": "Write HTML5 code to create a table with Roll No., Student name, Subject:\na) Ram, Physics\nb) Shyam, Math\nc) Murli, Chemistry",
                 "marks": 6,
-                "answer": "&lt;table border='1'>\n  &lt;tr&gt;&lt;th&gt;Roll No.&lt;/th&gt;&lt;th&gt;Student Name&lt;/th&gt;&lt;th&gt;Subject&lt;/th&gt;&lt;/tr&gt;\n  &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Ram&lt;/td&gt;&lt;td&gt;Physics&lt;/td&gt;&lt;/tr&gt;\n  &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Shyam&lt;/td&gt;&lt;td&gt;Math&lt;/td&gt;&lt;/tr&gt;\n  &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;Murli&lt;/td&gt;&lt;td&gt;Chemistry&lt;/td&gt;&lt;/tr&gt;\n&lt;/table&gt;"
+                "answer": "<table border='1'>\n  <tr><th>Roll No.</th><th>Student Name</th><th>Subject</th></tr>\n  <tr><td>1</td><td>Ram</td><td>Physics</td></tr>\n  <tr><td>2</td><td>Shyam</td><td>Math</td></tr>\n  <tr><td>3</td><td>Murli</td><td>Chemistry</td></tr>\n</table>"
               },
               {
                 "id": 6,
@@ -11366,7 +11297,7 @@ const examData = {
                 "id": 7,
                 "text": "Name two new tags included in HTML5.",
                 "marks": 2,
-                "answer": "&lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;section&gt;, &lt;footer&gt;, &lt;video&gt;, &lt;audio&gt;, &lt;canvas&gt;"
+                "answer": "<header>, <nav>, <article>, <section>, <footer>, <video>, <audio>, <canvas>"
               },
               {
                 "id": 8,
@@ -11474,7 +11405,7 @@ const examData = {
               },
               {
                 "id": 9,
-                "text": "74HC85 comparator, A=1000, B=1010. Outputs:\na) A>B=0, A&lt;B=0, A=B=0\nb) A&gt;B=0, A&lt;B=0, A=B=1\nc) A&gt;B=0, A&lt;B=1, A=B=0\nd) A&gt;B=0, A<B=1, A=B=1",
+                "text": "74HC85 comparator, A=1000, B=1010. Outputs:\na) A>B=0, A<B=0, A=B=0\nb) A>B=0, A<B=0, A=B=1\nc) A>B=0, A<B=1, A=B=0\nd) A>B=0, A<B=1, A=B=1",
                 "marks": 1,
                 "answer": "c) A>B=0, A<B=1, A=B=0"
               },
@@ -11590,7 +11521,7 @@ const examData = {
                 "id": 7,
                 "text": "Sketch Harvard and Von-Neumann architectures and explain differences.",
                 "marks": 5,
-                "answer": "Von-Neumann: single shared memory for instructions and data, single bus. Harvard: separate memory and buses for instructions and data.\n\nDifferences: Harvard allows simultaneous access (faster), prevents instruction corruption, used in microcontrollers. Von-Neumann simpler, more flexible, used in general-purpose computers.\n\n```mermaid\nflowchart LR\n    subgraph \"Von Neumann Architecture\"\n        CPU1[CPU] <--> BUS1[Single System Bus]\n        BUS1 <--> MEM1[Memory&lt;br/>Program + Data]\n    end\n    subgraph \"Harvard Architecture\"\n        CPU2[CPU] <--> IB[Instruction Bus]\n        CPU2 <--> DB[Data Bus]\n        IB <--> PM[Program Memory]\n        DB <--> DM[Data Memory]\n    end\n```\n\n**Key differences:**\n1. Von Neumann uses one shared memory for program + data; Harvard uses separate memories.\n2. Von Neumann has one bus (bottleneck); Harvard has two buses (parallel fetch).\n3. Harvard is faster but more complex.\n4. Von Neumann is used in general-purpose CPUs; Harvard in DSPs and microcontrollers."
+                "answer": "Von-Neumann: single shared memory for instructions and data, single bus. Harvard: separate memory and buses for instructions and data.\n\nDifferences: Harvard allows simultaneous access (faster), prevents instruction corruption, used in microcontrollers. Von-Neumann simpler, more flexible, used in general-purpose computers."
               },
               {
                 "id": 8,
@@ -11638,7 +11569,7 @@ const examData = {
                 "id": 6,
                 "text": "List 4 mobile devices.",
                 "marks": 4,
-                "answer": "Four types of mobile devices (1 mark each):\n\n(1) Smartphone: A handheld mobile phone with computing capabilities, touchscreen, internet access, and app support (e.g., iPhone, Samsung Galaxy).\n\n(2) Tablet: A portable device with a larger touchscreen than a phone, used for browsing, media, and light productivity (e.g., iPad, Samsung Tab).\n\n(3) Laptop: A portable personal computer with keyboard, screen, and battery, capable of running full desktop software.\n\n(4) Smartwatch: A wearable device worn on the wrist that offers notifications, fitness tracking, and app integration (e.g., Apple Watch, Samsung Galaxy Watch)."
+                "answer": "Smartphone, Tablet, Laptop, Smartwatch."
               },
               {
                 "id": 7,
@@ -11672,7 +11603,7 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "From the student marks sheet below:\n\n```\n+--------+-------+-------+---------+------+----------+\n|  Name  | Test1 | Test2 | Average | Rank | Decision |\n+--------+-------+-------+---------+------+----------+\n| Alice  |  75   |  82   |  78.5   |  2   |   Pass   |\n| Bob    |  45   |  52   |  48.5   |  5   |  Failed  |\n| Carol  |  88   |  90   |  89.0   |  1   |   Pass   |\n| Dave   |  60   |  65   |  62.5   |  4   |   Pass   |\n| Eve    |  70   |  68   |  69.0   |  3   |   Pass   |\n+--------+-------+-------+---------+------+----------+\n   A         B       C        D       E         F\n```\n\na) Give the formulas for cells D7 (Average), E7 (Rank), F7 (Decision) where Failed if Avg<50, Pass if Avg>=50. (6 marks)\nb) Two differences between relative and absolute references. (4 marks)",
+                "text": "From a student marks sheet with columns: Name, Test1, Test2, Average, Rank, Decision.\na) Give formulas for cells F7 (Average), G7 (Rank), H7 (Decision) where Failed if Avg<50, Pass if Avg>=50. (6 marks)\nb) Two differences between relative and absolute references. (4 marks)",
                 "marks": 10,
                 "answer": "a) F7 = AVERAGE(D7:E7) or (D7+E7)/2\nG7 = RANK(F7,$F$7:$F$n,0) (0 for descending)\nH7 = IF(F7>=50,\"Pass\",\"Failed\")\n\nb) Relative reference (A1): changes when formula is copied. Absolute reference ($A$1): stays constant when copied. Mixed ($A1, A$1): one part fixed."
               },
@@ -11957,25 +11888,25 @@ const examData = {
               {
                 "id": 1,
                 "text": "Lisez le texte sur le jouet et l'enfant.\n\n1) Proposez un titre à ce texte et justifiez-le. (4 pts)",
-                "marks": 6,
+                "marks": 4,
                 "answer": "Titre: 'Le Marchand de Jouets face au Choix des Parents'. Justification: le texte traite de la relation complexe entre parents, enfants et marchands de jouets lors de l'achat."
               },
               {
                 "id": 2,
                 "text": "2) Pourquoi certains parents achètent-ils les jouets demandés par leurs enfants? (6 pts)",
-                "marks": 9,
+                "marks": 6,
                 "answer": "20% seulement des adultes achètent ce que l'enfant demande. Les autres choisissent eux-mêmes en pensant moins aux besoins réels de l'enfant qu'à leurs relations avec lui. Certains parents cherchent à 'se faire pardonner' leur absence en achetant un jouet cher."
               },
               {
                 "id": 3,
                 "text": "3) A votre avis, la majorité des parents achètent-ils les jouets demandés par leurs enfants? Qu'est ce qui justifie cette situation? (6 pts)",
-                "marks": 9,
+                "marks": 6,
                 "answer": "Non, la majorité (80%) n'achète pas ce que l'enfant demande. Les parents choisissent selon leurs propres critères: le désir de s'amuser eux-mêmes (ex: le père qui veut un train électrique pour son fils), le besoin de compenser leur absence, ou l'impression que le jouet est éducatif."
               },
               {
                 "id": 4,
                 "text": "4) Pourquoi certains jouets n'ont-ils pas de succès auprès des enfants? (4 pts)",
-                "marks": 6,
+                "marks": 4,
                 "answer": "Les jouets trop perfectionnés ne séduisent pas toujours les enfants. Exemple: les Spoutniks miniatures n'ont pas eu de succès car les enfants n'en avaient jamais vu. De même, les machines à laver miniatures sont arrivées trop tôt, avant que les familles ne soient équipées."
               }
             ]
@@ -11987,19 +11918,19 @@ const examData = {
               {
                 "id": 1,
                 "text": "Sujet 1: Ecrivez une lettre pour demander un emploi comme cadre supérieur à la société CHOCOCAM. Votre nom est BOUBA NDENGUE NANA NLONG, vous résidez à Oliega-Bandam.",
-                "marks": 10,
+                "marks": 30,
                 "answer": "Bouba Ndengue Nana Nlong\nOliega-Bandam, Cameroun\n\nObjet: Candidature pour un poste de cadre supérieur\n\nMadame, Monsieur,\n\nJe me permets de vous adresser ma candidature pour un poste de cadre supérieur au sein de votre prestigieuse société CHOCOCAM.\n\nTitulaire d'un diplôme supérieur en gestion, je justifie d'une expérience significative dans le domaine. Mon parcours professionnel m'a permis de développer des compétences en management d'équipe, gestion de projets et développement stratégique.\n\nJe suis convaincu que mes compétences et ma motivation pourraient contribuer au développement de votre entreprise.\n\nDans l'attente de votre réponse, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.\n\nBouba Ndengue Nana Nlong"
               },
               {
                 "id": 2,
                 "text": "Sujet 2: D'après vous, pourquoi 20% seulement des adultes achètent les jouets que l'enfant a demandé? (30 lignes minimum)",
-                "marks": 10,
+                "marks": 30,
                 "answer": "Selon le texte, 80% des adultes n'achètent pas les jouets demandés par les enfants pour plusieurs raisons.\n\nD'abord, les parents projettent leurs propres désirs sur l'enfant. Le père qui achète un train électrique pour son fils de cinq ans veut en réalité s'amuser lui-même.\n\nEnsuite, les parents utilisent l'achat de jouets comme substitut affectif. Trop pris par leur travail, ils cherchent à compenser leur absence par des cadeaux coûteux.\n\nEnfin, les adultes sont influencés par l'apparence du jouet plutôt que par l'intérêt réel de l'enfant. Les jouets sophistiqués impressionnent les adultes mais ne correspondent pas toujours à l'âge ou aux centres d'intérêt de l'enfant.\n\nCette situation montre le décalage entre la perception des adultes et les besoins réels des enfants."
               },
               {
                 "id": 3,
                 "text": "Sujet 3: 'Les diplômes n'ont plus la valeur dans la société camerounaise d'aujourd'hui'. Est-ce votre point de vue?",
-                "marks": 10,
+                "marks": 30,
                 "answer": "Cette affirmation mérite d'être nuancée. Les diplômes conservent une valeur importante mais leur perception a évolué.\n\nD'un côté, le chômage des diplômés et la précarité de l'emploi peuvent donner l'impression que les diplômes perdent leur valeur. Le marché du travail exige de plus en plus d'expérience pratique et de compétences techniques.\n\nDe l'autre côté, les diplômes restent un sésame indispensable pour accéder à certaines professions et à l'enseignement supérieur. Ils attestent d'un niveau de connaissance et de capacité d'apprentissage.\n\nEn réalité, c'est la combinaison du diplôme et des compétences pratiques qui fait la différence. L'entrepreneuriat et la formation continue sont devenus des compléments essentiels au parcours académique."
               }
             ]
@@ -12026,7 +11957,7 @@ const examData = {
                 "id": 2,
                 "text": "Draw the flowchart of the nested loop:\nfor(int i=0; i<3; i++) {\n  Display i+1\n  for(int j=0; j<2; j++) {\n    Display i+1, j+1\n  }\n}",
                 "marks": 4,
-                "answer": "Flowchart:\nStart -> i=0 -> i<3? No -> End. Yes: Display i+1 -> j=0 -> j<2? No -> i++ -> back to i<3. Yes: Display i+1, j+1 -> j++ -> back to j<2.\n\n```mermaid\nflowchart TD\n    START([Start]) --> INIT[i = 0]\n    INIT --> OUTER{i < 3?}\n    OUTER -->|Yes| DISP_I[Display i+1]\n    DISP_I --> J_INIT[j = 0]\n    J_INIT --> INNER{j < 2?}\n    INNER -->|Yes| DISP_J[Display j+1]\n    DISP_J --> J_INC[j++]\n    J_INC --> INNER\n    INNER -->|No| I_INC[i++]\n    I_INC --> OUTER\n    OUTER -->|No| END([End])\n```"
+                "answer": "Flowchart:\nStart -> i=0 -> i<3? No -> End. Yes: Display i+1 -> j=0 -> j<2? No -> i++ -> back to i<3. Yes: Display i+1, j+1 -> j++ -> back to j<2."
               },
               {
                 "id": 3,
@@ -12068,7 +11999,7 @@ const examData = {
                 "id": 4,
                 "text": "Write a C program that takes an integer and displays its last digit.",
                 "marks": 3,
-                "answer": "#include <stdio.h>\nint main() {\n    int num;\n    printf(\"Enter integer: \");\n    scanf(\"%d\", &num);\n    int lastDigit = num % 10;\n    if (lastDigit < 0) lastDigit = -lastDigit;\n    printf(\"Last digit: %d\n\", lastDigit);\n    return 0;\n}"
+                "answer": "#include <stdio.h>\nint main() {\n    int num;\n    printf(\"Enter integer: \");\n    scanf(\"%d\", &num);\n    int lastDigit = num % 10;\n    if (lastDigit < 0) lastDigit = -lastDigit;\n    printf(\"Last digit: %d\\n\", lastDigit);\n    return 0;\n}"
               }
             ]
           },
@@ -12115,7 +12046,7 @@ const examData = {
               {
                 "id": 3,
                 "text": "A&B shop database with tables: CLIENT, BOUGHT, ARTICLE.\nWrite MySQL queries to:\na) Create database 'Business' (1 mark)\nb) Create and populate tables (5 marks)\nc) Display all CLIENT info (1 mark)\nd) Display info from BOUGHT and ARTICLE (2 marks)\ne) Display clients in Molyko or Muea (3 marks)\nf) Display info about people who got articles on credit (1 mark)",
-                "marks": 14,
+                "marks": 13,
                 "answer": "a) CREATE DATABASE Business;\n\nb) CREATE TABLE CLIENT (ClientNo INT AUTO_INCREMENT PRIMARY KEY, ClientName VARCHAR(50), ClientTown VARCHAR(50));\nINSERT INTO CLIENT VALUES (1,'Theron','Molyko'),(2,'Thelson','Malingo');\nCREATE TABLE ARTICLE (ArticleNo INT AUTO_INCREMENT PRIMARY KEY, ArticleName VARCHAR(50), UnitPrice INT);\nINSERT INTO ARTICLE VALUES (1,'Milk',250),(3,'Tea',380);\nCREATE TABLE BOUGHT (SalesNo INT AUTO_INCREMENT PRIMARY KEY, ArticleNo INT, ClientNo INT, Quantity INT, DateOfPurchase DATE, Paid VARCHAR(3));\nINSERT INTO BOUGHT VALUES (1,1,1,1,'1997-01-01','No'),(2,3,1,2,'1999-02-15','Yes');\n\nc) SELECT * FROM CLIENT;\nd) SELECT * FROM BOUGHT b JOIN ARTICLE a ON b.ArticleNo = a.ArticleNo;\ne) SELECT * FROM CLIENT WHERE ClientTown IN ('Molyko','Muea');\nf) SELECT * FROM BOUGHT WHERE Paid='No';"
               }
             ]
@@ -12128,7 +12059,7 @@ const examData = {
                 "id": 1,
                 "text": "A company needs an online interview form with:\n- Name (required)\n- Surname (required)\n- Email (required, must contain @)\n- Birth date\n- Place of birth\n- Phone\n\nTasks:\n1) Reproduce the HTML form with CSS and JavaScript validation (5 marks)\n2) Create MySQL database 'Online_registration' and table 'Online' (5 marks)\n3) Use PHP to connect form to database (5 marks)",
                 "marks": 15,
-                "answer": "1) HTML form:\n&lt;form id=\"interviewForm\" onsubmit=\"return validateForm()\">\n  Name: &lt;input type=\"text\" name=\"name\" required>&lt;br&gt;\n  Surname: &lt;input type=\"text\" name=\"surname\" required>&lt;br&gt;\n  Email: &lt;input type=\"email\" name=\"email\" required>&lt;br&gt;\n  Birth date: &lt;input type=\"text\" placeholder=\"dd/mm/yyyy\">&lt;br&gt;\n  Place: &lt;input type=\"text\">&lt;br&gt;\n  Phone: &lt;input type=\"tel\">&lt;br&gt;\n  &lt;input type=\"submit\">\n&lt;/form&gt;\n&lt;script&gt;\nfunction validateForm() {\n  var email = document.querySelector('[name=email]').value;\n  if (email.indexOf('@') === -1) { alert('Email must contain @'); return false; }\n  return true;\n}\n&lt;/script&gt;\n\n2) CREATE DATABASE Online_registration;\nCREATE TABLE Online (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(50), surname VARCHAR(50), email VARCHAR(100), birth_date VARCHAR(10), place VARCHAR(50), phone VARCHAR(20));\n\n3) PHP:\n<?php\n$conn = mysqli_connect('localhost','root','','Online_registration');\n$name = $_POST['name'];\n$surname = $_POST['surname'];\n$email = $_POST['email'];\n$sql = \"INSERT INTO Online (name,surname,email) VALUES ('$name','$surname','$email')\";\nmysqli_query($conn, $sql);\nmysqli_close($conn);\n?>"
+                "answer": "1) HTML form:\n<form id=\"interviewForm\" onsubmit=\"return validateForm()\">\n  Name: <input type=\"text\" name=\"name\" required><br>\n  Surname: <input type=\"text\" name=\"surname\" required><br>\n  Email: <input type=\"email\" name=\"email\" required><br>\n  Birth date: <input type=\"text\" placeholder=\"dd/mm/yyyy\"><br>\n  Place: <input type=\"text\"><br>\n  Phone: <input type=\"tel\"><br>\n  <input type=\"submit\">\n</form>\n<script>\nfunction validateForm() {\n  var email = document.querySelector('[name=email]').value;\n  if (email.indexOf('@') === -1) { alert('Email must contain @'); return false; }\n  return true;\n}\n</script>\n\n2) CREATE DATABASE Online_registration;\nCREATE TABLE Online (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(50), surname VARCHAR(50), email VARCHAR(100), birth_date VARCHAR(10), place VARCHAR(50), phone VARCHAR(20));\n\n3) PHP:\n<?php\n$conn = mysqli_connect('localhost','root','','Online_registration');\n$name = $_POST['name'];\n$surname = $_POST['surname'];\n$email = $_POST['email'];\n$sql = \"INSERT INTO Online (name,surname,email) VALUES ('$name','$surname','$email')\";\nmysqli_query($conn, $sql);\nmysqli_close($conn);\n?>"
               }
             ]
           },
@@ -12320,4 +12251,4 @@ const examData = {
       }
     ]
   }
-};
+};
