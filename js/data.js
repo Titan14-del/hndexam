@@ -10014,6 +10014,215 @@ const examData = {
           }
         ]
       }
+    ,
+      {
+        "title": "Enterprise Creation and Entrepreneurship",
+        "duration": "2 hours",
+        "credits": 1,
+        "description": "All Specialties | 2024 Session",
+        "sections": [
+          {
+            "title": "Section A: Entrepreneurship",
+            "marks": 34,
+            "questions": [
+              {
+                "id": 1,
+                "text": "State and explain the stages in the entrepreneurial process.",
+                "marks": 10,
+                "answer": "1. Discovery: identifying business opportunities.\n2. Concept Development: developing a business plan.\n3. Resourcing: acquiring financial, human, and material resources.\n4. Actualization: launching the business.\n5. Harvesting: growth, expansion, or exit."
+              },
+              {
+                "id": 2,
+                "text": "Why is the executive summary often called the most important part of a business plan?",
+                "marks": 8,
+                "answer": "The executive summary is the first section read by investors and lenders. It summarizes the entire business plan, highlighting key points such as the business concept, target market, competitive advantage, financial projections, and funding requirements. A compelling executive summary can convince readers to continue reviewing the plan, while a weak one may cause them to reject it immediately."
+              },
+              {
+                "id": 3,
+                "text": "State six (6) importance of a business plan.",
+                "marks": 6,
+                "answer": "1. Provides a clear roadmap for the business.\n2. Helps secure funding from investors/lenders.\n3. Identifies potential risks and challenges.\n4. Sets measurable goals and objectives.\n5. Helps in resource allocation and management.\n6. Serves as a communication tool for stakeholders."
+              },
+              {
+                "id": 4,
+                "text": "State and explain five (5) external sources of finance for a business in Cameroon.",
+                "marks": 10,
+                "answer": "1. Bank loans - borrowing from commercial banks with interest.\n2. Microfinance institutions - small loans for SMEs.\n3. Government grants and subsidies - funding from state programs.\n4. Angel investors - wealthy individuals providing capital in exchange for equity.\n5. Venture capital - investment firms providing funding for high-growth startups."
+              }
+            ]
+          },
+          {
+            "title": "Section B: Economics",
+            "marks": 33,
+            "questions": [
+              {
+                "id": 1,
+                "text": "With the aid of diagrams differentiate between change in quantity supplied and change in supply.",
+                "marks": 13,
+                "answer": "Change in quantity supplied: movement along the supply curve caused by a change in the good's own price (other factors constant).\nChange in supply: shift of the entire supply curve caused by changes in factors other than price (technology, input costs, taxes, etc.).\n\nDiagram: A supply curve with an arrow moving along it (quantity change) and a separate diagram showing the curve shifting right/left (supply change)."
+              },
+              {
+                "id": 2,
+                "text": "State and explain five (5) functions of commercial banks in Cameroon.",
+                "marks": 10,
+                "answer": "1. Accepting deposits (savings, current, fixed deposits).\n2. Granting loans and advances to individuals and businesses.\n3. Money transfer and payment services (cheques, transfers, mobile banking).\n4. Foreign exchange services (currency exchange, international transfers).\n5. Safe custody of valuables (locker services, asset management)."
+              },
+              {
+                "id": 3,
+                "text": "State five (5) difficulties encountered in measuring national income.",
+                "marks": 10,
+                "answer": "1. Double counting - goods/services counted at multiple stages.\n2. Informal sector - unregistered economic activities are excluded.\n3. Non-monetary transactions - subsistence farming/barter not captured.\n4. Depreciation - difficult to accurately measure capital consumption.\n5. Price changes - inflation/deflation distort real comparisons over time."
+              }
+            ]
+          },
+          {
+            "title": "Section C: Company Law",
+            "marks": 33,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Differentiate between a public limited company and a private limited company.",
+                "marks": 20,
+                "answer": "Public Limited Company:\n- Shares traded on stock exchange.\n- Minimum 7 shareholders, no maximum.\n- Must publish financial statements publicly.\n- Requires a minimum share capital.\n- Can raise capital from the general public.\n\nPrivate Limited Company:\n- Shares not traded publicly.\n- 2-50 shareholders maximum.\n- Financial statements kept private.\n- No minimum share capital requirement.\n- Cannot invite public to subscribe to shares."
+              },
+              {
+                "id": 2,
+                "text": "Identify and explain reasons why the courts may uplift the corporate veil in company law.",
+                "marks": 13,
+                "answer": "Reasons for lifting the corporate veil:\n1. Fraud or improper conduct - when the company is used to commit fraud.\n2. Tax evasion - when the corporate structure is used to avoid taxes.\n3. Agency relationship - when the company is acting as agent of shareholders.\n4. Group enterprises - when subsidiaries are mere extensions of parent company.\n5. Public policy - to prevent evasion of legal obligations.\n6. Trading with enemy - during wartime, to determine true ownership."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Case Study - SWE",
+        "duration": "6 hours",
+        "credits": 14,
+        "description": "Specialty: Software Engineering (SWE) | 2024 Session",
+        "sections": [
+          {
+            "title": "Section A: Algorithm and Programming",
+            "marks": 50,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Consider the following code:\n\n// This program uses an array to display five names.\nConstant Integer SIZE = 5\nDeclare String names[SIZE] = \"Meg\", \"Janai\", \"Sonat\", \"Belle\", \"Molak\"\nDeclare Integer index\nFor index = 0 To SIZE\n    Display names[index]\nEnd For\n\nWork required:\n1. Find the bug in the above-mentioned segment of code. (5 marks)\n2. Implement in the language you master properly. (5 marks)",
+                "marks": 10,
+                "answer": "1. Bug: The loop goes from index = 0 To SIZE, which is 0 to 5 (6 iterations), but the array has indices 0-4 (5 elements). This causes an out-of-bounds access when index = 5. The correct loop should be: For index = 0 To SIZE - 1\n\n2. Fix in C:\n#include &lt;stdio.h&gt;\n#define SIZE 5\nint main() {\n    char *names[SIZE] = {\"Meg\", \"Janai\", \"Sonat\", \"Belle\", \"Molak\"};\n    for (int index = 0; index &lt; SIZE; index++) {\n        printf(\"%s\\n\", names[index]);\n    }\n    return 0;\n}"
+              },
+              {
+                "id": 2,
+                "text": "Consider the following pseudocode:\n\n// This program displays the highest value in the array.\nDeclare Integer SIZE = 3\nDeclare Integer values[SIZE] = 1, 3, 4\nDeclare Integer index\nDeclare Integer highest\nFor index = 0 To SIZE - 1\n    If values[index] &gt; highest Then\n        Set highest = values[index]\n    End If\nEnd For\nDisplay \"The highest number is \", highest\n\nWork required:\n1. Explain the bug in the above-mentioned segment of code and fix it. (10 marks)\n2. Implement the previous pseudocode in the language you master most. (15 marks)",
+                "marks": 25,
+                "answer": "1. Bug: The variable 'highest' is not initialized. It starts with whatever garbage value is in memory. If that garbage value happens to be larger than all array elements, the algorithm will return the wrong result. Fix: Initialize highest to values[0] before the loop (or to Integer.MIN_VALUE).\n\nFixed pseudocode:\nSet highest = values[0]\nFor index = 1 To SIZE - 1\n    If values[index] &gt; highest Then\n        Set highest = values[index]\n    End If\nEnd For\n\n2. Implementation in C:\n#include &lt;stdio.h&gt;\n#define SIZE 3\nint main() {\n    int values[SIZE] = {1, 3, 4};\n    int highest = values[0];\n    for (int index = 1; index &lt; SIZE; index++) {\n        if (values[index] &gt; highest) {\n            highest = values[index];\n        }\n    }\n    printf(\"The highest number is %d\\n\", highest);\n    return 0;\n}"
+              },
+              {
+                "id": 3,
+                "text": "You are asked to design a program for Wireless Solutions, a business that sells cell phones and wireless service. The program will be used to keep track of the cell phones that the company has in inventory. The data that we need to keep for a cell phone is:\n- The name of the phone's manufacturer\n- The phone's model number\n- The phone's retail price\n\nWork required:\n1. Declare the data fields of the class cell phone. (3 marks)\n2. Declare the mutators (setters) and the accessors (getters) of the class cell phone. (3 marks)\n3. Declare a default constructor and a constructor with three parameter lists of the class cell phone. (3 marks)\n4. Define the class cell phone in the language you master better. (3 marks)\n5. Implement a test program for the class cell phone. (3 marks)",
+                "marks": 15,
+                "answer": "1. Data fields:\nprivate String manufacturer;\nprivate String modelNumber;\nprivate double retailPrice;\n\n2. Mutators and accessors:\npublic void setManufacturer(String m) { this.manufacturer = m; }\npublic String getManufacturer() { return manufacturer; }\npublic void setModelNumber(String m) { this.modelNumber = m; }\npublic String getModelNumber() { return modelNumber; }\npublic void setRetailPrice(double p) { this.retailPrice = p; }\npublic double getRetailPrice() { return retailPrice; }\n\n3. Constructors:\npublic CellPhone() {}\npublic CellPhone(String man, String model, double price) {\n    this.manufacturer = man;\n    this.modelNumber = model;\n    this.retailPrice = price;\n}\n\n4-5. Full implementation in Java with test program:\n(Student should write complete Java class with constructor, getters/setters, and a main method that creates CellPhone objects, sets values, and displays them.)"
+              }
+            ]
+          },
+          {
+            "title": "Section B: Database Development and Administration",
+            "marks": 20,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Given the relations:\nUser(Id, Name, Age, Gender, OccupationId*, CityId*)\nOccupation(OccupationId, OccupationName)\nCity(CityId, CityName)\n\nWrite relational algebra and SQL statement that outputs the names of the users who are more than 25 years old.",
+                "marks": 5,
+                "answer": "Relational Algebra: π Name(σ Age &gt; 25(User))\n\nSQL: SELECT Name FROM User WHERE Age &gt; 25;"
+              },
+              {
+                "id": 2,
+                "text": "Write relational algebra and SQL statement that outputs all information of users who have an Id lesser than 3 or who are of Age different from 32.",
+                "marks": 5,
+                "answer": "Relational Algebra: σ Id&lt;3 ∨ Age≠32(User)\n\nSQL: SELECT * FROM User WHERE Id &lt; 3 OR Age &lt;&gt; 32;"
+              },
+              {
+                "id": 3,
+                "text": "Write relational algebra and SQL statement that outputs all information of users together with information about their occupation.",
+                "marks": 5,
+                "answer": "Relational Algebra: User ⨝ Occupation (natural join on OccupationId)\n\nSQL: SELECT * FROM User JOIN Occupation ON User.OccupationId = Occupation.OccupationId;"
+              },
+              {
+                "id": 4,
+                "text": "Write relational algebra and SQL statement of user's names and gender who work in Bamenda.",
+                "marks": 5,
+                "answer": "Relational Algebra: π Name, Gender(σ CityName='Bamenda'(User ⨝ City))\n\nSQL: SELECT u.Name, u.Gender FROM User u JOIN City c ON u.CityId = c.CityId WHERE c.CityName = 'Bamenda';"
+              }
+            ]
+          },
+          {
+            "title": "Section C: Web Design",
+            "marks": 15,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Consider the following HTML/CSS code with CSS positioning:\n[...code with relative, absolute, and fixed positioning...]\n\nName the three positioning elements covered in the above code.",
+                "marks": 3,
+                "answer": "1. Relative Positioning (position: relative)\n2. Absolute Positioning (position: absolute)\n3. Fixed Positioning (position: fixed)"
+              },
+              {
+                "id": 2,
+                "text": "Explain the function of each positioning element from the code.",
+                "marks": 3,
+                "answer": "1. Relative: positions element relative to its normal document flow position, offset by left/top/right/bottom values.\n2. Absolute: positions element relative to its nearest positioned ancestor (or the initial containing block), removed from normal flow.\n3. Fixed: positions element relative to the browser viewport; stays in place even when scrolling."
+              },
+              {
+                "id": 3,
+                "text": "Provide a suitable title for this code.",
+                "marks": 3,
+                "answer": "CSS Positioning Examples / Learning CSS Positioning Properties"
+              },
+              {
+                "id": 4,
+                "text": "What is the purpose of this code?",
+                "marks": 3,
+                "answer": "To demonstrate and teach how different CSS positioning values (relative, absolute, fixed) affect the layout and placement of HTML elements on a web page."
+              },
+              {
+                "id": 5,
+                "text": "Define the function of CSS in the HTML file.",
+                "marks": 3,
+                "answer": "CSS (Cascading Style Sheets) controls the visual presentation of HTML elements on a web page, including layout, colors, fonts, spacing, positioning, and responsive design."
+              }
+            ]
+          },
+          {
+            "title": "Section D: Networking",
+            "marks": 15,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Explain the importance of layering in a network.",
+                "marks": 2,
+                "answer": "Layering divides network communication into smaller, manageable parts. Benefits: simplifies design, allows modular development, enables interoperability between different vendors, facilitates troubleshooting by isolating problems to specific layers, and allows changes in one layer without affecting others."
+              },
+              {
+                "id": 2,
+                "text": "Differentiate between:\n1. OSI model and TCP/IP model\n2. UDP and TCP",
+                "marks": 5,
+                "answer": "1. OSI vs TCP/IP:\n- OSI has 7 layers, TCP/IP has 4/5 layers.\n- OSI is conceptual/theoretical, TCP/IP is practical/implemented.\n- OSI separates presentation and session layers; TCP/IP combines them into Application layer.\n- TCP/IP was developed by DoD; OSI by ISO.\n\n2. UDP vs TCP:\n- TCP is connection-oriented, UDP is connectionless.\n- TCP guarantees delivery, UDP does not.\n- TCP has flow/congestion control, UDP does not.\n- TCP is slower but reliable; UDP is faster but unreliable.\n- TCP used for web/email, UDP for streaming/DNS."
+              },
+              {
+                "id": 3,
+                "text": "Describe in detail the data encapsulation process in the OSI model.",
+                "marks": 2,
+                "answer": "Data encapsulation in OSI:\n1. Application/Presentation/Session layers create data.\n2. Transport layer segments data and adds TCP/UDP header (segment).\n3. Network layer adds IP header (packet).\n4. Data Link layer adds MAC header and trailer (frame).\n5. Physical layer converts to bits for transmission.\nEach layer adds its own header, and the receiving end reverses the process (de-encapsulation)."
+              },
+              {
+                "id": 4,
+                "text": "For each of the following networks, give a sketch, two advantages, two disadvantages, and a network protocol or topology employing it:\n1. Mesh topology\n2. Star topology",
+                "marks": 6,
+                "answer": "1. Mesh Topology:\n- Sketch: each node connected to every other node.\n- Advantages: high reliability, no single point of failure, privacy/security.\n- Disadvantages: expensive (many cables), complex installation.\n- Protocol: fully connected network, used in WAN backbone.\n\n2. Star Topology:\n- Sketch: all nodes connected to a central hub/switch.\n- Advantages: easy to install/manage, failure of one node doesn't affect others.\n- Disadvantages: single point of failure (hub), more cable than bus.\n- Protocol: Ethernet (IEEE 802.3), used in most LANs."
+              }
+            ]
+          }
+        ]
+      }
     ]
   },
   "2025": {
