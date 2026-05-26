@@ -1,4 +1,4 @@
-const _notesData = {
+const _notesYear1 = {
   "title": "Year 1 - Common Core",
   "subjects": [
     {

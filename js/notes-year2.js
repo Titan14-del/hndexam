@@ -1,4 +1,4 @@
-const _notesData = {
+const _notesYear2 = {
   "title": "Year 2 - SWE Specialization",
   "subjects": [
     {
@@ -787,7 +787,6 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2025",
                   "paper": "Case Study",
@@ -800,7 +799,6 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2024",
                   "paper": "Case Study - SWE",
@@ -873,7 +871,6 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2025",
                   "paper": "Case Study",
@@ -942,21 +939,18 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2021",
                   "paper": "Case Study - SWE",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2024",
                   "paper": "Case Study - SWE",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2025",
                   "paper": "Case Study",
@@ -1021,21 +1015,18 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2021",
                   "paper": "Case Study - SWE",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2024",
                   "paper": "Case Study - SWE",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2025",
                   "paper": "Case Study",
@@ -1757,14 +1748,12 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2022",
                   "paper": "System Analysis and Design",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2025",
                   "paper": "System Analysis and Design",
@@ -1934,14 +1923,12 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2022",
                   "paper": "System Analysis and Design",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2025",
                   "paper": "System Analysis and Design",
@@ -1999,14 +1986,12 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2022",
                   "paper": "System Analysis and Design",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2025",
                   "paper": "System Analysis and Design",
@@ -2608,7 +2593,6 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2025",
                   "paper": "Case Study",
@@ -2621,7 +2605,6 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2024",
                   "paper": "Case Study - SWE",
@@ -2688,7 +2671,6 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2024",
                   "paper": "Case Study - SWE",
@@ -2748,7 +2730,6 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2024",
                   "paper": "Case Study - SWE",
@@ -3504,21 +3485,18 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2022",
                   "paper": "Information System",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2023",
                   "paper": "Information Systems",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2025",
                   "paper": "Information Systems",
@@ -3584,21 +3562,18 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2022",
                   "paper": "Information System",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2023",
                   "paper": "Information Systems",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2025",
                   "paper": "Information Systems",
@@ -3668,21 +3643,18 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2022",
                   "paper": "Information System",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2023",
                   "paper": "Information Systems",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2025",
                   "paper": "Information Systems",
@@ -3765,7 +3737,6 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2021",
                   "paper": "Case Study - SWE",
@@ -3834,7 +3805,6 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2021",
                   "paper": "Case Study - SWE",
@@ -3903,21 +3873,18 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2022",
                   "paper": "Discrete Mathematics",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2024",
                   "paper": "Discrete Mathematics",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2025",
                   "paper": "Discrete Mathematics",
@@ -3983,21 +3950,18 @@ const _notesData = {
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2022",
                   "paper": "Discrete Mathematics",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2024",
                   "paper": "Discrete Mathematics",
                   "section": "Section A",
                   "qid": "Q1"
                 },
-                null,
                 {
                   "year": "2025",
                   "paper": "Discrete Mathematics",
