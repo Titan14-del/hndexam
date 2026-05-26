@@ -9627,6 +9627,393 @@ const examData = {
           }
         ]
       }
+    ,
+      {
+        "title": "English Language",
+        "duration": "2 hours",
+        "credits": 0.5,
+        "description": "All Specialties | 2024 Session",
+        "sections": [
+          {
+            "title": "Section A: Reading Comprehension",
+            "marks": 20,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Based on the passage, how does the author likely feel about leaving his post?\nA) Melancholic and reflective\nB) Angry and resentful\nC) Relieved and content\nD) Gleeful and giddy",
+                "marks": 2,
+                "answer": "A) Melancholic and reflective"
+              },
+              {
+                "id": 2,
+                "text": "In Paragraph 2, Sentence 2, the word \"strictest\" most closely means:\nA) sternest\nB) harshest\nC) closest\nD) narrowest",
+                "marks": 2,
+                "answer": "C) closest"
+              },
+              {
+                "id": 3,
+                "text": "Over the course of the passage, the author expresses a particular concern for:\nA) ministers who no longer have congregations.\nB) young people in the church.\nC) orphans and widows.\nD) souls that are facing judgment.",
+                "marks": 2,
+                "answer": "B) young people in the church."
+              },
+              {
+                "id": 4,
+                "text": "Which lines in the passage best support the answer to the previous question?\nA) Paragraph 1, Sentence 1.\nB) Paragraph 2, Sentence 3.\nC) Paragraph 3, Sentence 1.\nD) Paragraph 5, Sentence 1.",
+                "marks": 2,
+                "answer": "C) Paragraph 3, Sentence 1"
+              },
+              {
+                "id": 5,
+                "text": "According to the passage, what is the author's observation about young people's compliance with divine law?\nA) They sometimes but not always adhere to its standards.\nB) They are less likely than both children and adults to comply.\nC) They mock all who try to adhere to its standards of behaviour.\nD) They are eager to please and afraid to disappoint.",
+                "marks": 2,
+                "answer": "C) They mock all who try to adhere to its standards of behaviour."
+              },
+              {
+                "id": 6,
+                "text": "The author implies in the fourth paragraph that he:\nA) used to fall prey to both vice and vanity in his youth before turning to religion.\nB) failed to institute the strict standards of behavior necessary to properly instruct the church’s youth.\nC) wishes he could go back to his own youth in order to seek prosperity and happiness.\nD) may have been removed from his post because of overzealous care and policing of young people in his community.",
+                "marks": 2,
+                "answer": "D) may have been removed from his post because of overzealous care and policing of young people in his community."
+              },
+              {
+                "id": 7,
+                "text": "The author indicates that he believes that one day the \"great Judge\" will:\nA) condemn him and all other sinners.\nB) confirm the wisdom of the author’s counsel.\nC) pardon all souls who defied his laws.\nD) testify against the author’s wayward congregation.",
+                "marks": 2,
+                "answer": "B) confirm the wisdom of the author’s counsel."
+              },
+              {
+                "id": 8,
+                "text": "The passage can primarily be classified as which of the following?\nA) A direct threat\nB) An offering of advice\nC) A circular argument\nD) A personal anecdote",
+                "marks": 2,
+                "answer": "B) An offering of advice"
+              },
+              {
+                "id": 9,
+                "text": "Give a suitable title to the passage.",
+                "marks": 4,
+                "answer": "A Farewell Sermon / The Minister’s Parting Counsel / A Pastoral Farewell / The Last Sermon (any suitable title reflecting the minister’s parting advice to his congregation)"
+              }
+            ]
+          },
+          {
+            "title": "Section B: Grammar and Vocabulary",
+            "marks": 30,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Even in the age of electronic mails, letters still got posted, _______________?",
+                "marks": 1,
+                "answer": "didn’t they"
+              },
+              {
+                "id": 2,
+                "text": "They would still have to be posted for a long while yet, _______________?",
+                "marks": 1,
+                "answer": "wouldn’t they"
+              },
+              {
+                "id": 3,
+                "text": "The boss sacked all his employees, _______________?",
+                "marks": 1,
+                "answer": "didn’t he"
+              },
+              {
+                "id": 4,
+                "text": "I am tired. We _______________ (walk) for over an hour. Let’s stop and rest for a while.",
+                "marks": 0.5,
+                "answer": "have been walking"
+              },
+              {
+                "id": 5,
+                "text": "I _______________ just _______________ (turn off) the lights when the telephone _______________ (ring).",
+                "marks": 1.5,
+                "answer": "had just turned off / rang"
+              },
+              {
+                "id": 6,
+                "text": "The careless businessman squanders all his money on unnecessary things. (Change to passive voice)",
+                "marks": 1,
+                "answer": "All his money is squandered on unnecessary things by the careless businessman."
+              },
+              {
+                "id": 7,
+                "text": "\"Did you send him your letter of apology yesterday?\", the man asked. (Change to indirect speech)",
+                "marks": 1,
+                "answer": "The man asked if I had sent him my letter of apology the previous day."
+              },
+              {
+                "id": 8,
+                "text": "The money could not yield any interest because it was deposited in the current account. (Complete: If this money hadn’t been deposited in the current account, ...)",
+                "marks": 2,
+                "answer": "If this money hadn’t been deposited in the current account, it could have yielded some interest."
+              },
+              {
+                "id": 9,
+                "text": "She advised me to follow him. (Change to passive voice)",
+                "marks": 0,
+                "answer": "I was advised to follow him."
+              },
+              {
+                "id": 10,
+                "text": "John is _______________ (bad) than Peter at Maths. (Use comparative form)",
+                "marks": 1,
+                "answer": "worse"
+              },
+              {
+                "id": 11,
+                "text": "The dead trees and peeling paint, along with the broken windows and flapping shutters, _______________ everyone believe that evil spirits haunt the deserted Sinclair house.\nA) made\nB) has made\nC) makes\nD) make",
+                "marks": 2,
+                "answer": "D) make"
+              },
+              {
+                "id": 12,
+                "text": "Where _______________ the earrings that I left by the bathroom sink?\nA) was\nB) were\nC) is\nD) are",
+                "marks": 1,
+                "answer": "D) are"
+              },
+              {
+                "id": 13,
+                "text": "Neither of those sharks circling your boogie board _______________ hungry enough to bite.\nA) looks\nB) look\nC) looked\nD) had looked",
+                "marks": 1,
+                "answer": "A) looks"
+              },
+              {
+                "id": 14,
+                "text": "One hundred and fifty gallons _______________ the amount of liquid the average living room rug can absorb.\nA) is\nB) are\nC) was\nD) were",
+                "marks": 1,
+                "answer": "A) is"
+              },
+              {
+                "id": 15,
+                "text": "Agnes never loses a single possession. Everyone knows what belongs to her, for each pen, pencil, and paperclip _______________ a tiny flag attached with Agnes’ full name on it.\nA) will have\nB) has\nC) have\nD) had",
+                "marks": 1,
+                "answer": "B) has"
+              },
+              {
+                "id": 16,
+                "text": "Asteroids and comets slamming into Earth _______________ Marge; she tries to remain under the protective cover of her roof as much as possible.\nA) worries\nB) worry\nC) worried\nD) used to worry",
+                "marks": 1,
+                "answer": "A) worries"
+              },
+              {
+                "id": 17,
+                "text": "Someone—perhaps Emmanuel or Paul—_______________ the right wine to serve with earthworm lasagna.\nA) knew\nB) will know\nC) knows\nD) know",
+                "marks": 1,
+                "answer": "C) knows"
+              },
+              {
+                "id": 18,
+                "text": "These scissors _______________ so dull that I’m not sure you could slice butter with them!\nA) is\nB) are\nC) has been\nD) had been",
+                "marks": 1,
+                "answer": "B) are"
+              },
+              {
+                "id": 19,
+                "text": "Physics _______________ proven to be Jerry’s easiest subject this semester.\nA) has\nB) have\nC) had\nD) will have",
+                "marks": 1,
+                "answer": "A) has"
+              },
+              {
+                "id": 1,
+                "text": "Briefly explain the meaning of the proverb: \"Add insult to injury.\"",
+                "marks": 1,
+                "answer": "To make a bad situation worse by doing something additional that causes further harm or offense."
+              },
+              {
+                "id": 2,
+                "text": "Briefly explain the meaning of the idiom: \"Cost an arm and a leg.\"",
+                "marks": 1,
+                "answer": "To be extremely expensive; to cost a very large amount of money."
+              },
+              {
+                "id": 3,
+                "text": "Briefly explain the meaning of the proverb: \"A picture paints a thousand words.\"",
+                "marks": 1,
+                "answer": "A visual image can convey a complex idea or story more effectively than a lengthy verbal description."
+              },
+              {
+                "id": 4,
+                "text": "Briefly explain the meaning of the idiom: \"Once in a blue moon.\"",
+                "marks": 1,
+                "answer": "Very rarely; an event that happens infrequently."
+              },
+              {
+                "id": 5,
+                "text": "Briefly explain the meaning of the idiom: \"Let the cat out of the bag.\"",
+                "marks": 1,
+                "answer": "To reveal a secret or disclose confidential information unintentionally."
+              },
+              {
+                "id": 6,
+                "text": "Find a word pronounced similarly to ‘Pear’ but spelt differently with a different meaning.",
+                "marks": 1,
+                "answer": "Pair (two of something)"
+              },
+              {
+                "id": 7,
+                "text": "Find a word pronounced similarly to ‘Still’ but spelt differently with a different meaning.",
+                "marks": 1,
+                "answer": "Steal (to take something without permission)"
+              },
+              {
+                "id": 8,
+                "text": "Find a word pronounced similarly to ‘Male’ but spelt differently with a different meaning.",
+                "marks": 1,
+                "answer": "Mail (postal correspondence)"
+              },
+              {
+                "id": 9,
+                "text": "Find a word pronounced similarly to ‘Feel’ but spelt differently with a different meaning.",
+                "marks": 1,
+                "answer": "Feal (loyal, faithful - archaic)"
+              },
+              {
+                "id": 10,
+                "text": "Find a word pronounced similarly to ‘Rice’ but spelt differently with a different meaning.",
+                "marks": 1,
+                "answer": "Rise (to go up / increase)"
+              }
+            ]
+          },
+          {
+            "title": "Section C: Spoken English",
+            "marks": 20,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Identify the word with an odd sound: Bark, bake, back, dam.",
+                "marks": 1,
+                "answer": "dam (/dæm/ vs /bɑː/ and /beɪk/)"
+              },
+              {
+                "id": 2,
+                "text": "Identify the word with an odd sound: Sea, see, seak, set.",
+                "marks": 1,
+                "answer": "set (/sɛt/ vs /siː/)"
+              },
+              {
+                "id": 3,
+                "text": "Identify the word with an odd sound: Meat, meat, lead, met.",
+                "marks": 1,
+                "answer": "met (/mɛt/ vs /miːt/)"
+              },
+              {
+                "id": 4,
+                "text": "Identify the word with an odd sound: Tall, tail, tale, take.",
+                "marks": 1,
+                "answer": "take (/teɪk/ vs /tɔːl/ and /teɪl/)"
+              },
+              {
+                "id": 5,
+                "text": "Identify the word with an odd sound: Lack, lake, sad, black.",
+                "marks": 1,
+                "answer": "lake (/leɪk/ vs /læk/)"
+              },
+              {
+                "id": 6,
+                "text": "Transcribe the following word: Sail",
+                "marks": 1,
+                "answer": "/seɪl/"
+              },
+              {
+                "id": 7,
+                "text": "Transcribe the following word: Waist",
+                "marks": 1,
+                "answer": "/weɪst/"
+              },
+              {
+                "id": 8,
+                "text": "Transcribe the following word: Car",
+                "marks": 1,
+                "answer": "/kɑː(r)/"
+              },
+              {
+                "id": 9,
+                "text": "Transcribe the following word: Boy",
+                "marks": 1,
+                "answer": "/bɔɪ/"
+              },
+              {
+                "id": 10,
+                "text": "Transcribe the following word: We",
+                "marks": 1,
+                "answer": "/wiː/"
+              },
+              {
+                "id": 11,
+                "text": "Put the stress mark on the word: Export (noun)",
+                "marks": 1,
+                "answer": "‘Export (stress on first syllable)"
+              },
+              {
+                "id": 12,
+                "text": "Put the stress mark on the word: Danger",
+                "marks": 1,
+                "answer": "‘Danger (stress on first syllable)"
+              },
+              {
+                "id": 13,
+                "text": "Put the stress mark on the word: Popular",
+                "marks": 1,
+                "answer": "‘Popular (stress on first syllable)"
+              },
+              {
+                "id": 14,
+                "text": "Put the stress mark on the word: Water",
+                "marks": 1,
+                "answer": "‘Water (stress on first syllable)"
+              },
+              {
+                "id": 15,
+                "text": "Put the stress mark on the word: Manage",
+                "marks": 1,
+                "answer": "‘Manage (stress on first syllable)"
+              },
+              {
+                "id": 16,
+                "text": "Write down the number of syllables: Generously",
+                "marks": 1,
+                "answer": "4 (gen-er-ous-ly)"
+              },
+              {
+                "id": 17,
+                "text": "Write down the number of syllables: Appreciation",
+                "marks": 1,
+                "answer": "5 (ap-pre-ci-a-tion)"
+              },
+              {
+                "id": 18,
+                "text": "Write down the number of syllables: Informal",
+                "marks": 1,
+                "answer": "3 (in-for-mal)"
+              },
+              {
+                "id": 19,
+                "text": "Write down the number of syllables: Challenges",
+                "marks": 1,
+                "answer": "3 (chal-leng-es)"
+              },
+              {
+                "id": 20,
+                "text": "Write down the number of syllables: Intelligently",
+                "marks": 1,
+                "answer": "5 (in-tel-li-gent-ly)"
+              }
+            ]
+          },
+          {
+            "title": "Section D: Composition",
+            "marks": 30,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Write a composition of not more than 450 to 500 words on ONE of the following topics:\n\n1. I must make a change\n2. Write a letter to a carpeting company about defective carpeting. (Your address: Bolevard Hotel, Britain, Bonia street 214.)\n3. My first day in the University",
+                "marks": 30,
+                "answer": "N/A - Essay writing exercise. Students should write a well-structured composition with proper spelling, paragraphing, punctuation, and standard English."
+              }
+            ]
+          }
+        ]
+      }
     ]
   },
   "2025": {
@@ -12251,4 +12638,5 @@ const examData = {
       }
     ]
   }
-};
+};
+
