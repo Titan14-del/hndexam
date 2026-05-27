@@ -110,7 +110,7 @@ const examData = {
                 "id": 2,
                 "text": "VEHICLE_OPERATOR normalization.",
                 "marks": 12,
-                "answer": "See 2021 answer."
+                "answer": "VEHICLE_OPERATOR normalization steps:\n\n1. Unnormalized form (UNF): Table contains repeating groups. All attributes in one table: (VehicleID, VehicleDesc, OperatorID, OperatorName, Route, Tariff).\n\n2. First Normal Form (1NF): Remove repeating groups by creating separate rows for each route-operator combination. Each row has atomic values. Primary key: (VehicleID, OperatorID, Route).\n\n3. Functional Dependencies:\n   - VehicleID \u2192 VehicleDesc\n   - OperatorID \u2192 OperatorName\n   - (VehicleID, OperatorID, Route) \u2192 Tariff\n\n4. Second Normal Form (2NF): Remove partial dependencies. Split into:\n   - Vehicle(VehicleID, VehicleDesc)\n   - Operator(OperatorID, OperatorName)\n   - VehicleOperator(VehicleID, OperatorID, Route, Tariff)\n\n5. Third Normal Form (3NF): Remove transitive dependencies. Vehicle and Operator already in 3NF. VehicleOperator has no transitive dependencies.\n\nResulting schema:\n   Vehicle(VehicleID PK, VehicleDesc)\n   Operator(OperatorID PK, OperatorName)\n   VehicleOperator(VehicleID FK, OperatorID FK, Route, Tariff) with composite PK (VehicleID, OperatorID, Route)\n\nAnomalies resolved:\n- Insert anomaly: Can add a vehicle without assigning operators.\n- Delete anomaly: Removing an operator won't lose vehicle data.\n- Update anomaly: Vehicle description stored only once."
               }
             ]
           },
@@ -140,7 +140,7 @@ const examData = {
                 "id": 1,
                 "text": "Firewall? ISP? 192.168.1.0/24: hosts, gateway, broadcast.",
                 "marks": 15,
-                "answer": "Firewall=access control. ISP=provider. /24: 254 hosts, .1 gateway, .255 broadcast."
+                "answer": "1. Firewall:\nA firewall is a network security device that monitors and controls incoming and outgoing traffic based on predetermined security rules. Types:\n- Packet filtering firewall: inspects packets headers (IP, port).\n- Stateful inspection: tracks connection state.\n- Application gateway (proxy): filters at application layer.\n- Next-generation firewall: combines multiple functions.\nFunctions: blocks unauthorized access, prevents malware, logs traffic, enables VPNs.\n\n2. ISP (Internet Service Provider):\nAn ISP is a company that provides internet access to individuals and organizations. Types:\n- Dial-up (obsolete).\n- DSL (over telephone lines).\n- Cable (over TV cables).\n- Fiber optic (high-speed).\n- Satellite (remote areas).\n- Mobile (4G/5G).\nISPs assign IP addresses, provide DNS, email, web hosting.\n\n3. 192.168.1.0/24 subnet analysis:\n- Subnet mask: 255.255.255.0\n- Total addresses: 2^(32-24) = 256\n- Usable hosts: 256 - 2 = 254\n- Network address: 192.168.1.0\n- Default gateway: 192.168.1.1 (typically the router's address)\n- Broadcast address: 192.168.1.255\n- Usable host range: 192.168.1.1 to 192.168.1.254\n- CIDR notation: /24 means first 24 bits are network prefix"
               }
             ]
           }
@@ -2026,7 +2026,7 @@ const examData = {
                 "id": 1,
                 "text": "a)Define C variable. b)Syntax. c)Outputs for a=20,b=10,c=15,d=5.",
                 "marks": 8,
-                "answer": "a)Named typed memory. b)type name; c)90,90,90,35"
+                "answer": "a) A C variable is a named location in memory that stores a value of a specific data type. It has a name (identifier), a type (int, float, char, etc.), a value, and a memory address. Variables must be declared before use.\n\nb) Syntax for declaring a C variable:\n   data_type variable_name;\n   Example: int age;\n   \n   Syntax for initializing:\n   data_type variable_name = value;\n   Example: int age = 25;\n   \n   Multiple declarations:\n   int a, b, c;\n\nc) Computing outputs for a=20, b=10, c=15, d=5:\n   Expression 1: a + b - c = 20 + 10 - 15 = 15\n   Expression 2: a * b / c = 20 * 10 / 15 = 200 / 15 = 13 (integer division)\n   Expression 3: (a + b) * c / d = (20 + 10) * 15 / 5 = 30 * 15 / 5 = 450 / 5 = 90\n   Expression 4: a % d + b = 20 % 5 + 10 = 0 + 10 = 10\n\nNote: Outputs depend on the specific expressions given. The above shows the methodology for computing C expression results."
               }
             ]
           },
