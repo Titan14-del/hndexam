@@ -1837,6 +1837,81 @@ const examData = {
           }
         ]
       }
+    ,
+      {
+        "title": "Law and Citizenship Education",
+        "duration": "2 hours",
+        "credits": 2,
+        "description": "All Specialties | 2020 Session",
+        "sections": [
+          {
+            "title": "Section A: Introduction to Law and Fundamental Rights",
+            "marks": 20,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Cameroon is one of the few countries in the world that operate a bijural legal system of Common law and Civil law. Critically examine the differences that exist between them.",
+                "marks": 20,
+                "answer": "Cameroon's bijural legal system combines English Common Law and French Civil Law traditions. Key differences:\n\n1. Sources of Law:\n- Common law: primarily case law (judicial precedents), supplemented by statutes. Courts interpret and develop law through decisions (stare decisis).\n- Civil law: primarily codified statutes (written codes). Judges apply the code; precedent is not binding.\n\n2. Role of Judges:\n- Common law: judges are active law-makers. They interpret statutes and create binding precedents through ratio decidendi.\n- Civil law: judges are passive applicators of the code. Their role is to apply the written law to facts. Prior decisions are persuasive but not binding.\n\n3. Court System:\n- Common law: adversarial system. Two opposing parties present cases before a neutral judge. Judge acts as referee. Jury system used for serious crimes.\n- Civil law: inquisitorial system. Judge actively investigates facts, examines witnesses, and directs proceedings. No jury; judge decides both fact and law.\n\n4. Legal Reasoning:\n- Common law: inductive reasoning. Decides individual cases first, then derives general principles from patterns of decisions.\n- Civil law: deductive reasoning. Starts with general principles in the code, then applies them to specific cases.\n\n5. Treatment of Equity:\n- Common law: separate courts of equity developed historically to supplement common law courts. Equitable remedies (injunctions, specific performance) available.\n- Civil law: equity is absorbed within the code. No separate equity jurisdiction.\n\n6. Legal Education and Profession:\n- Common law: barrister/solicitor distinction. Legal education focuses on case analysis and mooting.\n- Civil law: unified profession (avocat). Legal education focuses on code study and doctrinal analysis.\n\n7. Contract Law:\n- Common law: consideration required for contracts. Parol evidence rule limits extrinsic evidence.\n- Civil law: cause (causa) required instead of consideration. Good faith is a fundamental principle."
+              }
+            ]
+          },
+          {
+            "title": "Section B: Civics, Ethics, Moral and Citizenship Education",
+            "marks": 20,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Clearly examine the procedure and conditions for child adoption under Cameroonian law.",
+                "marks": 20,
+                "answer": "Child adoption in Cameroon is governed by Law No. 2019/020 of 24 December 2019 relating to the Protection of the Child in Cameroon.\n\nConditions for Adoption:\n1. Age requirement: Adopter must be at least 28 years old (with exceptions for adopting a spouse's child).\n2. Age gap: At least 15 years difference between adopter and child (reduced to 10 years for spousal adoption).\n3. Consent: Both biological parents must consent, or the child must be legally abandoned/declared available for adoption.\n4. Child's consent: Child aged 10+ must personally consent.\n5. Moral fitness: Adopter must demonstrate good moral character, stable mental health, and financial capacity.\n6. Marital status: Married couples must adopt jointly. Single persons may adopt in exceptional cases.\n7. No prior adoption: An adopter cannot have a prior adoption unless exceptional circumstances.\n\nTypes of Adoption:\n1. Full adoption (adoption plenière): Severs all legal ties with biological family. Child takes adopter's surname.\n2. Simple adoption (adoption simple): Child retains ties with biological family but acquires additional inheritance rights.\n\nProcedure:\n1. Application: File application at the court of first instance (Tribunal de Première Instance).\n2. Social enquiry: Social welfare service conducts home study, interviews, background check.\n3. Medical examination: Child and adopter undergo medical evaluation.\n4. Court hearing: Judge reviews evidence, interviews parties, examines consents.\n5. Judgment: Court issues adoption order if all conditions satisfied.\n6. Registration: Adoption registered in civil status register (Centre d'Etat Civil).\n7. New birth certificate: Issued showing adopters as parents.\n\nEffects of Adoption:\n- Full adoption: Child acquires adopter's surname, inheritance rights, parental authority.\n- Simple adoption: Child inherits from both biological and adoptive families."
+              }
+            ]
+          },
+          {
+            "title": "Section C: Labour Law",
+            "marks": 20,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Examine the types and forms of labour contracts recognized by the 1992 Labour Code of Cameroon.",
+                "marks": 20,
+                "answer": "The 1992 Labour Code of Cameroon (Law No. 92/007 of 14 August 1992) recognizes several types and forms of employment contracts.\n\nTypes of Labour Contracts by Duration:\n\n1. Contract of Indefinite Duration (CDI - Contrat à Durée Indéterminée):\n- No fixed end date.\n- The most common and preferred form.\n- Can be terminated by either party with notice.\n- Provides job security and stability.\n- Required when employment exceeds 2 years.\n\n2. Contract of Definite Duration (CDD - Contrat à Durée Déterminée):\n- Has a fixed end date.\n- Maximum duration: 2 years, renewable once (total max 4 years).\n- Only permitted for:\n  a) Temporary replacement of absent employee.\n  b) Seasonal work.\n  c) Specific projects with defined completion.\n  d) Temporary increase in workload.\n- Must be in writing.\n- Provides end-of-contract bonus (indemnité de fin de contrat).\n\nForms of Labour Contracts by Work Arrangement:\n\n3. Full-time Contract:\n- Standard 40 hours per week.\n- Employee entitled to full benefits.\n- Minimum wage (SMIG) applies.\n\n4. Part-time Contract:\n- Less than 40 hours per week.\n- Proportional benefits.\n- Must be in writing.\n\n5. Apprenticeship Contract:\n- Combines work and training.\n- For young workers aged 14-20.\n- Specific duration: 6 months to 3 years.\n- Master/apprentice relationship.\n- Governed by specific provisions of the Labour Code.\n\n6. Temporary Work Contract:\n- Through temporary employment agencies.\n- For specific short-term assignments.\n- Maximum 6 months.\n\nFormal Requirements:\n- Must be in writing for CDD and part-time.\n- Must specify: parties, job description, remuneration, place of work, working hours, duration.\n- Signed in multiple copies.\n- Registered with labor inspector.\n\nTermination:\n- CDI: notice required (8 days to 3 months based on seniority).\n- CDD: terminates automatically at expiry. Early termination requires serious misconduct or mutual agreement."
+              }
+            ]
+          },
+          {
+            "title": "Section D: Business Law",
+            "marks": 20,
+            "questions": [
+              {
+                "id": 1,
+                "text": "a) What do you understand by the term negotiable instruments?",
+                "marks": 5,
+                "answer": "Negotiable instruments are written documents that represent an unconditional promise or order to pay a specified sum of money to the bearer or a named person. They are transferable by delivery (if bearer) or by endorsement and delivery (if order). They function as substitutes for money and facilitate commercial transactions. Examples include cheques, promissory notes, bills of exchange, and bank drafts. The key characteristic is that a bona fide holder in due course acquires good title even if the transferor had defective title."
+              },
+              {
+                "id": 2,
+                "text": "b) State and explain clearly five features of negotiable instruments.",
+                "marks": 15,
+                "answer": "Five essential features of negotiable instruments:\n\n1. Free Transferability (Negotiability):\nThe instrument can be freely transferred from one person to another by mere delivery (if payable to bearer) or by endorsement and delivery (if payable to order). This distinguishes them from ordinary contracts which require assignment with notice to the debtor.\n\n2. Holder in Due Course Protection:\nA holder in due course (one who acquires the instrument in good faith, for value, before maturity, without notice of defects) takes the instrument free from any defects in the title of prior parties. This protection is fundamental to commercial certainty and marketability.\n\n3. Unconditional Promise or Order:\nThe instrument must contain an unconditional undertaking to pay a fixed sum of money. It cannot be subject to conditions or contingent events. This certainty is essential for the instrument to function as a substitute for money.\n\n4. Writing and Signature:\nThe instrument must be in writing and signed by the maker (promissory note) or drawer (bill of exchange/cheque). While writing includes print, type, or any legible form, the signature is essential for authentication and creation of liability.\n\n5. Certainty of Parties:\nThe instrument must clearly identify:\n- The drawer (person who creates the instrument)\n- The drawee (person ordered to pay)\n- The payee (person entitled to payment)\n- The amount payable must be definite and certain\n\nAdditional features:\n6. Delivery: Essential for completion. Even if signed, an instrument is not valid until delivered.\n7. Payment in Money: Must be payable in legal currency, not in goods or services.\n8. Presentment: Must be presented for payment at the proper time and place."
+              }
+            ]
+          },
+          {
+            "title": "Section E: Company Law",
+            "marks": 20,
+            "questions": [
+              {
+                "id": 1,
+                "text": "Carefully explain the doctrine of corporate personality and its advantages.",
+                "marks": 20,
+                "answer": "The doctrine of corporate personality (also known as the veil of incorporation) is a fundamental principle of company law established in the landmark case of Salomon v Salomon & Co Ltd (1897). It states that a company is a legal entity separate and distinct from its shareholders and directors.\n\nKey Elements:\n1. Separate Legal Entity: The company has its own legal identity, distinct from its members. It can own property, enter contracts, sue and be sued in its own name.\n2. Perpetual Succession: The company continues to exist regardless of changes in membership. Death or bankruptcy of shareholders does not affect the company's existence.\n3. Limited Liability: Shareholders' liability is limited to the amount unpaid on their shares. Personal assets of shareholders are protected from company debts.\n4. Separate Property: Company property belongs to the company, not its shareholders. Shareholders cannot claim ownership of company assets.\n5. Capacity to Sue: The company can sue and be sued in its own name. Creditors must sue the company, not its members.\n\nAdvantages:\n1. Limited Liability Protection:\nShareholders risk only their investment. Personal assets are shielded from business creditors. Encourages investment and entrepreneurship without fear of personal ruin.\n\n2. Perpetual Existence:\nBusiness continues despite owner death, retirement, or bankruptcy. Provides stability for employees, customers, and suppliers.\n\n3. Ownership Transferability:\nShares can be easily transferred without affecting company operations. Facilitates raising capital and exit strategies.\n\n4. Access to Capital:\nCompanies can raise funds by issuing shares or debentures. Greater borrowing capacity than partnerships or sole proprietorships.\n\n5. Tax Advantages:\nSeparate tax entity. May benefit from corporate tax rates, deductions, and incentives not available to individuals.\n\n6. Professional Management:\nSeparation of ownership and management allows hiring professional managers. Shareholders can focus on strategic direction.\n\nLimitations (Lifting the Corporate Veil):\nCourts may disregard corporate personality (lift the veil) in cases of:\n- Fraud or improper conduct.\n- Tax evasion.\n- Agency relationships.\n- Group enterprises.\n- Public policy considerations."
+              }
+            ]
+          }
+        ]
+      }
     ]
   },
   "2021": {
