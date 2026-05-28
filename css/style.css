@@ -441,6 +441,21 @@ main { padding: 40px 0 80px; }
 
 .answer-tutorial strong { color: var(--text); }
 
+.question-related-notes {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--answer-border);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.question-related-notes a {
+  color: var(--link);
+  text-decoration: none;
+}
+.question-related-notes a:hover {
+  text-decoration: underline;
+}
+
 /* Back Button */
 .btn-back {
   display: inline-flex;

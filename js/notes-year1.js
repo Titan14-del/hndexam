@@ -64,51 +64,33 @@ const _notesYear1 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2020",
-                  "paper": "Computer Technology",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Computer Technology",
-                  "section": "Section A",
-                  "qid": "Q2"
-                },
-                {
                   "year": "2022",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Computer Technology",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Fundamentals",
-                  "section": "Section A",
+                  "section": "Section A: General Computer Knowledge",
                   "qid": "Q1"
                 },
                 {
@@ -190,57 +172,51 @@ const _notesYear1 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2021",
-                  "paper": "Computer Technology",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2022",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2020",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number System and Codes",
                   "qid": "Q1"
                 },
                 {
                   "year": "2021",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number Systems and Codes",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number System and Codes",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number System and Codes",
                   "qid": "Q1"
                 },
                 {
@@ -325,37 +301,31 @@ const _notesYear1 = {
                 {
                   "year": "2022",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q3"
                 },
                 {
                   "year": "2022",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Computer Technology",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: MCQs",
                   "qid": "Q1"
                 },
                 {
@@ -448,39 +418,27 @@ const _notesYear1 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2020",
-                  "paper": "Computer Technology",
-                  "section": "Section A",
-                  "qid": "Q2"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Computer Technology",
-                  "section": "Section A",
-                  "qid": "Q3"
-                },
-                {
                   "year": "2022",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: MCQs",
                   "qid": "Q1"
                 },
                 {
@@ -588,39 +546,27 @@ const _notesYear1 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2020",
-                  "paper": "Computer Technology",
-                  "section": "Section A",
-                  "qid": "Q4"
-                },
-                {
                   "year": "2022",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Computer Technology",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: MCQs",
                   "qid": "Q1"
                 },
                 {
@@ -709,43 +655,43 @@ const _notesYear1 = {
                 {
                   "year": "2020",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number System and Codes",
                   "qid": "Q1"
                 },
                 {
                   "year": "2021",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number Systems and Codes",
                   "qid": "Q2"
                 },
                 {
                   "year": "2022",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number System and Codes",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number System and Codes",
                   "qid": "Q1"
                 },
                 {
                   "year": "2021",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number Systems and Codes",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -835,37 +781,37 @@ const _notesYear1 = {
                 {
                   "year": "2021",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number Systems and Codes",
                   "qid": "Q3"
                 },
                 {
                   "year": "2020",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number System and Codes",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number System and Codes",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number System and Codes",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -935,37 +881,37 @@ const _notesYear1 = {
                 {
                   "year": "2021",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number Systems and Codes",
                   "qid": "Q4"
                 },
                 {
                   "year": "2020",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number System and Codes",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number System and Codes",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Digital Electronics",
-                  "section": "Section A",
+                  "section": "Section A: Number System and Codes",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -1058,37 +1004,37 @@ const _notesYear1 = {
                 {
                   "year": "2020",
                   "paper": "Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: Statistics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: Statistics and Probability",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: Statistics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2021",
-                  "paper": "Mathematics",
-                  "section": "Section A",
+                  "paper": "Discrete Mathematics",
+                  "section": "Section A: MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -1162,37 +1108,37 @@ const _notesYear1 = {
                 {
                   "year": "2020",
                   "paper": "Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: Statistics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2021",
-                  "paper": "Mathematics",
-                  "section": "Section A",
+                  "paper": "Discrete Mathematics",
+                  "section": "Section A: MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: Statistics and Probability",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: Statistics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -1266,43 +1212,43 @@ const _notesYear1 = {
                 {
                   "year": "2022",
                   "paper": "Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: Statistics and Probability",
                   "qid": "Q2"
                 },
                 {
                   "year": "2020",
                   "paper": "Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: Statistics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2021",
-                  "paper": "Mathematics",
-                  "section": "Section A",
+                  "paper": "Discrete Mathematics",
+                  "section": "Section A: MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: Statistics and Probability",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: Statistics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -1376,43 +1322,43 @@ const _notesYear1 = {
                 {
                   "year": "2020",
                   "paper": "Mathematics",
-                  "section": "Section B",
+                  "section": "Section B: Probability",
                   "qid": "Q1"
                 },
                 {
                   "year": "2020",
                   "paper": "Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: Statistics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2021",
-                  "paper": "Mathematics",
-                  "section": "Section A",
+                  "paper": "Discrete Mathematics",
+                  "section": "Section A: MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: Statistics and Probability",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: Statistics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -1489,55 +1435,37 @@ const _notesYear1 = {
                 {
                   "year": "2020",
                   "paper": "Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
-                  "paper": "Enterprise Creation",
-                  "section": "Entrepreneurship",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Entrepreneurship",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2022",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2023",
-                  "paper": "Enterprise Creation",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -1592,57 +1520,39 @@ const _notesYear1 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2021",
-                  "paper": "Entrepreneurship",
-                  "section": "Section B",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2024",
-                  "paper": "Enterprise Creation",
-                  "section": "Entrepreneurship",
+                  "paper": "Enterprise Creation and Entrepreneurship",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q2"
                 },
                 {
                   "year": "2024",
-                  "paper": "Enterprise Creation",
-                  "section": "Entrepreneurship",
+                  "paper": "Enterprise Creation and Entrepreneurship",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q3"
                 },
                 {
                   "year": "2020",
                   "paper": "Entrepreneurship",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2022",
-                  "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2023",
-                  "paper": "Enterprise Creation",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -1744,49 +1654,43 @@ const _notesYear1 = {
                 {
                   "year": "2020",
                   "paper": "Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q3"
                 },
                 {
                   "year": "2020",
                   "paper": "Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2020",
                   "paper": "Company Law",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2022",
-                  "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Company Law",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -1861,57 +1765,33 @@ const _notesYear1 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2021",
-                  "paper": "Entrepreneurship",
-                  "section": "Section A",
-                  "qid": "Q2"
-                },
-                {
                   "year": "2020",
                   "paper": "Entrepreneurship",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Entrepreneurship",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2022",
-                  "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2023",
-                  "paper": "Enterprise Creation",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -1983,49 +1863,37 @@ const _notesYear1 = {
                 {
                   "year": "2020",
                   "paper": "General Economics",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2022",
-                  "paper": "General Economics",
-                  "section": "Section A",
+                  "section": "Section A: General Economics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2023",
-                  "paper": "Enterprise Creation",
-                  "section": "Section A",
+                  "section": "Section 2: General Economics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -2094,50 +1962,38 @@ const _notesYear1 = {
               "value": [
                 {
                   "year": "2021",
-                  "paper": "General Economics",
-                  "section": "Section A",
+                  "paper": "Entrepreneurship",
+                  "section": "Part II: General Economics",
                   "qid": "Q1"
-                },
-                {
-                  "year": "2024",
-                  "paper": "Enterprise Creation",
-                  "section": "Economics",
-                  "qid": "Q5"
                 },
                 {
                   "year": "2020",
                   "paper": "General Economics",
-                  "section": "Section A",
+                  "section": "Section A: General Economics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
-                  "paper": "General Economics",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2023",
-                  "paper": "Enterprise Creation",
-                  "section": "Section A",
+                  "paper": "Enterprise Creation and Entrepreneurship",
+                  "section": "Section 2: General Economics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -2241,51 +2097,33 @@ const _notesYear1 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2020",
-                  "paper": "General Economics",
-                  "section": "Section B",
-                  "qid": "Q2"
-                },
-                {
-                  "year": "2022",
-                  "paper": "General Economics",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2022",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2023",
-                  "paper": "Enterprise Creation",
-                  "section": "Section A",
+                  "section": "Section 2: General Economics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -2357,56 +2195,44 @@ const _notesYear1 = {
               "value": [
                 {
                   "year": "2021",
-                  "paper": "General Economics",
-                  "section": "Section A",
+                  "paper": "Entrepreneurship",
+                  "section": "Part II: General Economics",
                   "qid": "Q3"
                 },
                 {
                   "year": "2022",
-                  "paper": "General Economics",
-                  "section": "Section A",
+                  "paper": "Enterprise Creation and Entrepreneurship",
+                  "section": "Section 2: General Economics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2020",
                   "paper": "General Economics",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2022",
-                  "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2023",
-                  "paper": "Enterprise Creation",
-                  "section": "Section A",
+                  "section": "Section A: General Economics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -2482,55 +2308,31 @@ const _notesYear1 = {
                 {
                   "year": "2020",
                   "paper": "Company Law",
-                  "section": "Section A",
+                  "section": "Section A: Company Law",
                   "qid": "Q1"
-                },
-                {
-                  "year": "2024",
-                  "paper": "Enterprise Creation",
-                  "section": "Company Law",
-                  "qid": "Q8"
                 },
                 {
                   "year": "2020",
                   "paper": "Entrepreneurship",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Entrepreneurship",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2022",
-                  "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2023",
-                  "paper": "Enterprise Creation",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Enterprise Creation and Entrepreneurship",
-                  "section": "Section A",
+                  "section": "Section A: Entrepreneurship",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -2599,25 +2401,19 @@ const _notesYear1 = {
                 {
                   "year": "2020",
                   "paper": "Company Law",
-                  "section": "Section B",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2020",
-                  "paper": "Company Law",
-                  "section": "Section A",
+                  "section": "Section A: Company Law",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -2690,25 +2486,19 @@ const _notesYear1 = {
                 {
                   "year": "2020",
                   "paper": "Company Law",
-                  "section": "Section B",
-                  "qid": "Q2"
-                },
-                {
-                  "year": "2020",
-                  "paper": "Company Law",
-                  "section": "Section A",
+                  "section": "Section A: Company Law",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -2772,26 +2562,26 @@ const _notesYear1 = {
               "value": [
                 {
                   "year": "2021",
-                  "paper": "Company Law",
-                  "section": "Section B",
+                  "paper": "Entrepreneurship",
+                  "section": "Part III: Company Law",
                   "qid": "Q2"
                 },
                 {
                   "year": "2020",
                   "paper": "Company Law",
-                  "section": "Section A",
+                  "section": "Section A: Company Law",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -2866,50 +2656,50 @@ const _notesYear1 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "Law and Citizenship",
-                  "section": "Section A",
+                  "paper": "Law and Citizenship Education",
+                  "section": "Section A: Introduction to Law and Fundamental Rights",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "Law and Citizenship Education",
-                  "section": "Section A",
+                  "section": "Section A: Introduction to Law and Fundamental Rights",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Law and Citizenship Education",
-                  "section": "Section A",
+                  "section": "Section A: Introduction to Law and Fundamental Rights",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Law and Citizenship Education",
-                  "section": "Section A",
+                  "section": "Section A: Introduction to Law and Fundamental Rights",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Law and Citizenship Education",
-                  "section": "Section A",
+                  "section": "Section A: Introduction to Law and Fundamental Rights",
                   "qid": "Q1"
                 },
                 {
                   "year": "2021",
                   "paper": "Law and Citizenship",
-                  "section": "Section A",
+                  "section": "Section A: Introduction to Law and Fundamental Rights",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -2982,43 +2772,43 @@ const _notesYear1 = {
                 {
                   "year": "2021",
                   "paper": "Law and Citizenship",
-                  "section": "Section A",
+                  "section": "Section A: Introduction to Law and Fundamental Rights",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "Law and Citizenship Education",
-                  "section": "Section A",
+                  "section": "Section A: Introduction to Law and Fundamental Rights",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Law and Citizenship Education",
-                  "section": "Section A",
+                  "section": "Section A: Introduction to Law and Fundamental Rights",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Law and Citizenship Education",
-                  "section": "Section A",
+                  "section": "Section A: Introduction to Law and Fundamental Rights",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Law and Citizenship Education",
-                  "section": "Section A",
+                  "section": "Section A: Introduction to Law and Fundamental Rights",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -3086,50 +2876,50 @@ const _notesYear1 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "Law and Citizenship",
-                  "section": "Section B",
+                  "paper": "Law and Citizenship Education",
+                  "section": "Section B: Civics, Ethics, Moral and Citizenship Education",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "Law and Citizenship Education",
-                  "section": "Section A",
+                  "section": "Section A: Introduction to Law and Fundamental Rights",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Law and Citizenship Education",
-                  "section": "Section A",
+                  "section": "Section A: Introduction to Law and Fundamental Rights",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Law and Citizenship Education",
-                  "section": "Section A",
+                  "section": "Section A: Introduction to Law and Fundamental Rights",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Law and Citizenship Education",
-                  "section": "Section A",
+                  "section": "Section A: Introduction to Law and Fundamental Rights",
                   "qid": "Q1"
                 },
                 {
                   "year": "2021",
                   "paper": "Law and Citizenship",
-                  "section": "Section A",
+                  "section": "Section A: Introduction to Law and Fundamental Rights",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -3221,43 +3011,31 @@ const _notesYear1 = {
                 {
                   "year": "2020",
                   "paper": "French Language",
-                  "section": "Section A",
+                  "section": "Section A: Questions à Choix Multiples",
                   "qid": "Q1"
                 },
                 {
                   "year": "2021",
                   "paper": "French Language",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2022",
-                  "paper": "French Language",
-                  "section": "Section A",
+                  "section": "Section A: QCM",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "French Language",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2025",
-                  "paper": "French Language",
-                  "section": "Section A",
+                  "section": "Section A: La Langue (Grammaire, Conjugaison et Vocabulaire)",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -3322,43 +3100,31 @@ const _notesYear1 = {
                 {
                   "year": "2020",
                   "paper": "French Language",
-                  "section": "Section A",
+                  "section": "Section A: Questions à Choix Multiples",
                   "qid": "Q2"
                 },
                 {
                   "year": "2021",
                   "paper": "French Language",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2022",
-                  "paper": "French Language",
-                  "section": "Section A",
+                  "section": "Section A: QCM",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "French Language",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2025",
-                  "paper": "French Language",
-                  "section": "Section A",
+                  "section": "Section A: La Langue (Grammaire, Conjugaison et Vocabulaire)",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -3430,49 +3196,43 @@ const _notesYear1 = {
                 {
                   "year": "2020",
                   "paper": "English Language",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2024",
-                  "paper": "English",
-                  "section": "Grammar & Vocabulary",
+                  "section": "Section A: Reading Comprehension",
                   "qid": "Q1"
                 },
                 {
                   "year": "2021",
                   "paper": "English Language",
-                  "section": "Section A",
+                  "section": "Section A: Reading Comprehension",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "English Language",
-                  "section": "Section A",
+                  "section": "Section A: Reading Comprehension",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "English Language",
-                  "section": "Section A",
+                  "section": "Section A: Reading Comprehension",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
-                  "paper": "English",
-                  "section": "Section A",
+                  "paper": "English Language",
+                  "section": "Section A: Reading Comprehension",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -3529,43 +3289,43 @@ const _notesYear1 = {
                 {
                   "year": "2020",
                   "paper": "English Language",
-                  "section": "Section A",
+                  "section": "Section A: Reading Comprehension",
                   "qid": "Q2"
                 },
                 {
                   "year": "2024",
-                  "paper": "English",
-                  "section": "Reading Comprehension",
+                  "paper": "English Language",
+                  "section": "Section A: Reading Comprehension",
                   "qid": "Q1"
                 },
                 {
                   "year": "2021",
                   "paper": "English Language",
-                  "section": "Section A",
+                  "section": "Section A: Reading Comprehension",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "English Language",
-                  "section": "Section A",
+                  "section": "Section A: Reading Comprehension",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "English Language",
-                  "section": "Section A",
+                  "section": "Section A: Reading Comprehension",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -3622,43 +3382,43 @@ const _notesYear1 = {
                 {
                   "year": "2020",
                   "paper": "English Language",
-                  "section": "Section B",
+                  "section": "Section B: Grammar and Vocabulary",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
-                  "paper": "English",
-                  "section": "Composition",
+                  "paper": "English Language",
+                  "section": "Section D: Composition",
                   "qid": "Q1"
                 },
                 {
                   "year": "2021",
                   "paper": "English Language",
-                  "section": "Section A",
+                  "section": "Section A: Reading Comprehension",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "English Language",
-                  "section": "Section A",
+                  "section": "Section A: Reading Comprehension",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "English Language",
-                  "section": "Section A",
+                  "section": "Section A: Reading Comprehension",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {

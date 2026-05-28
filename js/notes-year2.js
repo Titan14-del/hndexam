@@ -36,38 +36,32 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "C Programming",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "paper": "Case Study - SWE",
+                  "section": "C Prog",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "section": "Section A: Programming — I. Structured Programming (C)",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "section": "Section A: Programming — I. Structured Programming (C)",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -140,38 +134,32 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "C Programming",
-                  "section": "Section A",
+                  "paper": "Case Study - SWE",
+                  "section": "C Prog",
                   "qid": "Q2"
                 },
                 {
-                  "year": "2021",
-                  "paper": "Practice of Computer",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2023",
                   "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "section": "Section A: Programming — I. Structured Programming (C)",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "section": "Section A: Programming — I. Structured Programming (C)",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -255,38 +243,32 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2021",
-                  "paper": "C Programming",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
                   "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "section": "C Programming",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "section": "Section A: Programming — I. Structured Programming (C)",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "section": "Section A: Programming — I. Structured Programming (C)",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -357,38 +339,32 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "C Programming",
-                  "section": "Section B",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "paper": "Case Study - SWE",
+                  "section": "C Prog",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "section": "Section A: Programming — I. Structured Programming (C)",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "section": "Section A: Programming — I. Structured Programming (C)",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -455,38 +431,32 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "C Programming",
-                  "section": "Section A",
+                  "paper": "Case Study - SWE",
+                  "section": "C Prog",
                   "qid": "Q4"
                 },
                 {
-                  "year": "2021",
-                  "paper": "Practice of Computer",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2023",
                   "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "section": "Section A: Programming — I. Structured Programming (C)",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "section": "Section A: Programming — I. Structured Programming (C)",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -553,38 +523,32 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2021",
-                  "paper": "C Programming",
-                  "section": "Section B",
+                  "paper": "Practice of Computer",
+                  "section": "C Programming",
                   "qid": "Q2"
                 },
                 {
-                  "year": "2021",
-                  "paper": "Practice of Computer",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2023",
                   "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "section": "Section A: Programming — I. Structured Programming (C)",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "section": "Section A: Programming — I. Structured Programming (C)",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -660,38 +624,32 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2021",
-                  "paper": "C Programming",
-                  "section": "Section B",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
                   "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "section": "C Programming",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "section": "Section A: Programming — I. Structured Programming (C)",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "section": "Section A: Programming — I. Structured Programming (C)",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -771,50 +729,38 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "OOP",
-                  "section": "Section A",
+                  "paper": "Case Study - SWE",
+                  "section": "OOP",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
-                  "paper": "Case Study",
-                  "section": "Algorithm and Programming",
-                  "qid": "Q3"
-                },
-                {
-                  "year": "2021",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
+                  "section": "Section A: Algorithm and Programming",
+                  "qid": "Q3"
                 },
                 {
                   "year": "2025",
                   "paper": "Case Study",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2020",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Section A: Algorithm and Programming - I. Algorithms",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Section A: Algorithm and Programming",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -855,38 +801,32 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "OOP",
-                  "section": "Section B",
+                  "paper": "Case Study - SWE",
+                  "section": "OOP",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
-                  "paper": "Case Study",
-                  "section": "Algorithm and Programming",
-                  "qid": "Q3"
-                },
-                {
-                  "year": "2021",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
+                  "section": "Section A: Algorithm and Programming",
+                  "qid": "Q3"
                 },
                 {
                   "year": "2025",
                   "paper": "Case Study",
-                  "section": "Section A",
+                  "section": "Section A: Algorithm and Programming - I. Algorithms",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -922,51 +862,33 @@ const _notesYear2 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2021",
-                  "paper": "OOP",
-                  "section": "Section A",
-                  "qid": "Q3"
-                },
-                {
-                  "year": "2020",
-                  "paper": "OOP",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2020",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "OOP",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Section A: Algorithm and Programming",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Case Study",
-                  "section": "Section A",
+                  "section": "Section A: Algorithm and Programming - I. Algorithms",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -999,50 +921,38 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2021",
-                  "paper": "OOP",
-                  "section": "Section B",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2020",
-                  "paper": "OOP",
-                  "section": "Section A",
+                  "paper": "Practice of Computer",
+                  "section": "OOP",
                   "qid": "Q1"
                 },
                 {
                   "year": "2020",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "OOP",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Section A: Algorithm and Programming",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Case Study",
-                  "section": "Section A",
+                  "section": "Section A: Algorithm and Programming - I. Algorithms",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -1101,45 +1011,15 @@ const _notesYear2 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2020",
-                  "paper": "Algorithms & DS",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2024",
-                  "paper": "Case Study",
-                  "section": "Algorithms",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Practice of Computer",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2020",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -1260,45 +1140,21 @@ const _notesYear2 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2020",
-                  "paper": "Algorithms & DS",
-                  "section": "Section B",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Algorithms & DS",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2020",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Practice of Computer",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2021",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Algorithms",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -1360,26 +1216,20 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2021",
-                  "paper": "Algorithms & DS",
-                  "section": "Section A",
+                  "paper": "Case Study - SWE",
+                  "section": "Algorithms",
                   "qid": "Q2"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Practice of Computer",
-                  "section": "Section A",
-                  "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -1443,27 +1293,15 @@ const _notesYear2 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2020",
-                  "paper": "Algorithms & DS",
-                  "section": "Section A",
-                  "qid": "Q3"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Practice of Computer",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -1523,27 +1361,15 @@ const _notesYear2 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2020",
-                  "paper": "Algorithms & DS",
-                  "section": "Section B",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Practice of Computer",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -1611,38 +1437,20 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2021",
-                  "paper": "Algorithms & DS",
-                  "section": "Section A",
+                  "paper": "Case Study - SWE",
+                  "section": "Algorithms",
                   "qid": "Q2"
-                },
-                {
-                  "year": "2020",
-                  "paper": "Algorithms & DS",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2020",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -1737,39 +1545,27 @@ const _notesYear2 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2020",
-                  "paper": "System Analysis & Design",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "System Analysis & Design",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2022",
                   "paper": "System Analysis and Design",
-                  "section": "Section A",
+                  "section": "Section A: Information System and Database — I. Object Modeling",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "System Analysis and Design",
-                  "section": "Section A",
+                  "section": "Section A: Information Systems and Database - Part I: Object Modeling MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -1912,39 +1708,27 @@ const _notesYear2 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2020",
-                  "paper": "System Analysis & Design",
-                  "section": "Section B",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "System Analysis & Design",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2022",
                   "paper": "System Analysis and Design",
-                  "section": "Section A",
+                  "section": "Section A: Information System and Database — I. Object Modeling",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "System Analysis and Design",
-                  "section": "Section A",
+                  "section": "Section A: Information Systems and Database - Part I: Object Modeling MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -1975,39 +1759,27 @@ const _notesYear2 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2021",
-                  "paper": "System Analysis & Design",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2020",
-                  "paper": "System Analysis & Design",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2022",
                   "paper": "System Analysis and Design",
-                  "section": "Section A",
+                  "section": "Section A: Information System and Database — I. Object Modeling",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "System Analysis and Design",
-                  "section": "Section A",
+                  "section": "Section A: Information Systems and Database - Part I: Object Modeling MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -2062,38 +1834,26 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "Database & SQL",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2020",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Database",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Section A: Algorithm and Programming",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -2215,38 +1975,32 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "Database & SQL",
-                  "section": "Section B",
+                  "paper": "Case Study - SWE",
+                  "section": "Database",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
-                  "paper": "Case Study",
-                  "section": "Database",
-                  "qid": "Q4"
-                },
-                {
-                  "year": "2021",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
+                  "section": "Section B: Database Development and Administration",
+                  "qid": "Q4"
                 },
                 {
                   "year": "2025",
                   "paper": "Case Study",
-                  "section": "Section A",
+                  "section": "Section A: Algorithm and Programming - I. Algorithms",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -2311,26 +2065,20 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2021",
-                  "paper": "Database & SQL",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Practice of Computer",
-                  "section": "Section A",
+                  "paper": "Case Study - SWE",
+                  "section": "Database",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -2382,38 +2130,26 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "Database & SQL",
-                  "section": "Section B",
+                  "paper": "Case Study - SWE",
+                  "section": "Database",
                   "qid": "Q2"
-                },
-                {
-                  "year": "2020",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Section A: Algorithm and Programming",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -2484,27 +2220,15 @@ const _notesYear2 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2021",
-                  "paper": "Database & SQL",
-                  "section": "Section A",
-                  "qid": "Q3"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Practice of Computer",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -2577,50 +2301,38 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "Web Programming",
-                  "section": "Section A",
+                  "paper": "Case Study - SWE",
+                  "section": "Web",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
-                  "paper": "Case Study",
-                  "section": "Web Design",
-                  "qid": "Q5"
-                },
-                {
-                  "year": "2021",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
+                  "section": "Section C: Web Design",
+                  "qid": "Q5"
                 },
                 {
                   "year": "2025",
                   "paper": "Case Study",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2020",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Section A: Algorithm and Programming - I. Algorithms",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Section A: Algorithm and Programming",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -2660,33 +2372,21 @@ const _notesYear2 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2020",
-                  "paper": "Web Programming",
-                  "section": "Section A",
-                  "qid": "Q3"
-                },
-                {
-                  "year": "2020",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2024",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Section A: Algorithm and Programming",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -2720,32 +2420,26 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "Web Programming",
-                  "section": "Section B",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2020",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Web",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Section A: Algorithm and Programming",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -2800,32 +2494,20 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "Networking",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2020",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Networking",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -2908,33 +2590,15 @@ const _notesYear2 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2020",
-                  "paper": "Networking",
-                  "section": "Section A",
-                  "qid": "Q2"
-                },
-                {
-                  "year": "2024",
-                  "paper": "Case Study",
-                  "section": "Networking",
-                  "qid": "Q6"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -2997,39 +2661,21 @@ const _notesYear2 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2021",
-                  "paper": "Networking",
-                  "section": "Section A",
-                  "qid": "Q2"
-                },
-                {
-                  "year": "2020",
-                  "paper": "Networking",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
                   "year": "2020",
                   "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Networking",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -3132,38 +2778,26 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "Networking",
-                  "section": "Section B",
+                  "paper": "Case Study - SWE",
+                  "section": "Networking",
                   "qid": "Q1"
                 },
                 {
                   "year": "2021",
-                  "paper": "Networking",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2020",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "paper": "Practice of Computer",
+                  "section": "Networking",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
@@ -3227,25 +2861,19 @@ const _notesYear2 = {
                 {
                   "year": "2020",
                   "paper": "Operating Systems",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Section A: Operating Systems",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -3290,31 +2918,25 @@ const _notesYear2 = {
                 {
                   "year": "2020",
                   "paper": "Operating Systems",
-                  "section": "Section A",
+                  "section": "Section A: Operating Systems",
                   "qid": "Q2"
                 },
                 {
                   "year": "2021",
-                  "paper": "Operating Systems",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "paper": "Information System",
+                  "section": "Operating Systems",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -3354,32 +2976,26 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2021",
-                  "paper": "Operating Systems",
-                  "section": "Section A",
+                  "paper": "Information System",
+                  "section": "Operating Systems",
                   "qid": "Q1"
                 },
                 {
                   "year": "2020",
                   "paper": "Operating Systems",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Section A: Operating Systems",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -3411,32 +3027,26 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2021",
-                  "paper": "Operating Systems",
-                  "section": "Section A",
+                  "paper": "Information System",
+                  "section": "Operating Systems",
                   "qid": "Q2"
                 },
                 {
                   "year": "2020",
                   "paper": "Operating Systems",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "section": "Section A: Operating Systems",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -3475,44 +3085,38 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "Information Systems",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
                   "paper": "Information System",
-                  "section": "Section A",
+                  "section": "Section A: System Architecture",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "Information System",
-                  "section": "Section A",
+                  "section": "Section A: System Architecture",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Information Systems",
-                  "section": "Section A",
+                  "section": "Section A: System Architecture",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Information Systems",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -3552,44 +3156,38 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "Information Systems",
-                  "section": "Section A",
-                  "qid": "Q2"
-                },
-                {
-                  "year": "2021",
                   "paper": "Information System",
-                  "section": "Section A",
-                  "qid": "Q1"
+                  "section": "Section A: System Architecture",
+                  "qid": "Q2"
                 },
                 {
                   "year": "2022",
                   "paper": "Information System",
-                  "section": "Section A",
+                  "section": "Section A: System Architecture",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Information Systems",
-                  "section": "Section A",
+                  "section": "Section A: System Architecture",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Information Systems",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -3632,45 +3230,39 @@ const _notesYear2 = {
               "type": "related",
               "value": [
                 {
-                  "year": "2021",
-                  "paper": "Information Systems",
-                  "section": "Section A",
-                  "qid": "Q2"
-                },
-                {
                   "year": "2020",
                   "paper": "Information System",
-                  "section": "Section A",
+                  "section": "Section A: System Architecture",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "Information System",
-                  "section": "Section A",
+                  "section": "Section A: System Architecture",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Information Systems",
-                  "section": "Section A",
+                  "section": "Section A: System Architecture",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Information Systems",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -3721,38 +3313,20 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2021",
-                  "paper": "Mobile Programming",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2020",
-                  "paper": "Mobile Programming",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2020",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
+                  "paper": "System Analysis & Design",
+                  "section": "Mobile Programming",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -3789,38 +3363,20 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2021",
-                  "paper": "Mobile Programming",
-                  "section": "Section A",
+                  "paper": "System Analysis & Design",
+                  "section": "Mobile Programming",
                   "qid": "Q2"
-                },
-                {
-                  "year": "2020",
-                  "paper": "Mobile Programming",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2020",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
-                },
-                {
-                  "year": "2021",
-                  "paper": "Case Study - SWE",
-                  "section": "Section A",
-                  "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -3863,44 +3419,44 @@ const _notesYear2 = {
               "value": [
                 {
                   "year": "2020",
-                  "paper": "Discrete Mathematics",
-                  "section": "Section A",
+                  "paper": "Mathematics",
+                  "section": "Section A: Statistics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2021",
                   "paper": "Discrete Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "Discrete Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Discrete Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Discrete Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]
@@ -3941,43 +3497,43 @@ const _notesYear2 = {
                 {
                   "year": "2021",
                   "paper": "Discrete Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2020",
-                  "paper": "Discrete Mathematics",
-                  "section": "Section A",
+                  "paper": "Mathematics",
+                  "section": "Section A: Statistics",
                   "qid": "Q1"
                 },
                 {
                   "year": "2022",
                   "paper": "Discrete Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Discrete Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2025",
                   "paper": "Discrete Mathematics",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 },
                 {
                   "year": "2024",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: I. MCQs",
                   "qid": "Q1"
                 },
                 {
                   "year": "2023",
                   "paper": "Computer Technology",
-                  "section": "Section A",
+                  "section": "Section A: Multiple Choice Questions",
                   "qid": "Q1"
                 }
               ]

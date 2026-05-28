@@ -120,14 +120,15 @@ function renderPaper(year, paperIdx) {
           <h2>${sec.title}</h2>
           <span class="marks-badge">${sec.marks} marks</span>
         </div>
-        ${sec.questions.map((q, qi) => renderQuestion(q, si, qi)).join('')}
+        ${sec.questions.map((q, qi) => renderQuestion(q, si, qi, year, paper.title, sec.title)).join('')}
       </div>
     `).join('')}
   `;
 }
 
-function renderQuestion(q, si, qi) {
+function renderQuestion(q, si, qi, year, paperTitle, sectionTitle) {
   const ansId = `ans-${si}-${qi}`;
+  const relatedNotes = renderRelatedNotes(year, paperTitle, sectionTitle, q.id || (qi+1));
   return `
     <div class="question" id="q-${si}-${qi}">
       <div class="question-header">
@@ -144,9 +145,49 @@ function renderQuestion(q, si, qi) {
       <div class="answer-content" id="${ansId}">
         ${formatAnswer(q.answer)}
         ${q.tutorial ? `<div class="answer-tutorial"><strong>&#128218; Explanation:</strong> ${q.tutorial}</div>` : ''}
+        ${relatedNotes}
       </div>
     </div>
   `;
+}
+
+function renderRelatedNotes(year, paperTitle, sectionTitle, qid) {
+  const qidStr = 'Q' + qid;
+  const links = [];
+  for (const yearId of ['year1', 'year2']) {
+    const yearData = notesData[yearId];
+    if (!yearData) continue;
+    for (const subject of yearData.subjects) {
+      for (const chapter of subject.chapters) {
+        for (const block of chapter.content) {
+          if (block.type === 'related' && Array.isArray(block.value)) {
+            for (const entry of block.value) {
+              const paperMatch = paperTitle.toLowerCase().includes(entry.paper.toLowerCase()) ||
+                                 entry.paper.toLowerCase().includes(paperTitle.toLowerCase());
+              const sectionMatch = sectionTitle.toLowerCase().includes(entry.section.toLowerCase()) ||
+                                   entry.section.toLowerCase().includes(sectionTitle.toLowerCase());
+              if (entry.year === year && paperMatch && sectionMatch && entry.qid === qidStr) {
+                links.push({
+                  yearId,
+                  subjectId: subject.id,
+                  chapterId: chapter.id,
+                  subjectTitle: subject.title,
+                  chapterTitle: chapter.title
+                });
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  if (links.length === 0) return '';
+  const uniqueLinks = links.filter((l, i, arr) => i === arr.findIndex(x => x.chapterId === l.chapterId));
+  return `<div class="question-related-notes"><strong>&#128221; Related Notes:</strong> ` +
+    uniqueLinks.map(l =>
+      `<a href="#" onclick="navigateToNotes('chapter','${l.yearId}','${l.subjectId}','${l.chapterId}');return false">${l.subjectTitle} &middot; ${l.chapterTitle}</a>`
+    ).join(' &nbsp;|&nbsp; ') +
+    `</div>`;
 }
 
 function formatQuestionText(text) {
