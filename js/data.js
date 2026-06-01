@@ -2058,7 +2058,7 @@ const examData = {
           }
         ]
       },
-                                          {
+                                                      {
         "title": "Case Study - SWE",
         "duration": "6 hours",
         "credits": 14,
