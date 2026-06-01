@@ -2058,7 +2058,7 @@ const examData = {
           }
         ]
       },
-      {
+                  {
         "title": "Case Study - SWE",
         "duration": "6 hours",
         "credits": 14,
@@ -2067,126 +2067,58 @@ const examData = {
             "title": "Algorithms",
             "marks": 20,
             "questions": [
-              {
-                "id": 1,
-                "text": "What is algorithm? List 4 characteristics.",
-                "marks": 5,
-                "answer": "A finite sequence of steps to solve a problem. Characteristics: Finiteness, Definiteness, Input, Output, Effectiveness."
-              },
-              {
-                "id": 2,
-                "text": "Weight avg algorithm: a)Control structures? b)Flowchart. c)Algorithm vs program.",
-                "marks": 11,
-                "answer": "a)Sequence + Selection. b)Start->Input->If negative?→Error/Compute→Display->End. c)Algorithm=conceptual; Program=executable."
-              },
-              {
-                "id": 3,
-                "text": "VB.NET declare age variable.",
-                "marks": 3,
-                "answer": "Dim age As Integer"
-              },
-              {
-                "id": 4,
-                "text": "VB.NET prompt name, display Hello name!",
-                "marks": 2,
-                "answer": "Dim n$=InputBox('Name:'):MsgBox('Hello '&n&'!')"
-              }
+              {"id": 1, "text": "What is algorithm? List 4 characteristics.", "marks": 5, "answer": "An algorithm is a finite, step-by-step sequence of instructions for solving a problem or accomplishing a task.\n\nFour characteristics:\n1) Finiteness: the algorithm must terminate after a finite number of steps.\n2) Definiteness: each step must be precisely and unambiguously defined.\n3) Input: zero or more input values must be specified.\n4) Output: at least one output value must be produced.\n5) Effectiveness: each step must be basic enough to be carried out (feasible)."},
+              {"id": 2, "text": "Design an algorithm to calculate the weighted average of three subjects where the weights are: Math (40%), English (30%), Science (30%). a) Identify the control structures used. b) Draw a flowchart. c) Differentiate between an algorithm and a program.", "marks": 5, "answer": "Algorithm:\n1. START\n2. INPUT mathScore\n3. INPUT englishScore\n4. INPUT scienceScore\n5. SET weightedAvg = mathScore*0.40 + englishScore*0.30 + scienceScore*0.30\n6. OUTPUT weightedAvg\n7. END\n\na) Control structures used: sequence (steps execute in order), assignment (step 5), input/output operations (steps 2-4, 6).\n\nb) Flowchart: Start oval → Input parallelogram (mathScore) → Input parallelogram (englishScore) → Input parallelogram (scienceScore) → Process rectangle (weightedAvg = math*0.4 + eng*0.3 + sci*0.3) → Output parallelogram (weightedAvg) → End oval.\n\nc) Algorithm vs Program:\n- Algorithm: a generic, language-independent step-by-step problem-solving method. Can be expressed in pseudocode or plain English.\n- Program: a specific implementation of an algorithm written in a particular programming language (C, Java, Python) that can be compiled and executed by a computer.\n- An algorithm exists in the design phase; a program is the executable product."},
+              {"id": 3, "text": "Write an algorithm to find the largest element in an array of N numbers.", "marks": 5, "answer": "Algorithm to find the maximum element in an array:\n1. START\n2. INPUT N (number of elements)\n3. DECLARE array arr[N]\n4. FOR i = 0 TO N-1\n5.    INPUT arr[i]\n6. END FOR\n7. SET max = arr[0]\n8. FOR i = 1 TO N-1\n9.    IF arr[i] > max THEN\n10.       SET max = arr[i]\n11.   END IF\n12. END FOR\n13. OUTPUT max\n14. END\n\nThis algorithm uses:\n- Sequence (steps execute in order)\n- Iteration (FOR loops for input and comparison)\n- Selection (IF condition to compare values)\n- Time complexity: O(N) where N is the number of elements."},
+              {"id": 4, "text": "a) What is a flowchart? List four standard flowchart symbols with their meanings.\nb) Write the pseudocode to check whether a number is prime or not.", "marks": 5, "answer": "a) A flowchart is a graphical representation of an algorithm using standardized symbols connected by arrows to show the sequence of steps.\n\nFour standard flowchart symbols:\n1) Oval/Terminator: represents START and END of the algorithm.\n2) Parallelogram: represents INPUT/OUTPUT operations.\n3) Rectangle/Process: represents computation or data processing.\n4) Diamond/Decision: represents a conditional branch (YES/NO or TRUE/FALSE).\n5) Arrows/Flowlines: indicate the direction of flow between symbols.\n\nb) Pseudocode to check if a number is prime:\n   START\n   INPUT number\n   IF number <= 1 THEN\n       OUTPUT \"Not prime\"\n       END\n   END IF\n   SET isPrime = TRUE\n   FOR i = 2 TO sqrt(number)\n       IF number MOD i == 0 THEN\n           SET isPrime = FALSE\n           BREAK\n       END IF\n   END FOR\n   IF isPrime == TRUE THEN\n       OUTPUT \"Prime\"\n   ELSE\n       OUTPUT \"Not prime\"\n   END IF\n   END"}
             ]
           },
           {
             "title": "C Prog",
             "marks": 15,
             "questions": [
-              {
-                "id": 1,
-                "text": "a)Define C variable. b)Syntax. c)Outputs for a=20,b=10,c=15,d=5.",
-                "marks": 8,
-                "answer": "a) A C variable is a named location in memory that stores a value of a specific data type. It has a name (identifier), a type (int, float, char, etc.), a value, and a memory address. Variables must be declared before use.\n\nb) Syntax for declaring a C variable:\n   data_type variable_name;\n   Example: int age;\n   \n   Syntax for initializing:\n   data_type variable_name = value;\n   Example: int age = 25;\n   \n   Multiple declarations:\n   int a, b, c;\n\nc) Computing outputs for a=20, b=10, c=15, d=5:\n   Expression 1: a + b - c = 20 + 10 - 15 = 15\n   Expression 2: a * b / c = 20 * 10 / 15 = 200 / 15 = 13 (integer division)\n   Expression 3: (a + b) * c / d = (20 + 10) * 15 / 5 = 30 * 15 / 5 = 450 / 5 = 90\n   Expression 4: a % d + b = 20 % 5 + 10 = 0 + 10 = 10\n\nNote: Outputs depend on the specific expressions given. The above shows the methodology for computing C expression results."
-              }
+              {"id": 1, "text": "a) Define a C variable.\nb) Write the syntax for declaring and initializing a variable in C.\nc) Evaluate the following C expressions given a=20, b=10, c=15, d=5:\n   i) a + b - c\n   ii) a * b / c\n   iii) (a + b) * c / d\n   iv) a % d + b", "marks": 5, "answer": "a) A C variable is a named memory location that stores a value of a specific data type. Variables must be declared before use with a data type (int, float, char, double). The value stored in a variable can be changed during program execution.\n\nb) Declaration syntax:\n   data_type variable_name;\n   Example: int age;\n\n   Declaration with initialization:\n   data_type variable_name = value;\n   Example: int age = 25;\n\n   Multiple declarations:\n   int a, b, c;\n\nc) Given a=20, b=10, c=15, d=5:\n   i) a + b - c = 20 + 10 - 15 = 15\n   ii) a * b / c = 20 * 10 / 15 = 200 / 15 = 13 (integer division truncates)\n   iii) (a + b) * c / d = (20 + 10) * 15 / 5 = 30 * 15 / 5 = 450 / 5 = 90\n   iv) a % d + b = 20 % 5 + 10 = 0 + 10 = 10"},
+              {"id": 2, "text": "Write a complete C program to compute the factorial of a given positive integer N using a loop.", "marks": 5, "answer": "#include <stdio.h>\n\nint main() {\n    int N, i;\n    unsigned long long factorial = 1;\n\n    printf(\"Enter a positive integer: \");\n    scanf(\"%d\", &N);\n\n    if (N < 0) {\n        printf(\"Error: Factorial is not defined for negative numbers.\\n\");\n        return 1;\n    }\n\n    for (i = 1; i <= N; i++) {\n        factorial *= i;\n    }\n\n    printf(\"Factorial of %d = %llu\\n\", N, factorial);\n    return 0;\n}\n\nExplanation:\n- The program reads an integer N.\n- A for loop iterates from 1 to N, multiplying each value into the factorial variable.\n- unsigned long long is used to handle larger factorial values.\n- Error checking is included for negative input."},
+              {"id": 3, "text": "Write a complete C program to check if a given integer is a palindrome (e.g., 121 reads the same forwards and backwards).", "marks": 5, "answer": "#include <stdio.h>\n\nint main() {\n    int originalNum, num, reversed = 0, remainder;\n\n    printf(\"Enter an integer: \");\n    scanf(\"%d\", &originalNum);\n\n    num = originalNum;\n\n    while (num != 0) {\n        remainder = num % 10;\n        reversed = reversed * 10 + remainder;\n        num /= 10;\n    }\n\n    if (originalNum == reversed) {\n        printf(\"%d is a palindrome.\\n\", originalNum);\n    } else {\n        printf(\"%d is not a palindrome.\\n\", originalNum);\n    }\n\n    return 0;\n}\n\nExplanation:\n- Store the original number.\n- Reverse the number by repeatedly extracting the last digit (mod 10) and building the reversed number.\n- Compare the original with the reversed number.\n- Examples: 121 → reversed 121 → palindrome. 123 → reversed 321 → not palindrome."}
             ]
           },
           {
             "title": "OOP",
-            "marks": 10,
+            "marks": 15,
             "questions": [
-              {
-                "id": 1,
-                "text": "Explain auto numeric,text,decimal,date fields in Customer table.",
-                "marks": 8,
-                "answer": "Auto=auto-increment unique. Text=VARCHAR. Decimal=exact currency. Date=YYYY-MM-DD."
-              },
-              {
-                "id": 2,
-                "text": "University Department class.",
-                "marks": 10,
-                "answer": "class Dept{String n,p,l,s;Dept(n,p,l,s){this.n=n;this.p=p;this.l=l;this.s=s;}void display(){System.out.println(n+' '+p+' '+l+' '+s);}}"
-              }
+              {"id": 1, "text": "Explain the four main principles of Object-Oriented Programming.", "marks": 5, "answer": "The four main principles of OOP are:\n\n1) Encapsulation: bundling data (attributes) and methods (behaviors) together within a class, and restricting direct access to internal data using access modifiers (private, protected, public). Data hiding protects the integrity of the object.\n\n2) Inheritance: creating new classes (derived/child) from existing classes (base/parent), allowing the child class to reuse and extend the parent's attributes and methods. Promotes code reuse and hierarchical classification.\n\n3) Polymorphism: the ability of objects of different classes to respond to the same method call in their own specific way. Achieved through method overriding (runtime) and method overloading (compile-time).\n\n4) Abstraction: hiding complex implementation details and showing only the essential features of an object. Achieved through abstract classes and interfaces, allowing the user to interact with the object at a high level without understanding its internal complexity."},
+              {"id": 2, "text": "Create a University Department class in Java with attributes (name, professor, location, students) and a method to display department details.", "marks": 5, "answer": "public class Department {\n    private String name;\n    private String professor;\n    private String location;\n    private int studentCount;\n\n    // Constructor\n    public Department(String name, String professor, String location, int studentCount) {\n        this.name = name;\n        this.professor = professor;\n        this.location = location;\n        this.studentCount = studentCount;\n    }\n\n    // Method to display department details\n    public void displayDetails() {\n        System.out.println(\"Department: \" + name);\n        System.out.println(\"Head of Department: \" + professor);\n        System.out.println(\"Location: \" + location);\n        System.out.println(\"Number of Students: \" + studentCount);\n    }\n\n    // Main method for testing\n    public static void main(String[] args) {\n        Department cs = new Department(\"Computer Science\", \"Dr. Smith\", \"Block A, Room 201\", 250);\n        cs.displayDetails();\n    }\n}\n\nKey OOP concepts demonstrated:\n- Encapsulation: private fields with public methods.\n- Constructor: initializes object state.\n- this keyword: refers to the current instance.\n- Method: displayDetails() exposes object behavior."},
+              {"id": 3, "text": "a) What is polymorphism in Java? b) Differentiate between method overloading (compile-time polymorphism) and method overriding (runtime polymorphism) with examples.", "marks": 5, "answer": "a) Polymorphism is the capability of objects of different classes to respond to the same method call in their own specific way. It allows one interface to be used for a general class of actions, with the specific action determined by the exact type of the object at runtime.\n\nb) Method Overloading (Compile-Time Polymorphism):\n- Multiple methods with the SAME name but DIFFERENT parameters (different number, type, or order of parameters).\n- Resolved at compile time.\n- Occurs within the same class.\n- Return type may or may not be different.\n- Example:\n  class Calculator {\n      int add(int a, int b) { return a + b; }\n      int add(int a, int b, int c) { return a + b + c; }\n      double add(double a, double b) { return a + b; }\n  }\n\nMethod Overriding (Runtime Polymorphism):\n- A subclass provides a SPECIFIC implementation of a method already defined in its parent class.\n- The method signatures must be identical (same name, parameters, and return type).\n- Resolved at runtime (dynamic method dispatch).\n- Requires inheritance (IS-A relationship).\n- The @Override annotation is used to indicate overriding.\n- Example:\n  class Animal {\n      void sound() { System.out.println(\"Animal makes a sound\"); }\n  }\n  class Dog extends Animal {\n      @Override\n      void sound() { System.out.println(\"Dog barks\"); }\n  }\n  // Usage:\n  Animal a = new Dog();\n  a.sound(); // Outputs: Dog barks"}
             ]
           },
           {
             "title": "Database",
             "marks": 20,
             "questions": [
-              {
-                "id": 1,
-                "text": "VEHICLE_OPERATOR: 1NF, FDs, anomalies, schema, normal form.",
-                "marks": 12,
-                "answer": "1NF: split repeats. FDs: VehicleID→Desc, {VehID,Op}→Route,Tariff. Anomalies: insert/delete/update. Not 2NF."
-              }
+              {"id": 1, "text": "Consider the VEHICLE_OPERATOR relation below:\nVehicleID | VehicleDesc | OperatorID | OperatorName | Route | Tariff\n\nGiven the functional dependencies:\nVehicleID → VehicleDesc\n{VehicleID, OperatorID} → {Route, Tariff}\n\na) Identify the primary key.\nb) What normal form is this relation in? Justify.\nc) List all insertion, deletion, and update anomalies that may occur.\nd) Decompose the relation into 3NF showing each step.", "marks": 8, "answer": "a) Primary key: {VehicleID, OperatorID} — together they uniquely determine Route and Tariff.\n\nb) The relation is in 1NF (atomic values) but NOT in 2NF because VehicleID → VehicleDesc is a partial dependency (VehicleDesc depends on only part of the composite key).\n\nc) Anomalies:\n- Insertion: cannot add a new vehicle until it has an operator assigned.\n- Deletion: deleting the last operator for a vehicle removes the vehicle description.\n- Update: changing a vehicle description requires updating all rows with that VehicleID.\n\nd) Decomposition to 3NF:\n\nStep 1 — 2NF:\n   Vehicle(VehicleID, VehicleDesc)  [PK: VehicleID]\n   Operation(VehicleID, OperatorID, OperatorName, Route, Tariff)  [PK: {VehicleID, OperatorID}]\n\nStep 2 — 3NF (remove transitive dependencies):\n   Vehicle(VehicleID, VehicleDesc)  [PK: VehicleID]\n   Operator(OperatorID, OperatorName)  [PK: OperatorID]\n   Schedule(VehicleID, OperatorID, Route, Tariff)  [PK: {VehicleID, OperatorID}, FK: VehicleID→Vehicle, FK: OperatorID→Operator]"},
+              {"id": 2, "text": "a) What is a foreign key? Give an example.\nb) Write SQL statements to create the following tables for a Library database:\n   - Book(BookID, Title, AuthorID, Publisher, Year)\n   - Author(AuthorID, Name, Nationality)\n   Include primary key, foreign key, and NOT NULL constraints.", "marks": 6, "answer": "a) A foreign key is a field (or set of fields) in one table that refers to the primary key in another table. It establishes a relationship between the two tables and enforces referential integrity.\n   Example: AuthorID in Book table references AuthorID in Author table.\n\nb) SQL statements:\n\nCREATE TABLE Author (\n    AuthorID INT PRIMARY KEY,\n    Name VARCHAR(100) NOT NULL,\n    Nationality VARCHAR(50)\n);\n\nCREATE TABLE Book (\n    BookID INT PRIMARY KEY,\n    Title VARCHAR(200) NOT NULL,\n    AuthorID INT NOT NULL,\n    Publisher VARCHAR(100),\n    Year INT,\n    FOREIGN KEY (AuthorID) REFERENCES Author(AuthorID)\n);\n\nThe FOREIGN KEY constraint ensures:\n- Every AuthorID in Book must exist in Author.\n- An author cannot be deleted if they have books in the Book table (unless CASCADE is specified)."},
+              {"id": 3, "text": "Write SQL queries for the following on a Student database with tables:\nStudent(StudentID, Name, Age, Major)\nEnrollment(StudentID, CourseID, Grade)\nCourse(CourseID, CourseName, Credits)\n\na) List all students majoring in Computer Science.\nb) Find the average age of students in each major.\nc) List the names of students who have enrolled in more than 3 courses.\nd) Display each course name along with the number of students enrolled.", "marks": 6, "answer": "a) SELECT Name FROM Student WHERE Major = 'Computer Science';\n\nb) SELECT Major, AVG(Age) AS AverageAge FROM Student GROUP BY Major;\n\nc) SELECT s.Name\n   FROM Student s\n   JOIN Enrollment e ON s.StudentID = e.StudentID\n   GROUP BY s.StudentID, s.Name\n   HAVING COUNT(e.CourseID) > 3;\n\nd) SELECT c.CourseName, COUNT(e.StudentID) AS EnrolledStudents\n   FROM Course c\n   LEFT JOIN Enrollment e ON c.CourseID = e.CourseID\n   GROUP BY c.CourseID, c.CourseName;\n\nNote: LEFT JOIN ensures courses with zero enrollments also appear in the result."}
             ]
           },
           {
             "title": "Web",
             "marks": 15,
             "questions": [
-              {
-                "id": 1,
-                "text": "HTML5 new form elements?",
-                "marks": 2,
-                "answer": "datalist, output, progress, meter."
-              },
-              {
-                "id": 2,
-                "text": "Meta charset tag.",
-                "marks": 1,
-                "answer": "<meta charset='UTF-8'>"
-              },
-              {
-                "id": 3,
-                "text": "CSS vs CSS3?",
-                "marks": 1,
-                "answer": "CSS3 adds flexbox, grid, animations, rounded corners."
-              },
-              {
-                "id": 4,
-                "text": "Types of CSS?",
-                "marks": 3,
-                "answer": "Inline, Internal, External."
-              },
-              {
-                "id": 5,
-                "text": "window.onload vs DOMContentLoaded?",
-                "marks": 2,
-                "answer": "onload waits all assets. DOMContentLoaded fires when DOM ready."
-              }
+              {"id": 1, "text": "List four new form input types introduced in HTML5.", "marks": 2, "answer": "Four HTML5 form input types:\n1) email: validates email address format.\n2) date: provides a date picker interface.\n3) range: creates a slider control for numeric input.\n4) color: opens a color picker.\n5) number: restricts input to numeric values with spin buttons.\n6) url: validates URL format.\n7) tel: accepts telephone numbers.\n8) search: styled search input field."},
+              {"id": 2, "text": "What is the purpose of the meta charset tag in HTML? Write the correct syntax for UTF-8.", "marks": 2, "answer": "The meta charset tag specifies the character encoding used by the HTML document. It ensures that the browser correctly interprets and displays text characters, including special symbols, accented letters, and non-Latin scripts.\n\nSyntax: <meta charset=\"UTF-8\">\n\nUTF-8 (Unicode Transformation Format - 8-bit) is the most widely used encoding and supports all characters from all writing systems worldwide. The tag should be placed inside the <head> section, ideally as the first meta tag for the browser to apply the encoding immediately."},
+              {"id": 3, "text": "Differentiate between CSS and CSS3.", "marks": 2, "answer": "CSS (Cascading Style Sheets) is the foundational styling language for web documents. CSS3 is the latest major version with significant enhancements:\n\n1) Modules: CSS3 is modularized (Selectors, Box Model, Backgrounds, Transforms, Animations), making it easier to implement and update.\n2) Selectors: CSS3 adds attribute selectors, nth-child, :not(), and pseudo-classes for more precise targeting.\n3) Layout: CSS3 introduces Flexbox and CSS Grid for advanced responsive layouts without float hacks.\n4) Visual Effects: CSS3 adds rounded corners (border-radius), box shadows, text shadows, gradients, and multiple backgrounds.\n5) Animations: CSS3 introduces @keyframes, transitions, and transforms for smooth animations without JavaScript.\n6) Media Queries: CSS3 enables responsive design through @media rules adapting to screen size, resolution, and device orientation."},
+              {"id": 4, "text": "Explain the three types of CSS with examples of each.", "marks": 3, "answer": "The three types of CSS are:\n\n1) Inline CSS: applied directly to an HTML element using the style attribute.\n   Example: <p style=\"color: blue; font-size: 16px;\">This is a blue paragraph.</p>\n   Pros: quick, high specificity, no extra files.\n   Cons: mixes content with presentation, not reusable, hard to maintain.\n\n2) Internal CSS: defined within the <style> tag in the HTML <head> section.\n   Example: <style> p { color: blue; font-size: 16px; } </style>\n   Pros: single-page styling, no extra HTTP request.\n   Cons: not reusable across multiple pages, increases page size.\n\n3) External CSS: defined in a separate .css file linked via <link> tag.\n   Example: <link rel=\"stylesheet\" href=\"styles.css\">\n   Contents of styles.css: p { color: blue; font-size: 16px; }\n   Pros: reusable across pages, cached by browser, easier maintenance.\n   Cons: additional HTTP request (mitigated by caching)."},
+              {"id": 5, "text": "Explain the difference between window.onload and DOMContentLoaded events in JavaScript.", "marks": 3, "answer": "window.onload vs DOMContentLoaded:\n\n1) DOMContentLoaded:\n   - Fires when the HTML document has been completely loaded and parsed (DOM tree is ready).\n   - Does NOT wait for stylesheets, images, subframes, or other external resources to finish loading.\n   - Syntax: document.addEventListener('DOMContentLoaded', function() { ... });\n   - Faster execution — scripts can manipulate the DOM earlier.\n   - More widely supported recommendation for DOM manipulation.\n\n2) window.onload:\n   - Fires when ALL resources have finished loading: DOM, images, stylesheets, scripts, iframes.\n   - Waits for every external asset to download completely.\n   - Syntax: window.onload = function() { ... };\n   - Slower — the entire page must finish loading, including large images or slow resources.\n   - Suitable when the script depends on image dimensions or resource availability.\n\nKey difference: DOMContentLoaded triggers earlier (when DOM is ready but images may still load), while onload waits for everything including images and external content."},
+              {"id": 6, "text": "a) What is a responsive web design?\nb) Explain the role of media queries in creating responsive layouts.\nc) Write a media query that changes the background color to light blue when the screen width is less than 600px.", "marks": 3, "answer": "a) Responsive web design is an approach to web development that ensures web pages render well and provide optimal viewing experience across a wide range of devices (desktops, tablets, smartphones). It uses flexible layouts, flexible images, and CSS media queries to adapt the design to different screen sizes and orientations.\n\nb) Media queries are CSS rules that apply styles conditionally based on device characteristics (screen width, height, orientation, resolution). They enable the same HTML to adapt its layout and appearance for different viewport sizes without separate code for each device. Common breakpoints: 768px (tablets), 992px (desktops), 1200px (large screens).\n\nc) @media screen and (max-width: 599px) {\n       body {\n           background-color: lightblue;\n       }\n   }\n   This rule applies only when the viewport width is 599px or less."}
             ]
           },
           {
             "title": "Networking",
             "marks": 15,
             "questions": [
-              {
-                "id": 1,
-                "text": "TCP vs UDP?",
-                "marks": 3,
-                "answer": "TCP: reliable, ordered, connection-oriented. UDP: fast, connectionless."
-              },
-              {
-                "id": 2,
-                "text": "Ring vs Star topology.",
-                "marks": 6,
-                "answer": "Ring: predictable, single break stops all. Star: fault isolation, hub SPOF."
-              }
+              {"id": 1, "text": "Compare TCP and UDP protocols in terms of reliability, connection establishment, ordering, speed, and use cases.", "marks": 4, "answer": "TCP (Transmission Control Protocol) vs UDP (User Datagram Protocol):\n\n1) Connection:\n   - TCP: connection-oriented — establishes a three-way handshake before data transfer.\n   - UDP: connectionless — sends data directly without establishing a connection.\n\n2) Reliability:\n   - TCP: reliable — guarantees delivery through acknowledgments and retransmission of lost packets.\n   - UDP: unreliable — no acknowledgment mechanism; packets may be lost.\n\n3) Ordering:\n   - TCP: ordered — packets arrive in the correct sequence (sequencing).\n   - UDP: unordered — packets may arrive out of order.\n\n4) Speed:\n   - TCP: slower due to overhead of handshaking, acknowledgments, and error checking.\n   - UDP: faster — minimal overhead, lower latency.\n\n5) Use Cases:\n   - TCP: web browsing (HTTP/HTTPS), email (SMTP), file transfer (FTP), remote access (SSH).\n   - UDP: streaming video/audio, online gaming, DNS queries, VoIP, DHCP.\n\n6) Header Size:\n   - TCP: 20-60 bytes (larger header with more fields).\n   - UDP: 8 bytes (smaller header, minimal overhead)."},
+              {"id": 2, "text": "a) What is a network topology?\nb) Draw and explain the Ring topology — advantages and disadvantages.\nc) Draw and explain the Star topology — advantages and disadvantages.\nd) Which topology is most suitable for a campus network? Justify.", "marks": 6, "answer": "a) Network topology is the physical or logical arrangement of devices (nodes, computers, servers) and connections in a computer network. It defines how devices are interconnected and how data flows between them.\n\nb) Ring Topology:\n   Layout: each device is connected to exactly two other devices, forming a closed loop/ring. Data travels in one direction (unidirectional) or both directions (bidirectional) around the ring.\n   Advantages:\n   - Predictable performance: each device gets equal access to the network.\n   - No collisions: data travels in one direction without collision.\n   - Handles heavy traffic better than bus topology.\n   - Easy to install and extend initially.\n   Disadvantages:\n   - Single point of failure: one broken device or cable breaks the entire network.\n   - Difficult to troubleshoot: locating the fault requires checking each connection.\n   - Adding/removing devices disrupts the network.\n   - Slower than star for large networks.\n\nc) Star Topology:\n   Layout: all devices connect to a central hub/switch. Each device has a dedicated point-to-point connection to the central device.\n   Advantages:\n   - Fault isolation: one failed device/cable does not affect other devices.\n   - Easy to troubleshoot: faults are easily identified and isolated.\n   - Scalable: adding or removing devices is simple without disrupting the network.\n   - Centralized management: network traffic is managed through the central switch.\n   - High performance: dedicated bandwidth per connection (with switches).\n   Disadvantages:\n   - Central device is a single point of failure (if the switch fails, the entire network goes down).\n   - Requires more cable than ring or bus topologies.\n   - Higher cost due to the central switch and more cabling.\n\nNote: Modern networks typically use switches instead of hubs, providing dedicated bandwidth to each device.\n\nd) Star topology is most suitable for a campus network because:\n   - It provides centralized management through the core switch.\n   - Fault isolation ensures that one building or department failure does not affect others.\n   - It is highly scalable — new buildings can be added easily.\n   - It supports high-bandwidth connections (Gigabit Ethernet) needed for campus-wide applications.\n   - Troubleshooting is easier with centralized monitoring.\n   - Redundant switches can eliminate the single point of failure concern."},
+              {"id": 3, "text": "a) Explain the OSI model and list its 7 layers from top to bottom with the data unit at each layer.\nb) What is an IP address? Differentiate between IPv4 and IPv6.", "marks": 5, "answer": "a) The OSI (Open Systems Interconnection) model is a conceptual framework developed by ISO that standardizes network communication into seven layers, each with specific functions:\n\n7. Application Layer (Data): User interface — HTTP, FTP, SMTP, DNS.\n6. Presentation Layer (Data): Data translation, encryption, compression.\n5. Session Layer (Data): Session management, synchronization, checkpoints.\n4. Transport Layer (Segment): End-to-end delivery, flow control, error recovery — TCP/UDP.\n3. Network Layer (Packet): Logical addressing, routing, path determination — IP.\n2. Data Link Layer (Frame): Physical addressing (MAC), error detection, framing.\n1. Physical Layer (Bit): Raw bit transmission over physical medium (cable, fiber, wireless).\nMnemonic: Please Do Not Throw Sausage Pizza Away (bottom-up).\n\nb) IP Address: A unique numerical identifier assigned to each device on a network, used for routing and addressing.\n\nIPv4:\n- 32-bit address (4 octets), e.g., 192.168.1.1\n- Approximately 4.3 billion addresses.\n- Dotted decimal notation.\n- Exhausted — no new addresses available.\n- Uses NAT (Network Address Translation) for conservation.\n\nIPv6:\n- 128-bit address (8 groups of 4 hex digits), e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334\n- Approximately 340 undecillion addresses (virtually unlimited).\n- Hexadecimal colon notation.\n- Designed to replace IPv4.\n- Built-in security (IPsec), auto-configuration, and no NAT required.\n- Supports multicast, anycast, and simplified header format."}
             ]
           }
         ]
