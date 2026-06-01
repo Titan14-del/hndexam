@@ -275,7 +275,7 @@ function formatWithMermaid(text) {
     const mermaidMatch = part.match(/```mermaid\n?([\s\S]*?)```/);
     if (mermaidMatch) {
       const diagram = mermaidMatch[1].trim();
-      return '<div class="mermaid">' + diagram + '</div>';
+      return '<div class="mermaid">' + escapeHTML(diagram) + '</div>';
     }
     return '<p>' + part.replace(/\n/g, '<br>') + '</p>';
   }).join('') + '</div>';
