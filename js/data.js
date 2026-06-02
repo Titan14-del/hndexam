@@ -4654,21 +4654,21 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "Explain what Space complexity of an algorithm means.",
+                "text": "Explain what is meant by Space complexity of an algorithm.",
                 "marks": 2,
                 "answer": "Space complexity is the amount of memory an algorithm requires to execute, including input data, auxiliary space, and output. Expressed using Big O notation (O(1), O(n), O(n²)).",
                 "tutorial": "Considers both fixed part (constants) and variable part (dynamic allocations, recursion stack)."
               },
               {
                 "id": 2,
-                "text": "Define worst case, average case, and best case execution time.",
+                "text": "An algorithm execution time can be said to be worst case, average case, or best case. Define these notations.",
                 "marks": 3,
                 "answer": "Best case: minimum time for any input. Average case: expected time over all inputs. Worst case: maximum time for any input. Example (linear search): Best=O(1), Average=O(n/2), Worst=O(n).",
                 "tutorial": "Worst-case analysis provides guaranteed performance bounds."
               },
               {
                 "id": 3,
-                "text": "Write an algorithm receiving three numbers and displaying the maximum using: i) Pseudocode ii) Flowchart.",
+                "text": "Write an algorithm that receives three numbers and displays the maximum of these numbers using: i) Pseudocode ii) Flowchart.",
                 "marks": 5,
                 "answer": "i) Pseudocode:\nBEGIN\n    INPUT num1, num2, num3\n    max = num1\n    IF num2 > max THEN max = num2\n    IF num3 > max THEN max = num3\n    PRINT \"Maximum is: \", max\nEND\n\nii) Flowchart: [Start] -> [Input] -> [max=num1] -> [num2>max?] Yes->[max=num2] No->[num3>max?] Yes->[max=num3] No->[Print max] -> [End]."
               }
@@ -4680,14 +4680,14 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "n students, m subjects. Maths & English coeff 4 (compulsory), rest coeff 2. Write C program to: i) Enter subjects count, marks/20, coefficient. ii) Print total, average, remark (0-6: very poor, 6-9: poor, 9-10: below average, 10: average, >10: good).",
+                "text": "A class of n students take an annual examination in m subjects. Mathematics and English are coefficient 4 (compulsory), the rest are coefficient 2. Each student must offer between 4 and 10 subjects. Write a C program that: i) Enters the number of subjects, marks/20, and coefficient for each. ii) Prints total marks, average, and remark (0-6: very poor, 6-9: poor, 9-10: below average, 10: average, >10: good).",
                 "marks": 10,
                 "answer": "#include <stdio.h>\n\nint main() {\n    int n, m, i, j;\n    float marks[20], coeff[20], total, sumCoeff, avg;\n    printf(\"Enter number of students: \"); scanf(\"%d\", &n);\n    for (i = 0; i < n; i++) {\n        printf(\"\\nStudent %d:\\n\", i+1);\n        printf(\"Enter subjects: \"); scanf(\"%d\", &m);\n        total = 0; sumCoeff = 0;\n        for (j = 0; j < m; j++) {\n            printf(\"Subject %d marks (0-20): \", j+1);\n            scanf(\"%f\", &marks[j]);\n            printf(\"Coefficient: \"); scanf(\"%f\", &coeff[j]);\n            total += marks[j] * coeff[j];\n            sumCoeff += coeff[j];\n        }\n        avg = total / sumCoeff;\n        printf(\"Total: %.2f, Average: %.2f\\n\", total, avg);\n        if (avg <= 6) printf(\"Remark: Very Poor\\n\");\n        else if (avg <= 9) printf(\"Remark: Poor\\n\");\n        else if (avg < 10) printf(\"Remark: Below Average\\n\");\n        else if (avg == 10) printf(\"Remark: Average\\n\");\n        else printf(\"Remark: Good\\n\");\n    }\n    return 0;\n}",
                 "tutorial": "Weighted average = Σ(marks × coeff) / Σ(coeff)."
               },
               {
                 "id": 2,
-                "text": "Write function 'location_of_target(array, size, target)' returning the largest subscript containing target, or -1 if not found.",
+                "text": "Write a function named 'location_of_target' that takes an array of integers, its size, and a target value, and returns the largest subscript/position containing the target. E.g., for arr = {58,26,91,34,70,34,88} with target 34, return 5 (34 appears at positions 3 and 5; return the largest). If not found, return -1.",
                 "marks": 10,
                 "answer": "int location_of_target(int arr[], int size, int target) {\n    int found = -1;\n    for (int i = 0; i < size; i++)\n        if (arr[i] == target) found = i;\n    return found;\n}\n// arr={58,26,91,34,70,34,88}, target=34 returns 5",
                 "tutorial": "Iterate from beginning, update on each match to get last occurrence."
@@ -4706,7 +4706,7 @@ const examData = {
               },
               {
                 "id": 2,
-                "text": "What are the four OOP principles?",
+                "text": "What are the four major principles that make a language object oriented?",
                 "marks": 4,
                 "answer": "1. Encapsulation: bundling data and methods, hiding details.\n2. Inheritance: creating classes from existing ones.\n3. Polymorphism: same method name, different implementations.\n4. Abstraction: hiding complexity, showing essentials."
               },
@@ -4724,7 +4724,7 @@ const examData = {
               },
               {
                 "id": 5,
-                "text": "Design class Cube with 'side' (double). Constructor, getter, setter, volume(). Write test class in C++/Java.",
+                "text": "Design a class called Cube with a data member 'side' (double). Supply: a constructor with one argument, getter and setter methods, and a volume() method (side³). Implement the class and write a test class 'CubeTest' in C++ or Java to verify functionality.",
                 "marks": 9,
                 "answer": "public class Cube {\n    private double side;\n    public Cube(double s) { side = s; }\n    public double getSide() { return side; }\n    public void setSide(double s) { side = s; }\n    public double volume() { return Math.pow(side, 3); }\n\n    public static void main(String[] args) {\n        Cube c = new Cube(5.0);\n        System.out.println(\"Side: \" + c.getSide());\n        System.out.println(\"Volume: \" + c.volume());\n        c.setSide(3.0);\n        System.out.println(\"New volume: \" + c.volume());\n    }\n}",
                 "tutorial": "Constructor initializes, getter/setter provide controlled access, volume() computes side³."
@@ -4737,15 +4737,15 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "University database: teachers, students, courses. a) What is an Entity? b) List entities c) What is an attribute? d) List attributes e) What is ER diagram? Components? f) Draw ER diagram g) Convert to relational model",
-                "marks": 10,
+                "text": "a) What is an Entity? b) List all possible entities for a university database (teachers, students, courses). c) What is an attribute? d) For each entity listed, list its attributes. e) What is an E-R Diagram? List its components. f) Draw the E-R diagram using Crow's Foot or Chen notation. g) Convert the diagram to a relational model.",
+                "marks": 14,
                 "answer": "a) Entity: distinguishable real-world object.\nb) Entities: Teacher, Student, Course, Enrollment.\nc) Attribute: property of an entity.\nd) Teacher: TeacherID, Name, Matricule, Phone, Gender, Grade.\nStudent: StudentID, Name, Matricule, Phone, Gender, Address, Age.\nCourse: CourseID, Code, Title, Credit.\nEnrollment: EnrollID, StudentID(FK), CourseID(FK), TeacherID(FK), Mark.\ne) ```mermaid\nerDiagram\n    TEACHER ||--o{ COURSE : teaches\n    STUDENT }o--o{ COURSE : enrolls\n    COURSE ||--o{ ENROLLMENT : has\n    TEACHER {\n        int TeacherID PK\n        string Name\n    }\n    STUDENT {\n        int StudentID PK\n        string Name\n        int Age\n    }\n    COURSE {\n        int CourseID PK\n        string Code\n        string Title\n    }\n    ENROLLMENT {\n        int EnrollID PK\n        int StudentID FK\n        int CourseID FK\n        int TeacherID FK\n        int Mark\n    }\n```\ng) Tables: Teacher, Student, Course, Enrollment with FKs.",
                 "tutorial": "M:N relationships resolved with junction tables."
               },
               {
                 "id": 2,
-                "text": "Write SQL: i) Create tables ii) Create database 'UNIV' iii) Insert a student iv) Retrieve marks of all students in a subject.",
-                "marks": 10,
+                "text": "Using SQL: i) Create the database tables. ii) Create the database called 'UNIV'. iii) Insert a student into the database. iv) Retrieve the marks of all students in a particular subject.",
+                "marks": 6,
                 "answer": "CREATE DATABASE UNIV;\nUSE UNIV;\n\nCREATE TABLE Student (StudentID INT PK, Name VARCHAR(100), Matricule VARCHAR(20), Phone VARCHAR(15), Gender CHAR(1), Address VARCHAR(200), Age INT);\nCREATE TABLE Course (CourseID INT PK, Code VARCHAR(10), Title VARCHAR(100), Credit INT);\nCREATE TABLE Enrollment (EnrollID INT PK, StudentID INT FK, CourseID INT FK, Mark FLOAT);\n\nINSERT INTO Student VALUES (1, 'John Doe', 'SWE001', '677000001', 'M', 'Yaounde', 20);\n\nSELECT s.Name, e.Mark FROM Student s JOIN Enrollment e ON s.StudentID=e.StudentID JOIN Course c ON e.CourseID=c.CourseID WHERE c.Title='Database';"
               }
             ]
@@ -4763,9 +4763,9 @@ const examData = {
               },
               {
                 "id": 2,
-                "text": "Create HTML5 form titled 'HND Student Information' with Name, Matricule, DOB, Gender (radio), Subject (dropdown), Submit.",
+                "text": "Give HTML5 code to create a form titled 'HND Student Information Form' with fields: Name, Matricule, DOB, Gender (radio buttons), Subject (dropdown), and a Submit button.",
                 "marks": 8,
-                "answer": "<!DOCTYPE html>\n<html><head><title>HND Student Information</title></head><body>\n<h2>HND Student Information</h2>\n<form action=\"submit.php\" method=\"POST\">\n    Name: <input type=\"text\" name=\"name\" required><br>\n    Matricule: <input type=\"text\" name=\"matricule\" required><br>\n    DOB: <input type=\"date\" name=\"dob\" required><br>\n    Gender: <input type=\"radio\" name=\"gender\" value=\"male\"> Male\n    <input type=\"radio\" name=\"gender\" value=\"female\"> Female<br>\n    Subject: <select name=\"subject\">\n        <option value=\"SWE\">Software Engineering</option>\n        <option value=\"CSN\">Computer Science</option>\n    </select><br>\n    <input type=\"submit\">\n</form>\n</body></html>"
+                "answer": "<!DOCTYPE html>\n<html><head><title>HND Student Information Form</title></head><body>\n<h2>HND Student Information Form</h2>\n<form action=\"submit.php\" method=\"POST\">\n    Name: <input type=\"text\" name=\"name\" required><br>\n    Matricule: <input type=\"text\" name=\"matricule\" required><br>\n    DOB: <input type=\"date\" name=\"dob\" required><br>\n    Gender: <input type=\"radio\" name=\"gender\" value=\"male\"> Male\n    <input type=\"radio\" name=\"gender\" value=\"female\"> Female<br>\n    Subject: <select name=\"subject\">\n        <option value=\"SWE\">Software Engineering</option>\n        <option value=\"CSN\">Computer Science</option>\n    </select><br>\n    <input type=\"submit\">\n</form>\n</body></html>"
               }
             ]
           },
@@ -4775,7 +4775,7 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "For lower 4 OSI layers: give functions, example protocol, example equipment.",
+                "text": "For the lower four layers of the OSI model, give the function of each layer, one example protocol, and one example equipment.",
                 "marks": 8,
                 "answer": "Layer 4 Transport: end-to-end delivery, TCP/UDP, gateway.\nLayer 3 Network: routing/addressing, IP/ICMP, router.\nLayer 2 Data Link: framing/MAC, Ethernet, switch.\nLayer 1 Physical: bit transmission, RS-232, hub/repeater."
               },
