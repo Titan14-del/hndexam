@@ -1,33 +1,33 @@
 const ESSAY_TOPIC_RULES = [
-  { name: 'Algorithms', keywords: ['algorithms', 'ds & alg'] },
-  { name: 'Procedural Programming', keywords: ['procedural programming', 'c prog', 'structural programming c', 'c programming'] },
-  { name: 'OOP', keywords: ['object oriented programming'] },
-  { name: 'Object Modeling / UML', keywords: ['object modeling', 'uml'] },
-  { name: 'Database', keywords: ['database development', 'database administration', 'database-mysql'] },
-  { name: 'Web Design', keywords: ['web design'] },
+  { name: 'Algorithms', keywords: ['algorithms', 'ds & alg', 'algorithm', 'data structure'] },
+  { name: 'Procedural Programming', keywords: ['procedural programming', 'c prog', 'structural programming c', 'c programming', 'programming'] },
+  { name: 'OOP', keywords: ['object oriented programming', 'oop'] },
+  { name: 'Object Modeling / UML', keywords: ['object modeling', 'uml', 'object model'] },
+  { name: 'Database', keywords: ['database'] },
+  { name: 'Web Design', keywords: ['web'] },
   { name: 'Networking', keywords: ['networking', 'network'] },
   { name: 'Event Programming', keywords: ['event programming', 'vb.net'] },
   { name: 'Mobile', keywords: ['mobile programming', 'mobile operating'] },
   { name: 'System Architecture', keywords: ['system architecture'] },
-  { name: 'Operating Systems', keywords: ['operating systems'] },
+  { name: 'Operating Systems', keywords: ['operating system'] },
   { name: 'Project Management', keywords: ['project management'] },
-  { name: 'General Knowledge', keywords: ['general computer'] },
-  { name: 'Computer Fundamentals', keywords: ['number system', 'logic gate', 'boolean', 'computer fundamental'] },
-  { name: 'English', keywords: ['reading comprehension', 'grammar', 'spoken english', 'writing'] },
-  { name: 'French', keywords: ['compréhension', 'expression libre', 'langue'] },
+  { name: 'General Knowledge', keywords: ['general computer', 'digital society'] },
+  { name: 'Computer Fundamentals', keywords: ['number system', 'logic gate', 'boolean', 'computer fundamental', 'ms office', 'microsoft word', 'excel', 'powerpoint'] },
+  { name: 'English', keywords: ['reading comprehension', 'grammar', 'spoken english', 'writing', 'composition'] },
+  { name: 'French', keywords: ['compréhension', 'comprehension', 'expression libre', 'langue', 'rédaction', 'ecrite'] },
   { name: 'Mathematics', keywords: [
     'statistics', 'probability', 'statistique', 'analysis', 'calculus',
-    'differential equation', 'structural analysis', 'structural', 'further mathematics',
+    'differential equation', 'structural', 'further mathematics',
     'transform', 'differential equations'
   ]},
   { name: 'Entrepreneurship', keywords: ['entrepreneurship'] },
-  { name: 'Economics', keywords: ['general economics'] },
+  { name: 'Economics', keywords: ['general economics', 'economics'] },
   { name: 'Law & Civics', keywords: ['company law', 'labour law', 'fundamental rights', 'civics', 'business law'] },
 ];
 
 const MCQ_TOPIC_RULES = [
   { name: 'Database', keywords: [
-    'database', 'sql', 'query', 'select', 'insert', 'table',
+    'database', 'sql', 'query', 'select ', 'insert', 'table',
     'entity', 'attribute', 'relation', 'foreign key', 'primary key',
     'normalization', 'dbms', 'referential', 'tuple', 'order by',
     'where clause', 'create table', 'join', 'unique identifies a row'
@@ -39,36 +39,36 @@ const MCQ_TOPIC_RULES = [
     'modem', '10base', 'network layer', 'transport layer', 'network administrator'
   ]},
   { name: 'Procedural Programming', keywords: [
-    'compiler', 'interpreter', 'variable', 'function', 'array', 'loop',
+    'compiler', 'interpreter', 'array', 'loop',
     'printf', 'scanf', 'c program', 'arithmetic instruction',
     'return statement', 'recursion', 'pointer', 'structure', 'union',
     'factorial', 'function procedure'
   ]},
   { name: 'OOP', keywords: [
-    'class', 'object', 'inheritance', 'polymorphism', 'encapsulation',
+    'object', 'inheritance', 'polymorphism', 'encapsulation',
     'abstraction', 'constructor', 'method overriding', 'method overloading',
     'interface', 'object oriented'
   ]},
   { name: 'Web Design', keywords: [
-    'html', 'css', 'element', 'tag', 'attribute', 'head', 'body',
-    'div', 'form', 'web page', 'markup', 'font', 'style',
-    'javascript', 'script', 'root tag'
+    'html', 'css', 'element', 'tag', 'attribute', 'body',
+    'div', 'web page', 'markup', 'font', 'style',
+    'javascript', 'script', 'root tag', '<head>', '<form>'
   ]},
   { name: 'Operating Systems', keywords: [
     'process', 'thread', 'scheduling', 'cpu', 'memory', 'deadlock',
-    'semaphore', 'mutex', 'kernel', 'fifo', 'sjf', 'round robin',
+    'semaphore', 'mutex', 'kernel ', 'fifo', 'sjf', 'round robin',
     'throughput', 'turnaround', 'response time', 'pcb',
     'process control block', 'multithreading', 'cpu burst'
   ]},
   { name: 'Algorithms', keywords: [
-    'algorithm', 'complexity', 'big o', 'sorting', 'searching', 'graph',
+    'algorithm', 'complexity', 'big o', 'sorting', 'searching',
     'tree', 'traversal', 'stack', 'queue', 'data structure', 'linked list',
     'vertex', 'edge', 'directed graph', 'undirected', 'depth first',
-    'breadth first'
+    'breadth first', 'graph data', 'graph of '
   ]},
   { name: 'Computer Fundamentals', keywords: [
     'binary', 'number system', 'logic gate', 'boolean', 'truth table',
-    'bit', 'byte', 'hardware', 'software', 'motherboard', 'alu',
+    'bit', 'byte', 'hardware', 'software', 'motherboard', 'arithmetic logic unit',
     'control unit', 'register', 'memory unit', 'input device',
     'output device', 'storage', 'cpu'
   ]},
@@ -114,13 +114,23 @@ const MCQ_TOPIC_RULES = [
     'convergence', 'divergence', 'cosec', 'coth', 'tanh', 'sinh', 'cosh',
     'arithmetic progression', 'binomial', 'poisson', 'correlation coefficient',
     'determinant', 'gradient', 'parity', 'periodic function',
-    'domain', 'series', 'log(', 'ln(', 'f(x)', 'dx ',
-    'mean ', 'median', 'period', 'limit', 'dice',
-    'derivative', 'differentiation', 'evaluate', 'solve',
-    'coefficient', 'frequency', 'variance', 'cumulative', 'decimal',
+    'domain of', 'series', 'log(', 'ln(', 'f(x)', 'dx ',
+    'mean ', 'median', 'period', 'limit as', 'limit x', 'dice',
+    'coefficient', 'frequency', 'cumulative', 'decimal',
     'random variable', 'probability mass', 'hyperbolic',
     'moment', 'skewness', 'kurtosis', 'quartile', 'percentile',
-    'matrices', 'vectors', 'scalar', 'symmetric', 'adjoint'
+    'matrices', 'vectors', 'scalar', 'symmetric', 'adjoint',
+    'expectation', 'simplif', 'sqrt', 'p(a', 'p(b', 'p(x',
+    'e(x)', 'e(x)=', 'linearly', 'trigonometric',
+    'lim ', 'linear regression',
+    'interpolation', 'extrapolation', 'stochastic',
+    'linear algebra', 'differential', 'calculus',
+    'is a factor', 'factoring', 'factorise', 'factorization',
+    'sample of', 'sample data', 'sample mean',
+    'range of', 'fibonacci', 'grad f',
+    'defective', 'solves', 'absolute value',
+    'vector', 'lim x', 'lim(', 'sin ', 'cos ', 'tan ',
+    'solution of', 'class interval', 'class limit of', 'tan('
   ]}
 ];
 
