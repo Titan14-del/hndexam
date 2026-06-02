@@ -15,7 +15,11 @@ const ESSAY_TOPIC_RULES = [
   { name: 'Computer Fundamentals', keywords: ['number system', 'logic gate', 'boolean', 'computer fundamental'] },
   { name: 'English', keywords: ['reading comprehension', 'grammar', 'spoken english', 'writing'] },
   { name: 'French', keywords: ['compréhension', 'expression libre', 'langue'] },
-  { name: 'Statistics & Probability', keywords: ['statistics', 'probability', 'statistique'] },
+  { name: 'Mathematics', keywords: [
+    'statistics', 'probability', 'statistique', 'analysis', 'calculus',
+    'differential equation', 'structural analysis', 'structural', 'further mathematics',
+    'transform', 'differential equations'
+  ]},
   { name: 'Entrepreneurship', keywords: ['entrepreneurship'] },
   { name: 'Economics', keywords: ['general economics'] },
   { name: 'Law & Civics', keywords: ['company law', 'labour law', 'fundamental rights', 'civics', 'business law'] },
@@ -102,6 +106,21 @@ const MCQ_TOPIC_RULES = [
     'revenue', 'profit', 'inflation', 'gdp', 'unemployment', 'trade',
     'consumer', 'producer', 'scarcity', 'opportunity cost', 'equilibrium',
     'monopoly', 'competition', 'tax', 'subsidy', 'tariff', 'export', 'import'
+  ]},
+  { name: 'Mathematics', keywords: [
+    'probability', 'variance', 'standard deviation', 'distribution',
+    'laplace transform', 'integral', 'derivative', 'differential equation',
+    'eigenvalue', 'theorem', 'asymptote', 'maclaurin', 'taylor series',
+    'convergence', 'divergence', 'cosec', 'coth', 'tanh', 'sinh', 'cosh',
+    'arithmetic progression', 'binomial', 'poisson', 'correlation coefficient',
+    'determinant', 'gradient', 'parity', 'periodic function',
+    'domain', 'series', 'log(', 'ln(', 'f(x)', 'dx ',
+    'mean ', 'median', 'period', 'limit', 'dice',
+    'derivative', 'differentiation', 'evaluate', 'solve',
+    'coefficient', 'frequency', 'variance', 'cumulative', 'decimal',
+    'random variable', 'probability mass', 'hyperbolic',
+    'moment', 'skewness', 'kurtosis', 'quartile', 'percentile',
+    'matrices', 'vectors', 'scalar', 'symmetric', 'adjoint'
   ]}
 ];
 
@@ -113,7 +132,7 @@ const TOPIC_CATEGORIES = {
   ],
   'General': [
     'General Knowledge', 'Computer Fundamentals', 'English', 'French',
-    'Statistics & Probability', 'Entrepreneurship', 'Economics', 'Law & Civics'
+    'Mathematics', 'Entrepreneurship', 'Economics', 'Law & Civics'
   ]
 };
 

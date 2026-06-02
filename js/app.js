@@ -211,9 +211,17 @@ function renderRelatedNotes(year, paperTitle, sectionTitle, qid) {
     `</div>`;
 }
 
+function formatFraction(text) {
+  return text
+    .replace(/\(([^()]+)\)\/\(([^()]+)\)/g, '<span class="frac"><span class="num">$1</span><span class="den">$2</span></span>')
+    .replace(/\(([^()]+)\)\/(\d+)/g, '<span class="frac"><span class="num">$1</span><span class="den">$2</span></span>')
+    .replace(/(\d+)\/\(([^()]+)\)/g, '<span class="frac"><span class="num">$1</span><span class="den">$2</span></span>')
+    .replace(/\b(\d+)\/(\d+)\b/g, '<span class="frac"><span class="num">$1</span><span class="den">$2</span></span>');
+}
+
 function formatQuestionText(text) {
   if (!text) return '';
-  if (!text.includes('```mermaid')) return text.replace(/\n/g, '<br>');
+  if (!text.includes('```mermaid')) return formatFraction(text.replace(/\n/g, '<br>'));
   
   const parts = text.split(/(```mermaid[\s\S]*?```)/);
   return parts.map(part => {
@@ -222,7 +230,7 @@ function formatQuestionText(text) {
       const diagram = mermaidMatch[1].trim();
       return '<div class="mermaid">' + diagram + '</div>';
     }
-    return '<p>' + part.replace(/\n/g, '<br>') + '</p>';
+    return '<p>' + formatFraction(part.replace(/\n/g, '<br>')) + '</p>';
   }).join('');
 }
 
