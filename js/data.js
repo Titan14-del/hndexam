@@ -4700,7 +4700,7 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "Define: i) Object ii) Classes iii) Methods",
+                "text": "Define the following as seen in object oriented programming:\ni) Object\nii) Classes\niii) Methods",
                 "marks": 3,
                 "answer": "i) Object: instance of a class with state and behavior.\nii) Class: blueprint for creating objects.\niii) Methods: functions defined inside a class."
               },
@@ -4712,13 +4712,13 @@ const examData = {
               },
               {
                 "id": 3,
-                "text": "Differences between private and public class members?",
+                "text": "What are the differences between private and public class members?",
                 "marks": 2,
                 "answer": "Private: only accessible within the same class.\nPublic: accessible from anywhere."
               },
               {
                 "id": 4,
-                "text": "Differences between data hiding and encapsulation?",
+                "text": "What are the differences between data hiding and encapsulation?",
                 "marks": 2,
                 "answer": "Data hiding: specifically hiding internal data (private members).\nEncapsulation: broader concept bundling data + methods + hiding. Data hiding is part of encapsulation."
               },
@@ -4793,16 +4793,16 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "Given HTML/CSS code, draw how browser renders it. CSS includes float right, clear both, borders, backgrounds.",
+                "text": "Draw a picture of how the following HTML/CSS code will look when the browser renders it on-screen. Assume that the HTML is wrapped in a valid full page with a head and body. Indicate a non-white background by shading lightly. It is possible that some CSS rules shown will not apply to any elements.",
                 "marks": 7,
                 "answer": "Rendering shows: 'hello' box, a floated right div with cyan child divs (one underlined), then after clear:both, more divs with solid borders containing text with line breaks. 'goodbye' box at bottom.",
                 "tutorial": "Float right + clear:both controls layout flow."
               },
               {
                 "id": 2,
-                "text": "Give HTML5 code to create a form titled 'HND Student Information Form' with fields: Name, Matricule, DOB, Gender (radio buttons), Subject (dropdown), and a Submit button.",
+                "text": "Give HTML5 code to create this form.",
                 "marks": 8,
-                "answer": "<!DOCTYPE html>\n<html><head><title>HND Student Information Form</title></head><body>\n<h2>HND Student Information Form</h2>\n<form action=\"submit.php\" method=\"POST\">\n    Name: <input type=\"text\" name=\"name\" required><br>\n    Matricule: <input type=\"text\" name=\"matricule\" required><br>\n    DOB: <input type=\"date\" name=\"dob\" required><br>\n    Gender: <input type=\"radio\" name=\"gender\" value=\"male\"> Male\n    <input type=\"radio\" name=\"gender\" value=\"female\"> Female<br>\n    Subject: <select name=\"subject\">\n        <option value=\"SWE\">Software Engineering</option>\n        <option value=\"CSN\">Computer Science</option>\n    </select><br>\n    <input type=\"submit\">\n</form>\n</body></html>"
+                "answer": "<!DOCTYPE html>\n<html><head><title>HND Student Information</title></head><body>\n<h2>HND Student Information</h2>\n<form action=\"submit.php\" method=\"POST\">\n    Name: <input type=\"text\" name=\"name\" required><br>\n    Matricule: <input type=\"text\" name=\"matricule\" required><br>\n    DOB: <input type=\"date\" name=\"dob\" required><br>\n    Gender: <input type=\"radio\" name=\"gender\" value=\"male\"> Male\n    <input type=\"radio\" name=\"gender\" value=\"female\"> Female<br>\n    Subject: <select name=\"subject\">\n        <option value=\"SWE\">Software Engineering</option>\n        <option value=\"CSN\">Computer Science</option>\n    </select><br>\n    <input type=\"submit\">\n</form>\n</body></html>"
               }
             ]
           },
@@ -4812,15 +4812,21 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "For the lower four layers of the OSI model, give the function of each layer, one example protocol, and one example equipment.",
+                "text": "For the lower four layers of the OSI model, give for each:\ni. Functions of the layer.\nii. An example of a protocol used in the layer.\niii. An example of network or interconnection equipment and/or end systems used.",
                 "marks": 8,
                 "answer": "Layer 4 Transport: end-to-end delivery, TCP/UDP, gateway.\nLayer 3 Network: routing/addressing, IP/ICMP, router.\nLayer 2 Data Link: framing/MAC, Ethernet, switch.\nLayer 1 Physical: bit transmission, RS-232, hub/repeater."
               },
               {
                 "id": 2,
-                "text": "What is network topology? For Star and Ring: sketch, 2 advantages, 2 disadvantages each.",
-                "marks": 7,
-                "answer": "Network topology: arrangement of devices in a network.\nStar: central hub, devices connect individually. Adv: easy to manage, one failure doesn't affect others. Disadv: hub is SPOF, more cable.\nRing: closed loop, each device connects to two neighbors. Adv: no collisions, equal access. Disadv: one failure breaks network, adding devices disrupts."
+                "text": "What is a network topology?",
+                "marks": 1,
+                "answer": "A network topology is the arrangement of devices and connections in a computer network."
+              },
+              {
+                "id": 3,
+                "text": "For each of the following networks, give a sketch, two advantages and two disadvantages:\ni. Star\nii. Ring",
+                "marks": 6,
+                "answer": "Star: central hub, devices connect individually. Adv: easy to manage, one failure doesn't affect others. Disadv: hub is SPOF, more cable.\nRing: closed loop, each device connects to two neighbors. Adv: no collisions, equal access. Disadv: one failure breaks network, adding devices disrupts."
               }
             ]
           }
