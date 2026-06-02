@@ -1,4 +1,5 @@
 const ESSAY_TOPIC_RULES = [
+  { name: 'Digital Literacy', keywords: ['digital literacy'] },
   { name: 'Algorithms', keywords: ['algorithms', 'ds & alg', 'algorithm', 'data structure'] },
   { name: 'Procedural Programming', keywords: ['procedural programming', 'c prog', 'structural programming c', 'c programming', 'programming'] },
   { name: 'OOP', keywords: ['object oriented programming', 'oop'] },
@@ -17,7 +18,7 @@ const ESSAY_TOPIC_RULES = [
   { name: 'French', keywords: ['compréhension', 'comprehension', 'expression libre', 'langue', 'rédaction', 'ecrite'] },
   { name: 'Mathematics', keywords: [
     'statistics', 'probability', 'statistique', 'analysis', 'calculus',
-    'differential equation', 'structural', 'further mathematics',
+    'differential equation', 'further mathematics',
     'transform', 'differential equations'
   ]},
   { name: 'Entrepreneurship', keywords: ['entrepreneurship'] },
@@ -26,6 +27,7 @@ const ESSAY_TOPIC_RULES = [
 ];
 
 const MCQ_TOPIC_RULES = [
+  { name: 'Digital Literacy', keywords: ['digital literacy'] },
   { name: 'Database', keywords: [
     'database', 'sql', 'query', 'select ', 'insert', 'table',
     'entity', 'attribute', 'relation', 'foreign key', 'primary key',
@@ -141,7 +143,7 @@ const TOPIC_CATEGORIES = {
     'Mobile', 'System Architecture', 'Operating Systems', 'Project Management'
   ],
   'General': [
-    'General Knowledge', 'Computer Fundamentals', 'English', 'French',
+    'General Knowledge', 'Digital Literacy', 'Computer Fundamentals', 'English', 'French',
     'Mathematics', 'Entrepreneurship', 'Economics', 'Law & Civics'
   ]
 };
@@ -197,10 +199,19 @@ function buildStudyIndex() {
           });
         } else {
           let essayTopic = null;
+          const pt = paper.title.toLowerCase();
           for (const rule of ESSAY_TOPIC_RULES) {
-            if (rule.keywords.some(kw => st.includes(kw))) {
+            if (rule.keywords.some(kw => pt.includes(kw))) {
               essayTopic = rule.name;
               break;
+            }
+          }
+          if (!essayTopic) {
+            for (const rule of ESSAY_TOPIC_RULES) {
+              if (rule.keywords.some(kw => st.includes(kw))) {
+                essayTopic = rule.name;
+                break;
+              }
             }
           }
           if (essayTopic) {
