@@ -1,5 +1,6 @@
 const ESSAY_TOPIC_RULES = [
   { name: 'Digital Literacy', keywords: ['digital literacy'] },
+  { name: 'Digital Electronics', keywords: ['digital electronics'] },
   { name: 'Algorithms', keywords: ['algorithms', 'ds & alg', 'algorithm', 'data structure'] },
   { name: 'Procedural Programming', keywords: ['procedural programming', 'c prog', 'structural programming c', 'c programming', 'programming'] },
   { name: 'OOP', keywords: ['object oriented programming', 'oop'] },
@@ -28,6 +29,7 @@ const ESSAY_TOPIC_RULES = [
 
 const MCQ_TOPIC_RULES = [
   { name: 'Digital Literacy', keywords: ['digital literacy'] },
+  { name: 'Digital Electronics', keywords: ['digital electronics'] },
   { name: 'Database', keywords: [
     'database', 'sql', 'query', 'select ', 'insert', 'table',
     'entity', 'attribute', 'relation', 'foreign key', 'primary key',
@@ -143,7 +145,7 @@ const TOPIC_CATEGORIES = {
     'Mobile', 'System Architecture', 'Operating Systems', 'Project Management'
   ],
   'General': [
-    'General Knowledge', 'Digital Literacy', 'Computer Fundamentals', 'English', 'French',
+    'General Knowledge', 'Digital Literacy', 'Digital Electronics', 'Computer Fundamentals', 'English', 'French',
     'Mathematics', 'Entrepreneurship', 'Economics', 'Law & Civics'
   ]
 };
