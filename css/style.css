@@ -415,6 +415,8 @@ main { padding: 40px 0 80px; }
   filter: invert(0.9) hue-rotate(180deg);
 }
 
+.mermaid svg { max-width: 100%; height: auto; }
+
 /* Code Blocks formatting */
 .answer-content pre {
   margin: 16px 0;

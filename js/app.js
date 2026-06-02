@@ -1,4 +1,5 @@
 let currentState = { view: 'home', year: null, paperIdx: null };
+let prevState = null;
 
 function navigateTo(view, year, paperIdx) {
   currentState = { view, year, paperIdx };
@@ -52,13 +53,13 @@ function renderNotes(app) {
 
 function renderAllMermaid() {
   if (typeof mermaid === 'undefined') return;
-  setTimeout(() => {
+  requestAnimationFrame(() => {
     const diagrams = document.querySelectorAll('#app .mermaid');
     diagrams.forEach((el, i) => {
       if (!el.id) el.id = 'nmermaid-' + i;
       try { mermaid.run({ nodes: [el] }); } catch(e) {}
     });
-  }, 150);
+  });
 }
 
 function renderHome() {
@@ -162,10 +163,10 @@ function renderRelatedNotes(year, paperTitle, sectionTitle, qid) {
         for (const block of chapter.content) {
           if (block.type === 'related' && Array.isArray(block.value)) {
             for (const entry of block.value) {
-              const paperMatch = paperTitle.toLowerCase().includes(entry.paper.toLowerCase()) ||
-                                 entry.paper.toLowerCase().includes(paperTitle.toLowerCase());
-              const sectionMatch = sectionTitle.toLowerCase().includes(entry.section.toLowerCase()) ||
-                                   entry.section.toLowerCase().includes(sectionTitle.toLowerCase());
+              const pt = paperTitle.toLowerCase(); const ep = entry.paper.toLowerCase();
+              const paperMatch = pt === ep || pt.includes(ep) || ep.includes(pt);
+              const st = sectionTitle.toLowerCase(); const es = entry.section.toLowerCase();
+              const sectionMatch = st === es || st.includes(es) || es.includes(st);
               if (entry.year === year && paperMatch && sectionMatch && entry.qid === qidStr) {
                 links.push({
                   yearId,
@@ -214,7 +215,10 @@ function toggleAnswer(id, btn) {
   
   if (isOpen) {
     if (window.Prism) Prism.highlightAllUnder(el);
-    setTimeout(() => runMermaid(id), 100);
+    el.addEventListener('transitionend', function handler() {
+      el.removeEventListener('transitionend', handler);
+      runMermaid(id);
+    }, { once: true });
   }
 }
 
@@ -405,14 +409,19 @@ function renderChapter(yearId, subjectId, chapterId) {
 function findPaperIndex(year, paperTitle) {
   const data = examData[year];
   if (!data) return -1;
-  const idx = data.papers.findIndex(p => p.title.toLowerCase().includes(paperTitle.toLowerCase()));
+  const t = paperTitle.toLowerCase();
+  let idx = data.papers.findIndex(p => p.title.toLowerCase() === t);
+  if (idx === -1) idx = data.papers.findIndex(p => p.title.toLowerCase().includes(t));
   return idx;
 }
 
 function getSectionIndex(year, paperIdx, sectionTitle) {
   const data = examData[year];
   if (!data || !data.papers[paperIdx]) return 0;
-  return data.papers[paperIdx].sections.findIndex(s => s.title.toLowerCase().includes(sectionTitle.toLowerCase()));
+  const t = sectionTitle.toLowerCase();
+  let idx = data.papers[paperIdx].sections.findIndex(s => s.title.toLowerCase() === t);
+  if (idx === -1) idx = data.papers[paperIdx].sections.findIndex(s => s.title.toLowerCase().includes(t));
+  return idx;
 }
 
 function getQuestionIndex(qid) {
@@ -437,9 +446,11 @@ window.debouncedSearch = debounce(handleSearch, 300);
 function handleSearch(query) {
   const results = document.getElementById('searchResults');
   if (!query.trim()) {
-    render();
+    if (prevState) { currentState = prevState; prevState = null; render(); }
+    else { render(); }
     return;
   }
+  if (currentState.view !== 'search') prevState = { ...currentState };
 
   const q = query.toLowerCase();
   const matches = [];
@@ -476,11 +487,13 @@ function handleSearch(query) {
     });
   }
 
+  const restorePrev = `if(prevState){currentState=prevState;prevState=null;render()}else{navigateTo('home')}`;
+
   if (matches.length === 0 && noteMatches.length === 0) {
     currentState = { view: 'search', query };
     const app = document.getElementById('app');
     app.innerHTML = `
-      <a href="#" class="btn-back" onclick="navigateTo('home')">&larr; Back</a>
+      <a href="#" class="btn-back" onclick="${restorePrev}">&larr; Back</a>
       <h2 class="page-title">Search Results</h2>
       <div class="no-results">
         <p>No results found for "<strong>${escapeHTML(query)}</strong>"</p>
@@ -493,7 +506,7 @@ function handleSearch(query) {
   currentState = { view: 'search', query };
   const app = document.getElementById('app');
   let html = `
-    <a href="#" class="btn-back" onclick="navigateTo('home')">&larr; Back</a>
+    <a href="#" class="btn-back" onclick="${restorePrev}">&larr; Back</a>
     <h2 class="page-title">Search Results</h2>
     <p class="page-meta">${matches.length + noteMatches.length} result${matches.length + noteMatches.length > 1 ? 's' : ''} for "${escapeHTML(query)}"</p>
     <div class="search-results">
@@ -547,7 +560,8 @@ function renderNav() {
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
     document.getElementById('searchInput').value = '';
-    navigateTo('home');
+    if (prevState) { currentState = prevState; prevState = null; render(); }
+    else { navigateTo('home'); }
   }
 });
 
