@@ -292,6 +292,18 @@ main { padding: 40px 0 80px; }
   font-weight: 700;
 }
 
+.scenario-box {
+  background: var(--bg-card);
+  border-left: 4px solid var(--mark-bg);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
 /* Questions */
 .question {
   background: var(--bg-card);

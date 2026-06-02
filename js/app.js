@@ -121,6 +121,7 @@ function renderPaper(year, paperIdx) {
           <h2>${sec.title}</h2>
           <span class="marks-badge">${sec.marks} marks</span>
         </div>
+        ${sec.scenario ? `<div class="scenario-box">${sec.scenario.replace(/\n/g, '<br>')}</div>` : ''}
         ${sec.questions.map((q, qi) => renderQuestion(q, si, qi, year, paper.title, sec.title)).join('')}
       </div>
     `).join('')}

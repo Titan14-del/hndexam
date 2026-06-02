@@ -4734,17 +4734,54 @@ const examData = {
           {
             "title": "Section B: Database Development and Administration",
             "marks": 20,
+            "scenario": "A private university is interested in designing a database that will track its teachers, students and courses. Information of interest includes teacher's names, matricule, telephone, gender, grade, student names, student telephone, student matricule, student gender, student address, student age, course title, course code, course ID and course credit. Each student enrolls in one or many courses of his choice and a teacher is teaching one or many courses. When a student enrolls to a course at the end, he had a mark.",
             "questions": [
               {
                 "id": 1,
-                "text": "a) What is an Entity? b) List all possible entities for a university database (teachers, students, courses). c) What is an attribute? d) For each entity listed, list its attributes. e) What is an E-R Diagram? List its components. f) Draw the E-R diagram using Crow's Foot or Chen notation. g) Convert the diagram to a relational model.",
-                "marks": 14,
-                "answer": "a) Entity: distinguishable real-world object.\nb) Entities: Teacher, Student, Course, Enrollment.\nc) Attribute: property of an entity.\nd) Teacher: TeacherID, Name, Matricule, Phone, Gender, Grade.\nStudent: StudentID, Name, Matricule, Phone, Gender, Address, Age.\nCourse: CourseID, Code, Title, Credit.\nEnrollment: EnrollID, StudentID(FK), CourseID(FK), TeacherID(FK), Mark.\ne) ```mermaid\nerDiagram\n    TEACHER ||--o{ COURSE : teaches\n    STUDENT }o--o{ COURSE : enrolls\n    COURSE ||--o{ ENROLLMENT : has\n    TEACHER {\n        int TeacherID PK\n        string Name\n    }\n    STUDENT {\n        int StudentID PK\n        string Name\n        int Age\n    }\n    COURSE {\n        int CourseID PK\n        string Code\n        string Title\n    }\n    ENROLLMENT {\n        int EnrollID PK\n        int StudentID FK\n        int CourseID FK\n        int TeacherID FK\n        int Mark\n    }\n```\ng) Tables: Teacher, Student, Course, Enrollment with FKs.",
-                "tutorial": "M:N relationships resolved with junction tables."
+                "text": "What is an Entity?",
+                "marks": 1,
+                "answer": "An entity is a distinguishable real-world object or concept about which data is stored in a database."
               },
               {
                 "id": 2,
-                "text": "Using SQL: i) Create the database tables. ii) Create the database called 'UNIV'. iii) Insert a student into the database. iv) Retrieve the marks of all students in a particular subject.",
+                "text": "List all the possible entities.",
+                "marks": 1.5,
+                "answer": "Teacher, Student, Course, Enrollment"
+              },
+              {
+                "id": 3,
+                "text": "What is an attribute?",
+                "marks": 1,
+                "answer": "An attribute is a property or characteristic of an entity."
+              },
+              {
+                "id": 4,
+                "text": "On each entity listed in question 2, list its attributes.",
+                "marks": 1.5,
+                "answer": "Teacher: TeacherID, Name, Matricule, Phone, Gender, Grade.\nStudent: StudentID, Name, Matricule, Phone, Gender, Address, Age.\nCourse: CourseID, Code, Title, Credit.\nEnrollment: EnrollID, StudentID(FK), CourseID(FK), TeacherID(FK), Mark."
+              },
+              {
+                "id": 5,
+                "text": "What is an E-R Diagram? List all the components of an E-R diagram.",
+                "marks": 3,
+                "answer": "An E-R (Entity-Relationship) diagram is a graphical representation of entities, attributes, and relationships in a database.\n\nComponents: Entity (rectangle), Attribute (ellipse), Relationship (diamond), Primary Key (underlined attribute), Foreign Key, Cardinality constraints (1:1, 1:M, M:N)."
+              },
+              {
+                "id": 6,
+                "text": "Draw the equivalent E-R diagram of that private University using the crow's notation or Chen notation.",
+                "marks": 3,
+                "answer": "```mermaid\nerDiagram\n    TEACHER ||--o{ COURSE : teaches\n    STUDENT }o--o{ COURSE : enrolls\n    COURSE ||--o{ ENROLLMENT : has\n    TEACHER {\n        int TeacherID PK\n        string Name\n    }\n    STUDENT {\n        int StudentID PK\n        string Name\n        int Age\n    }\n    COURSE {\n        int CourseID PK\n        string Code\n        string Title\n    }\n    ENROLLMENT {\n        int EnrollID PK\n        int StudentID FK\n        int CourseID FK\n        int TeacherID FK\n        int Mark\n    }\n```",
+                "tutorial": "M:N relationships resolved with junction tables."
+              },
+              {
+                "id": 7,
+                "text": "Convert the diagram to a relational model.",
+                "marks": 3,
+                "answer": "Tables: Teacher(TeacherID PK, Name, Matricule, Phone, Gender, Grade)\nStudent(StudentID PK, Name, Matricule, Phone, Gender, Address, Age)\nCourse(CourseID PK, Code, Title, Credit)\nEnrollment(EnrollID PK, StudentID FK, CourseID FK, TeacherID FK, Mark)"
+              },
+              {
+                "id": 8,
+                "text": "Using SQL language answer the following questions:\ni. Create the tables of your database\nii. Create the database of the university called 'UNIV'\niii. Insert a student your database\niv. Retrieve the marks of all students in a particular subject",
                 "marks": 6,
                 "answer": "CREATE DATABASE UNIV;\nUSE UNIV;\n\nCREATE TABLE Student (StudentID INT PK, Name VARCHAR(100), Matricule VARCHAR(20), Phone VARCHAR(15), Gender CHAR(1), Address VARCHAR(200), Age INT);\nCREATE TABLE Course (CourseID INT PK, Code VARCHAR(10), Title VARCHAR(100), Credit INT);\nCREATE TABLE Enrollment (EnrollID INT PK, StudentID INT FK, CourseID INT FK, Mark FLOAT);\n\nINSERT INTO Student VALUES (1, 'John Doe', 'SWE001', '677000001', 'M', 'Yaounde', 20);\n\nSELECT s.Name, e.Mark FROM Student s JOIN Enrollment e ON s.StudentID=e.StudentID JOIN Course c ON e.CourseID=c.CourseID WHERE c.Title='Database';"
               }
