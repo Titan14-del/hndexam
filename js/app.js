@@ -13,6 +13,23 @@ function navigateToNotes(subView, yearId, subjectId, chapterId) {
   window.scrollTo(0, 0);
 }
 
+function navigateToStudy() {
+  currentState = { view: 'study' };
+  render();
+  window.scrollTo(0, 0);
+}
+
+function navigateToStudyTopic(topicName) {
+  currentState = { view: 'study-topic', topic: topicName };
+  render();
+  window.scrollTo(0, 0);
+}
+
+function filterStudyTopic(topicName, year) {
+  selectedYearFilter[topicName] = year;
+  navigateToStudyTopic(topicName);
+}
+
 function toggleTheme() {
   const html = document.documentElement;
   const current = html.getAttribute('data-theme');
@@ -40,6 +57,8 @@ function render() {
   else if (view === 'paper') { app.innerHTML = renderPaper(year, paperIdx); renderMermaidInQuestions(); }
   else if (view === 'notes') renderNotes(app);
   else if (view === 'search') { /* handled by handleSearch */ }
+  else if (view === 'study') app.innerHTML = renderStudyHome();
+  else if (view === 'study-topic') app.innerHTML = renderStudyTopic(currentState.topic);
   renderNav();
 }
 
@@ -546,6 +565,167 @@ function scrollToQuestion(id) {
   }, 200);
 }
 
+// ====== STUDY MODE ======
+
+function renderStudyHome() {
+  const index = getStudyIndex();
+  const topics = Object.keys(index).sort(function(a, b) {
+    var aTotal = index[a].essays.length + index[a].mcqs.length;
+    var bTotal = index[b].essays.length + index[b].mcqs.length;
+    return bTotal - aTotal;
+  });
+
+  var catMap = {};
+  Object.keys(TOPIC_CATEGORIES).forEach(function(cat) {
+    catMap[cat] = [];
+  });
+  catMap['Other'] = [];
+
+  topics.forEach(function(t) {
+    var data = index[t];
+    var total = data.essays.length + data.mcqs.length;
+    if (total === 0) return;
+    var papers = new Set();
+    data.essays.forEach(function(e) { papers.add(e.year + '|' + e.paperTitle); });
+    data.mcqs.forEach(function(m) { papers.add(m.year + '|' + m.paperTitle); });
+    var card = { name: t, essays: data.essays.length, mcqs: data.mcqs.length, total: total, papers: papers.size };
+
+    var categorized = false;
+    Object.keys(TOPIC_CATEGORIES).forEach(function(cat) {
+      if (TOPIC_CATEGORIES[cat].indexOf(t) !== -1) {
+        catMap[cat].push(card);
+        categorized = true;
+      }
+    });
+    if (!categorized) catMap['Other'].push(card);
+  });
+
+  var html = '<h1 class="page-title">Study by Topic</h1>' +
+    '<p class="page-meta">Review questions from all years, organized by topic</p>';
+
+  ['SWE Core', 'General', 'Other'].forEach(function(cat) {
+    var cards = catMap[cat];
+    if (!cards || cards.length === 0) return;
+    html += '<h2 class="study-category">' + cat + '</h2><div class="study-grid">';
+    cards.forEach(function(c) {
+      html += '<a href="#" class="study-card" onclick="navigateToStudyTopic(\'' +
+        c.name.replace(/'/g, "\\'") + '\')">' +
+        '<h3>' + escapeHTML(c.name) + '</h3>' +
+        '<div class="study-card-stats">' +
+        '<span>' + c.essays + ' essay' + (c.essays !== 1 ? 's' : '') + '</span>' +
+        (c.mcqs > 0 ? '<span>' + c.mcqs + ' MCQ' + (c.mcqs !== 1 ? 's' : '') + '</span>' : '') +
+        '<span>' + c.papers + ' paper' + (c.papers !== 1 ? 's' : '') + '</span>' +
+        '</div></a>';
+    });
+    html += '</div>';
+  });
+
+  return html;
+}
+
+function renderStudyTopic(topicName) {
+  var index = getStudyIndex();
+  var topicData = index[topicName];
+  if (!topicData || (topicData.essays.length === 0 && topicData.mcqs.length === 0)) {
+    return '<a href="#" class="btn-back" onclick="navigateToStudy()">&larr; All Topics</a>' +
+      '<h1 class="page-title">' + escapeHTML(topicName) + '</h1>' +
+      '<p class="page-meta">No questions found for this topic.</p>';
+  }
+
+  var paperSet = new Set();
+  topicData.essays.forEach(function(e) { paperSet.add(e.year + '|' + e.paperTitle); });
+  topicData.mcqs.forEach(function(m) { paperSet.add(m.year + '|' + m.paperTitle); });
+
+  var years = new Set();
+  topicData.essays.forEach(function(e) { years.add(e.year); });
+  topicData.mcqs.forEach(function(m) { years.add(m.year); });
+  var sortedYears = Array.from(years).sort();
+
+  var filterYear = selectedYearFilter[topicName] || 'all';
+
+  var html = '<a href="#" class="btn-back" onclick="navigateToStudy()">&larr; All Topics</a>' +
+    '<h1 class="page-title">' + escapeHTML(topicName) + '</h1>' +
+    '<p class="page-meta">' + (topicData.essays.length + topicData.mcqs.length) +
+    ' questions across ' + paperSet.size + ' paper' + (paperSet.size !== 1 ? 's' : '') +
+    (sortedYears.length > 0 ? ' (' + sortedYears[0] + '\u2013' + sortedYears[sortedYears.length - 1] + ')' : '') + '</p>' +
+    '<div class="study-year-filter">' +
+    '<button class="study-filter-btn' + (filterYear === 'all' ? ' active' : '') +
+    '" onclick="filterStudyTopic(\'' + topicName.replace(/'/g, "\\'") + "','all')\">All Years</button>";
+
+  sortedYears.slice().reverse().forEach(function(y) {
+    html += '<button class="study-filter-btn' + (filterYear === y ? ' active' : '') +
+      '" onclick="filterStudyTopic(\'' + topicName.replace(/'/g, "\\'") + "','" + y + "')\">" + y + '</button>';
+  });
+  html += '</div>';
+
+  var idx = 0;
+
+  var filterEssays = filterYear === 'all'
+    ? topicData.essays
+    : topicData.essays.filter(function(e) { return e.year === filterYear; });
+  var filterMCQs = filterYear === 'all'
+    ? topicData.mcqs
+    : topicData.mcqs.filter(function(m) { return m.year === filterYear; });
+
+  if (filterEssays.length > 0) {
+    html += '<h3 class="study-type-header">Essay Questions (' + filterEssays.length + ')</h3>';
+    var essayHtml = renderStudyQuestionGroup(filterEssays, idx);
+    html += essayHtml;
+    idx += filterEssays.length;
+  }
+
+  if (filterMCQs.length > 0) {
+    html += '<h3 class="study-type-header">Multiple Choice Questions (' + filterMCQs.length + ')</h3>';
+    html += renderStudyQuestionGroup(filterMCQs, idx);
+  }
+
+  return html;
+}
+
+function renderStudyQuestionGroup(entries, startIdx) {
+  var yearMap = {};
+  entries.forEach(function(e) {
+    if (!yearMap[e.year]) yearMap[e.year] = {};
+    if (!yearMap[e.year][e.paperTitle]) yearMap[e.year][e.paperTitle] = [];
+    yearMap[e.year][e.paperTitle].push(e);
+  });
+
+  var html = '';
+  var idx = startIdx;
+
+  Object.keys(yearMap).sort().reverse().forEach(function(year) {
+    Object.keys(yearMap[year]).sort().forEach(function(paperTitle) {
+      var items = yearMap[year][paperTitle];
+      html += '<div class="study-year-divider">' + year + ' \u00b7 ' + escapeHTML(paperTitle) + '</div>';
+      items.forEach(function(item) {
+        html += renderStudyQuestion(item.question, item.source, idx);
+        idx++;
+      });
+    });
+  });
+
+  return html;
+}
+
+function renderStudyQuestion(q, source, idx) {
+  var ansId = 'studya' + idx;
+  return '<div class="study-question" id="sq-' + idx + '">' +
+    '<div class="study-source">' + escapeHTML(source) + '</div>' +
+    '<div class="question question-tight">' +
+    '<div class="question-header">' +
+    '<div>' +
+    (q.id ? '<span class="question-number">' + q.id + '.</span>' : '') +
+    '<div class="question-text">' + formatQuestionText(q.text) + '</div></div>' +
+    '<span class="question-marks">' + q.marks + ' mk' + (q.marks > 1 ? 's' : '') + '</span></div>' +
+    (q.subtext ? '<p class="study-subtext">' + q.subtext + '</p>' : '') +
+    '<button class="answer-toggle" onclick="toggleAnswer(\'' + ansId + '\', this)">' +
+    '<span class="arrow">&#9660;</span> Show Answer</button>' +
+    '<div class="answer-content" id="' + ansId + '">' +
+    formatAnswer(q.answer) +
+    (q.tutorial ? '<div class="answer-tutorial"><strong>&#128218; Explanation:</strong> ' + q.tutorial + '</div>' : '') +
+    '</div></div></div>';
+}
+
 // ====== NAV TABS ======
 
 function renderNav() {
@@ -555,6 +735,7 @@ function renderNav() {
   nav.innerHTML = `
     <a href="#" class="nav-tab ${view === 'home' || view === 'year' || view === 'paper' ? 'active' : ''}" onclick="navigateTo('home')">&#128218; Exams</a>
     <a href="#" class="nav-tab ${view === 'notes' ? 'active' : ''}" onclick="navigateToNotes('home',null,null,null)">&#128221; Notes</a>
+    <a href="#" class="nav-tab ${view === 'study' || view === 'study-topic' ? 'active' : ''}" onclick="navigateToStudy()">&#128214; Study</a>
   `;
 }
 
