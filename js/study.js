@@ -14,12 +14,12 @@ const ESSAY_TOPIC_RULES = [
   { name: 'Operating Systems', keywords: ['operating system'] },
   { name: 'Project Management', keywords: ['project management'] },
   { name: 'General Knowledge', keywords: ['general computer', 'digital society'] },
-  { name: 'Computer Fundamentals', keywords: ['number system', 'logic gate', 'boolean', 'computer fundamental', 'ms office', 'microsoft word', 'excel', 'powerpoint'] },
+  { name: 'Computer Fundamentals', keywords: ['number system', 'logic gate', 'boolean', 'computer fundamental', 'computer technology', 'ms office', 'microsoft word', 'excel', 'powerpoint'] },
   { name: 'English', keywords: ['reading comprehension', 'grammar', 'spoken english', 'writing', 'composition'] },
   { name: 'French', keywords: ['compréhension', 'comprehension', 'expression libre', 'langue', 'rédaction', 'ecrite'] },
   { name: 'Mathematics', keywords: [
     'statistics', 'probability', 'statistique', 'analysis', 'calculus',
-    'differential equation', 'further mathematics',
+    'differential equation', 'mathematics', 'further mathematics',
     'transform', 'differential equations'
   ]},
   { name: 'Entrepreneurship', keywords: ['entrepreneurship'] },
@@ -189,8 +189,19 @@ function buildStudyIndex() {
       paper.sections.forEach((sec, si) => {
         const st = sec.title.toLowerCase();
         if (isMCQSection(st)) {
+          const pt = paper.title.toLowerCase();
+          let paperTopic = null;
+          for (const rule of ESSAY_TOPIC_RULES) {
+            if (rule.keywords.some(kw => pt.includes(kw))) {
+              paperTopic = rule.name;
+              break;
+            }
+          }
+          if (paperTopic !== 'Digital Literacy' && paperTopic !== 'Digital Electronics') {
+            paperTopic = null;
+          }
           sec.questions.forEach((q, qi) => {
-            const topic = classifyMCQ(q.text + ' ' + (q.subtext || ''));
+            const topic = paperTopic || classifyMCQ(q.text + ' ' + (q.subtext || ''));
             if (!index[topic]) index[topic] = { essays: [], mcqs: [] };
             index[topic].mcqs.push({
               year, paperIdx: pi, paperTitle: paper.title,
