@@ -57,6 +57,7 @@ function toggleTheme() {
 
 function render() {
   const app = document.getElementById('app');
+<<<<<<< HEAD
   const { view, year, paperIdx } = currentState;
   if (view === 'home') app.innerHTML = renderHome();
   else if (view === 'year') app.innerHTML = renderYear(year);
@@ -67,6 +68,22 @@ function render() {
   else if (view === 'study-topic') app.innerHTML = renderStudyTopic(currentState.topic);
   else if (view === 'paper-pdf') { app.innerHTML = renderPaperPdf(year, paperIdx); renderMermaidInQuestions(); }
   renderNav();
+=======
+  try {
+    const { view, year, paperIdx } = currentState;
+    if (view === 'home') app.innerHTML = renderHome();
+    else if (view === 'year') app.innerHTML = renderYear(year);
+    else if (view === 'paper') { app.innerHTML = renderPaper(year, paperIdx); renderAllMermaid(); }
+    else if (view === 'notes') renderNotes(app);
+    else if (view === 'search') { /* handled by handleSearch */ }
+    else if (view === 'study') app.innerHTML = renderStudyHome();
+    else if (view === 'study-topic') app.innerHTML = renderStudyTopic(currentState.topic);
+    renderNav();
+  } catch (e) {
+    console.error('Render error:', e);
+    app.innerHTML = '<div style="padding:40px;text-align:center"><h2>Something went wrong</h2><p style="color:var(--text-muted)">An error occurred while rendering this page.</p><button class="btn-back" data-nav="home" style="margin-top:16px">&larr; Go Home</button></div>';
+  }
+>>>>>>> a2e6c7c (Fix bugs, refactor events, fix classification, escape XSS, clean data)
 }
 
 function renderNotes(app) {
@@ -83,7 +100,7 @@ function renderAllMermaid() {
     const diagrams = document.querySelectorAll('#app .mermaid');
     diagrams.forEach((el, i) => {
       if (!el.id) el.id = 'nmermaid-' + i;
-      try { mermaid.run({ nodes: [el] }); } catch(e) {}
+      try { mermaid.run({ nodes: [el] }); } catch(e) { console.warn('Mermaid render error:', e); }
     });
   });
 }
@@ -92,11 +109,11 @@ function renderHome() {
   const years = Object.keys(examData).sort().reverse();
   return `
     <h1 class="page-title">HND Software Engineering Exam Hub</h1>
-    <p class="page-meta">Past exam papers with model answers — 2020 to 2025</p>
+    <p class="page-meta">Past exam papers with model answers — ${years[0]} to ${years[years.length - 1]}</p>
     <div class="year-grid">
       ${years.map(y => {
         const papers = examData[y].papers;
-        return `<a href="#" class="year-card" onclick="navigateTo('year','${y}')">
+        return `<a href="#" class="year-card" data-nav="year" data-year="${y}">
           <div class="year-num">${y}</div>
           <div class="year-papers">${papers.length} paper${papers.length > 1 ? 's' : ''}</div>
         </a>`;
@@ -112,11 +129,11 @@ function renderYear(year) {
   const data = examData[year];
   if (!data) return '<p>Year not found.</p>';
   return `
-    <a href="#" class="btn-back" onclick="navigateTo('home')">&larr; All Years</a>
+    <a href="#" class="btn-back" data-nav="home">&larr; All Years</a>
     <h1 class="page-title">${year} Session</h1>
     <p class="page-meta">${data.papers.length} exam paper${data.papers.length > 1 ? 's' : ''}</p>
     ${data.papers.map((p, i) => `
-      <div class="paper-card" onclick="navigateTo('paper','${year}',${i})">
+      <div class="paper-card" data-nav="paper" data-year="${year}" data-paper="${i}">
         <div class="paper-title">${p.title}</div>
         <div class="paper-details">
           ${p.duration ? `<span>&#9200; ${p.duration}</span>` : ''}
@@ -134,20 +151,25 @@ function renderPaper(year, paperIdx) {
   const paper = data.papers[paperIdx];
 
   return `
+<<<<<<< HEAD
     <a href="#" class="btn-back" onclick="navigateTo('year','${year}')">&larr; ${year} Papers</a>
     <div class="paper-toolbar">
       <h1 class="page-title" style="margin-bottom:0">${paper.title}</h1>
       <button class="pdf-btn" onclick="navigateToPaperPdf('${year}',${paperIdx})" title="View full paper as PDF">&#128196; View Full Paper (PDF)</button>
     </div>
+=======
+    <a href="#" class="btn-back" data-nav="year" data-year="${year}">&larr; ${year} Papers</a>
+    <h1 class="page-title">${escapeHTML(paper.title)}</h1>
+>>>>>>> a2e6c7c (Fix bugs, refactor events, fix classification, escape XSS, clean data)
     <p class="page-meta">
-      ${paper.duration ? `Duration: ${paper.duration} &nbsp;|&nbsp; ` : ''}
-      ${paper.credits ? `Credits: ${paper.credits} &nbsp;|&nbsp; ` : ''}
-      ${paper.description || ''}
+      ${paper.duration ? `Duration: ${escapeHTML(paper.duration)} &nbsp;|&nbsp; ` : ''}
+      ${paper.credits ? `Credits: ${escapeHTML(paper.credits)} &nbsp;|&nbsp; ` : ''}
+      ${escapeHTML(paper.description || '')}
     </p>
     ${paper.sections.map((sec, si) => `
       <div class="section">
         <div class="section-header">
-          <h2>${sec.title}</h2>
+          <h2>${escapeHTML(sec.title)}</h2>
           <span class="marks-badge">${sec.marks} marks</span>
         </div>
         ${sec.scenario ? `<div class="scenario-box">${sec.scenario.replace(/\n/g, '<br>')}</div>` : ''}
@@ -222,13 +244,13 @@ function renderQuestion(q, si, qi, year, paperTitle, sectionTitle) {
         </div>
         <span class="question-marks">${q.marks} mk${q.marks > 1 ? 's' : ''}</span>
       </div>
-      ${q.subtext ? `<p style="font-size:13px;color:var(--text-muted);margin-bottom:6px">${q.subtext}</p>` : ''}
-      <button class="answer-toggle" onclick="toggleAnswer('${ansId}', this)">
+      ${q.subtext ? `<p style="font-size:13px;color:var(--text-muted);margin-bottom:6px">${escapeHTML(q.subtext)}</p>` : ''}
+      <button class="answer-toggle" data-toggle="answer" data-answer-id="${ansId}">
         <span class="arrow">&#9660;</span> Show Answer
       </button>
       <div class="answer-content" id="${ansId}">
         ${formatAnswer(q.answer)}
-        ${q.tutorial ? `<div class="answer-tutorial"><strong>&#128218; Explanation:</strong> ${q.tutorial}</div>` : ''}
+        ${q.tutorial ? `<div class="answer-tutorial"><strong>&#128218; Explanation:</strong> ${escapeHTML(q.tutorial)}</div>` : ''}
         ${relatedNotes}
       </div>
     </div>
@@ -269,7 +291,7 @@ function renderRelatedNotes(year, paperTitle, sectionTitle, qid) {
   const uniqueLinks = links.filter((l, i, arr) => i === arr.findIndex(x => x.chapterId === l.chapterId));
   return `<div class="question-related-notes"><strong>&#128221; Related Notes:</strong> ` +
     uniqueLinks.map(l =>
-      `<a href="#" onclick="navigateToNotes('chapter','${l.yearId}','${l.subjectId}','${l.chapterId}');return false">${l.subjectTitle} &middot; ${l.chapterTitle}</a>`
+      `<a href="#" data-nav="notes-chapter" data-year-id="${l.yearId}" data-subject-id="${l.subjectId}" data-chapter-id="${l.chapterId}">${escapeHTML(l.subjectTitle)} &middot; ${escapeHTML(l.chapterTitle)}</a>`
     ).join(' &nbsp;|&nbsp; ') +
     `</div>`;
 }
@@ -279,7 +301,7 @@ function formatFraction(text) {
     .replace(/\(([^()]+)\)\/\(([^()]+)\)/g, '<span class="frac"><span class="num">$1</span><span class="den">$2</span></span>')
     .replace(/\(([^()]+)\)\/(\d+)/g, '<span class="frac"><span class="num">$1</span><span class="den">$2</span></span>')
     .replace(/(\d+)\/\(([^()]+)\)/g, '<span class="frac"><span class="num">$1</span><span class="den">$2</span></span>')
-    .replace(/\b(\d+)\/(\d+)\b/g, '<span class="frac"><span class="num">$1</span><span class="den">$2</span></span>');
+    .replace(/\b(?!(?:\d{4}\/\d{4}))(\d+)\/(\d+)\b/g, '<span class="frac"><span class="num">$1</span><span class="den">$2</span></span>');
 }
 
 function formatQuestionText(text) {
@@ -306,10 +328,7 @@ function toggleAnswer(id, btn) {
   
   if (isOpen) {
     if (window.Prism) Prism.highlightAllUnder(el);
-    el.addEventListener('transitionend', function handler() {
-      el.removeEventListener('transitionend', handler);
-      runMermaid(id);
-    }, { once: true });
+    runMermaid(id);
   }
 }
 
@@ -323,7 +342,7 @@ function runMermaid(containerId) {
     if (!el.id) el.id = id;
     try {
       mermaid.run({ nodes: [el] });
-    } catch(e) {}
+    } catch(e) { console.warn('Mermaid render error:', e); }
   });
 }
 
@@ -394,7 +413,7 @@ function renderNotesHome() {
     <p class="page-meta">Exam-focused study notes organized by year and subject</p>
     <div class="notes-years-grid">
       ${Object.entries(notesData).map(([id, yearData]) => `
-        <a href="#" class="notes-year-card" onclick="navigateToNotes('year','${id}',null,null)">
+        <a href="#" class="notes-year-card" data-nav="notes-year" data-notes-year="${id}">
           <div class="notes-year-num">${yearData.title}</div>
           <div class="notes-year-subjects">${yearData.subjects.length} subjects</div>
         </a>
@@ -407,12 +426,12 @@ function renderNotesYear(yearId) {
   const yearData = notesData[yearId];
   if (!yearData) return '<p>Year not found.</p>';
   return `
-    <a href="#" class="btn-back" onclick="navigateToNotes('home',null,null,null)">&larr; All Notes</a>
+    <a href="#" class="btn-back" data-nav="notes-home">&larr; All Notes</a>
     <h1 class="page-title">${yearData.title}</h1>
     <p class="page-meta">${yearData.subjects.length} subjects</p>
     <div class="subjects-grid">
       ${yearData.subjects.map(s => `
-        <a href="#" class="subject-card" onclick="navigateToNotes('subject','${yearId}','${s.id}',null)">
+        <a href="#" class="subject-card" data-nav="notes-subject" data-notes-year="${yearId}" data-notes-subject="${s.id}">
           <div class="subject-icon">${s.icon || '&#128218;'}</div>
           <div class="subject-title">${s.title}</div>
           <div class="subject-chapters">${s.chapters.length} chapter${s.chapters.length > 1 ? 's' : ''}</div>
@@ -429,12 +448,12 @@ function renderSubject(yearId, subjectId) {
   if (!subject) return '<p>Subject not found.</p>';
   const yearLabel = yearId === 'year1' ? 'Year 1' : 'Year 2';
   return `
-    <a href="#" class="btn-back" onclick="navigateToNotes('year','${yearId}',null,null)">&larr; ${yearLabel}</a>
+    <a href="#" class="btn-back" data-nav="notes-year" data-notes-year="${yearId}">&larr; ${escapeHTML(yearLabel)}</a>
     <h1 class="page-title">${subject.icon || '&#128218;'} ${subject.title}</h1>
     <p class="page-meta">${subject.chapters.length} chapter${subject.chapters.length > 1 ? 's' : ''}</p>
     <div class="chapters-list">
       ${subject.chapters.map((ch, i) => `
-        <a href="#" class="chapter-card" onclick="navigateToNotes('chapter','${yearId}','${subjectId}','${ch.id}')">
+        <a href="#" class="chapter-card" data-nav="notes-chapter" data-year-id="${yearId}" data-subject-id="${subjectId}" data-chapter-id="${ch.id}">
           <div class="chapter-num">${i + 1}</div>
           <div class="chapter-info">
             <div class="chapter-title">${ch.title}</div>
@@ -456,7 +475,7 @@ function renderChapter(yearId, subjectId, chapterId) {
   if (!chapter) return '<p>Chapter not found.</p>';
 
   let html = `
-    <a href="#" class="btn-back" onclick="navigateToNotes('subject','${yearId}','${subjectId}',null)">&larr; ${subject.title}</a>
+    <a href="#" class="btn-back" data-nav="notes-subject" data-notes-year="${yearId}" data-notes-subject="${subjectId}">&larr; ${escapeHTML(subject.title)}</a>
     <h1 class="page-title">${chapter.title}</h1>
   `;
 
@@ -481,7 +500,7 @@ function renderChapter(yearId, subjectId, chapterId) {
       block.value.forEach(r => {
         const paperIdx = findPaperIndex(r.year, r.paper);
         if (paperIdx !== -1) {
-          html += `<li><a href="#" onclick="navigateTo('paper','${r.year}',${paperIdx});setTimeout(()=>scrollToQuestion('q-${getSectionIndex(r.year,paperIdx,r.section)}-${getQuestionIndex(r.qid)}'),200)">${r.year} &middot; ${r.paper} &middot; ${r.section} &middot; ${r.qid}</a></li>`;
+          html += `<li><a href="#" data-nav="notes-paper" data-year="${r.year}" data-paper="${paperIdx}" data-section="${getSectionIndex(r.year,paperIdx,r.section)}" data-question="${getQuestionIndex(r.qid)}">${escapeHTML(r.year)} &middot; ${escapeHTML(r.paper)} &middot; ${escapeHTML(r.section)} &middot; ${escapeHTML(r.qid)}</a></li>`;
         } else {
           html += `<li>${r.year} &middot; ${r.paper} &middot; ${r.section} &middot; ${r.qid}</li>`;
         }
@@ -516,8 +535,9 @@ function getSectionIndex(year, paperIdx, sectionTitle) {
 }
 
 function getQuestionIndex(qid) {
-  const num = parseInt(qid.replace(/[^0-9]/g, ''));
-  return isNaN(num) ? 0 : num - 1;
+  if (typeof qid === 'number') return qid - 1;
+  const parts = qid.match(/^(\d+)/);
+  return parts ? parseInt(parts[1]) - 1 : 0;
 }
 
 // ====== SEARCH ======
@@ -532,7 +552,8 @@ function debounce(func, delay) {
   };
 }
 
-window.debouncedSearch = debounce(handleSearch, 300);
+const SEARCH_DEBOUNCE_MS = 500;
+window.debouncedSearch = debounce(handleSearch, SEARCH_DEBOUNCE_MS);
 
 function handleSearch(query) {
   const results = document.getElementById('searchResults');
@@ -578,13 +599,11 @@ function handleSearch(query) {
     });
   }
 
-  const restorePrev = `if(prevState){currentState=prevState;prevState=null;render()}else{navigateTo('home')}`;
-
   if (matches.length === 0 && noteMatches.length === 0) {
     currentState = { view: 'search', query };
     const app = document.getElementById('app');
     app.innerHTML = `
-      <a href="#" class="btn-back" onclick="${restorePrev}">&larr; Back</a>
+      <a href="#" class="btn-back" data-nav="back-restore">&larr; Back</a>
       <h2 class="page-title">Search Results</h2>
       <div class="no-results">
         <p>No results found for "<strong>${escapeHTML(query)}</strong>"</p>
@@ -597,7 +616,7 @@ function handleSearch(query) {
   currentState = { view: 'search', query };
   const app = document.getElementById('app');
   let html = `
-    <a href="#" class="btn-back" onclick="${restorePrev}">&larr; Back</a>
+    <a href="#" class="btn-back" data-nav="back-restore">&larr; Back</a>
     <h2 class="page-title">Search Results</h2>
     <p class="page-meta">${matches.length + noteMatches.length} result${matches.length + noteMatches.length > 1 ? 's' : ''} for "${escapeHTML(query)}"</p>
     <div class="search-results">
@@ -606,7 +625,7 @@ function handleSearch(query) {
   if (matches.length > 0) {
     html += `<h3 class="search-category">Exam Questions</h3>`;
     html += matches.map(m => `
-      <div class="result-item" onclick="navigateTo('paper','${m.year}',${m.paperIdx});setTimeout(()=>scrollToQuestion('q-${m.si}-${m.qi}'),100)">
+      <div class="result-item" data-nav="search-paper" data-year="${m.year}" data-paper="${m.paperIdx}" data-si="${m.si}" data-qi="${m.qi}">
         <div class="result-meta">${m.year} &middot; ${m.paperTitle} &middot; ${m.sectionTitle}</div>
         <div class="result-text">${escapeHTML(m.question.text.length > 120 ? m.question.text.slice(0, 120) + '...' : m.question.text)}</div>
       </div>
@@ -618,7 +637,7 @@ function handleSearch(query) {
     html += noteMatches.map(m => {
       const yearLabel = m.yearId === 'year1' ? 'Year 1' : 'Year 2';
       return `
-      <div class="result-item" onclick="navigateToNotes('chapter','${m.yearId}','${m.subjectId}','${m.chapterId}')">
+      <div class="result-item" data-nav="notes-chapter" data-year-id="${m.yearId}" data-subject-id="${m.subjectId}" data-chapter-id="${m.chapterId}">
         <div class="result-meta">${yearLabel} &middot; ${escapeHTML(m.subjectTitle)}</div>
         <div class="result-text">${escapeHTML(m.chapterTitle)}</div>
       </div>`;
@@ -641,27 +660,27 @@ function scrollToQuestion(id) {
 function renderStudyHome() {
   const index = getStudyIndex();
   const topics = Object.keys(index).sort(function(a, b) {
-    var aTotal = index[a].essays.length + index[a].mcqs.length;
-    var bTotal = index[b].essays.length + index[b].mcqs.length;
+    const aTotal = index[a].essays.length + index[a].mcqs.length;
+    const bTotal = index[b].essays.length + index[b].mcqs.length;
     return bTotal - aTotal;
   });
 
-  var catMap = {};
+  const catMap = {};
   Object.keys(TOPIC_CATEGORIES).forEach(function(cat) {
     catMap[cat] = [];
   });
   catMap['Other'] = [];
 
   topics.forEach(function(t) {
-    var data = index[t];
-    var total = data.essays.length + data.mcqs.length;
+    const data = index[t];
+    const total = data.essays.length + data.mcqs.length;
     if (total === 0) return;
-    var papers = new Set();
+    const papers = new Set();
     data.essays.forEach(function(e) { papers.add(e.year + '|' + e.paperTitle); });
     data.mcqs.forEach(function(m) { papers.add(m.year + '|' + m.paperTitle); });
-    var card = { name: t, essays: data.essays.length, mcqs: data.mcqs.length, total: total, papers: papers.size };
+    const card = { name: t, essays: data.essays.length, mcqs: data.mcqs.length, total: total, papers: papers.size };
 
-    var categorized = false;
+    let categorized = false;
     Object.keys(TOPIC_CATEGORIES).forEach(function(cat) {
       if (TOPIC_CATEGORIES[cat].indexOf(t) !== -1) {
         catMap[cat].push(card);
@@ -671,16 +690,21 @@ function renderStudyHome() {
     if (!categorized) catMap['Other'].push(card);
   });
 
-  var html = '<h1 class="page-title">Study by Topic</h1>' +
+  let html = '<h1 class="page-title">Study by Topic</h1>' +
     '<p class="page-meta">Review questions from all years, organized by topic</p>';
 
+<<<<<<< HEAD
   ['SWE Core', 'General', 'Mathematics', 'Other'].forEach(function(cat) {
     var cards = catMap[cat];
+=======
+  ['SWE Core', 'General', 'Other'].forEach(function(cat) {
+    const cards = catMap[cat];
+>>>>>>> a2e6c7c (Fix bugs, refactor events, fix classification, escape XSS, clean data)
     if (!cards || cards.length === 0) return;
     html += '<h2 class="study-category">' + cat + '</h2><div class="study-grid">';
     cards.forEach(function(c) {
-      html += '<a href="#" class="study-card" onclick="navigateToStudyTopic(\'' +
-        c.name.replace(/'/g, "\\'") + '\')">' +
+      html += '<a href="#" class="study-card" data-nav="study-topic" data-topic="' +
+        escapeHTML(c.name) + '">' +
         '<h3>' + escapeHTML(c.name) + '</h3>' +
         '<div class="study-card-stats">' +
         '<span>' + c.essays + ' essay' + (c.essays !== 1 ? 's' : '') + '</span>' +
@@ -695,46 +719,46 @@ function renderStudyHome() {
 }
 
 function renderStudyTopic(topicName) {
-  var index = getStudyIndex();
-  var topicData = index[topicName];
+  const index = getStudyIndex();
+  const topicData = index[topicName];
   if (!topicData || (topicData.essays.length === 0 && topicData.mcqs.length === 0)) {
-    return '<a href="#" class="btn-back" onclick="navigateToStudy()">&larr; All Topics</a>' +
+    return '<a href="#" class="btn-back" data-nav="study">&larr; All Topics</a>' +
       '<h1 class="page-title">' + escapeHTML(topicName) + '</h1>' +
       '<p class="page-meta">No questions found for this topic.</p>';
   }
 
-  var paperSet = new Set();
+  const paperSet = new Set();
   topicData.essays.forEach(function(e) { paperSet.add(e.year + '|' + e.paperTitle); });
   topicData.mcqs.forEach(function(m) { paperSet.add(m.year + '|' + m.paperTitle); });
 
-  var years = new Set();
+  const years = new Set();
   topicData.essays.forEach(function(e) { years.add(e.year); });
   topicData.mcqs.forEach(function(m) { years.add(m.year); });
-  var sortedYears = Array.from(years).sort();
+  const sortedYears = Array.from(years).sort();
 
-  var filterYear = selectedYearFilter[topicName] || 'all';
+  const filterYear = selectedYearFilter[topicName] || 'all';
 
-  var html = '<a href="#" class="btn-back" onclick="navigateToStudy()">&larr; All Topics</a>' +
+  let html = '<a href="#" class="btn-back" data-nav="study">&larr; All Topics</a>' +
     '<h1 class="page-title">' + escapeHTML(topicName) + '</h1>' +
     '<p class="page-meta">' + (topicData.essays.length + topicData.mcqs.length) +
     ' questions across ' + paperSet.size + ' paper' + (paperSet.size !== 1 ? 's' : '') +
     (sortedYears.length > 0 ? ' (' + sortedYears[0] + '\u2013' + sortedYears[sortedYears.length - 1] + ')' : '') + '</p>' +
     '<div class="study-year-filter">' +
     '<button class="study-filter-btn' + (filterYear === 'all' ? ' active' : '') +
-    '" onclick="filterStudyTopic(\'' + topicName.replace(/'/g, "\\'") + "','all')\">All Years</button>";
+    '" data-nav="filter-study" data-topic="' + escapeHTML(topicName) + '" data-year="all">All Years</button>';
 
   sortedYears.slice().reverse().forEach(function(y) {
     html += '<button class="study-filter-btn' + (filterYear === y ? ' active' : '') +
-      '" onclick="filterStudyTopic(\'' + topicName.replace(/'/g, "\\'") + "','" + y + "')\">" + y + '</button>';
+      '" data-nav="filter-study" data-topic="' + escapeHTML(topicName) + '" data-year="' + y + '">' + y + '</button>';
   });
   html += '</div>';
 
-  var idx = 0;
+  let idx = 0;
 
-  var filterEssays = filterYear === 'all'
+  const filterEssays = filterYear === 'all'
     ? topicData.essays
     : topicData.essays.filter(function(e) { return e.year === filterYear; });
-  var filterMCQs = filterYear === 'all'
+  const filterMCQs = filterYear === 'all'
     ? topicData.mcqs
     : topicData.mcqs.filter(function(m) { return m.year === filterYear; });
 
@@ -754,15 +778,15 @@ function renderStudyTopic(topicName) {
 }
 
 function renderStudyQuestionGroup(entries, startIdx) {
-  var yearMap = {};
+  const yearMap = {};
   entries.forEach(function(e) {
     if (!yearMap[e.year]) yearMap[e.year] = {};
     if (!yearMap[e.year][e.paperTitle]) yearMap[e.year][e.paperTitle] = [];
     yearMap[e.year][e.paperTitle].push(e);
   });
 
-  var html = '';
-  var idx = startIdx;
+  let html = '';
+  let idx = startIdx;
 
   Object.keys(yearMap).sort().reverse().forEach(function(year) {
     Object.keys(yearMap[year]).sort().forEach(function(paperTitle) {
@@ -779,7 +803,7 @@ function renderStudyQuestionGroup(entries, startIdx) {
 }
 
 function renderStudyQuestion(q, source, idx) {
-  var ansId = 'studya' + idx;
+  const ansId = 'studya' + idx;
   return '<div class="study-question" id="sq-' + idx + '">' +
     '<div class="study-source">' + escapeHTML(source) + '</div>' +
     '<div class="question question-tight">' +
@@ -788,12 +812,12 @@ function renderStudyQuestion(q, source, idx) {
     (q.id ? '<span class="question-number">' + q.id + '.</span>' : '') +
     '<div class="question-text">' + formatQuestionText(q.text) + '</div></div>' +
     '<span class="question-marks">' + q.marks + ' mk' + (q.marks > 1 ? 's' : '') + '</span></div>' +
-    (q.subtext ? '<p class="study-subtext">' + q.subtext + '</p>' : '') +
-    '<button class="answer-toggle" onclick="toggleAnswer(\'' + ansId + '\', this)">' +
+    (q.subtext ? '<p class="study-subtext">' + escapeHTML(q.subtext) + '</p>' : '') +
+    '<button class="answer-toggle" data-toggle="answer" data-answer-id="' + ansId + '">' +
     '<span class="arrow">&#9660;</span> Show Answer</button>' +
     '<div class="answer-content" id="' + ansId + '">' +
     formatAnswer(q.answer) +
-    (q.tutorial ? '<div class="answer-tutorial"><strong>&#128218; Explanation:</strong> ' + q.tutorial + '</div>' : '') +
+    (q.tutorial ? '<div class="answer-tutorial"><strong>&#128218; Explanation:</strong> ' + escapeHTML(q.tutorial) + '</div>' : '') +
     '</div></div></div>';
 }
 
@@ -804,9 +828,15 @@ function renderNav() {
   if (!nav) return;
   const { view, notesView } = currentState;
   nav.innerHTML = `
+<<<<<<< HEAD
     <a href="#" class="nav-tab ${view === 'home' || view === 'year' || view === 'paper' || view === 'paper-pdf' ? 'active' : ''}" onclick="navigateTo('home')">&#128218; Exams</a>
     <a href="#" class="nav-tab ${view === 'notes' ? 'active' : ''}" onclick="navigateToNotes('home',null,null,null)">&#128221; Notes</a>
     <a href="#" class="nav-tab ${view === 'study' || view === 'study-topic' ? 'active' : ''}" onclick="navigateToStudy()">&#128214; Study</a>
+=======
+    <a href="#" class="nav-tab ${view === 'home' || view === 'year' || view === 'paper' ? 'active' : ''}" data-nav="home">&#128218; Exams</a>
+    <a href="#" class="nav-tab ${view === 'notes' ? 'active' : ''}" data-nav="notes-home">&#128221; Notes</a>
+    <a href="#" class="nav-tab ${view === 'study' || view === 'study-topic' ? 'active' : ''}" data-nav="study">&#128214; Study</a>
+>>>>>>> a2e6c7c (Fix bugs, refactor events, fix classification, escape XSS, clean data)
   `;
 }
 
@@ -828,5 +858,40 @@ document.addEventListener('keydown', function(e) {
     renderNav();
   }
 })();
+
+document.addEventListener('click', function(e) {
+  const toggle = e.target.closest('[data-toggle="answer"]');
+  if (toggle) {
+    toggleAnswer(toggle.dataset.answerId, toggle);
+    return;
+  }
+  const nav = e.target.closest('[data-nav]');
+  if (!nav) return;
+  if (nav.tagName === 'A') e.preventDefault();
+  switch (nav.dataset.nav) {
+    case 'home': navigateTo('home'); break;
+    case 'year': navigateTo('year', nav.dataset.year); break;
+    case 'paper': navigateTo('paper', nav.dataset.year, parseInt(nav.dataset.paper)); break;
+    case 'notes-home': navigateToNotes('home', null, null, null); break;
+    case 'notes-year': navigateToNotes('year', nav.dataset.notesYear, null, null); break;
+    case 'notes-subject': navigateToNotes('subject', nav.dataset.notesYear, nav.dataset.notesSubject, null); break;
+    case 'notes-chapter': navigateToNotes('chapter', nav.dataset.yearId, nav.dataset.subjectId, nav.dataset.chapterId); break;
+    case 'study': navigateToStudy(); break;
+    case 'study-topic': navigateToStudyTopic(nav.dataset.topic); break;
+    case 'filter-study': filterStudyTopic(nav.dataset.topic, nav.dataset.year); break;
+    case 'back-restore':
+      if (prevState) { currentState = prevState; prevState = null; render(); }
+      else { navigateTo('home'); }
+      break;
+    case 'search-paper':
+      navigateTo('paper', nav.dataset.year, parseInt(nav.dataset.paper));
+      setTimeout(function() { scrollToQuestion('q-' + nav.dataset.si + '-' + nav.dataset.qi); }, 100);
+      break;
+    case 'notes-paper':
+      navigateTo('paper', nav.dataset.year, parseInt(nav.dataset.paper));
+      setTimeout(function() { scrollToQuestion('q-' + nav.dataset.section + '-' + nav.dataset.question); }, 200);
+      break;
+  }
+});
 
 render();

@@ -16,6 +16,7 @@
   --answer-bg: #fffbeb;
   --answer-border: #fde68a;
   --input-bg: #ffffff;
+  --link: var(--primary);
 }
 
 [data-theme="dark"] {
@@ -36,6 +37,7 @@
   --answer-bg: #282111;
   --answer-border: #78350f;
   --input-bg: #1e293b;
+  --link: var(--primary);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -888,7 +890,7 @@ main { padding: 40px 0 80px; }
 }
 
 .note-list li::before {
-  content: "\\2022";
+  content: "\2022";
   color: var(--primary);
   font-weight: bold;
   margin-right: 10px;
@@ -997,7 +999,7 @@ main { padding: 40px 0 80px; }
 }
 
 .note-exam-tips li::before {
-  content: "\\2B50";
+  content: "\2B50";
   margin-right: 8px;
 }
 

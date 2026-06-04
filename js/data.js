@@ -2068,8 +2068,8 @@ const examData = {
             "marks": 20,
             "questions": [
               {"id": 1, "text": "What is an algorithm? List four characteristics of algorithms.", "marks": 5, "answer": "An algorithm is a finite, step-by-step sequence of well-defined instructions for solving a problem.\n\nFour characteristics:\n1) Finiteness: must terminate after finite steps.\n2) Definiteness: each step must be unambiguous.\n3) Input: zero or more input values.\n4) Output: at least one output value produced.\n5) Effectiveness: each step must be basic enough to carry out."},
-              {"id": 2, "text": "The algorithm below determines average weight of two rabbits.\n\n1. Start\n2. Get W1, W2\n3. If W1<0 OR W2<0\n4.     Display error\n5. Else\n6.     Average = (W1+W2)/2\n7.     Displace W1, W2, Average\n8. End\n\nHow many control structures? Name them and identify line numbers.", "marks": 4, "answer": "Two control structures:\n\n1) Sequence (lines 1,2,6,7,8): linear execution.\n2) Selection/IF-THEN-ELSE (lines 3-5): conditional branch.\n\nNo iteration/loop present."},
-              {"id": 3, "text": "The algorithm below determines average weight of two rabbits.\n\n1. Start\n2. Get W1, W2\n3. If W1<0 OR W2<0\n4.     Display error\n5. Else\n6.     Average = (W1+W2)/2\n7.     Displace W1, W2, Average\n8. End\n\nUse a flow chart to represent this algorithm.", "marks": 7, "answer": "Flowchart:\n\n```mermaid\nflowchart TD\n    Start([Start]) --> GetW[Get W1, W2]\n    GetW --> Check{Is weight negative?}\n    Check -->|Yes| Error[Display error]\n    Check -->|No| Calc[Average = W1+W2 / 2]\n    Calc --> Output[Display W1, W2, Average]\n    Error --> End([End])\n    Output --> End\n```\n\nSymbols: Oval=Start/End, Parallelogram=Input/Output, Diamond=Decision, Rectangle=Process, Arrows=Flow."},
+              {"id": 2, "text": "The algorithm below determines average weight of two rabbits.\n\n1. Start\n2. Get W1, W2\n3. If W1&lt;0 OR W2&lt;0\n4.     Display error\n5. Else\n6.     Average = (W1+W2)/2\n7.     Displace W1, W2, Average\n8. End\n\nHow many control structures? Name them and identify line numbers.", "marks": 4, "answer": "Two control structures:\n\n1) Sequence (lines 1,2,6,7,8): linear execution.\n2) Selection/IF-THEN-ELSE (lines 3-5): conditional branch.\n\nNo iteration/loop present."},
+              {"id": 3, "text": "The algorithm below determines average weight of two rabbits.\n\n1. Start\n2. Get W1, W2\n3. If W1&lt;0 OR W2&lt;0\n4.     Display error\n5. Else\n6.     Average = (W1+W2)/2\n7.     Displace W1, W2, Average\n8. End\n\nUse a flow chart to represent this algorithm.", "marks": 7, "answer": "Flowchart:\n\n```mermaid\nflowchart TD\n    Start([Start]) --> GetW[Get W1, W2]\n    GetW --> Check{Is weight negative?}\n    Check -->|Yes| Error[Display error]\n    Check -->|No| Calc[Average = W1+W2 / 2]\n    Calc --> Output[Display W1, W2, Average]\n    Error --> End([End])\n    Output --> End\n```\n\nSymbols: Oval=Start/End, Parallelogram=Input/Output, Diamond=Decision, Rectangle=Process, Arrows=Flow."},
               {"id": 4, "text": "Differentiate between an algorithm and a computer program.", "marks": 4, "answer": "Algorithm: step-by-step logical procedure, language-independent, cannot execute directly.\nProgram: instructions in specific language (C, Java, Python), can be compiled/executed.\n\nAlgorithm = design/plan; Program = implementation."}
             ]
           },
@@ -2684,7 +2684,7 @@ const examData = {
               },
               {
                 "id": 30,
-                "text": "To refer to an external CSS file within an HTML document, we use: A) <CSS>...</CSS> B) <LINK>...</LINK> C) <Script>...</Script> D) <LINK />",
+                "text": "To refer to an external CSS file within an HTML document, we use: A) &lt;CSS&gt;...&lt;/CSS&gt; B) &lt;LINK&gt;...&lt;/LINK&gt; C) &lt;Script&gt;...&lt;/Script&gt; D) &lt;LINK /&gt;",
                 "marks": 1,
                 "answer": "D"
               },
@@ -6933,7 +6933,7 @@ const examData = {
               },
               {
                 "id": 2,
-                "text": "From a normal distribution with μ=75, σ=8, find: a) P(X<80) b) P(X>70) c) P(65<X<85) using Z-scores.",
+                "text": "From a normal distribution with μ=75, σ=8, find: a) P(X&lt;80) b) P(X&gt;70) c) P(65&lt;X&lt;85) using Z-scores.",
                 "marks": 10,
                 "answer": "a) Z=(80-75)/8=0.625, P(Z<0.625)=0.7340\nb) Z=(70-75)/8=-0.625, P(Z>-0.625)=0.7340\nc) Z₁=(65-75)/8=-1.25, Z₂=(85-75)/8=1.25, P=0.8944-0.1056=0.7888"
               },
@@ -8136,9 +8136,9 @@ const examData = {
               },
               {
                 "id": 33,
-                "text": "Inside which HTML element do we put the JavaScript?\nA) &amp;lt;js&amp;gt;\nB) &amp;lt;javascript&amp;gt;\nC) &amp;lt;scripting&amp;gt;\nD) &amp;lt;script&amp;gt;",
+                "text": "Inside which HTML element do we put the JavaScript?\nA) &lt;js&gt;\nB) &lt;javascript&gt;\nC) &lt;scripting&gt;\nD) &lt;script&gt;",
                 "marks": 1,
-                "answer": "D) &amp;lt;script&amp;gt;"
+                "answer": "D) &lt;script&gt;"
               },
               {
                 "id": 34,
@@ -8900,7 +8900,7 @@ const examData = {
             "questions": [
               {
                 "id": "a",
-                "text": "Given an HTML file with a submit button and a <p id='text'> element, implement js_content() in JavaScript to modify the paragraph content when the button is clicked.",
+                "text": "Given an HTML file with a submit button and a &lt;p id='text'&gt; element, implement js_content() in JavaScript to modify the paragraph content when the button is clicked.",
                 "marks": 5,
                 "answer": "<p id=\"text\">Original text</p>\n<button onclick=\"js_content()\">Click</button>\n\n<script>\nfunction js_content() {\n    document.getElementById(\"text\").innerHTML = \"Text modified by JavaScript!\";\n}\n</script>",
                 "tutorial": "document.getElementById() selects the element. innerHTML changes its content. This is a basic DOM manipulation technique."
@@ -9574,9 +9574,9 @@ const examData = {
               },
               {
                 "id": 13,
-                "text": "Inside which HTML element do we put the JavaScript?\nA) &amp;lt;js&amp;gt;\nB) &amp;lt;javascript&amp;gt;\nC) &amp;lt;scripting&amp;gt;\nD) &amp;lt;script&amp;gt;",
+                "text": "Inside which HTML element do we put the JavaScript?\nA) &lt;js&gt;\nB) &lt;javascript&gt;\nC) &lt;scripting&gt;\nD) &lt;script&gt;",
                 "marks": 1,
-                "answer": "D) &amp;lt;script&amp;gt;"
+                "answer": "D) &lt;script&gt;"
               },
               {
                 "id": 14,
@@ -10374,9 +10374,9 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "How can you open a link in a new browser window?\na) <a href=\"url\" new>\nb) <a href=\"url\" target=\"new\">\nc) <a href=\"url\" target=\"_blank\">\nd) <a href=\"url\" target=\"\">",
+                "text": "How can you open a link in a new browser window?\na) &lt;a href=\"url\" new&gt;\nb) &lt;a href=\"url\" target=\"new\"&gt;\nc) &lt;a href=\"url\" target=\"_blank\"&gt;\nd) &lt;a href=\"url\" target=\"\"&gt;",
                 "marks": 1,
-                "answer": "c) <a href=\"url\" target=\"_blank\">"
+                "answer": "c) &lt;a href=\"url\" target=\"_blank\"&gt;"
               },
               {
                 "id": 2,
@@ -10446,9 +10446,9 @@ const examData = {
               },
               {
                 "id": 13,
-                "text": "Inside which HTML element do we put the JavaScript?\na) <js>\nb) <script>\nc) <scripting>\nd) <javascript>",
+                "text": "Inside which HTML element do we put the JavaScript?\na) &lt;js&gt;\nb) &lt;script&gt;\nc) &lt;scripting&gt;\nd) &lt;javascript&gt;",
                 "marks": 1,
-                "answer": "b) <script>"
+                "answer": "b) &lt;script&gt;"
               },
               {
                 "id": 14,
@@ -10512,9 +10512,9 @@ const examData = {
               },
               {
                 "id": 24,
-                "text": "Which of these tags are all <table> tags?\na) <table><head><tfoot>\nb) <table><tr><td>\nc) <table><tr><tt>\nd) <thead><body><tr>",
+                "text": "Which of these tags are all &lt;table&gt; tags?\na) &lt;table&gt;&lt;head&gt;&lt;tfoot&gt;\nb) &lt;table&gt;&lt;tr&gt;&lt;td&gt;\nc) &lt;table&gt;&lt;tr&gt;&lt;tt&gt;\nd) &lt;thead&gt;&lt;body&gt;&lt;tr&gt;",
                 "marks": 1,
-                "answer": "b) <table><tr><td>"
+                "answer": "b) &lt;table&gt;&lt;tr&gt;&lt;td&gt;"
               },
               {
                 "id": 25,
@@ -11772,7 +11772,7 @@ const examData = {
               },
               {
                 "id": 8,
-                "text": "3.3 Normal distribution: 14% scored <30, 24% scored >50. Find mean and variance. (7 marks)",
+                "text": "3.3 Normal distribution: 14% scored &lt;30, 24% scored &gt;50. Find mean and variance. (7 marks)",
                 "marks": 7,
                 "answer": "P(X<30)=0.14 => Z=-1.08 => (30-μ)/σ=-1.08\nP(X>50)=0.24 => Z=0.71 => (50-μ)/σ=0.71\nSolving: μ-30=1.08σ and 50-μ=0.71σ. Adding: 20=1.79σ => σ=11.2, μ=30+1.08(11.2)=42.1"
               }
@@ -12136,9 +12136,9 @@ const examData = {
               },
               {
                 "id": 9,
-                "text": "74HC85 comparator, A=1000, B=1010. Outputs:\na) A>B=0, A<B=0, A=B=0\nb) A>B=0, A<B=0, A=B=1\nc) A>B=0, A<B=1, A=B=0\nd) A>B=0, A<B=1, A=B=1",
+                "text": "74HC85 comparator, A=1000, B=1010. Outputs:\na) A&gt;B=0, A&lt;B=0, A=B=0\nb) A&gt;B=0, A&lt;B=0, A=B=1\nc) A&gt;B=0, A&lt;B=1, A=B=0\nd) A&gt;B=0, A&lt;B=1, A=B=1",
                 "marks": 1,
-                "answer": "c) A>B=0, A<B=1, A=B=0"
+                "answer": "c) A&gt;B=0, A&lt;B=1, A=B=0"
               },
               {
                 "id": 10,

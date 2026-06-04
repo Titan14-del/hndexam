@@ -2,7 +2,7 @@ const ESSAY_TOPIC_RULES = [
   { name: 'Digital Literacy', keywords: ['digital literacy'] },
   { name: 'Digital Electronics', keywords: ['digital electronics'] },
   { name: 'Algorithms', keywords: ['algorithms', 'ds & alg', 'algorithm', 'data structure'] },
-  { name: 'Procedural Programming', keywords: ['procedural programming', 'c prog', 'structural programming c', 'c programming', 'programming'] },
+  { name: 'Procedural Programming', keywords: ['procedural programming', 'c prog', 'structural programming c', 'c programming'] },
   { name: 'OOP', keywords: ['object oriented programming', 'oop'] },
   { name: 'Object Modeling / UML', keywords: ['object modeling', 'uml', 'object model'] },
   { name: 'Database', keywords: ['database'] },
@@ -87,7 +87,7 @@ const MCQ_TOPIC_RULES = [
     'database', 'sql', 'query', 'select ', 'insert', 'table',
     'entity', 'attribute', 'relation', 'foreign key', 'primary key',
     'normalization', 'dbms', 'referential', 'tuple', 'order by',
-    'where clause', 'create table', 'join', 'unique identifies a row'
+    'where clause', 'create table', 'join', 'uniquely identifies a row'
   ]},
   { name: 'Networking', keywords: [
     'router', 'switch', 'hub', 'osi', 'tcp/ip', 'ip address', 'subnet',
@@ -238,7 +238,8 @@ let selectedYearFilter = {};
 function isMCQSection(title) {
   const t = title.toLowerCase();
   return t.includes('multiple choice') || t.includes('mcq') ||
-         t.includes('qcm') || t.includes('choix multiples');
+         t.includes('qcm') || t.includes('choix multiples') ||
+         t.includes('number system') || t.includes('number system and codes');
 }
 
 function classifyMCQ(text) {
@@ -279,7 +280,8 @@ function buildStudyIndex() {
               break;
             }
           }
-          if (paperTopic !== 'Digital Literacy' && paperTopic !== 'Digital Electronics') {
+          const MCQ_PAPER_OVERRIDE = ['Digital Literacy', 'Digital Electronics'];
+          if (!MCQ_PAPER_OVERRIDE.includes(paperTopic)) {
             paperTopic = null;
           }
           sec.questions.forEach((q, qi) => {
