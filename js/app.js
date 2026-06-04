@@ -25,6 +25,12 @@ function navigateToStudyTopic(topicName) {
   window.scrollTo(0, 0);
 }
 
+function navigateToPaperPdf(year, paperIdx) {
+  currentState = { view: 'paper-pdf', year, paperIdx };
+  render();
+  window.scrollTo(0, 0);
+}
+
 function filterStudyTopic(topicName, year) {
   selectedYearFilter[topicName] = year;
   navigateToStudyTopic(topicName);
@@ -59,6 +65,7 @@ function render() {
   else if (view === 'search') { /* handled by handleSearch */ }
   else if (view === 'study') app.innerHTML = renderStudyHome();
   else if (view === 'study-topic') app.innerHTML = renderStudyTopic(currentState.topic);
+  else if (view === 'paper-pdf') { app.innerHTML = renderPaperPdf(year, paperIdx); renderMermaidInQuestions(); }
   renderNav();
 }
 
@@ -128,7 +135,10 @@ function renderPaper(year, paperIdx) {
 
   return `
     <a href="#" class="btn-back" onclick="navigateTo('year','${year}')">&larr; ${year} Papers</a>
-    <h1 class="page-title">${paper.title}</h1>
+    <div class="paper-toolbar">
+      <h1 class="page-title" style="margin-bottom:0">${paper.title}</h1>
+      <button class="pdf-btn" onclick="navigateToPaperPdf('${year}',${paperIdx})" title="View full paper as PDF">&#128196; View Full Paper (PDF)</button>
+    </div>
     <p class="page-meta">
       ${paper.duration ? `Duration: ${paper.duration} &nbsp;|&nbsp; ` : ''}
       ${paper.credits ? `Credits: ${paper.credits} &nbsp;|&nbsp; ` : ''}
@@ -144,6 +154,59 @@ function renderPaper(year, paperIdx) {
         ${sec.questions.map((q, qi) => renderQuestion(q, si, qi, year, paper.title, sec.title)).join('')}
       </div>
     `).join('')}
+  `;
+}
+
+function renderPaperPdf(year, paperIdx) {
+  const data = examData[year];
+  if (!data || !data.papers[paperIdx]) return '<p>Paper not found.</p>';
+  const paper = data.papers[paperIdx];
+
+  const allQuestionsExpanded = paper.sections.map((sec, si) => `
+    <div class="section">
+      <div class="section-header">
+        <h2>${sec.title}</h2>
+        <span class="marks-badge">${sec.marks} marks</span>
+      </div>
+      ${sec.scenario ? `<div class="scenario-box">${sec.scenario.replace(/\n/g, '<br>')}</div>` : ''}
+      ${sec.questions.map((q, qi) => {
+        const ansId = `pdf-ans-${si}-${qi}`;
+        return `
+          <div class="question" id="pdf-q-${si}-${qi}">
+            <div class="question-header">
+              <div>
+                <span class="question-number">${q.id || qi+1}.</span>
+                <div class="question-text">${formatQuestionText(q.text)}</div>
+              </div>
+              <span class="question-marks">${q.marks} mk${q.marks > 1 ? 's' : ''}</span>
+            </div>
+            ${q.subtext ? `<p style="font-size:13px;color:var(--text-muted);margin-bottom:6px">${q.subtext}</p>` : ''}
+            <div class="answer-content pdf-open" id="${ansId}">
+              ${formatAnswer(q.answer)}
+              ${q.tutorial ? `<div class="answer-tutorial"><strong>&#128218; Explanation:</strong> ${q.tutorial}</div>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `).join('');
+
+  return `
+    <div class="pdf-container">
+      <div class="pdf-toolbar">
+        <a href="#" class="btn-back" onclick="navigateTo('paper','${year}',${paperIdx})">&larr; Back to Paper</a>
+        <button class="pdf-btn pdf-print-btn" onclick="window.print()">&#128424; Print / Save as PDF</button>
+      </div>
+      <div class="pdf-paper">
+        <h1 class="pdf-title">${year} — ${paper.title}</h1>
+        <p class="pdf-meta">
+          ${paper.duration ? `Duration: ${paper.duration}` : ''}
+          ${paper.credits ? `${paper.duration ? ' &nbsp;|&nbsp; ' : ''}Credits: ${paper.credits}` : ''}
+          ${paper.description ? `${(paper.duration || paper.credits) ? ' &nbsp;|&nbsp; ' : ''}${paper.description}` : ''}
+        </p>
+        ${allQuestionsExpanded}
+      </div>
+    </div>
   `;
 }
 
@@ -611,7 +674,7 @@ function renderStudyHome() {
   var html = '<h1 class="page-title">Study by Topic</h1>' +
     '<p class="page-meta">Review questions from all years, organized by topic</p>';
 
-  ['SWE Core', 'General', 'Other'].forEach(function(cat) {
+  ['SWE Core', 'General', 'Mathematics', 'Other'].forEach(function(cat) {
     var cards = catMap[cat];
     if (!cards || cards.length === 0) return;
     html += '<h2 class="study-category">' + cat + '</h2><div class="study-grid">';
@@ -741,7 +804,7 @@ function renderNav() {
   if (!nav) return;
   const { view, notesView } = currentState;
   nav.innerHTML = `
-    <a href="#" class="nav-tab ${view === 'home' || view === 'year' || view === 'paper' ? 'active' : ''}" onclick="navigateTo('home')">&#128218; Exams</a>
+    <a href="#" class="nav-tab ${view === 'home' || view === 'year' || view === 'paper' || view === 'paper-pdf' ? 'active' : ''}" onclick="navigateTo('home')">&#128218; Exams</a>
     <a href="#" class="nav-tab ${view === 'notes' ? 'active' : ''}" onclick="navigateToNotes('home',null,null,null)">&#128221; Notes</a>
     <a href="#" class="nav-tab ${view === 'study' || view === 'study-topic' ? 'active' : ''}" onclick="navigateToStudy()">&#128214; Study</a>
   `;

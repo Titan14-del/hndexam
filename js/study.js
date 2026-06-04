@@ -17,10 +17,63 @@ const ESSAY_TOPIC_RULES = [
   { name: 'Computer Fundamentals', keywords: ['number system', 'logic gate', 'boolean', 'computer fundamental', 'computer technology', 'ms office', 'microsoft word', 'excel', 'powerpoint'] },
   { name: 'English', keywords: ['reading comprehension', 'grammar', 'spoken english', 'writing', 'composition'] },
   { name: 'French', keywords: ['compréhension', 'comprehension', 'expression libre', 'langue', 'rédaction', 'ecrite'] },
+  { name: 'Statistics', keywords: [
+    'statistics', 'statistique', 'mean', 'variance', 'standard deviation',
+    'cumulative frequency', 'frequency distribution', 'quartile', 'percentile',
+    'regression', 'correlation coefficient', 'sample', 'confidence interval',
+    'hypothesis test', 'z-score', 'normal distribution', 'poisson distribution',
+    'binomial distribution', 'class interval', 'class limit', 'frequency table',
+    'ogive', 'histogram'
+  ]},
+  { name: 'Probability', keywords: [
+    'probability', 'probabilité', 'bayes', 'bayes\' theorem', 'conditional probability',
+    'random variable', 'expectation', 'expected value', 'probability density',
+    'tree diagram', 'independent event', 'mutually exclusive', 'geometric distribution',
+    'poisson', 'binomial', 'markov bound', 'chebyshev bound'
+  ]},
+  { name: 'Differentiation', keywords: [
+    'differentiate', 'derivative', 'differential calculus', 'gradient',
+    'stationary point', 'tangent', 'chain rule', 'product rule', 'quotient rule',
+    'dy/dx', 'f\'(x)', 'partial derivative', 'curl', 'grad f'
+  ]},
+  { name: 'Integration', keywords: [
+    'integrate', 'integration', 'integral', 'definite integral', 'indefinite integral',
+    'area under', 'integration by', '∫', 'laplace transform'
+  ]},
+  { name: 'Matrices & Vectors', keywords: [
+    'matrix', 'matrices', 'determinant', 'inverse matrix', 'adjoint',
+    'eigenvalue', 'eigenvector', 'vector', 'scalar', 'cross product',
+    'dot product', 'linearly independent', 'symmetric matrix'
+  ]},
+  { name: 'Sets & Logic', keywords: [
+    'set', 'union', 'intersection', 'subset', 'venn diagram', 'complement',
+    'truth table', 'proposition', 'logical', 'boolean algebra', 'predicate'
+  ]},
+  { name: 'Sequences & Series', keywords: [
+    'sequence', 'series', 'arithmetic progression', 'geometric progression',
+    'convergence', 'divergence', 'maclaurin', 'taylor series', 'binomial expansion',
+    'ratio test', 'fibonacci', 'fourier series', 'fourier coefficient'
+  ]},
+  { name: 'Trigonometry', keywords: [
+    'trigonometric', 'trigonometry', 'sin ', 'cos ', 'tan ', 'sec ',
+    'cosec', 'cot ', 'sinh', 'cosh', 'tanh', 'angle', 'hyperbolic',
+    'trig', 'sinusoidal'
+  ]},
+  { name: 'Limits & Continuity', keywords: [
+    'limit', 'asymptote', 'continuity', 'continuous function',
+    'convergent', 'divergent', 'l\'hôpital', 'l\'hopital', 'lim '
+  ]},
+  { name: 'Functions & Graphs', keywords: [
+    'function', 'domain of definition', 'range of', 'parity', 'periodic function',
+    'odd function', 'even function', 'bijection', 'inverse function',
+    'composite function', 'f(x)', 'real valued function'
+  ]},
+  { name: 'Analysis', keywords: [
+    'analysis', 'calculus', 'ordinary differential equation', 'ode',
+    'differential equations', 'laplace transform', 'fourier'
+  ]},
   { name: 'Mathematics', keywords: [
-    'statistics', 'probability', 'statistique', 'analysis', 'calculus',
-    'differential equation', 'mathematics', 'further mathematics',
-    'transform', 'differential equations'
+    'mathematics', 'further mathematics', 'discrete mathematics', 'mathématique'
   ]},
   { name: 'Entrepreneurship', keywords: ['entrepreneurship'] },
   { name: 'Economics', keywords: ['general economics', 'economics'] },
@@ -111,30 +164,54 @@ const MCQ_TOPIC_RULES = [
     'consumer', 'producer', 'scarcity', 'opportunity cost', 'equilibrium',
     'monopoly', 'competition', 'tax', 'subsidy', 'tariff', 'export', 'import'
   ]},
+  { name: 'Statistics', keywords: [
+    'variance', 'standard deviation', 'distribution', 'correlation coefficient',
+    'mean ', 'median', 'quartile', 'percentile', 'frequency', 'cumulative',
+    'regression', 'sample ', 'class interval', 'class limit', 'range of',
+    'decimal', 'coefficient'
+  ]},
+  { name: 'Probability', keywords: [
+    'probability', 'probability mass', 'poisson', 'binomial', 'random variable',
+    'expectation', 'expected value', 'bayes', 'conditional', 'independent',
+    'p(a', 'p(b', 'p(x', 'e(x)', 'defective'
+  ]},
+  { name: 'Differentiation', keywords: [
+    'derivative', 'differential', 'gradient', 'dy/dx', 'f\'(x)'
+  ]},
+  { name: 'Integration', keywords: [
+    'integral', 'integration', '∫', 'dx '
+  ]},
+  { name: 'Matrices & Vectors', keywords: [
+    'matrix', 'matrices', 'determinant', 'eigenvalue', 'vector', 'adjoint'
+  ]},
+  { name: 'Sets & Logic', keywords: [
+    'set', 'union', 'intersection', 'subset', 'truth table', 'logic'
+  ]},
+  { name: 'Sequences & Series', keywords: [
+    'series', 'arithmetic progression', 'geometric progression', 'maclaurin',
+    'taylor series', 'binomial expansion', 'convergence', 'divergence',
+    'fibonacci', 'fourier'
+  ]},
+  { name: 'Trigonometry', keywords: [
+    'trigonometric', 'sin ', 'cos ', 'tan ', 'cosec', 'sinh', 'cosh', 'tanh',
+    'hyperbolic'
+  ]},
+  { name: 'Limits & Continuity', keywords: [
+    'limit', 'asymptote', 'lim ', 'lim(', 'limit as', 'limit x'
+  ]},
+  { name: 'Functions & Graphs', keywords: [
+    'function', 'domain of', 'parity', 'periodic function', 'odd function',
+    'even function', 'f(x)', 'absolute value', 'sqrt'
+  ]},
   { name: 'Mathematics', keywords: [
-    'probability', 'variance', 'standard deviation', 'distribution',
-    'laplace transform', 'integral', 'derivative', 'differential equation',
-    'eigenvalue', 'theorem', 'asymptote', 'maclaurin', 'taylor series',
-    'convergence', 'divergence', 'cosec', 'coth', 'tanh', 'sinh', 'cosh',
-    'arithmetic progression', 'binomial', 'poisson', 'correlation coefficient',
-    'determinant', 'gradient', 'parity', 'periodic function',
-    'domain of', 'series', 'log(', 'ln(', 'f(x)', 'dx ',
-    'mean ', 'median', 'period', 'limit as', 'limit x', 'dice',
-    'coefficient', 'frequency', 'cumulative', 'decimal',
-    'random variable', 'probability mass', 'hyperbolic',
-    'moment', 'skewness', 'kurtosis', 'quartile', 'percentile',
-    'matrices', 'vectors', 'scalar', 'symmetric', 'adjoint',
-    'expectation', 'simplif', 'sqrt', 'p(a', 'p(b', 'p(x',
-    'e(x)', 'e(x)=', 'linearly', 'trigonometric',
-    'lim ', 'linear regression',
-    'interpolation', 'extrapolation', 'stochastic',
-    'linear algebra', 'differential', 'calculus',
+    'laplace transform', 'differential equation', 'equation',
+    'log(', 'ln(', 'factor', 'simplif', 'solves', 'solution of',
+    'matrices', 'linear algebra', 'calculus', 'theorem',
+    'stochastic', 'interpolation', 'extrapolation',
     'is a factor', 'factoring', 'factorise', 'factorization',
-    'sample of', 'sample data', 'sample mean',
-    'range of', 'fibonacci', 'grad f',
-    'defective', 'solves', 'absolute value',
-    'vector', 'lim x', 'lim(', 'sin ', 'cos ', 'tan ',
-    'solution of', 'class interval', 'class limit of', 'tan('
+    'skewness', 'kurtosis', 'moment', 'period', 'dice',
+    'linear regression', 'grad f', 'linearly',
+    'lim x', 'tan(', 'e(x)='
   ]}
 ];
 
@@ -146,7 +223,12 @@ const TOPIC_CATEGORIES = {
   ],
   'General': [
     'General Knowledge', 'Digital Literacy', 'Digital Electronics', 'Computer Fundamentals', 'English', 'French',
-    'Mathematics', 'Entrepreneurship', 'Economics', 'Law & Civics'
+    'Entrepreneurship', 'Economics', 'Law & Civics'
+  ],
+  'Mathematics': [
+    'Statistics', 'Probability', 'Differentiation', 'Integration', 'Matrices & Vectors',
+    'Sets & Logic', 'Sequences & Series', 'Trigonometry', 'Limits & Continuity',
+    'Functions & Graphs', 'Analysis', 'Mathematics'
   ]
 };
 
@@ -229,7 +311,20 @@ function buildStudyIndex() {
           }
           if (essayTopic) {
             sec.questions.forEach((q, qi) => {
-              index[essayTopic].essays.push({
+              let finalTopic = essayTopic;
+              // Per-question text matching for granular math sub-topics
+              if (essayTopic === 'Mathematics' || essayTopic === 'Analysis') {
+                const qt = (q.text + ' ' + (q.subtext || '')).toLowerCase();
+                for (const subRule of ESSAY_TOPIC_RULES) {
+                  if (subRule.name === 'Mathematics' || subRule.name === 'Analysis') continue;
+                  if (subRule.keywords.some(kw => qt.includes(kw))) {
+                    finalTopic = subRule.name;
+                    break;
+                  }
+                }
+              }
+              if (!index[finalTopic]) index[finalTopic] = { essays: [], mcqs: [] };
+              index[finalTopic].essays.push({
                 year, paperIdx: pi, paperTitle: paper.title,
                 sectionTitle: sec.title, si, qi,
                 question: q,
