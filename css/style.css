@@ -1011,6 +1011,106 @@ main { padding: 40px 0 80px; }
   border-bottom: 2px solid var(--border);
 }
 
+/* Paper Toolbar */
+.paper-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+/* PDF Button */
+.pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.pdf-btn:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.pdf-print-btn {
+  background: var(--accent);
+}
+
+.pdf-print-btn:hover {
+  background: #fbbf24;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+/* PDF Container */
+.pdf-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pdf-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 12px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  position: sticky;
+  top: 80px;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+}
+
+.pdf-paper {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+.pdf-title {
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.pdf-meta {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--border);
+}
+
+.pdf-open {
+  max-height: none !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  margin-top: 16px !important;
+  border-left: 4px solid var(--accent) !important;
+  background: var(--answer-bg) !important;
+  height: auto !important;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   header .container { flex-wrap: wrap; }
