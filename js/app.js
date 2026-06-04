@@ -146,7 +146,7 @@ function renderPaper(year, paperIdx) {
     </div>
     <p class="page-meta">
       ${paper.duration ? `Duration: ${escapeHTML(paper.duration)} &nbsp;|&nbsp; ` : ''}
-      ${paper.credits ? `Credits: ${escapeHTML(paper.credits)} &nbsp;|&nbsp; ` : ''}
+      ${paper.credits ? `Credits: ${paper.credits} &nbsp;|&nbsp; ` : ''}
       ${escapeHTML(paper.description || '')}
     </p>
     ${paper.sections.map((sec, si) => `
@@ -379,6 +379,7 @@ function formatWithMermaid(text) {
 }
 
 function escapeHTML(str) {
+  if (typeof str !== 'string') return str;
   return str.replace(/[&<>'"]/g, tag => ({
     '&': '&amp;',
     '<': '&lt;',
