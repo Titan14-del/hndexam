@@ -12252,7 +12252,7 @@ const examData = {
                 "id": 7,
                 "text": "Sketch Harvard and Von-Neumann architectures and explain differences.",
                 "marks": 5,
-                "answer": "Von-Neumann: single shared memory for instructions and data, single bus. Harvard: separate memory and buses for instructions and data.\n\nDifferences: Harvard allows simultaneous access (faster), prevents instruction corruption, used in microcontrollers. Von-Neumann simpler, more flexible, used in general-purpose computers."
+                "answer": "Von-Neumann: single shared memory for instructions and data, single bus. Harvard: separate memory and buses for instructions and data.\n\n```mermaid\nflowchart LR\n    CPU[CPU] <--->|System Bus| MEM[Memory<br/>Instructions + Data]\n    CPU <--->|I/O Bus| IO[I/O Devices]\n    MEM <---> IO\n```\n\n**Von-Neumann Architecture**\n\n```mermaid\nflowchart LR\n    CPU[CPU] <--->|Instruction Bus| IMEM[Instruction Memory]\n    CPU <--->|Data Bus| DMEM[Data Memory]\n    CPU <--->|I/O Bus| IO[I/O Devices]\n```\n\n**Harvard Architecture**\n\nDifferences: Harvard allows simultaneous access (faster), prevents instruction corruption, used in microcontrollers. Von-Neumann simpler, more flexible, used in general-purpose computers."
               },
               {
                 "id": 8,
