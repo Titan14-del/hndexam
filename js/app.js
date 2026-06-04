@@ -57,18 +57,6 @@ function toggleTheme() {
 
 function render() {
   const app = document.getElementById('app');
-<<<<<<< HEAD
-  const { view, year, paperIdx } = currentState;
-  if (view === 'home') app.innerHTML = renderHome();
-  else if (view === 'year') app.innerHTML = renderYear(year);
-  else if (view === 'paper') { app.innerHTML = renderPaper(year, paperIdx); renderMermaidInQuestions(); }
-  else if (view === 'notes') renderNotes(app);
-  else if (view === 'search') { /* handled by handleSearch */ }
-  else if (view === 'study') app.innerHTML = renderStudyHome();
-  else if (view === 'study-topic') app.innerHTML = renderStudyTopic(currentState.topic);
-  else if (view === 'paper-pdf') { app.innerHTML = renderPaperPdf(year, paperIdx); renderMermaidInQuestions(); }
-  renderNav();
-=======
   try {
     const { view, year, paperIdx } = currentState;
     if (view === 'home') app.innerHTML = renderHome();
@@ -78,12 +66,12 @@ function render() {
     else if (view === 'search') { /* handled by handleSearch */ }
     else if (view === 'study') app.innerHTML = renderStudyHome();
     else if (view === 'study-topic') app.innerHTML = renderStudyTopic(currentState.topic);
+    else if (view === 'paper-pdf') { app.innerHTML = renderPaperPdf(year, paperIdx); renderAllMermaid(); }
     renderNav();
   } catch (e) {
     console.error('Render error:', e);
     app.innerHTML = '<div style="padding:40px;text-align:center"><h2>Something went wrong</h2><p style="color:var(--text-muted)">An error occurred while rendering this page.</p><button class="btn-back" data-nav="home" style="margin-top:16px">&larr; Go Home</button></div>';
   }
->>>>>>> a2e6c7c (Fix bugs, refactor events, fix classification, escape XSS, clean data)
 }
 
 function renderNotes(app) {
@@ -151,16 +139,11 @@ function renderPaper(year, paperIdx) {
   const paper = data.papers[paperIdx];
 
   return `
-<<<<<<< HEAD
-    <a href="#" class="btn-back" onclick="navigateTo('year','${year}')">&larr; ${year} Papers</a>
-    <div class="paper-toolbar">
-      <h1 class="page-title" style="margin-bottom:0">${paper.title}</h1>
-      <button class="pdf-btn" onclick="navigateToPaperPdf('${year}',${paperIdx})" title="View full paper as PDF">&#128196; View Full Paper (PDF)</button>
-    </div>
-=======
     <a href="#" class="btn-back" data-nav="year" data-year="${year}">&larr; ${year} Papers</a>
-    <h1 class="page-title">${escapeHTML(paper.title)}</h1>
->>>>>>> a2e6c7c (Fix bugs, refactor events, fix classification, escape XSS, clean data)
+    <div class="paper-toolbar">
+      <h1 class="page-title" style="margin-bottom:0">${escapeHTML(paper.title)}</h1>
+      <button class="pdf-btn" data-nav="paper-pdf" data-year="${year}" data-paper="${paperIdx}" title="View full paper as PDF">&#128196; View Full Paper (PDF)</button>
+    </div>
     <p class="page-meta">
       ${paper.duration ? `Duration: ${escapeHTML(paper.duration)} &nbsp;|&nbsp; ` : ''}
       ${paper.credits ? `Credits: ${escapeHTML(paper.credits)} &nbsp;|&nbsp; ` : ''}
@@ -693,13 +676,8 @@ function renderStudyHome() {
   let html = '<h1 class="page-title">Study by Topic</h1>' +
     '<p class="page-meta">Review questions from all years, organized by topic</p>';
 
-<<<<<<< HEAD
   ['SWE Core', 'General', 'Mathematics', 'Other'].forEach(function(cat) {
-    var cards = catMap[cat];
-=======
-  ['SWE Core', 'General', 'Other'].forEach(function(cat) {
     const cards = catMap[cat];
->>>>>>> a2e6c7c (Fix bugs, refactor events, fix classification, escape XSS, clean data)
     if (!cards || cards.length === 0) return;
     html += '<h2 class="study-category">' + cat + '</h2><div class="study-grid">';
     cards.forEach(function(c) {
@@ -828,15 +806,9 @@ function renderNav() {
   if (!nav) return;
   const { view, notesView } = currentState;
   nav.innerHTML = `
-<<<<<<< HEAD
-    <a href="#" class="nav-tab ${view === 'home' || view === 'year' || view === 'paper' || view === 'paper-pdf' ? 'active' : ''}" onclick="navigateTo('home')">&#128218; Exams</a>
-    <a href="#" class="nav-tab ${view === 'notes' ? 'active' : ''}" onclick="navigateToNotes('home',null,null,null)">&#128221; Notes</a>
-    <a href="#" class="nav-tab ${view === 'study' || view === 'study-topic' ? 'active' : ''}" onclick="navigateToStudy()">&#128214; Study</a>
-=======
-    <a href="#" class="nav-tab ${view === 'home' || view === 'year' || view === 'paper' ? 'active' : ''}" data-nav="home">&#128218; Exams</a>
+    <a href="#" class="nav-tab ${view === 'home' || view === 'year' || view === 'paper' || view === 'paper-pdf' ? 'active' : ''}" data-nav="home">&#128218; Exams</a>
     <a href="#" class="nav-tab ${view === 'notes' ? 'active' : ''}" data-nav="notes-home">&#128221; Notes</a>
     <a href="#" class="nav-tab ${view === 'study' || view === 'study-topic' ? 'active' : ''}" data-nav="study">&#128214; Study</a>
->>>>>>> a2e6c7c (Fix bugs, refactor events, fix classification, escape XSS, clean data)
   `;
 }
 
@@ -872,6 +844,7 @@ document.addEventListener('click', function(e) {
     case 'home': navigateTo('home'); break;
     case 'year': navigateTo('year', nav.dataset.year); break;
     case 'paper': navigateTo('paper', nav.dataset.year, parseInt(nav.dataset.paper)); break;
+    case 'paper-pdf': navigateToPaperPdf(nav.dataset.year, parseInt(nav.dataset.paper)); break;
     case 'notes-home': navigateToNotes('home', null, null, null); break;
     case 'notes-year': navigateToNotes('year', nav.dataset.notesYear, null, null); break;
     case 'notes-subject': navigateToNotes('subject', nav.dataset.notesYear, nav.dataset.notesSubject, null); break;
