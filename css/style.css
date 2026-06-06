@@ -1122,4 +1122,71 @@ main { padding: 40px 0 80px; }
   .section-header { flex-direction: column; align-items: flex-start; }
   .question-header { flex-wrap: wrap; }
   .paper-card .paper-details { flex-direction: column; gap: 8px; }
+  .main-nav { display: none; }
+  .main-nav.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 12px; gap: 4px; z-index: 200; }
+  .hamburger { display: flex; }
+}
+
+@media (max-width: 480px) {
+  .year-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .year-card { padding: 24px 16px; }
+  .year-card .year-num { font-size: 32px; }
+  .page-title { font-size: 22px; }
+  .paper-card { padding: 18px 20px; }
+  .question { padding: 18px 16px; }
+  .pdf-paper { padding: 20px; }
+  .pdf-title { font-size: 22px; }
+  .section-header { padding: 14px 18px; }
+  .section-header h2 { font-size: 17px; }
+  .study-grid { grid-template-columns: 1fr; }
+  .subjects-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .notes-years-grid { grid-template-columns: 1fr; }
+  .chapters-list { margin: 24px 0; }
+  .chapter-card { padding: 14px 16px; }
+  .pdf-paper { padding: 16px; }
+  .pdf-toolbar { flex-direction: column; gap: 10px; }
+  .btn-back { width: 100%; justify-content: center; }
+  .question-text { font-size: 15px; }
+  .answer-inner { padding: 16px; }
+  .answer-content { font-size: 14px; }
+  .paper-toolbar { flex-direction: column; align-items: flex-start; }
+  .paper-toolbar .pdf-btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 360px) {
+  .year-grid { grid-template-columns: 1fr; }
+  .subjects-grid { grid-template-columns: 1fr; }
+  .year-card .year-num { font-size: 28px; }
+  .page-title { font-size: 20px; }
+  .question { padding: 14px 12px; }
+  .pdf-paper { padding: 12px; }
+  header .container { gap: 10px; }
+  .search-box input { padding: 8px 36px 8px 12px; font-size: 14px; }
+  .study-filter-btn { padding: 8px 14px; font-size: 12px; }
+  .question-marks { font-size: 12px; padding: 3px 8px; }
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--text);
+  transition: all 0.2s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Disable hover effects on touch devices */
+html.touch-device *:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: inherit !important;
+  background: inherit !important;
+  color: inherit !important;
+  text-decoration: none !important;
 }
