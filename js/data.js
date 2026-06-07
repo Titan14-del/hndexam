@@ -3332,7 +3332,7 @@ const examData = {
                 "id": 31,
                 "text": "Briefly explain the following network topologies with the aid of diagrams: a) Bus b) Star c) Ring d) Mesh",
                 "marks": 8,
-                "answer": "a) Bus: all devices connected to a single central cable (backbone). Advantages: simple, cheap. Disadvantage: cable break stops all. b) Star: all devices connect to central hub/switch. Advantages: fault isolation. Disadvantage: hub is SPOF. c) Ring: each device connects to two neighbors forming a closed loop. Advantages: no collisions. Disadvantages: single break affects entire network. d) Mesh: every device connects to every other device. Advantages: redundancy, fault tolerance. Disadvantages: expensive, complex cabling."
+                "answer": "a) Bus Topology: all devices connect to a single central cable (backbone) with terminators at each end.\n\n```mermaid\nflowchart LR\n    T1[(Terminator)] --- Cable\n    Cable --- PC1 & PC2 & PC3 & Printer\n    Cable --- T2[(Terminator)]\n```\n\nAdvantages: simple, cheap. Disadvantage: cable break stops all.\n\nb) Star Topology: all devices connect to a central hub/switch.\n\n```mermaid\nflowchart TD\n    Hub{Hub/Switch} --- PC1\n    Hub --- PC2\n    Hub --- PC3\n    Hub --- Server\n```\n\nAdvantages: fault isolation, easy management. Disadvantage: hub is single point of failure.\n\nc) Ring Topology: each device connects to two neighbours forming a closed loop. Data travels in one direction.\n\n```mermaid\nflowchart LR\n    PC1 --- PC2\n    PC2 --- PC3\n    PC3 --- PC4\n    PC4 --- PC1\n```\n\nAdvantages: no collisions, predictable performance. Disadvantages: single break affects entire network.\n\nd) Mesh Topology: every device connects directly to every other device.\n\n```mermaid\nflowchart LR\n    PC1 --- PC2\n    PC1 --- PC3\n    PC1 --- PC4\n    PC2 --- PC3\n    PC2 --- PC4\n    PC3 --- PC4\n```\n\nAdvantages: redundancy, fault tolerance. Disadvantages: expensive, complex cabling."
               },
               {
                 "id": 32,
@@ -6096,7 +6096,7 @@ const examData = {
                 "id": 9,
                 "text": "Binary of Gray code 1111: A) (1101)₂ B) (1011)₂ C) (1110)₂ D) (1010)₂",
                 "marks": 1,
-                "answer": "B) (1011)₂ (Gray→Binary: MSB same, each next = prev binary XOR current Gray)"
+                "answer": "D) (1010)₂ (Gray→Binary: MSB same, each next = prev binary XOR current Gray. 1→1, 1⊕1=0, 0⊕1=1, 1⊕1=0 → 1010)"
               },
               {
                 "id": 10,
@@ -6112,9 +6112,9 @@ const examData = {
               },
               {
                 "id": 12,
-                "text": "Binary addition: 11011011010 + 010100101 = ? A) 0111001000 B) 1100110110 C) 11101112111 D) 10011010011",
+                "text": "Binary addition: 11011011010 + 010100101 = ? A) 0111001000 B) 1100110110 C) 11101111111 D) 10011010011",
                 "marks": 1,
-                "answer": "D) 10011010011"
+                "answer": "C) 11101111111 (1754+165=1919, verify by adding right to left)"
               },
               {
                 "id": 13,
