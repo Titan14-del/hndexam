@@ -14,9 +14,9 @@ const ESSAY_TOPIC_RULES = [
   { name: 'Operating Systems', keywords: ['operating system'] },
   { name: 'Project Management', keywords: ['project management'] },
   { name: 'General Knowledge', keywords: ['general computer', 'digital society'] },
-  { name: 'Computer Fundamentals', keywords: ['number system', 'logic gate', 'boolean', 'computer fundamental', 'computer technology', 'ms office', 'microsoft word', 'excel', 'powerpoint'] },
-  { name: 'English', keywords: ['reading comprehension', 'grammar', 'spoken english', 'writing', 'composition'] },
-  { name: 'French', keywords: ['compréhension', 'comprehension', 'expression libre', 'langue', 'rédaction', 'ecrite'] },
+  { name: 'Computer Fundamentals', keywords: ['number system', 'logic gate', 'boolean', 'computer fundamental', 'ms office', 'microsoft word', 'excel', 'powerpoint'] },
+  { name: 'English', keywords: ['reading comprehension', 'grammar', 'spoken english', 'writing', 'composition', 'english language'] },
+  { name: 'French', keywords: ['compréhension', 'comprehension', 'expression libre', 'langue', 'rédaction', 'ecrite', 'french language', 'français'] },
   { name: 'Statistics', keywords: [
     'statistics', 'statistique', 'mean', 'variance', 'standard deviation',
     'cumulative frequency', 'frequency distribution', 'quartile', 'percentile',
@@ -77,7 +77,7 @@ const ESSAY_TOPIC_RULES = [
   ]},
   { name: 'Entrepreneurship', keywords: ['entrepreneurship'] },
   { name: 'Economics', keywords: ['general economics', 'economics'] },
-  { name: 'Law & Civics', keywords: ['company law', 'labour law', 'fundamental rights', 'civics', 'business law'] },
+  { name: 'Law & Civics', keywords: ['company law', 'labour law', 'fundamental rights', 'civics', 'business law', 'law and citizenship'] },
 ];
 
 const MCQ_TOPIC_RULES = [
