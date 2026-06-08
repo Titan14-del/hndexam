@@ -8635,7 +8635,7 @@ const examData = {
               {"id": 22, "text": "A data condition occurs whenever a data is passed to an input element followed by a processing element and the result in control output.\nA) True\nB) False", "marks": 1, "answer": "B) False. A data condition occurs when data is passed to an input element AND the result is control output. The statement describes a control flow, not a data condition per se."},
               {"id": 23, "text": "The __________ enables the software engineer to develop models of the information domain and functional domain at the same time.\nA) data flow diagram\nB) state transition diagram\nC) control specification\nD) activity diagram", "marks": 1, "answer": "A) data flow diagram. DFDs simultaneously model the information domain (data flows, stores) and the functional domain (processes/transforms)."},
               {"id": 24, "text": "The __________ contains a state transition diagram that is a sequential specification of behavior.\nA) data flow diagram\nB) state transition diagram\nC) control specification\nD) workflow diagram", "marks": 1, "answer": "C) control specification. A control specification (CSPEC) contains a state transition diagram that describes the system's behavioral control flow."},
-              {"id": 25, "text": "Which of the following is not a construct?\nA) sequence\nB) condition\nC) repetition\nD) selection", "marks": 1, "answer": "C) repetition. In structured programming, the three basic constructs are sequence, selection (if-else), and repetition (loops). Condition is not a construct; it is part of selection."}
+              {"id": 25, "text": "Which of the following is not a construct?\nA) sequence\nB) condition\nC) repetition\nD) selection", "marks": 1, "answer": "B) condition. In structured programming, the three basic constructs are sequence, selection (if-else), and repetition (loops). Condition is not a construct; it is part of selection."}
             ]
           },
           {
@@ -11915,7 +11915,7 @@ const examData = {
                 "id": 22,
                 "text": "A structural model showing other systems in environment:\na) System context model\nb) Interaction model\nc) Environmental model\nd) Both a and b",
                 "marks": 1,
-                "answer": "d) Both a and b"
+                "answer": "a) System context model. A system context model is a structural model that defines the system boundary and shows external systems/actors. The interaction model is behavioral/dynamic, not structural."
               },
               {
                 "id": 23,
@@ -11951,7 +11951,7 @@ const examData = {
                 "id": 2,
                 "text": "Design a university database system with entities: STUDENT, DEPARTMENT, DEGREE, COURSE, REGISTER, REQUIRES.\n\na) List entities (2 marks)\nb) List attributes for DEGREE (1 mark)\nc) Design ER Diagram with multiplicity (5 marks)\nd) Present conceptual model (4 marks)\ne) Present logical model (4 marks)\nf) Present physical model (4 marks)",
                 "marks": 20,
-                "answer": "a) STUDENT, DEPARTMENT, DEGREE, COURSE, REGISTER, REQUIRES\nb) DEGREE attributes: DegreeCode(PK), DegreeTitle, DepartmentCode(FK)\nc) ```mermaid\nerDiagram\n    DEPARTMENT ||--o{ DEGREE : offers\n    DEGREE }o--|| COURSE : requires\n    STUDENT }o--o{ DEGREE : registers\n    DEGREE {\n        string DegreeCode PK\n        string DegreeTitle\n        string DepartmentCode FK\n    }\n```\nd) Conceptual: ER diagram independent of DBMS\ne) Logical: relational tables with FKs, normalized\ng) Physical: SQL CREATE TABLE statements with data types"
+                "answer": "a) STUDENT, DEPARTMENT, DEGREE, COURSE, REGISTER, REQUIRES\nb) DEGREE attributes: DegreeCode(PK), DegreeTitle, DepartmentCode(FK)\nc) ```mermaid\nerDiagram\n    DEPARTMENT ||--o{ DEGREE : offers\n    DEGREE }o--o{ COURSE : requires\n    STUDENT }o--o{ DEGREE : registers\n    DEGREE {\n        string DegreeCode PK\n        string DegreeTitle\n        string DepartmentCode FK\n    }\n```\nd) Conceptual: ER diagram independent of DBMS\ne) Logical: relational tables with FKs, normalized\nf) Physical: SQL CREATE TABLE statements with data types"
               },
               {
                 "id": 3,
