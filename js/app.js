@@ -52,6 +52,13 @@ function closeMobileNav() {
   document.getElementById('mainNav').classList.remove('open');
 }
 
+function closeMobileNavIfOutside(e) {
+  const nav = document.getElementById('mainNav');
+  if (!nav.classList.contains('open')) return;
+  if (e.target.closest('.hamburger, #mainNav')) return;
+  nav.classList.remove('open');
+}
+
 (function initTheme() {
   const saved = localStorage.getItem('hnd-theme');
   if (saved) { document.documentElement.setAttribute('data-theme', saved); return; }
@@ -852,7 +859,10 @@ document.addEventListener('click', function(e) {
     return;
   }
   const nav = e.target.closest('[data-nav]');
-  if (!nav) return;
+  if (!nav) {
+    closeMobileNavIfOutside(e);
+    return;
+  }
   if (nav.tagName === 'A') e.preventDefault();
   closeMobileNav();
   switch (nav.dataset.nav) {
