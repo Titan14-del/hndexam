@@ -45,16 +45,18 @@ function toggleTheme() {
 }
 
 function toggleMobileNav() {
-  document.getElementById('mainNav').classList.toggle('open');
+  const nav = document.getElementById('mainNav');
+  if (nav) nav.classList.toggle('open');
 }
 
 function closeMobileNav() {
-  document.getElementById('mainNav').classList.remove('open');
+  const nav = document.getElementById('mainNav');
+  if (nav) nav.classList.remove('open');
 }
 
 function closeMobileNavIfOutside(e) {
   const nav = document.getElementById('mainNav');
-  if (!nav.classList.contains('open')) return;
+  if (!nav || !nav.classList.contains('open')) return;
   if (e.target.closest('.hamburger, #mainNav')) return;
   nav.classList.remove('open');
 }
@@ -69,7 +71,15 @@ function closeMobileNavIfOutside(e) {
 (function initMermaid() {
   if (typeof mermaid !== 'undefined') {
     mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+    return;
   }
+  var checkMermaid = setInterval(function() {
+    if (typeof mermaid !== 'undefined') {
+      clearInterval(checkMermaid);
+      mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+      renderAllMermaid();
+    }
+  }, 200);
 })();
 
 (function initTouchDetection() {
@@ -826,8 +836,16 @@ function renderStudyQuestion(q, source, idx) {
 // ====== NAV TABS ======
 
 function renderNav() {
-  const nav = document.getElementById('mainNav');
-  if (!nav) return;
+  let nav = document.getElementById('mainNav');
+  if (!nav) {
+    const header = document.querySelector('header .container');
+    if (!header) return;
+    nav = document.createElement('nav');
+    nav.id = 'mainNav';
+    nav.className = 'main-nav';
+    const controls = header.querySelector('.header-controls');
+    header.insertBefore(nav, controls);
+  }
   const { view, notesView } = currentState;
   nav.innerHTML = `
     <a href="#" class="nav-tab ${view === 'home' || view === 'year' || view === 'paper' || view === 'paper-pdf' ? 'active' : ''}" data-nav="home">&#128218; Exams</a>
@@ -845,11 +863,7 @@ document.addEventListener('keydown', function(e) {
 });
 
 (function initNav() {
-  const header = document.querySelector('header .container');
-  if (header) {
-    // mainNav already exists in HTML; no need to create another
-    renderNav();
-  }
+  renderNav();
 })();
 
 document.addEventListener('click', function(e) {
