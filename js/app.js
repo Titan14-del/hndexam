@@ -840,10 +840,7 @@ document.addEventListener('keydown', function(e) {
 (function initNav() {
   const header = document.querySelector('header .container');
   if (header) {
-    const nav = document.createElement('nav');
-    nav.id = 'mainNav';
-    nav.className = 'main-nav';
-    header.insertBefore(nav, header.querySelector('.header-controls'));
+    // mainNav already exists in HTML; no need to create another
     renderNav();
   }
 })();
