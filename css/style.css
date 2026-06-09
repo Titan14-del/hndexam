@@ -535,9 +535,10 @@ main { padding: 40px 0 80px; }
 }
 
 .answer-content.open {
-  max-height: 3000px;
+  max-height: 20000px;
   opacity: 1;
   margin-top: 16px;
+  overflow-y: auto;
 }
 
 .answer-inner {
@@ -628,6 +629,8 @@ main { padding: 40px 0 80px; }
   color: var(--primary);
   transform: translateX(-2px);
 }
+
+.btn-home { margin-top: 16px; }
 
 /* Search Results */
 .search-results { margin-top: 24px; }
@@ -1184,12 +1187,24 @@ main { padding: 40px 0 80px; }
   min-height: 44px;
 }
 
-/* Disable hover effects on touch devices */
+/* Utility classes for inline style replacements */
+.text-muted { color: var(--text-muted); }
+.text-muted-small { color: var(--text-muted); font-size: 13px; margin-top: 20px; }
+.page-title-nomargin { font-size: 32px; font-weight: 800; margin-bottom: 0; letter-spacing: -0.5px; line-height: 1.2; }
+.subtext-muted { font-size: 13px; color: var(--text-muted); margin-bottom: 6px; }
+.search-hint { font-size: 14px; margin-top: 10px; }
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Disable sticky transform/shadow on touch devices */
 html.touch-device *:hover {
   transform: none !important;
   box-shadow: none !important;
-  border-color: inherit !important;
-  background: inherit !important;
-  color: inherit !important;
-  text-decoration: none !important;
 }

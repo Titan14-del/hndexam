@@ -42,6 +42,7 @@ function toggleTheme() {
   const next = current === 'light' ? 'dark' : 'light';
   html.setAttribute('data-theme', next);
   localStorage.setItem('hnd-theme', next);
+  document.querySelector('meta[name="theme-color"]').setAttribute('content', next === 'dark' ? '#0f172a' : '#ffffff');
 }
 
 function toggleMobileNav() {
@@ -63,9 +64,15 @@ function closeMobileNavIfOutside(e) {
 
 (function initTheme() {
   const saved = localStorage.getItem('hnd-theme');
-  if (saved) { document.documentElement.setAttribute('data-theme', saved); return; }
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (prefersDark) document.documentElement.setAttribute('data-theme', 'dark');
+  let theme = 'light';
+  if (saved) theme = saved;
+  else {
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark) theme = 'dark';
+  }
+  document.documentElement.setAttribute('data-theme', theme);
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute('content', theme === 'dark' ? '#0f172a' : '#ffffff');
 })();
 
 (function initMermaid() {
@@ -103,7 +110,7 @@ function render() {
     renderNav();
   } catch (e) {
     console.error('Render error:', e);
-    app.innerHTML = '<div style="padding:40px;text-align:center"><h2>Something went wrong</h2><p style="color:var(--text-muted)">An error occurred while rendering this page.</p><button class="btn-back" data-nav="home" style="margin-top:16px">&larr; Go Home</button></div>';
+    app.innerHTML = '<div class="error-container"><h2>Something went wrong</h2><p class="text-muted">An error occurred while rendering this page.</p><button class="btn-back btn-home" data-nav="home">&larr; Go Home</button></div>';
   }
 }
 
@@ -115,9 +122,12 @@ function renderNotes(app) {
   else if (notesView === 'chapter') { app.innerHTML = renderChapter(notesYear, notesSubject, notesChapter); renderAllMermaid(); }
 }
 
+let _mermaidRAF = null;
 function renderAllMermaid() {
   if (typeof mermaid === 'undefined') return;
-  requestAnimationFrame(() => {
+  if (_mermaidRAF) cancelAnimationFrame(_mermaidRAF);
+  _mermaidRAF = requestAnimationFrame(() => {
+    _mermaidRAF = null;
     const diagrams = document.querySelectorAll('#app .mermaid');
     diagrams.forEach((el, i) => {
       if (!el.id) el.id = 'nmermaid-' + i;
@@ -140,7 +150,7 @@ function renderHome() {
         </a>`;
       }).join('')}
     </div>
-    <p style="color:var(--text-muted);font-size:13px;margin-top:20px">
+    <p class="text-muted-small">
       Click a year to view papers &nbsp;|&nbsp; Use the search box to find questions
     </p>
   `;
@@ -174,7 +184,7 @@ function renderPaper(year, paperIdx) {
   return `
     <a href="#" class="btn-back" data-nav="year" data-year="${year}">&larr; ${year} Papers</a>
     <div class="paper-toolbar">
-      <h1 class="page-title" style="margin-bottom:0">${escapeHTML(paper.title)}</h1>
+      <h1 class="page-title-nomargin">${escapeHTML(paper.title)}</h1>
       <button class="pdf-btn" data-nav="paper-pdf" data-year="${year}" data-paper="${paperIdx}" title="View full paper as PDF">&#128196; View Full Paper (PDF)</button>
     </div>
     <p class="page-meta">
@@ -218,7 +228,7 @@ function renderPaperPdf(year, paperIdx) {
               </div>
               <span class="question-marks">${q.marks} mk${q.marks > 1 ? 's' : ''}</span>
             </div>
-            ${q.subtext ? `<p style="font-size:13px;color:var(--text-muted);margin-bottom:6px">${q.subtext}</p>` : ''}
+            ${q.subtext ? `<p class="subtext-muted">${q.subtext}</p>` : ''}
             <div class="answer-content pdf-open" id="${ansId}">
               ${formatAnswer(q.answer)}
               ${q.tutorial ? `<div class="answer-tutorial"><strong>&#128218; Explanation:</strong> ${q.tutorial}</div>` : ''}
@@ -260,7 +270,7 @@ function renderQuestion(q, si, qi, year, paperTitle, sectionTitle) {
         </div>
         <span class="question-marks">${q.marks} mk${q.marks > 1 ? 's' : ''}</span>
       </div>
-      ${q.subtext ? `<p style="font-size:13px;color:var(--text-muted);margin-bottom:6px">${escapeHTML(q.subtext)}</p>` : ''}
+      ${q.subtext ? `<p class="subtext-muted">${escapeHTML(q.subtext)}</p>` : ''}
       <button class="answer-toggle" data-toggle="answer" data-answer-id="${ansId}">
         <span class="arrow">&#9660;</span> Show Answer
       </button>
@@ -363,7 +373,7 @@ function runMermaid(containerId) {
 }
 
 function formatAnswer(text) {
-  if (!text) return '<div class="answer-inner"><p style="color:var(--text-muted)">Answer not yet available.</p></div>';
+  if (!text) return '<div class="answer-inner"><p class="text-muted">Answer not yet available.</p></div>';
   
   const hasMermaid = text.includes('classDiagram') || text.includes('erDiagram') || 
                      text.includes('stateDiagram') || text.includes('flowchart') ||
@@ -382,21 +392,34 @@ function formatAnswer(text) {
                  text.includes('<?php') ||
                  text.includes('<form') ||
                  text.includes('function ') ||
-                 text.includes('struct Node');
-                 
+                 text.includes('struct Node') ||
+                 text.includes('<script') ||
+                 text.includes('char ') ||
+                 text.includes('int ') ||
+                 text.includes('void ') ||
+                 text.includes('printf(') ||
+                 text.includes('scanf(') ||
+                 text.includes('cout <<') ||
+                 text.includes('cin >>');
+                  
   if (isCode) {
     let lang = 'language-clike';
     if (text.includes('SELECT ') || text.includes('CREATE TABLE')) lang = 'language-sql';
     else if (text.includes('<?php')) lang = 'language-php';
-    else if (text.includes('<form') || text.includes('<!DOCTYPE')) lang = 'language-markup';
+    else if (text.includes('<form') || text.includes('<!DOCTYPE') || text.includes('<script')) lang = 'language-markup';
     else if (text.includes('public static void main') || text.includes('System.out')) lang = 'language-java';
-    else if (text.includes('#include') || text.includes('cout <<')) lang = 'language-cpp';
+    else if (text.includes('#include') || text.includes('cout <<') || text.includes('scanf(')) lang = 'language-cpp';
     
     const escaped = text.replace(/</g, '&lt;').replace(/>/g, '&gt;');
     return `<pre><code class="${lang}">${escaped}</code></pre>`;
-  } else {
-    return `<div class="answer-inner"><p>${text.replace(/\n/g, '<br>')}</p></div>`;
   }
+  
+  // Check if text contains angle brackets (math, HTML examples) — escape for safety
+  if (text.includes('<') || text.includes('>')) {
+    return `<div class="answer-inner"><p>${escapeHTML(text).replace(/\n/g, '<br>')}</p></div>`;
+  }
+  
+  return `<div class="answer-inner"><p>${text.replace(/\n/g, '<br>')}</p></div>`;
 }
 
 function formatWithMermaid(text) {
@@ -553,8 +576,13 @@ function getSectionIndex(year, paperIdx, sectionTitle) {
 
 function getQuestionIndex(qid) {
   if (typeof qid === 'number') return qid - 1;
-  const parts = qid.match(/^(\d+)/);
-  return parts ? parseInt(parts[1]) - 1 : 0;
+  if (typeof qid === 'string') {
+    const num = parseInt(qid);
+    if (!isNaN(num)) return num - 1;
+    const match = qid.match(/^Q\s*(\d+)/i);
+    return match ? parseInt(match[1]) - 1 : 0;
+  }
+  return 0;
 }
 
 // ====== SEARCH ======
@@ -579,7 +607,7 @@ function handleSearch(query) {
     else { render(); }
     return;
   }
-  if (currentState.view !== 'search') prevState = { ...currentState };
+  if (currentState.view !== 'search' && !prevState) prevState = { ...currentState };
 
   const q = query.toLowerCase();
   const matches = [];
@@ -624,7 +652,7 @@ function handleSearch(query) {
       <h2 class="page-title">Search Results</h2>
       <div class="no-results">
         <p>No results found for "<strong>${escapeHTML(query)}</strong>"</p>
-        <p style="font-size:14px; margin-top:10px;">Try using different keywords or checking your spelling.</p>
+        <p class="search-hint">Try using different keywords or checking your spelling.</p>
       </div>
     `;
     return;
@@ -846,7 +874,7 @@ function renderNav() {
     const controls = header.querySelector('.header-controls');
     header.insertBefore(nav, controls);
   }
-  const { view, notesView } = currentState;
+  const { view } = currentState;
   nav.innerHTML = `
     <a href="#" class="nav-tab ${view === 'home' || view === 'year' || view === 'paper' || view === 'paper-pdf' ? 'active' : ''}" data-nav="home">&#128218; Exams</a>
     <a href="#" class="nav-tab ${view === 'notes' ? 'active' : ''}" data-nav="notes-home">&#128221; Notes</a>
