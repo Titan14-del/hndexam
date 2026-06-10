@@ -307,6 +307,17 @@ main { padding: 40px 0 80px; }
   font-style: italic;
 }
 
+.question-scenario {
+  background: var(--bg-section);
+  border-left: 4px solid var(--primary-light);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 12px 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
 /* Study Mode */
 .study-category {
   font-size: 18px;

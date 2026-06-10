@@ -228,6 +228,7 @@ function renderPaperPdf(year, paperIdx) {
               </div>
               <span class="question-marks">${q.marks} mk${q.marks > 1 ? 's' : ''}</span>
             </div>
+            ${q.scenario ? `<div class="question-scenario">${q.scenario.replace(/\n/g, '<br>')}</div>` : ''}
             ${q.subtext ? `<p class="subtext-muted">${q.subtext}</p>` : ''}
             <div class="answer-content pdf-open" id="${ansId}">
               ${formatAnswer(q.answer)}
@@ -270,6 +271,7 @@ function renderQuestion(q, si, qi, year, paperTitle, sectionTitle) {
         </div>
         <span class="question-marks">${q.marks} mk${q.marks > 1 ? 's' : ''}</span>
       </div>
+      ${q.scenario ? `<div class="question-scenario">${q.scenario.replace(/\n/g, '<br>')}</div>` : ''}
       ${q.subtext ? `<p class="subtext-muted">${escapeHTML(q.subtext)}</p>` : ''}
       <button class="answer-toggle" data-toggle="answer" data-answer-id="${ansId}">
         <span class="arrow">&#9660;</span> Show Answer
