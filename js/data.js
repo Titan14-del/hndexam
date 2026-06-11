@@ -2359,15 +2359,17 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "Based on the Employee table (empId, empName, Age, Address) solve: (a) display employee with empId=1004; (b) display all records; (c) display employees whose name starts with R.",
+                "scenario": "Employee table:\nempId  | empName | Age | Address\n1001   | John    | 30  | Douala\n1002   | Rita    | 25  | Yaounde\n1003   | Bob     | 35  | Bafoussam\n1004   | Rita    | 28  | Bamenda",
+                "text": "Based on the Employee table above solve: (a) display employee with empId=1004; (b) display all records; (c) display employees whose name starts with R.",
                 "marks": 5,
                 "answer": "(a) SELECT * FROM Employee WHERE empId=1004;\n(b) SELECT * FROM Employee;\n(c) SELECT * FROM Employee WHERE empName LIKE 'R%';"
               },
               {
                 "id": 2,
-                "text": "Consider an ER model for a pharmacy chain. Can a pharmaceutical company have multiple phone numbers? If not, what do you need to do?",
+                "scenario": "Consider the ER model for a pharmacy chain. The PharmaceuticalCompany entity has attributes: companyId, name, address.",
+                "text": "Can a pharmaceutical company have multiple phone numbers? If not, what do you need to do?",
                 "marks": 5,
-                "answer": "As a single-valued attribute, it cannot. Add a multi-valued attribute (phoneNumbers) or split into a separate Phone table with 1-to-many relationship."
+                "answer": "As a single-valued attribute, it cannot. Add a multi-valued attribute (phoneNumbers) or split into a separate Phone table with 1-to-many relationship.\n\n```mermaid\nerDiagram\n  PharmaceuticalCompany ||--o{ Phone : has\n  PharmaceuticalCompany {\n    int companyId PK\n    string name\n    string address\n  }\n  Phone {\n    int phoneId PK\n    string number\n  }\n```"
               },
               {
                 "id": 3,
