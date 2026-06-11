@@ -78,6 +78,7 @@ function closeMobileNavIfOutside(e) {
 (function initMermaid() {
   if (typeof mermaid !== 'undefined') {
     mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+    renderAllMermaid();
     return;
   }
   var checkMermaid = setInterval(function() {
@@ -130,6 +131,8 @@ function renderAllMermaid() {
     _mermaidRAF = null;
     const diagrams = document.querySelectorAll('#app .mermaid');
     diagrams.forEach((el, i) => {
+      const hiddenParent = el.closest('.answer-content:not(.open):not(.pdf-open)');
+      if (hiddenParent) return;
       if (!el.id) el.id = 'nmermaid-' + i;
       try { mermaid.run({ nodes: [el] }); } catch(e) { console.warn('Mermaid render error:', e); }
     });
@@ -361,7 +364,10 @@ function toggleAnswer(id, btn) {
 }
 
 function runMermaid(containerId) {
-  if (typeof mermaid === 'undefined') return;
+  if (typeof mermaid === 'undefined') {
+    setTimeout(function() { runMermaid(containerId); }, 300);
+    return;
+  }
   const container = document.getElementById(containerId);
   if (!container) return;
   const diagrams = container.querySelectorAll('.mermaid');
