@@ -379,8 +379,8 @@ function formatAnswer(text) {
   
   const hasMermaid = text.includes('classDiagram') || text.includes('erDiagram') || 
                      text.includes('stateDiagram') || text.includes('flowchart') ||
-                     text.includes('sequenceDiagram') || text.includes('useCaseDiagram') ||
-                     text.includes('classDiagram-v2');
+                     text.includes('sequenceDiagram') || text.includes('usecaseDiagram') ||
+                     text.includes('useCaseDiagram') || text.includes('classDiagram-v2');
   
   if (hasMermaid) {
     return formatWithMermaid(text);
