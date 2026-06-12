@@ -11967,7 +11967,7 @@ const examData = {
                 "id": 20,
                 "text": "Which is a design pattern?\na) Behavioral\nb) Structural\nc) Abstract Factory\nd) All",
                 "marks": 1,
-                "answer": "d) All"
+                "answer": "c) Abstract Factory. Behavioral and Structural are categories of design patterns, not patterns themselves. Only Abstract Factory is a specific design pattern."
               },
               {
                 "id": 21,
@@ -11985,19 +11985,19 @@ const examData = {
                 "id": 23,
                 "text": "Model showing flow of object interactions:\na) Sequence model\nb) Subsystem model\nc) Dynamic model\nd) Structural model",
                 "marks": 1,
-                "answer": "c) Dynamic model"
+                "answer": "a) Sequence model. A sequence model specifically shows the time-ordered flow of messages between objects. Dynamic model is a broader category that includes state, activity, and interaction models."
               },
               {
                 "id": 24,
-                "text": "Which UML diagram is time-oriented?\na) Sequence\nb) Collaboration\nc) Class\nd) Use Case",
+                "text": "Which UML diagram is shown in the figure below?\na) Use Case\nb) Collaboration\nc) Sequence\nd) Object",
                 "marks": 1,
-                "answer": "a) Sequence"
+                "answer": "c) Sequence. The diagram shows vertical lifelines with horizontal arrows representing messages exchanged between objects over time, which is the defining characteristic of a sequence diagram."
               },
               {
                 "id": 25,
-                "text": "Shape class and Square class relationship:\na) Realization\nb) Generalization\nc) Aggregation\nd) Dependency",
+                "text": "Which UML diagram is shown in the figure below?\na) Component\nb) Deployment\nc) Use Case\nd) Class",
                 "marks": 1,
-                "answer": "b) Generalization"
+                "answer": "b) Deployment. The diagram shows physical nodes (Database) connected by associations, representing the deployment of software components on hardware nodes."
               }
             ]
           },
@@ -12113,7 +12113,7 @@ const examData = {
                 "id": 2,
                 "text": "Explain four Android Architectures.",
                 "marks": 2,
-                "answer": "1. Linux Kernel (core services, drivers). 2. Hardware Abstraction Layer (HAL). 3. Android Runtime (ART). 4. Native C/C++ Libraries. 5. Java API Framework. 6. System Apps."
+                "answer": "1. Linux Kernel: manages hardware, memory, processes, security, and device drivers.\n2. Libraries & Android Runtime: native libraries (WebKit, SQLite, OpenGL) + ART (Android Runtime) with JIT/AOT compilation.\n3. Application Framework: Java API providing Activity Manager, Content Providers, Resource Manager, Notification Manager.\n4. Applications: system apps (Phone, Contacts, Browser) and third-party user apps."
               },
               {
                 "id": 3,
