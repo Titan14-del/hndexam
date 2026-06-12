@@ -12007,15 +12007,17 @@ const examData = {
             "questions": [
               {
                 "id": 1,
-                "text": "Based on Employee table (empId, empName, Age, address):\na) SELECT command to display employee with empId 1004 (2 marks)\nb) SELECT to display all records (2 marks)\nc) SELECT to display employees whose name starts with 'R' (2 marks)",
-                "marks": 6,
+                "scenario": "Employee table:\nempId  | empName | Age | Address\n1001   | John    | 30  | Buea\n1002   | Hama    | 25  | Bamenda\n1003   | Youssouf| 27  | Mumbai\n1004   | Rafa    | 28  | Nagpur",
+                "text": "Based on the Employee table shown above, solve the following queries:\na) Write the SELECT command to display the details of the employee with empId as 1004. (2 marks)\nb) Write the SELECT command to display all the records of table Employees. (2 marks)\nc) Write the SELECT command to display all the records of the employee whose name starts with the character 'R'. (3 marks)",
+                "marks": 7,
                 "answer": "a) SELECT * FROM Employee WHERE empId=1004;\nb) SELECT * FROM Employee;\nc) SELECT * FROM Employee WHERE empName LIKE 'R%';"
               },
               {
                 "id": 2,
-                "text": "Design a university database system with entities: STUDENT, DEPARTMENT, DEGREE, COURSE, REGISTER, REQUIRES.\n\na) List entities (2 marks)\nb) List attributes for DEGREE (1 mark)\nc) Design ER Diagram with multiplicity (5 marks)\nd) Present conceptual model (4 marks)\ne) Present logical model (4 marks)\nf) Present physical model (4 marks)",
-                "marks": 20,
-                "answer": "a) STUDENT, DEPARTMENT, DEGREE, COURSE, REGISTER, REQUIRES\nb) DEGREE attributes: DegreeCode(PK), DegreeTitle, DepartmentCode(FK)\nc) ```mermaid\nerDiagram\n    DEPARTMENT ||--o{ DEGREE : offers\n    DEGREE }o--o{ COURSE : requires\n    STUDENT }o--o{ DEGREE : registers\n    DEGREE {\n        string DegreeCode PK\n        string DegreeTitle\n        string DepartmentCode FK\n    }\n```\nd) Conceptual: ER diagram independent of DBMS\ne) Logical: relational tables with FKs, normalized\nf) Physical: SQL CREATE TABLE statements with data types"
+                "scenario": "As a software engineer, you have been awarded a contract to produce a database software for a certain University in town. In the system specification, you are told that the database will have to deal with:\n- STUDENTS who have Student ID, First Name, Last Name, Date of Birth\n- DEPARTMENTS which have department Code, Department Title, Faculty\n- DEGREE which constitute Degree Code, Degree Title, Department Code\n- COURSE which include Course No, Course Code, Course Title, No of hours\n- REGISTER which have Registration No, Degree Code, Student No, Year of entry\n- REQUIRES which have Requirement No, Course No, Degree Code",
+                "text": "Tasks:\na) List entities in the case study above (2 marks)\nb) List the attributes for DEGREE (1 mark)\nc) Design an Entity Relationship (ER) Diagram for the above system indicating multiplicity (1 mark)\nd) Present the conceptual model of the system (2 marks)\ne) Present the Logical model of the system (2 marks)\nf) Present the physical model of the system (2 marks)",
+                "marks": 10,
+                "answer": "a) STUDENT, DEPARTMENT, DEGREE, COURSE, REGISTER, REQUIRES\nb) DEGREE attributes: DegreeCode(PK), DegreeTitle, DepartmentCode(FK)\nc) ```mermaid\nerDiagram\n    DEPARTMENT ||--o{ DEGREE : offers\n    DEGREE }o--o{ COURSE : requires\n    STUDENT }o--o{ DEGREE : registers\n    DEGREE {\n        string DegreeCode PK\n        string DegreeTitle\n        string DepartmentCode FK\n    }\n```\nd) Conceptual: ER diagram independent of DBMS — abstract representation of entities and relationships.\ne) Logical: relational tables with FKs, normalized — schema with tables, columns, and constraints.\nf) Physical: SQL CREATE TABLE statements with data types and indexes for a specific DBMS."
               },
               {
                 "id": 3,
@@ -12026,7 +12028,7 @@ const examData = {
               {
                 "id": 4,
                 "text": "What are Entities and Relationships?",
-                "marks": 2,
+                "marks": 3,
                 "answer": "Entities: real-world objects distinguishable from others (e.g., Student, Course). Relationships: associations between entities (e.g., Student enrolls in Course)."
               },
               {
@@ -12038,7 +12040,7 @@ const examData = {
               {
                 "id": 6,
                 "text": "What are the various forms of Normalization?",
-                "marks": 4,
+                "marks": 1,
                 "answer": "1NF: atomic values, no repeating groups. 2NF: 1NF + no partial dependencies. 3NF: 2NF + no transitive dependencies. BCNF: stronger 3NF. 4NF: no multi-valued dependencies. 5NF: no join dependencies."
               }
             ]
